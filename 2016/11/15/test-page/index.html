@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="hello hexodate: 2016-11-15 16:16:04tags:hexo
+花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自hexo中文网站,还有一部分来自不如的博客。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。
+hexo -v没有结果安装hexo后使用hexo -v查看hexo的版本，提示’hexo’ 不是内部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/11/15/test-page/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="hello hexodate: 2016-11-15 16:16:04tags:hexo
+花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自hexo中文网站,还有一部分来自不如的博客。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。
+hexo -v没有结果安装hexo后使用hexo -v查看hexo的版本，提示’hexo’ 不是内部">
+<meta property="og:image" content="http://yoursite.com/markdown-img-paste-20161115170121138.png">
+<meta property="og:image" content="http://yoursite.com/markdown-img-paste-2016111517030152.png">
+<meta property="og:updated_time" content="2016-11-15T09:15:36.117Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="hello hexodate: 2016-11-15 16:16:04tags:hexo
+花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自hexo中文网站,还有一部分来自不如的博客。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。
+hexo -v没有结果安装hexo后使用hexo -v查看hexo的版本，提示’hexo’ 不是内部">
+<meta name="twitter:image" content="http://yoursite.com/markdown-img-paste-20161115170121138.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-test-page" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/15/test-page/" class="article-date">
+  <time datetime="2016-11-15T08:16:04.565Z" itemprop="datePublished">2016-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="hello-hexo"><a href="#hello-hexo" class="headerlink" title="hello hexo"></a>hello hexo</h1><p>date: 2016-11-15 16:16:04<br>tags:hexo</p>
+<p>花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文网站</a>,还有一部分来自<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">不如的博客</a>。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。</p>
+<h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="markdown-img-paste-20161115170121138.png" alt=""></p>
+<p>解决方案：在环境变量中新建一个叫做<code>HEXO_HOME</code>的环境变量，其值为<code>D:\Program Files\nodejs\node_global</code>（选择nodejs安装路径下的node_global）<br><img src="markdown-img-paste-2016111517030152.png" alt=""></p>
+<p>此时在使用命令行输入<code>hexo -v</code>能显示出版本号就说明hexo是配置好了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">C:\Users\tao&gt;hexo -v</div><div class="line">hexo-cli: 1.0.2</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.5.2</div><div class="line">node: 4.4.1</div><div class="line">v8: 4.5.103.35</div><div class="line">uv: 1.8.0</div><div class="line">zlib: 1.2.8</div><div class="line">ares: 1.10.1-DEV</div><div class="line">icu: 56.1</div><div class="line">modules: 46</div><div class="line">openssl: 1.0.2g</div></pre></td></tr></table></figure></p>
+<h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">hexo init</td>
+<td>初始化一个网站。</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo -v</td>
+<td>查看hexo版本号</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo -new “title”</td>
+<td>生成一个md文件，用来写博客的内容。title里面没有空格可以不用写引号</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo -g</td>
+<td>生成</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo -d</td>
+<td>发布</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo d -g</td>
+<td>生成并发布</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo g -d</td>
+<td>生成并发布</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/15/test-page/" data-id="civj8rqb30000kklbkspi0mm3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/11/15/test-page/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/15/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
