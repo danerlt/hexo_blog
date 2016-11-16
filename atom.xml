@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Litao workspace</title>
-  
+  <title>李滔的工作空间</title>
+  <subtitle>一个不太勤快的程序猿，偶尔写写自己的心得。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
