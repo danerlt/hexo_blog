@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>李涛的工作空间</title>
+  <title>Litao workspace</title>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://litao.work/</id>
   
   <author>
-    <name>Litao</name>
+    <name>李滔</name>
     
   </author>
   
