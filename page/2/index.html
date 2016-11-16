@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-HTML规范From Google Code Style" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/16/HTML规范From Google Code Style/" class="article-date">
+  <time datetime="2016-11-16T04:20:39.717Z" itemprop="datePublished">2016-11-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTML规范From-Google-Code-Style"><a href="#HTML规范From-Google-Code-Style" class="headerlink" title="HTML规范From Google Code Style"></a>HTML规范From Google Code Style</h1><p>标签（空格分隔）： Html</p>
+<hr>
+<h1 id="一、通用规范"><a href="#一、通用规范" class="headerlink" title="一、通用规范"></a>一、通用规范</h1><h2 id="1-通用样式规范"><a href="#1-通用样式规范" class="headerlink" title="1.通用样式规范"></a>1.通用样式规范</h2><p>隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(https://www.google.com/images/example);</div><div class="line">&#125;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(//www.google.com/images/example);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-通用格式规范"><a href="#2-通用格式规范" class="headerlink" title="2.通用格式规范"></a>2.通用格式规范</h2><h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><p>实验两个空格缩进而不是使用tab键或者混合使用tab键和空格键</p>
+<h3 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h3><p>仅使用小写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">A</span> <span class="attr">HREF</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">A</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"google.png"</span> <span class="attr">alt</span>=<span class="string">"Google"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#E5E5E5</span>;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#e5e5e5</span>;</div></pre></td></tr></table></figure>
+<h2 id="3-通用meta规范"><a href="#3-通用meta规范" class="headerlink" title="3.通用meta规范"></a>3.通用meta规范</h2><h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>####使用UTF-8无BOM<br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>####当代码需要注释的时候添加注释。<br>对代码注释，需要指明代码的功能。</p>
+<h3 id="Action-Item"><a href="#Action-Item" class="headerlink" title="Action Item"></a>Action Item</h3><p>只用TODO标记待办事宜（todos），不能使用其他的格式来表述。在TODO后面追加描述信息（如用户名或者邮件列表），将待办事宜追加到TODO后面。例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;# TODO(john.doe): revisit centering #&#125;</div><div class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">center</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- <span class="doctag">TODO:</span> remove optional tags --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Oranges<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="二、HTML规范"><a href="#二、HTML规范" class="headerlink" title="二、HTML规范"></a>二、HTML规范</h1><h2 id="1-HTML样式规范"><a href="#1-HTML样式规范" class="headerlink" title="1.HTML样式规范"></a>1.HTML样式规范</h2><h2 id="2-HTML格式规范"><a href="#2-HTML格式规范" class="headerlink" title="2.HTML格式规范"></a>2.HTML格式规范</h2><h1 id="三、CSS规范"><a href="#三、CSS规范" class="headerlink" title="三、CSS规范"></a>三、CSS规范</h1><h2 id="1-CSS样式规范"><a href="#1-CSS样式规范" class="headerlink" title="1.CSS样式规范"></a>1.CSS样式规范</h2><h2 id="2-CSS格式规范"><a href="#2-CSS格式规范" class="headerlink" title="2.CSS格式规范"></a>2.CSS格式规范</h2><h2 id="3-CSS-meta规范"><a href="#3-CSS-meta规范" class="headerlink" title="3.CSS meta规范"></a>3.CSS meta规范</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/16/HTML规范From Google Code Style/" data-id="civkf84rs0000d8lbil38dse6" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-first-page" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/15/first-page/" class="article-date">
+  <time datetime="2016-11-15T14:27:48.000Z" itemprop="datePublished">2016-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/15/first-page/">first page</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="这个一个测试的页面"><a href="#这个一个测试的页面" class="headerlink" title="这个一个测试的页面"></a>这个一个测试的页面</h2><p>Hello.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class Hello&#123;</div><div class="line">   puclic static void main(String[] args)&#123;</div><div class="line">       System.out.println(&quot;hello world!&quot;); </div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/15/first-page/" data-id="civjlkb57000020lb2ndgtjzo" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/15/hello-world/" class="article-date">
+  <time datetime="2016-11-15T03:44:47.220Z" itemprop="datePublished">2016-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/15/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/15/hello-world/" data-id="civjlkb5f000120lb31mxgvjz" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-软考之软件设计师考试大纲（2016下半年）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/28/软考之软件设计师考试大纲（2016下半年）/" class="article-date">
+  <time datetime="2016-08-28T07:22:32.702Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="软考之软件设计师考试大纲（2016下半年）"><a href="#软考之软件设计师考试大纲（2016下半年）" class="headerlink" title="软考之软件设计师考试大纲（2016下半年）"></a>软考之软件设计师考试大纲（2016下半年）</h1><p>标签（空格分隔）： 软考</p>
+<hr>
+<p>博主开学就大三了，二流学校在读，暑假留校，没什么项目练手，索性报个软考来系统的整理下自己的专业知识。<br>软考大纲，2016年下半年。考试大纲图：<img src="http://static.zybuluo.com/danerlt/gng2z4zy995njf2w1rys9eow/%E8%BD%AF%E8%80%83.xmind.svg" alt="软考.xmind.svg-177.8kB"><br>本思维导图使用百度脑图绘制，高清无码大图请戳<a href="http://static.zybuluo.com/danerlt/gng2z4zy995njf2w1rys9eow/%E8%BD%AF%E8%80%83.xmind.svg" target="_blank" rel="external">这里</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/28/软考之软件设计师考试大纲（2016下半年）/" data-id="civkf84su000cd8lbbbak6bur" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-学习总结 --2016-7-27" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/28/学习总结 --2016-7-27/" class="article-date">
+  <time datetime="2016-08-28T07:22:32.699Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="学习总结–2016-07-27"><a href="#学习总结–2016-07-27" class="headerlink" title="学习总结–2016-07-27"></a>学习总结–2016-07-27</h1><p>标签（空格分隔）： 学习笔记</p>
+<hr>
+<h1 id="1-Javascript"><a href="#1-Javascript" class="headerlink" title="1.Javascript"></a>1.Javascript</h1><h2 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h2><ul>
+<li>false</li>
+<li>null</li>
+<li>undefined</li>
+<li>空字符串’ ‘</li>
+<li>数字0</li>
+<li>数字NaN<h2 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h2>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。<h2 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h2>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</li>
+</ul>
+<h2 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h2><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"><br>[节选自JavaScriptDOM编程]</p>
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
+<p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
+<blockquote>
+<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
+<blockquote>
+<p>至此，大功告成，可以正常显示中文了。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/28/学习总结 --2016-7-27/" data-id="civkf84sb0009d8lbednll2s1" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-学习总结 --2016-7-26" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/28/学习总结 --2016-7-26/" class="article-date">
+  <time datetime="2016-08-28T07:22:32.692Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="学习总结-–2016-7-26"><a href="#学习总结-–2016-7-26" class="headerlink" title="学习总结 –2016-7-26"></a>学习总结 –2016-7-26</h1><p>标签（空格分隔）： 学习总结</p>
+<hr>
+<p>Time：2016-7-26</p>
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="git-连接远程库。"><a href="#git-连接远程库。" class="headerlink" title="git 连接远程库。"></a>git 连接远程库。</h2><p>首先要使用ssh-keygen 生成公钥，引号里输入自己的邮箱地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</div></pre></td></tr></table></figure></p>
+<p>执行这个命令后可以一路回车，然后会生成一个私钥和一个公钥，公钥可以随便告诉别人，私钥一定不要让它泄密。Linux下默认保存在<code>/root/.ssh</code>下windows默认保存在<code>C:\Users\window用户名\.ssh</code>下。<code>.ssh</code>文件夹下会产生如下几个文件。<br><img src="http://static.zybuluo.com/danerlt/tpu33lwmzt8yhblbt73huzfn/image_1aojnbro51kd21jujvm4ib5ii6m.png" alt="image_1aojnbro51kd21jujvm4ib5ii6m.png-16.3kB"><br>其中的<code>id_rsa.pub</code>就是公钥,在文本编辑器打开，复制里面的内容，在你的github账号下选择<code>Settings</code>，然后选择<code>SSH and GPG keys</code>，点击<code>new ssh key</code>,粘贴进去就可以使用<code>git clone git@github.com:github用户名/远程仓库名.git</code> 愉快地将远程仓库克隆下来了。<br><img src="http://static.zybuluo.com/danerlt/jwzzmndkhzit8nxjsq4picri/image_1aojngm9p1invlahj8l1t3u1ne513.png" alt="image_1aojngm9p1invlahj8l1t3u1ne513.png-15.4kB"><br><img src="http://static.zybuluo.com/danerlt/ud7hl8ior9od4t0z50n10pl1/image_1aojnl61a1ckes717p11bcjeav9.png" alt="image_1aojnl61a1ckes717p11bcjeav9.png-26.8kB"></p>
+<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="NaN是一个数值，它不等于任何值，包括它自己。"><a href="#NaN是一个数值，它不等于任何值，包括它自己。" class="headerlink" title="NaN是一个数值，它不等于任何值，包括它自己。"></a>NaN是一个数值，它不等于任何值，包括它自己。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="literal">NaN</span>));</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="string">'a'</span>));</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="number">1</span>));</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>运行截图<br><img src="http://static.zybuluo.com/danerlt/hi7hdtll42lrca1a4hnk15qp/image_1aojmukvf1adu8lq1tkuuuuttb9.png" alt="image_1aojmukvf1adu8lq1tkuuuuttb9.png-2.4kB"></p>
+<p>## </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/28/学习总结 --2016-7-26/" data-id="civke11uu0000qslbe8a2rdkb" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/11/16/css技巧/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/16/电脑的运行、控制面板、命令提示符被禁用的解决方案/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/16/查看电脑配置指令大全/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/16/vmare Mac OS 常见错误/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/16/U盘文件夹变成快捷方式解决方案/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
