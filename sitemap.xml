@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/about/index.html</loc>
+    
+    <lastmod>2016-11-17T06:04:03.620Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/2016/11/15/test-page/</loc>
     
     <lastmod>2016-11-16T10:07:37.661Z</lastmod>
@@ -79,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://litao.work/2016/11/16/putty%E8%BF%9E%E6%8E%A5Linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <loc>http://litao.work/2016/11/16/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
     
     <lastmod>2016-08-28T07:22:32.774Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://litao.work/2016/11/16/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
+    <loc>http://litao.work/2016/11/16/putty%E8%BF%9E%E6%8E%A5Linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
     
     <lastmod>2016-08-28T07:22:32.774Z</lastmod>
     
