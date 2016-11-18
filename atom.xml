@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2016-11-11T12:12:12.311Z</updated>
+  <updated>2016-11-18T08:07:32.278Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,11 +20,10 @@
     <link href="http://litao.work/2016/11/16/css%E6%8A%80%E5%B7%A7/"/>
     <id>http://litao.work/2016/11/16/css技巧/</id>
     <published>2016-11-16T04:21:36.580Z</published>
-    <updated>2016-11-11T12:12:12.311Z</updated>
+    <updated>2016-11-18T08:07:32.278Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="css技巧"><a href="#css技巧" class="headerlink" title="css技巧"></a>css技巧</h1><p>标签（空格分隔）： css</p>
-<hr>
-<p>[TOC]</p>
+    <content type="html"><![CDATA[<hr>
+<p>title: CSS技巧<br>date: 2016-11-15 11:51:44<br>tag: css<br>—﻿</p>
 <h2 id="1-水平导航栏"><a href="#1-水平导航栏" class="headerlink" title="1.水平导航栏"></a>1.水平导航栏</h2><p>html代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"index.htm/"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"introduce.htm/"</span>&gt;</span>业务介绍<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"agent.htm/"</span>&gt;</span>加盟代理<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"cooperate.htm/"</span>&gt;</span>招商合作<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"partner.htm/"</span>&gt;</span>合作伙伴<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"help.htm/"</span>&gt;</span>帮助中心<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>css代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.nav</span>&#123;</div><div class="line">	<span class="attribute">position</span>: relative;</div><div class="line">	<span class="attribute">top</span>:-<span class="number">19px</span>;</div><div class="line">	<span class="attribute">left</span>: <span class="number">207px</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">791px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">791px</span>;</div><div class="line">	<span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span>&gt;<span class="selector-tag">li</span>&#123;</div><div class="line">	<span class="attribute">float</span>: left;<span class="comment">/**这个是重点***/</span></div><div class="line">	<span class="attribute">height</span>: <span class="number">25px</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span>&gt;<span class="selector-tag">li</span>&gt;<span class="selector-tag">a</span>&#123;</div><div class="line">	<span class="attribute">padding-left</span>: <span class="number">40px</span>;</div><div class="line">	<span class="attribute">display</span>:block;</div><div class="line">	<span class="attribute">width</span>: <span class="number">72px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">25px</span>;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">18px</span>;</div><div class="line">	<span class="attribute">text-align</span>:center;</div><div class="line">	<span class="attribute">text-decoration</span>:none;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>效果图<br><img src="http://static.zybuluo.com/danerlt/vhw7npseuocf2vcxvetxkizx/image_1aobrvr1dlvqnd1mb2jeugfr9.png" alt="image_1aobrvr1dlvqnd1mb2jeugfr9.png-7.1kB"></p>
@@ -50,10 +49,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;css技巧&quot;&gt;&lt;a href=&quot;#css技巧&quot; class=&quot;headerlink&quot; title=&quot;css技巧&quot;&gt;&lt;/a&gt;css技巧&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： css&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;1-水平导航栏&quot;&gt;&lt;a hr
+      &lt;hr&gt;
+&lt;p&gt;title: CSS技巧&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: css&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;1-水平导航栏&quot;&gt;&lt;a href=&quot;#1-水平导航栏&quot; class=&quot;headerlink&quot; title=&quot;1.水平导航
     
     </summary>
     
@@ -65,19 +63,22 @@
     <link href="http://litao.work/2016/11/16/%E7%94%B5%E8%84%91%E7%9A%84%E8%BF%90%E8%A1%8C%E3%80%81%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E3%80%81%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%A2%AB%E7%A6%81%E7%94%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/11/16/电脑的运行、控制面板、命令提示符被禁用的解决方案/</id>
     <published>2016-11-16T04:21:21.651Z</published>
-    <updated>2016-08-28T07:22:32.775Z</updated>
+    <updated>2016-11-18T08:02:06.515Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="电脑的运行、控制面板、命令提示符被禁用的解决方案"><a href="#电脑的运行、控制面板、命令提示符被禁用的解决方案" class="headerlink" title="电脑的运行、控制面板、命令提示符被禁用的解决方案"></a>电脑的运行、控制面板、命令提示符被禁用的解决方案</h1><p>标签：windows</p>
-<hr>
-<p>#问题描述：<br>电脑的运行、控制面板、命令提示符被禁用了</p>
-<p>#解决方案</p>
-<h2 id="一：—-gt-gpedit-msc—-gt-用户配置–-gt-管理模块–-gt-系统-单击选中-–-gt-右边找到“阻止访问命令提示符”，鼠标双击，弹出窗口，点选“未配置”–-gt-应用–确定"><a href="#一：—-gt-gpedit-msc—-gt-用户配置–-gt-管理模块–-gt-系统-单击选中-–-gt-右边找到“阻止访问命令提示符”，鼠标双击，弹出窗口，点选“未配置”–-gt-应用–确定" class="headerlink" title="一：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;系统(单击选中)–&gt;右边找到“阻止访问命令提示符”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定"></a>一：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;系统(单击选中)–&gt;右边找到“阻止访问命令提示符”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定</h2><h2 id="二：—-gt-gpedit-msc—-gt-用户配置–-gt-管理模块–-gt-控制面板-单击选中-–-gt-右边找到“禁止访问控制面板”，鼠标双击，弹出窗口，点选“未配置”–-gt-应用–确定"><a href="#二：—-gt-gpedit-msc—-gt-用户配置–-gt-管理模块–-gt-控制面板-单击选中-–-gt-右边找到“禁止访问控制面板”，鼠标双击，弹出窗口，点选“未配置”–-gt-应用–确定" class="headerlink" title="二：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;控制面板(单击选中)–&gt;右边找到“禁止访问控制面板”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定"></a>二：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;控制面板(单击选中)–&gt;右边找到“禁止访问控制面板”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定</h2><h2 id="三：—-gt-c-windows-regedit-exe"><a href="#三：—-gt-c-windows-regedit-exe" class="headerlink" title="三：—&gt;c:\windows\regedit.exe,"></a>三：—&gt;c:\windows\regedit.exe,</h2><p>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,在右边空白处右键，选择“新建”的“DWORD”,然后输入名字“NoRun”，然后双击它，修改NoRun为0即可</p>
+    <content type="html"><![CDATA[<hr>
+<p>title: 电脑的运行、控制面板、命令提示符被禁用的解决方案<br>date: 2016-11-15 11:51:44<br>tag: windows<br>—﻿</p>
+<h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>电脑的运行、控制面板、命令提示符被禁用了</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>一：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;系统(单击选中)–&gt;右边找到“阻止访问命令提示符”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定<br>二：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;控制面板(单击选中)–&gt;右边找到“禁止访问控制面板”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定<br>三：—&gt;c:\windows\regedit.exe,HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,在右边空白处右键，选择“新建”的“DWORD”,然后输入名字“NoRun”，然后双击它，修改NoRun为0即可</p>
+</blockquote>
 <p>转载自：<a href="http://www.33lc.com/article/6617.html" target="_blank" rel="external">http://www.33lc.com/article/6617.html</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;电脑的运行、控制面板、命令提示符被禁用的解决方案&quot;&gt;&lt;a href=&quot;#电脑的运行、控制面板、命令提示符被禁用的解决方案&quot; class=&quot;headerlink&quot; title=&quot;电脑的运行、控制面板、命令提示符被禁用的解决方案&quot;&gt;&lt;/a&gt;电脑的运行、控制面板、命令提
+      &lt;hr&gt;
+&lt;p&gt;title: 电脑的运行、控制面板、命令提示符被禁用的解决方案&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: windows&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;header
     
     </summary>
     
@@ -89,11 +90,11 @@
     <link href="http://litao.work/2016/11/16/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
     <id>http://litao.work/2016/11/16/查看电脑配置指令大全/</id>
     <published>2016-11-16T04:21:21.650Z</published>
-    <updated>2016-08-28T07:22:32.774Z</updated>
+    <updated>2016-11-18T07:56:53.609Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="查看电脑配置指令大全"><a href="#查看电脑配置指令大全" class="headerlink" title="查看电脑配置指令大全"></a>查看电脑配置指令大全</h1><p>标签（空格分隔）： windows</p>
-<hr>
-<h1 id="查看电脑配置指令大全-1"><a href="#查看电脑配置指令大全-1" class="headerlink" title="查看电脑配置指令大全"></a>查看电脑配置指令大全</h1><h2 id="问题描述：查看电脑配置信息指令。"><a href="#问题描述：查看电脑配置信息指令。" class="headerlink" title="问题描述：查看电脑配置信息指令。"></a>问题描述：查看电脑配置信息指令。</h2><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="1-查看电脑配置命令：dxdiag"><a href="#1-查看电脑配置命令：dxdiag" class="headerlink" title="1.查看电脑配置命令：dxdiag"></a>1.查看电脑配置命令：<code>dxdiag</code></h3><p><img src="http://static.zybuluo.com/danerlt/gd3ck9isli9ii43x52yznbed/image_1aoo1hpnag8i1trm1s871c41e879.png" alt="image_1aoo1hpnag8i1trm1s871c41e879.png-62.6kB"></p>
+    <content type="html"><![CDATA[<hr>
+<p>title: 查看电脑配置指令大全<br>date: 2016-11-15 11:51:44<br>tags: windows<br>—﻿</p>
+<h2 id="问题描述：查看电脑配置信息指令。"><a href="#问题描述：查看电脑配置信息指令。" class="headerlink" title="问题描述：查看电脑配置信息指令。"></a>问题描述：查看电脑配置信息指令。</h2><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="1-查看电脑配置命令：dxdiag"><a href="#1-查看电脑配置命令：dxdiag" class="headerlink" title="1.查看电脑配置命令：dxdiag"></a>1.查看电脑配置命令：<code>dxdiag</code></h3><p><img src="http://static.zybuluo.com/danerlt/gd3ck9isli9ii43x52yznbed/image_1aoo1hpnag8i1trm1s871c41e879.png" alt="image_1aoo1hpnag8i1trm1s871c41e879.png-62.6kB"></p>
 <h3 id="2查看系统属性命令：sysdm-cpl"><a href="#2查看系统属性命令：sysdm-cpl" class="headerlink" title="2查看系统属性命令：sysdm.cpl"></a>2查看系统属性命令：<code>sysdm.cpl</code></h3><p><img src="http://static.zybuluo.com/danerlt/60rbc4m4wkto1u1l9cng1psk/image_1aoo1q7qo1lce1jus1cq81sgu1d54m.png" alt="image_1aoo1q7qo1lce1jus1cq81sgu1d54m.png-35.8kB"></p>
 <h3 id="3-查看系统信息命令：msinfo32"><a href="#3-查看系统信息命令：msinfo32" class="headerlink" title="3.查看系统信息命令：msinfo32"></a>3.查看系统信息命令：<code>msinfo32</code></h3><p><img src="http://static.zybuluo.com/danerlt/mo05695bndo1e8k5ulyjr0c0/image_1aoo1si7mekbfeh1hf91k8u12u313.png" alt="image_1aoo1si7mekbfeh1hf91k8u12u313.png-81.5kB"></p>
 <h3 id="3-查看当前ip命令-在cmd里输入ipconfig-all"><a href="#3-查看当前ip命令-在cmd里输入ipconfig-all" class="headerlink" title="3.查看当前ip命令: 在cmd里输入ipconfig/all"></a>3.查看当前ip命令: 在cmd里输入<code>ipconfig/all</code></h3><p>这个学计算机的我不相信他不会，就不截图了。</p>
@@ -110,9 +111,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;查看电脑配置指令大全&quot;&gt;&lt;a href=&quot;#查看电脑配置指令大全&quot; class=&quot;headerlink&quot; title=&quot;查看电脑配置指令大全&quot;&gt;&lt;/a&gt;查看电脑配置指令大全&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： windows&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;查看电
+      &lt;hr&gt;
+&lt;p&gt;title: 查看电脑配置指令大全&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tags: windows&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;问题描述：查看电脑配置信息指令。&quot;&gt;&lt;a href=&quot;#问题描述：查看电脑配置信息指令。&quot; clas
     
     </summary>
     
@@ -124,10 +125,11 @@
     <link href="http://litao.work/2016/11/16/vmare%20Mac%20OS%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
     <id>http://litao.work/2016/11/16/vmare Mac OS 常见错误/</id>
     <published>2016-11-16T04:21:21.647Z</published>
-    <updated>2016-08-30T04:03:16.119Z</updated>
+    <updated>2016-11-18T08:21:02.627Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vmare-Mac-OS-常见错误"><a href="#vmare-Mac-OS-常见错误" class="headerlink" title="vmare Mac OS 常见错误"></a>vmare Mac OS 常见错误</h1><p>标签（空格分隔）： Vmware，Mac</p>
-<hr>
+    <content type="html"><![CDATA[<hr>
+<p>title: vmware Max OS 常见错误<br>date: 2016-11-15 11:51:44<br>tag: vmware<br>—﻿
+﻿</p>
 <h2 id="1-开启虚拟机之前用记事本打开-vmx，在最后加一句smc-version-0"><a href="#1-开启虚拟机之前用记事本打开-vmx，在最后加一句smc-version-0" class="headerlink" title="1.开启虚拟机之前用记事本打开*.vmx，在最后加一句smc.version=0"></a>1.开启虚拟机之前用记事本打开<em>*</em>.vmx，在最后加一句smc.version=0</h2><p><img src="http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png" alt="image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB"></p>
 <h2 id="2-安装之前要格式化分区，选择GUID分区表。"><a href="#2-安装之前要格式化分区，选择GUID分区表。" class="headerlink" title="2.安装之前要格式化分区，选择GUID分区表。"></a>2.安装之前要格式化分区，选择GUID分区表。</h2><p> <img src="http://static.zybuluo.com/danerlt/och4t4v9d2hfoylh9t4tbjaa/image_1arcpcaifond1kiuug97tu1e9mm.png" alt="image_1arcpcaifond1kiuug97tu1e9mm.png-134.1kB"></p>
 <h2 id="3-安装好Mac-OS后，屏幕没有全屏，需要安装Vmware-tools-先关闭虚拟机，在设置里的CD-DVD里面选择加载Vmware安装目录-默认是C-Program-Files-x86-VMware-VMware-Workstation-下的darwin-iso-再次开启虚拟机，安装Vmware-tools后即可显示全屏的效果。"><a href="#3-安装好Mac-OS后，屏幕没有全屏，需要安装Vmware-tools-先关闭虚拟机，在设置里的CD-DVD里面选择加载Vmware安装目录-默认是C-Program-Files-x86-VMware-VMware-Workstation-下的darwin-iso-再次开启虚拟机，安装Vmware-tools后即可显示全屏的效果。" class="headerlink" title="3.安装好Mac OS后，屏幕没有全屏，需要安装Vmware tools,先关闭虚拟机，在设置里的CD/DVD里面选择加载Vmware安装目录(默认是C:\Program Files (x86)\VMware\VMware Workstation)下的darwin.iso,再次开启虚拟机，安装Vmware tools后即可显示全屏的效果。"></a>3.安装好Mac OS后，屏幕没有全屏，需要安装Vmware tools,先关闭虚拟机，在设置里的CD/DVD里面选择加载Vmware安装目录(默认是<code>C:\Program Files (x86)\VMware\VMware Workstation</code>)下的<code>darwin.iso</code>,再次开启虚拟机，安装Vmware tools后即可显示全屏的效果。</h2><p><img src="http://static.zybuluo.com/danerlt/irf1h1tp8qjn3043v94uqw7h/image_1arcpl01uilp1q0cm141tqe1thg13.png" alt="image_1arcpl01uilp1q0cm141tqe1thg13.png-55.4kB"><br><img src="http://static.zybuluo.com/danerlt/0bvbc4tcearbts6xqm05rob6/image_1arcpp89lpcsqg520q1d2nicr1g.png" alt="image_1arcpp89lpcsqg520q1d2nicr1g.png-149.6kB"></p>
@@ -135,7 +137,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;vmare-Mac-OS-常见错误&quot;&gt;&lt;a href=&quot;#vmare-Mac-OS-常见错误&quot; class=&quot;headerlink&quot; title=&quot;vmare Mac OS 常见错误&quot;&gt;&lt;/a&gt;vmare Mac OS 常见错误&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： 
+      &lt;hr&gt;
+&lt;p&gt;title: vmware Max OS 常见错误&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: vmware&lt;br&gt;—﻿
+﻿&lt;/p&gt;
+&lt;h2 id=&quot;1-开启虚拟机之前用记事本打开-vmx，在最后加一句smc-version-0&quot;&gt;&lt;
     
     </summary>
     
@@ -147,17 +152,19 @@
     <link href="http://litao.work/2016/11/16/U%E7%9B%98%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%98%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/11/16/U盘文件夹变成快捷方式解决方案/</id>
     <published>2016-11-16T04:21:21.645Z</published>
-    <updated>2016-11-04T11:42:15.080Z</updated>
+    <updated>2016-11-18T08:19:59.122Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="U盘文件夹变成快捷方式解决方案"><a href="#U盘文件夹变成快捷方式解决方案" class="headerlink" title="U盘文件夹变成快捷方式解决方案"></a>U盘文件夹变成快捷方式解决方案</h1><p>标签（空格分隔）： windows</p>
-<hr>
-<p>有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。<br><img src="http://static.zybuluo.com/danerlt/28jr3b8hg0c7qgx2pgpaxgr3/image_1b0ni0gt31e551mca1bk61nbc8mp9.png" alt="image_1b0ni0gt31e551mca1bk61nbc8mp9.png-4.1kB"><br>然后问记事本或者任意一个文本编辑器打开这个文件，在里面输入下面的代码，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo 本程序消除文件夹被病毒设置的隐藏属性 </div><div class="line">@echo </div><div class="line">@echo 2016.11</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo.</div><div class="line">@ECHO 可能需要一段时间，请耐心等待</div><div class="line">@echo 耐心等待...</div><div class="line">attrib -s -h *. /S /D</div><div class="line">attrib +s +h System~1</div><div class="line">attrib +s +h Recycled</div><div class="line">attrib +s +h +a ntldr</div><div class="line">@ECHO 完成！</div><div class="line"></div><div class="line">@echo on</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<hr>
+<p>title: U盘文件并成快捷方案解决方案<br>date: 2016-11-15 11:51:44<br>tag: windows<br>—﻿</p>
+<p>有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。<br><img src="http://static.zybuluo.com/danerlt/28jr3b8hg0c7qgx2pgpaxgr3/image_1b0ni0gt31e551mca1bk61nbc8mp9.png" alt="image_1b0ni0gt31e551mca1bk61nbc8mp9.png-4.1kB"><br>然后问记事本或者任意一个文本编辑器打开这个文件，在里面输入下面的代码，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo 本程序消除文件夹被病毒设置的隐藏属性</div><div class="line">@echo</div><div class="line">@echo 2016.11</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo.</div><div class="line">@ECHO 可能需要一段时间，请耐心等待</div><div class="line">@echo 耐心等待...</div><div class="line">attrib -s -h *. /S /D</div><div class="line">attrib +s +h System~1</div><div class="line">attrib +s +h Recycled</div><div class="line">attrib +s +h +a ntldr</div><div class="line">@ECHO 完成！</div><div class="line"></div><div class="line">@echo on</div></pre></td></tr></table></figure></p>
 <p>然后使用管理员身份运行一次，等待一下，你的文件夹就能打开了。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;U盘文件夹变成快捷方式解决方案&quot;&gt;&lt;a href=&quot;#U盘文件夹变成快捷方式解决方案&quot; class=&quot;headerlink&quot; title=&quot;U盘文件夹变成快捷方式解决方案&quot;&gt;&lt;/a&gt;U盘文件夹变成快捷方式解决方案&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： windows&lt;
+      &lt;hr&gt;
+&lt;p&gt;title: U盘文件并成快捷方案解决方案&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: windows&lt;br&gt;—﻿&lt;/p&gt;
+&lt;p&gt;有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件
     
     </summary>
     
@@ -169,10 +176,11 @@
     <link href="http://litao.work/2016/11/16/putty%E8%BF%9E%E6%8E%A5Linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/11/16/putty连接Linux中文乱码解决方案/</id>
     <published>2016-11-16T04:21:10.629Z</published>
-    <updated>2016-08-28T07:22:32.774Z</updated>
+    <updated>2016-11-18T08:18:39.504Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h1><p>标签：Linux 中文乱码</p>
-<h2 id="putty连接Linux中文乱码解决方案-1"><a href="#putty连接Linux中文乱码解决方案-1" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><h2 id="问题描述：使用putty连接Linux后中文显示乱码"><a href="#问题描述：使用putty连接Linux后中文显示乱码" class="headerlink" title="问题描述：使用putty连接Linux后中文显示乱码"></a>问题描述：使用putty连接Linux后中文显示乱码</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
+    <content type="html"><![CDATA[<hr>
+<p>title: putty连接中乱码<br>date: 2016-11-15 11:51:44<br>tag: linux<br>—﻿</p>
+<h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><h2 id="问题描述：使用putty连接Linux后中文显示乱码"><a href="#问题描述：使用putty连接Linux后中文显示乱码" class="headerlink" title="问题描述：使用putty连接Linux后中文显示乱码"></a>问题描述：使用putty连接Linux后中文显示乱码</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
 <p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
 <blockquote>
 <p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
@@ -186,7 +194,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;a href=&quot;#putty连接Linux中文乱码解决方案&quot; class=&quot;headerlink&quot; title=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;/a&gt;putty连接Linux中文乱码解决方案&lt;/h1&gt;&lt;
+      &lt;hr&gt;
+&lt;p&gt;title: putty连接中乱码&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: linux&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;a href=&quot;#putty连接Linux中文乱码解决方案&quot;
     
     </summary>
     
@@ -198,18 +208,18 @@
     <link href="http://litao.work/2016/11/16/linux%E5%AE%89%E8%A3%85chrome/"/>
     <id>http://litao.work/2016/11/16/linux安装chrome/</id>
     <published>2016-11-16T04:21:10.626Z</published>
-    <updated>2016-10-13T05:24:59.853Z</updated>
+    <updated>2016-11-18T08:17:00.936Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="linux安装chrome"><a href="#linux安装chrome" class="headerlink" title="linux安装chrome"></a>linux安装chrome</h1><p>标签（空格分隔）： fedora,chrome,centos</p>
-<hr>
-<p>在fedora或者centos上安装chrome:<br>在<code>/etc/yum.reos.d</code>文件夹下创建一个叫<code>google-chrome.repo</code>的配置文件 <code>/etc/yum.repos.d/google-chrome.repo</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[google-chrome]</div><div class="line">name=google-chrome</div><div class="line">baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/</div><div class="line">gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<hr>
+<p>title: linux安装chrome<br>date: 2016-11-15 11:51:44<br>tag: linux<br>—﻿<br>﻿<br>在fedora或者centos上安装chrome:<br>在<code>/etc/yum.reos.d</code>文件夹下创建一个叫<code>google-chrome.repo</code>的配置文件 <code>/etc/yum.repos.d/google-chrome.repo</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[google-chrome]</div><div class="line">name=google-chrome</div><div class="line">baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/</div><div class="line">gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div></pre></td></tr></table></figure></p>
 <p>Install google-chrome-stable rpm package:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># yum install google-chrome-stable</div></pre></td></tr></table></figure></p>
 <p>参考自<a href="https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html" target="_blank" rel="external">https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;linux安装chrome&quot;&gt;&lt;a href=&quot;#linux安装chrome&quot; class=&quot;headerlink&quot; title=&quot;linux安装chrome&quot;&gt;&lt;/a&gt;linux安装chrome&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： fedora,chrome,ce
+      &lt;hr&gt;
+&lt;p&gt;title: linux安装chrome&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: linux&lt;br&gt;—﻿&lt;br&gt;﻿&lt;br&gt;在fedora或者centos上安装chrome:&lt;br&gt;在&lt;code&gt;/etc/yum.reos.d&lt;/c
     
     </summary>
     
@@ -221,21 +231,21 @@
     <link href="http://litao.work/2016/11/16/Java%E8%8E%B7%E5%8F%96%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/"/>
     <id>http://litao.work/2016/11/16/Java获取程序运行时间/</id>
     <published>2016-11-16T04:20:59.887Z</published>
-    <updated>2016-08-28T07:22:32.843Z</updated>
+    <updated>2016-11-18T08:16:08.314Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Java获取程序运行时间"><a href="#Java获取程序运行时间" class="headerlink" title="Java获取程序运行时间"></a>Java获取程序运行时间</h1><p>标签（空格分隔）： Java</p>
-<hr>
+    <content type="html"><![CDATA[<hr>
+<p>title: java获取程序运行时间<br>date: 2016-11-15 11:51:44<br>tag: java<br>—﻿</p>
 <h2 id="1-单位精确到毫秒"><a href="#1-单位精确到毫秒" class="headerlink" title="1.单位精确到毫秒"></a>1.单位精确到毫秒</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Time</span> </span>&#123;</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">          <span class="keyword">try</span> &#123;</div><div class="line">              <span class="keyword">long</span> startTime = System.currentTimeMillis();</div><div class="line">             Thread.sleep(<span class="number">3000</span>);<span class="comment">//暂停3秒</span></div><div class="line">            <span class="keyword">long</span> endTime = System.currentTimeMillis();</div><div class="line">            System.out.println(<span class="string">"time: "</span> + (endTime - startTime) + <span class="string">" ms"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">             e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="http://static.zybuluo.com/danerlt/kqy19iwlia87xyaatuszzz0n/image_1ar7sqpupujs19rn1pq1163d1kn29.png" alt="image_1ar7sqpupujs19rn1pq1163d1kn29.png-5.9kB"></p>
-<h2 id="精确到纳秒"><a href="#精确到纳秒" class="headerlink" title="精确到纳秒"></a>精确到纳秒</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Time</span> </span>&#123;</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">          <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">long</span> startTime = System.nanoTime();</div><div class="line">            Thread.sleep(<span class="number">3000</span>);<span class="comment">//暂停3秒</span></div><div class="line">            <span class="keyword">long</span> endTime = System.nanoTime();</div><div class="line">            System.out.println(<span class="string">"time: "</span> + (endTime - startTime) + <span class="string">" ms"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">             e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="精确到纳秒"><a href="#精确到纳秒" class="headerlink" title="精确到纳秒"></a>精确到纳秒</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Time</span> </span>&#123;</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">          <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">long</span> startTime = System.nanoTime();</div><div class="line">            Thread.sleep(<span class="number">3000</span>);<span class="comment">//暂停3秒</span></div><div class="line">            <span class="keyword">long</span> endTime = System.nanoTime();</div><div class="line">            System.out.println(<span class="string">"time: "</span> + (endTime - startTime) + <span class="string">" ns"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">             e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="截图-1"><a href="#截图-1" class="headerlink" title="截图"></a>截图</h3><p><img src="http://static.zybuluo.com/danerlt/uxhu0361mj23uunszy4kxhwo/image_1ar7t4sn01ugd133ff7b15csi1om.png" alt="image_1ar7t4sn01ugd133ff7b15csi1om.png-6.6kB"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Java获取程序运行时间&quot;&gt;&lt;a href=&quot;#Java获取程序运行时间&quot; class=&quot;headerlink&quot; title=&quot;Java获取程序运行时间&quot;&gt;&lt;/a&gt;Java获取程序运行时间&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： Java&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id
+      &lt;hr&gt;
+&lt;p&gt;title: java获取程序运行时间&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: java&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;1-单位精确到毫秒&quot;&gt;&lt;a href=&quot;#1-单位精确到毫秒&quot; class=&quot;headerlink&quot; t
     
     </summary>
     
@@ -247,21 +257,30 @@
     <link href="http://litao.work/2016/11/16/failed%20to%20push%20some%20refs%20to%20&#39;urls-username-repo_name.git&#39;%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/11/16/failed to push some refs to &#39;urls-username-repo_name.git&#39;的解决方案/</id>
     <published>2016-11-16T04:20:50.462Z</published>
-    <updated>2016-08-28T07:51:51.638Z</updated>
+    <updated>2016-11-18T08:11:05.587Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="failed-to-push-some-refs-to-‘urls-username-repo-name-git’的解决方案"><a href="#failed-to-push-some-refs-to-‘urls-username-repo-name-git’的解决方案" class="headerlink" title="failed to push some refs to ‘urls:username/repo_name.git’的解决方案"></a>failed to push some refs to ‘urls:username/repo_name.git’的解决方案</h1><p>标签（空格分隔）： Git</p>
-<hr>
-<h2 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">error: failed to push some refs to <span class="string">'git@github.com:username/repo_name.git'</span></div><div class="line">hint: Updates were rejected because the tip of your current branch is behind</div><div class="line">hint: its remote counterpart. <span class="function">Integrate the remote <span class="title">changes</span> <span class="params">(e.g.</span></span></div><div class="line">hint: <span class="string">'git pull ...'</span>) before pushing again.</div><div class="line">hint: See the 'Note about fast-forwards' in 'git push --help' <span class="keyword">for</span> details.</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<hr>
+<p>title: failed to push some refs to ‘*.git’的解决方案<br>date: 2016-11-15 11:51:44<br>tag: git<br>—﻿</p>
+<h2 id="错误提"><a href="#错误提" class="headerlink" title="错误提"></a>错误提</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">error: failed to push some refs to &apos;git@github.com:username/repo_name.git&apos;</div><div class="line">hint: Updates were rejected because the tip of your current branch is behind</div><div class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</div><div class="line">hint: &apos;git pull ...&apos;) before pushing again.</div><div class="line">hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</div></pre></td></tr></table></figure>
 <p><img src="http://static.zybuluo.com/danerlt/n8psdkld5as44plb37meusu4/image_1ar80krop1n4jlak99k14i0odr9.png" alt="image_1ar80krop1n4jlak99k14i0odr9.png-24.1kB"></p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
 <p>git pull –rebase</p>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>  提示里说更新被拒绝，因为你当前的分支在前面。大意就是你本地的仓库不是最新的，要和远程库合并之后再<code>push</code>,要你在使用<code>git push orign master</code>之前使用<code>git pull</code>合并远程仓库。<br>  但是但我使用<code>git pull</code>之后，又出现了下面的错误。<br>    <img src="http://static.zybuluo.com/danerlt/do5js74k8d43w7altrwbpchr/image_1ar817spe1989vqv1oho1rc7vlbm.png" alt="image_1ar817spe1989vqv1oho1rc7vlbm.png-20.1kB"><br>    要我去查看<code>git-pull(1)</code>这个网页,（原网页关闭了，找不到原图，）其中有一个图很关键，指出了原因。由于<code>git pull</code>是相当于是<code>git fetch</code>和<code>git merge</code>的，所以只需要使用<code>git pull --rabase</code>就可以解决了。<br>  <img src="http://static.zybuluo.com/danerlt/4nn9p7p7uwzwiyueccduu0zu/image_1ar81khnk1b2oa5815spiqqr6f13.png" alt="image_1ar81khnk1b2oa5815spiqqr6f13.png-13kB">（图侵删）</p>
 </blockquote>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><blockquote>
+<p>提示里说更新被拒绝，因为你当前的分支在前面。大意就是你本地的仓库不是最新的，要和远程库合并之后再<code>push</code>,要你在使用<code>git push orign master</code>之前使用<code>git pull</code>合并远程仓库。但是但我使用<code>git pull</code>之后，又出现了下面的错误。</p>
+</blockquote>
+<p><img src="http://static.zybuluo.com/danerlt/do5js74k8d43w7altrwbpchr/image_1ar817spe1989vqv1oho1rc7vlbm.png" alt="image_1ar817spe1989vqv1oho1rc7vlbm.png-20.1kB"></p>
+<blockquote>
+<p>要我去查看<code>git-pull(1)</code>这个网页,（原网页关闭了，找不到原图，）其中有一个图很关键，指出了原因。由于<code>git pull</code>是相当于是<code>git fetch</code>和<code>git merge</code>的，所以只需要使用<code>git pull --rabase</code>就可以解决了。</p>
+</blockquote>
+<p><img src="http://static.zybuluo.com/danerlt/4nn9p7p7uwzwiyueccduu0zu/image_1ar81khnk1b2oa5815spiqqr6f13.png" alt="image_1ar81khnk1b2oa5815spiqqr6f13.png-13kB">（图侵删）</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;failed-to-push-some-refs-to-‘urls-username-repo-name-git’的解决方案&quot;&gt;&lt;a href=&quot;#failed-to-push-some-refs-to-‘urls-username-repo-name-git’的
+      &lt;hr&gt;
+&lt;p&gt;title: failed to push some refs to ‘*.git’的解决方案&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: git&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;错误提&quot;&gt;&lt;a href=&quot;#错误提&quot; class
     
     </summary>
     
@@ -273,21 +292,23 @@
     <link href="http://litao.work/2016/11/16/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E7%AC%94%E8%AE%B0/"/>
     <id>http://litao.work/2016/11/16/代码整洁之道笔记/</id>
     <published>2016-11-16T04:20:39.718Z</published>
-    <updated>2016-08-28T07:22:32.773Z</updated>
+    <updated>2016-11-18T07:58:11.297Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="代码整洁之道笔记"><a href="#代码整洁之道笔记" class="headerlink" title="代码整洁之道笔记"></a>代码整洁之道笔记</h1><p>标签（空格分隔）： 整洁代码  </p>
-<hr>
+    <content type="html"><![CDATA[<hr>
+<p>title: 代码整洁之道笔记<br>date: 2016-11-15 11:51:44<br>tags: 整洁代码<br>—﻿</p>
 <h2 id="1-类名"><a href="#1-类名" class="headerlink" title="1.类名"></a>1.类名</h2><blockquote>
 <p>类名和对象名应该是名词或者名词短语，入Customer，WikiPage，Account和AddressParser。避免使用Manager、Processor、Data、或Info这样的类名。类名不应该是动词</p>
-<h2 id="2-方法名"><a href="#2-方法名" class="headerlink" title="2.方法名"></a>2.方法名</h2><p>方法名应该是动词或动词短语，入postPayment、deletePage、或save、。属性访问器、修改器和<a href="http://baike.baidu.com/link?url=HpPwqDS9OReMBJjliI30AoLHlDClNwGDanFghF85KO3HzEGF5ih_pWUDBlWEaA1qs1EOSa_Lh3yWaZT4I0FS_6vpxJs7gPjs72H-MGbP8We" target="_blank" rel="external">断言</a>应该根据其值命名，值并根据JavaBean标准加速get、set和is前缀。</p>
+</blockquote>
+<h2 id="2-方法名"><a href="#2-方法名" class="headerlink" title="2.方法名"></a>2.方法名</h2><blockquote>
+<p>方法名应该是动词或动词短语，入postPayment、deletePage、或save、。属性访问器、修改器和<a href="http://baike.baidu.com/link?url=HpPwqDS9OReMBJjliI30AoLHlDClNwGDanFghF85KO3HzEGF5ih_pWUDBlWEaA1qs1EOSa_Lh3yWaZT4I0FS_6vpxJs7gPjs72H-MGbP8We" target="_blank" rel="external">断言</a>应该根据其值命名，值并根据JavaBean标准加速get、set和is前缀。</p>
 </blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;代码整洁之道笔记&quot;&gt;&lt;a href=&quot;#代码整洁之道笔记&quot; class=&quot;headerlink&quot; title=&quot;代码整洁之道笔记&quot;&gt;&lt;/a&gt;代码整洁之道笔记&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： 整洁代码  &lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;1-类名&quot;&gt;&lt;a hre
+      &lt;hr&gt;
+&lt;p&gt;title: 代码整洁之道笔记&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tags: 整洁代码&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;1-类名&quot;&gt;&lt;a href=&quot;#1-类名&quot; class=&quot;headerlink&quot; title=&quot;1.类名&quot;&gt;&lt;
     
     </summary>
     
@@ -299,24 +320,28 @@
     <link href="http://litao.work/2016/11/16/HTML%E8%A7%84%E8%8C%83From%20Google%20Code%20Style/"/>
     <id>http://litao.work/2016/11/16/HTML规范From Google Code Style/</id>
     <published>2016-11-16T04:20:39.717Z</published>
-    <updated>2016-08-28T07:22:32.772Z</updated>
+    <updated>2016-11-18T08:13:28.429Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="HTML规范From-Google-Code-Style"><a href="#HTML规范From-Google-Code-Style" class="headerlink" title="HTML规范From Google Code Style"></a>HTML规范From Google Code Style</h1><p>标签（空格分隔）： Html</p>
-<hr>
-<h1 id="一、通用规范"><a href="#一、通用规范" class="headerlink" title="一、通用规范"></a>一、通用规范</h1><h2 id="1-通用样式规范"><a href="#1-通用样式规范" class="headerlink" title="1.通用样式规范"></a>1.通用样式规范</h2><p>隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<hr>
+<p>title: Html规范<br>date: 2016-11-15 11:51:44<br>tag: html<br>—﻿</p>
+<p>HTML规范From Google Code Style</p>
+<h2 id="一、通用规范"><a href="#一、通用规范" class="headerlink" title="一、通用规范"></a>一、通用规范</h2><h3 id="1-通用样式规范"><a href="#1-通用样式规范" class="headerlink" title="1.通用样式规范"></a>1.通用样式规范</h3><p>隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(https://www.google.com/images/example);</div><div class="line">&#125;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(//www.google.com/images/example);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="2-通用格式规范"><a href="#2-通用格式规范" class="headerlink" title="2.通用格式规范"></a>2.通用格式规范</h2><h3 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h3><p>实验两个空格缩进而不是使用tab键或者混合使用tab键和空格键</p>
-<h3 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h3><p>仅使用小写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">A</span> <span class="attr">HREF</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">A</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"google.png"</span> <span class="attr">alt</span>=<span class="string">"Google"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="2-通用格式规范"><a href="#2-通用格式规范" class="headerlink" title="2.通用格式规范"></a>2.通用格式规范</h3><h4 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h4><p>实验两个空格缩进而不是使用tab键或者混合使用tab键和空格键</p>
+<h4 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h4><p>仅使用小写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">A</span> <span class="attr">HREF</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">A</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"google.png"</span> <span class="attr">alt</span>=<span class="string">"Google"</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#E5E5E5</span>;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#e5e5e5</span>;</div></pre></td></tr></table></figure>
-<h2 id="3-通用meta规范"><a href="#3-通用meta规范" class="headerlink" title="3.通用meta规范"></a>3.通用meta规范</h2><h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>####使用UTF-8无BOM<br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>####当代码需要注释的时候添加注释。<br>对代码注释，需要指明代码的功能。</p>
-<h3 id="Action-Item"><a href="#Action-Item" class="headerlink" title="Action Item"></a>Action Item</h3><p>只用TODO标记待办事宜（todos），不能使用其他的格式来表述。在TODO后面追加描述信息（如用户名或者邮件列表），将待办事宜追加到TODO后面。例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;# TODO(john.doe): revisit centering #&#125;</div><div class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">center</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="3-通用meta规范"><a href="#3-通用meta规范" class="headerlink" title="3.通用meta规范"></a>3.通用meta规范</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><p>使用UTF-8无BOM<br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>当代码需要注释的时候添加注释。对代码注释，需要指明代码的功能。</p>
+<h4 id="Action-Item"><a href="#Action-Item" class="headerlink" title="Action Item"></a>Action Item</h4><p>只用TODO标记待办事宜（todos），不能使用其他的格式来表述。在TODO后面追加描述信息（如用户名或者邮件列表），将待办事宜追加到TODO后面。例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;# TODO(john.doe): revisit centering #&#125;</div><div class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">center</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- <span class="doctag">TODO:</span> remove optional tags --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Oranges<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<h1 id="二、HTML规范"><a href="#二、HTML规范" class="headerlink" title="二、HTML规范"></a>二、HTML规范</h1><h2 id="1-HTML样式规范"><a href="#1-HTML样式规范" class="headerlink" title="1.HTML样式规范"></a>1.HTML样式规范</h2><h2 id="2-HTML格式规范"><a href="#2-HTML格式规范" class="headerlink" title="2.HTML格式规范"></a>2.HTML格式规范</h2><h1 id="三、CSS规范"><a href="#三、CSS规范" class="headerlink" title="三、CSS规范"></a>三、CSS规范</h1><h2 id="1-CSS样式规范"><a href="#1-CSS样式规范" class="headerlink" title="1.CSS样式规范"></a>1.CSS样式规范</h2><h2 id="2-CSS格式规范"><a href="#2-CSS格式规范" class="headerlink" title="2.CSS格式规范"></a>2.CSS格式规范</h2><h2 id="3-CSS-meta规范"><a href="#3-CSS-meta规范" class="headerlink" title="3.CSS meta规范"></a>3.CSS meta规范</h2>]]></content>
+<h2 id="二、HTML规范"><a href="#二、HTML规范" class="headerlink" title="二、HTML规范"></a>二、HTML规范</h2><h3 id="1-HTML样式规范"><a href="#1-HTML样式规范" class="headerlink" title="1.HTML样式规范"></a>1.HTML样式规范</h3><h3 id="2-HTML格式规范"><a href="#2-HTML格式规范" class="headerlink" title="2.HTML格式规范"></a>2.HTML格式规范</h3>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;HTML规范From-Google-Code-Style&quot;&gt;&lt;a href=&quot;#HTML规范From-Google-Code-Style&quot; class=&quot;headerlink&quot; title=&quot;HTML规范From Google Code Style&quot;&gt;&lt;/a&gt;HT
+      &lt;hr&gt;
+&lt;p&gt;title: Html规范&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: html&lt;br&gt;—﻿&lt;/p&gt;
+&lt;p&gt;HTML规范From Google Code Style&lt;/p&gt;
+&lt;h2 id=&quot;一、通用规范&quot;&gt;&lt;a href=&quot;#一、通用
     
     </summary>
     
@@ -324,30 +349,11 @@
   </entry>
   
   <entry>
-    <title>first page</title>
-    <link href="http://litao.work/2016/11/15/first-page/"/>
-    <id>http://litao.work/2016/11/15/first-page/</id>
-    <published>2016-11-15T14:27:48.000Z</published>
-    <updated>2016-11-15T14:30:32.957Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="这个一个测试的页面"><a href="#这个一个测试的页面" class="headerlink" title="这个一个测试的页面"></a>这个一个测试的页面</h2><p>Hello.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class Hello&#123;</div><div class="line">   puclic static void main(String[] args)&#123;</div><div class="line">       System.out.println(&quot;hello world!&quot;); </div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;这个一个测试的页面&quot;&gt;&lt;a href=&quot;#这个一个测试的页面&quot; class=&quot;headerlink&quot; title=&quot;这个一个测试的页面&quot;&gt;&lt;/a&gt;这个一个测试的页面&lt;/h2&gt;&lt;p&gt;Hello.java&lt;br&gt;&lt;figure class=&quot;highlight pla
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hello hexo</title>
-    <link href="http://litao.work/2016/11/15/test-page/"/>
-    <id>http://litao.work/2016/11/15/test-page/</id>
+    <title>hexo笔记</title>
+    <link href="http://litao.work/2016/11/15/hexo%E7%AC%94%E8%AE%B0/"/>
+    <id>http://litao.work/2016/11/15/hexo笔记/</id>
     <published>2016-11-15T03:51:44.000Z</published>
-    <updated>2016-11-16T10:07:37.661Z</updated>
+    <updated>2016-11-18T08:19:19.989Z</updated>
     
     <content type="html"><![CDATA[<p>花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文网站</a>,还有一部分来自<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">不如的博客</a>。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。</p>
 <h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="markdown-img-paste-20161115170121138.png" alt=""></p>
@@ -434,16 +440,18 @@
     <link href="http://litao.work/2016/08/28/%E8%BD%AF%E8%80%83%E4%B9%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2%EF%BC%882016%E4%B8%8B%E5%8D%8A%E5%B9%B4%EF%BC%89/"/>
     <id>http://litao.work/2016/08/28/软考之软件设计师考试大纲（2016下半年）/</id>
     <published>2016-08-28T07:22:32.702Z</published>
-    <updated>2016-08-28T07:22:32.706Z</updated>
+    <updated>2016-11-18T08:03:47.771Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="软考之软件设计师考试大纲（2016下半年）"><a href="#软考之软件设计师考试大纲（2016下半年）" class="headerlink" title="软考之软件设计师考试大纲（2016下半年）"></a>软考之软件设计师考试大纲（2016下半年）</h1><p>标签（空格分隔）： 软考</p>
-<hr>
+    <content type="html"><![CDATA[<hr>
+<p>title: 软考之软件设计师大纲（2016下半年）<br>date: 2016-11-15 11:51:44<br>tag: 软考<br>—﻿</p>
 <p>博主开学就大三了，二流学校在读，暑假留校，没什么项目练手，索性报个软考来系统的整理下自己的专业知识。<br>软考大纲，2016年下半年。考试大纲图：<img src="http://static.zybuluo.com/danerlt/gng2z4zy995njf2w1rys9eow/%E8%BD%AF%E8%80%83.xmind.svg" alt="软考.xmind.svg-177.8kB"><br>本思维导图使用百度脑图绘制，高清无码大图请戳<a href="http://static.zybuluo.com/danerlt/gng2z4zy995njf2w1rys9eow/%E8%BD%AF%E8%80%83.xmind.svg" target="_blank" rel="external">这里</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;软考之软件设计师考试大纲（2016下半年）&quot;&gt;&lt;a href=&quot;#软考之软件设计师考试大纲（2016下半年）&quot; class=&quot;headerlink&quot; title=&quot;软考之软件设计师考试大纲（2016下半年）&quot;&gt;&lt;/a&gt;软考之软件设计师考试大纲（2016下半年）&lt;/
+      &lt;hr&gt;
+&lt;p&gt;title: 软考之软件设计师大纲（2016下半年）&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: 软考&lt;br&gt;—﻿&lt;/p&gt;
+&lt;p&gt;博主开学就大三了，二流学校在读，暑假留校，没什么项目练手，索性报个软考来系统的整理下自己的专业知识。&lt;b
     
     </summary>
     
@@ -455,19 +463,22 @@
     <link href="http://litao.work/2016/08/28/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%20--2016-7-27/"/>
     <id>http://litao.work/2016/08/28/学习总结 --2016-7-27/</id>
     <published>2016-08-28T07:22:32.699Z</published>
-    <updated>2016-08-28T07:22:32.702Z</updated>
+    <updated>2016-11-18T08:06:30.256Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="学习总结–2016-07-27"><a href="#学习总结–2016-07-27" class="headerlink" title="学习总结–2016-07-27"></a>学习总结–2016-07-27</h1><p>标签（空格分隔）： 学习笔记</p>
-<hr>
-<h1 id="1-Javascript"><a href="#1-Javascript" class="headerlink" title="1.Javascript"></a>1.Javascript</h1><h2 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h2><ul>
+    <content type="html"><![CDATA[<hr>
+<p>title: Javascript笔记<br>date: 2016-11-15 11:51:44<br>tag: javascript<br>—﻿</p>
+<h2 id="1-Javascript"><a href="#1-Javascript" class="headerlink" title="1.Javascript"></a>1.Javascript</h2><h3 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h3><ul>
 <li>false</li>
 <li>null</li>
 <li>undefined</li>
 <li>空字符串’ ‘</li>
 <li>数字0</li>
-<li>数字NaN<h2 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h2>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。<h2 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h2>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</li>
+<li>数字NaN</li>
 </ul>
-<h2 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h2><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"><br>[节选自JavaScriptDOM编程]</p>
+<h3 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h3><p>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。</p>
+<h3 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h3><p>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</p>
+<h3 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h3><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"></p>
+<p>节选自JavaScriptDOM编程]</p>
 <h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
 <p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
 <blockquote>
@@ -482,7 +493,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;学习总结–2016-07-27&quot;&gt;&lt;a href=&quot;#学习总结–2016-07-27&quot; class=&quot;headerlink&quot; title=&quot;学习总结–2016-07-27&quot;&gt;&lt;/a&gt;学习总结–2016-07-27&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： 学习笔记&lt;/p&gt;
+      &lt;hr&gt;
+&lt;p&gt;title: Javascript笔记&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: javascript&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;1-Javascript&quot;&gt;&lt;a href=&quot;#1-Javascript&quot; class=&quot;h
     
     </summary>
     
@@ -490,11 +503,11 @@
   </entry>
   
   <entry>
-    <title>学习总结</title>
+    <title>Git笔记</title>
     <link href="http://litao.work/2016/07/26/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%20--2016-7-26/"/>
     <id>http://litao.work/2016/07/26/学习总结 --2016-7-26/</id>
     <published>2016-07-26T03:51:44.000Z</published>
-    <updated>2016-11-16T10:07:32.655Z</updated>
+    <updated>2016-11-18T08:04:27.511Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="git-连接远程库。"><a href="#git-连接远程库。" class="headerlink" title="git 连接远程库。"></a>git 连接远程库。</h2><p>首先要使用ssh-keygen 生成公钥，引号里输入自己的邮箱地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</div></pre></td></tr></table></figure></p>
 <p>执行这个命令后可以一路回车，然后会生成一个私钥和一个公钥，公钥可以随便告诉别人，私钥一定不要让它泄密。Linux下默认保存在<code>/root/.ssh</code>下windows默认保存在<code>C:\Users\window用户名\.ssh</code>下。<code>.ssh</code>文件夹下会产生如下几个文件。<br><img src="http://static.zybuluo.com/danerlt/tpu33lwmzt8yhblbt73huzfn/image_1aojnbro51kd21jujvm4ib5ii6m.png" alt="image_1aojnbro51kd21jujvm4ib5ii6m.png-16.3kB"><br>其中的<code>id_rsa.pub</code>就是公钥,在文本编辑器打开，复制里面的内容，在你的github账号下选择<code>Settings</code>，然后选择<code>SSH and GPG keys</code>，点击<code>new ssh key</code>,粘贴进去就可以使用<code>git clone git@github.com:github用户名/远程仓库名.git</code> 愉快地将远程仓库克隆下来了。<br><img src="http://static.zybuluo.com/danerlt/jwzzmndkhzit8nxjsq4picri/image_1aojngm9p1invlahj8l1t3u1ne513.png" alt="image_1aojngm9p1invlahj8l1t3u1ne513.png-15.4kB"><br><img src="http://static.zybuluo.com/danerlt/ud7hl8ior9od4t0z50n10pl1/image_1aojnl61a1ckes717p11bcjeav9.png" alt="image_1aojnl61a1ckes717p11bcjeav9.png-26.8kB"></p>
@@ -509,6 +522,8 @@
     
     </summary>
     
+    
+      <category term="git" scheme="http://litao.work/tags/git/"/>
     
   </entry>
   
