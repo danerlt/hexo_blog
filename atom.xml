@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2016-12-02T16:52:23.398Z</updated>
+  <updated>2016-12-02T17:27:40.053Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,156 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux安装chrome</title>
+    <link href="http://litao.work/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/"/>
+    <id>http://litao.work/2016/12/03/linux安装chrome/</id>
+    <published>2016-12-02T17:27:21.000Z</published>
+    <updated>2016-12-02T17:27:40.053Z</updated>
+    
+    <content type="html"><![CDATA[<p>在fedora或者centos上安装chrome:<br>在<code>/etc/yum.reos.d</code>文件夹下创建一个叫<code>google-chrome.repo</code>的配置文件 <code>/etc/yum.repos.d/google-chrome.repo</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[google-chrome]</div><div class="line">name=google-chrome</div><div class="line">baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/</div><div class="line">gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>Install google-chrome-stable rpm package:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># yum install google-chrome-stable</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参自 <a href="https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html" target="_blank" rel="external">https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在fedora或者centos上安装chrome:&lt;br&gt;在&lt;code&gt;/etc/yum.reos.d&lt;/code&gt;文件夹下创建一个叫&lt;code&gt;google-chrome.repo&lt;/code&gt;的配置文件 &lt;code&gt;/etc/yum.repos.d/google-chrome.repo&lt;/code&gt;:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[google-chrome]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;name=google-chrome&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;enabled=1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgcheck=1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Html规范form Google Code Style</title>
+    <link href="http://litao.work/2016/12/03/Html%E8%A7%84%E8%8C%83form-Google-Code-Style/"/>
+    <id>http://litao.work/2016/12/03/Html规范form-Google-Code-Style/</id>
+    <published>2016-12-02T17:17:09.000Z</published>
+    <updated>2016-12-02T17:29:41.789Z</updated>
+    
+    <content type="html"><![CDATA[<p>Html规范From Google Code Style</p>
+<h2 id="一、通用规范"><a href="#一、通用规范" class="headerlink" title="一、通用规范"></a>一、通用规范</h2><h3 id="1-通用样式规范"><a href="#1-通用样式规范" class="headerlink" title="1.通用样式规范"></a>1.通用样式规范</h3><p>隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(https://www.google.com/images/example);</div><div class="line">&#125;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(//www.google.com/images/example);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-通用格式规范"><a href="#2-通用格式规范" class="headerlink" title="2.通用格式规范"></a>2.通用格式规范</h3><h4 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h4><p>实验两个空格缩进而不是使用tab键或者混合使用tab键和空格键</p>
+<h4 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h4><p>仅使用小写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">A</span> <span class="attr">HREF</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">A</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"google.png"</span> <span class="attr">alt</span>=<span class="string">"Google"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#E5E5E5</span>;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#e5e5e5</span>;</div></pre></td></tr></table></figure>
+<h3 id="3-通用meta规范"><a href="#3-通用meta规范" class="headerlink" title="3.通用meta规范"></a>3.通用meta规范</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><p>使用UTF-8无BOM<br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>当代码需要注释的时候添加注释。对代码注释，需要指明代码的功能。</p>
+<h4 id="Action-Item"><a href="#Action-Item" class="headerlink" title="Action Item"></a>Action Item</h4><p>只用TODO标记待办事宜（todos），不能使用其他的格式来表述。在TODO后面追加描述信息（如用户名或者邮件列表），将待办事宜追加到TODO后面。例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;# TODO(john.doe): revisit centering #&#125;</div><div class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">center</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- <span class="doctag">TODO:</span> remove optional tags --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Oranges<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="二、HTML规范"><a href="#二、HTML规范" class="headerlink" title="二、HTML规范"></a>二、HTML规范</h2><h3 id="1-HTML样式规范"><a href="#1-HTML样式规范" class="headerlink" title="1.HTML样式规范"></a>1.HTML样式规范</h3><h3 id="2-HTML格式规范"><a href="#2-HTML格式规范" class="headerlink" title="2.HTML格式规范"></a>2.HTML格式规范</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Html规范From Google Code Style&lt;/p&gt;
+&lt;h2 id=&quot;一、通用规范&quot;&gt;&lt;a href=&quot;#一、通用规范&quot; class=&quot;headerlink&quot; title=&quot;一、通用规范&quot;&gt;&lt;/a&gt;一、通用规范&lt;/h2&gt;&lt;h3 id=&quot;1-通用样式规范&quot;&gt;&lt;a href=&quot;#1-通用样式规范&quot; class=&quot;headerlink&quot; title=&quot;1.通用样式规范&quot;&gt;&lt;/a&gt;1.通用样式规范&lt;/h3&gt;&lt;p&gt;隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Not recommended --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://www.google.com/js/gweb/analytics/autotrack.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Recommended --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//www.google.com/js/gweb/analytics/autotrack.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="html" scheme="http://litao.work/tags/html/"/>
+    
+      <category term="code style" scheme="http://litao.work/tags/code-style/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo之hello world</title>
+    <link href="http://litao.work/2016/12/03/hexo%E4%B9%8Bhello-world/"/>
+    <id>http://litao.work/2016/12/03/hexo之hello-world/</id>
+    <published>2016-12-02T17:15:21.000Z</published>
+    <updated>2016-12-02T17:31:16.803Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://litao.work/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>failed to push some refs to *.git的解决方案</title>
+    <link href="http://litao.work/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/2016/12/03/failed-to-push-some-refs-to-git的解决方案/</id>
+    <published>2016-12-02T17:13:11.000Z</published>
+    <updated>2016-12-02T17:13:40.107Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h2><p><img src="http://static.zybuluo.com/danerlt/n8psdkld5as44plb37meusu4/image_1ar80krop1n4jlak99k14i0odr9.png" alt="image_1ar80krop1n4jlak99k14i0odr9.png-24.1kB"></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">error: failed to push some refs to &apos;git@github.com:username/repo_name.git&apos;</div><div class="line">hint: Updates were rejected because the tip of your current branch is behind</div><div class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</div><div class="line">hint: &apos;git pull ...&apos;) before pushing again.</div><div class="line">hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</div></pre></td></tr></table></figure>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>git pull –rebase</p>
+</blockquote>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><blockquote>
+<p>提示里说更新被拒绝，因为你当前的分支在前面。大意就是你本地的仓库不是最新的，要和远程库合并之后再<code>push</code>,要你在使用<code>git push orign master</code>之前使用<code>git pull</code>合并远程仓库。但是但我使用<code>git pull</code>之后，又出现了下面的错误。</p>
+</blockquote>
+<p><img src="http://static.zybuluo.com/danerlt/do5js74k8d43w7altrwbpchr/image_1ar817spe1989vqv1oho1rc7vlbm.png" alt="image_1ar817spe1989vqv1oho1rc7vlbm.png-20.1kB"></p>
+<blockquote>
+<p>要我去查看<code>git-pull(1)</code>这个网页,（原网页关闭了，找不到原图，）其中有一个图很关键，指出了原因。由于<code>git pull</code>是相当于是<code>git fetch</code>和<code>git merge</code>的，所以只需要使用<code>git pull --rabase</code>就可以解决了。</p>
+</blockquote>
+<p><img src="http://static.zybuluo.com/danerlt/4nn9p7p7uwzwiyueccduu0zu/image_1ar81khnk1b2oa5815spiqqr6f13.png" alt="image_1ar81khnk1b2oa5815spiqqr6f13.png-13kB">（图侵删）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;错误提示&quot;&gt;&lt;a href=&quot;#错误提示&quot; class=&quot;headerlink&quot; title=&quot;错误提示&quot;&gt;&lt;/a&gt;错误提示&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/n8psdkld5as44plb37meusu4/image_1ar80krop1n4jlak99k14i0odr9.png&quot; alt=&quot;image_1ar80krop1n4jlak99k14i0odr9.png-24.1kB&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://litao.work/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java获取程序运行时间</title>
+    <link href="http://litao.work/2016/12/03/Java%E8%8E%B7%E5%8F%96%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/"/>
+    <id>http://litao.work/2016/12/03/Java获取程序运行时间/</id>
+    <published>2016-12-02T16:57:11.000Z</published>
+    <updated>2016-12-02T17:12:00.426Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-单位精确到毫秒"><a href="#1-单位精确到毫秒" class="headerlink" title="1.单位精确到毫秒"></a>1.单位精确到毫秒</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Time</span> </span>&#123;</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">          <span class="keyword">try</span> &#123;</div><div class="line">              <span class="keyword">long</span> startTime = System.currentTimeMillis();</div><div class="line">             Thread.sleep(<span class="number">3000</span>);<span class="comment">//暂停3秒</span></div><div class="line">            <span class="keyword">long</span> endTime = System.currentTimeMillis();</div><div class="line">            System.out.println(<span class="string">"time: "</span> + (endTime - startTime) + <span class="string">" ms"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">             e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="http://static.zybuluo.com/danerlt/kqy19iwlia87xyaatuszzz0n/image_1ar7sqpupujs19rn1pq1163d1kn29.png" alt="image_1ar7sqpupujs19rn1pq1163d1kn29.png-5.9kB"></p>
+<h2 id="精确到纳秒"><a href="#精确到纳秒" class="headerlink" title="精确到纳秒"></a>精确到纳秒</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Time</span> </span>&#123;</div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">          <span class="keyword">try</span> &#123;</div><div class="line">            <span class="keyword">long</span> startTime = System.nanoTime();</div><div class="line">            Thread.sleep(<span class="number">3000</span>);<span class="comment">//暂停3秒</span></div><div class="line">            <span class="keyword">long</span> endTime = System.nanoTime();</div><div class="line">            System.out.println(<span class="string">"time: "</span> + (endTime - startTime) + <span class="string">" ns"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">             e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="截图-1"><a href="#截图-1" class="headerlink" title="截图"></a>截图</h3><p><img src="http://static.zybuluo.com/danerlt/uxhu0361mj23uunszy4kxhwo/image_1ar7t4sn01ugd133ff7b15csi1om.png" alt="image_1ar7t4sn01ugd133ff7b15csi1om.png-6.6kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-单位精确到毫秒&quot;&gt;&lt;a href=&quot;#1-单位精确到毫秒&quot; class=&quot;headerlink&quot; title=&quot;1.单位精确到毫秒&quot;&gt;&lt;/a&gt;1.单位精确到毫秒&lt;/h2&gt;&lt;h3 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Time&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;              &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; startTime = System.currentTimeMillis();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;             Thread.sleep(&lt;span class=&quot;number&quot;&gt;3000&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;//暂停3秒&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; endTime = System.currentTimeMillis();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;time: &quot;&lt;/span&gt; + (endTime - startTime) + &lt;span class=&quot;string&quot;&gt;&quot; ms&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;#125; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;             e.printStackTrace();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://litao.work/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>css技巧</title>
@@ -62,12 +212,14 @@
     <link href="http://litao.work/2016/11/23/python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/"/>
     <id>http://litao.work/2016/11/23/python基础总结/</id>
     <published>2016-11-23T08:39:18.000Z</published>
-    <updated>2016-11-23T08:39:18.393Z</updated>
+    <updated>2016-12-02T17:16:05.770Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="python" scheme="http://litao.work/tags/python/"/>
     
   </entry>
   
@@ -76,11 +228,10 @@
     <link href="http://litao.work/2016/11/15/hexo%E7%AC%94%E8%AE%B0/"/>
     <id>http://litao.work/2016/11/15/hexo笔记/</id>
     <published>2016-11-15T03:51:44.000Z</published>
-    <updated>2016-11-18T08:19:19.989Z</updated>
+    <updated>2016-12-02T17:22:17.051Z</updated>
     
     <content type="html"><![CDATA[<p>花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文网站</a>,还有一部分来自<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">不如的博客</a>。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。</p>
-<h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="markdown-img-paste-20161115170121138.png" alt=""></p>
-<p>解决方案：在环境变量中新建一个叫做<code>HEXO_HOME</code>的环境变量，其值为<code>D:\Program Files\nodejs\node_global</code>（选择nodejs安装路径下的node_global）<br><img src="markdown-img-paste-2016111517030152.png" alt=""></p>
+<h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="markdown-img-paste-20161115170121138.png" alt=""><br><a id="more"></a><br>解决方案：在环境变量中新建一个叫做<code>HEXO_HOME</code>的环境变量，其值为<code>D:\Program Files\nodejs\node_global</code>（选择nodejs安装路径下的node_global）<br><img src="markdown-img-paste-2016111517030152.png" alt=""></p>
 <p>此时在使用命令行输入<code>hexo -v</code>能显示出版本号就说明hexo是配置好了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">C:\Users\tao&gt;hexo -v</div><div class="line">hexo-cli: 1.0.2</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.5.2</div><div class="line">node: 4.4.1</div><div class="line">v8: 4.5.103.35</div><div class="line">uv: 1.8.0</div><div class="line">zlib: 1.2.8</div><div class="line">ares: 1.10.1-DEV</div><div class="line">icu: 56.1</div><div class="line">modules: 46</div><div class="line">openssl: 1.0.2g</div></pre></td></tr></table></figure></p>
 <h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><table>
 <thead>
@@ -120,14 +271,18 @@
 </tr>
 </tbody>
 </table>
+<h2 id="hexo多个标签"><a href="#hexo多个标签" class="headerlink" title="hexo多个标签"></a>hexo多个标签</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tags</span>: <span class="selector-attr">[标签1，标签2,标签3]</span></div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo中文网站&lt;/a&gt;,还有一部分来自&lt;a href=&quot;htt
+      &lt;p&gt;花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;hexo中文网站&lt;/a&gt;,还有一部分来自&lt;a href=&quot;http://ibruce.info/2013/11/22/hexo-your-blog/&quot;&gt;不如的博客&lt;/a&gt;。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。&lt;/p&gt;
+&lt;h2 id=&quot;hexo-v没有结果&quot;&gt;&lt;a href=&quot;#hexo-v没有结果&quot; class=&quot;headerlink&quot; title=&quot;hexo -v没有结果&quot;&gt;&lt;/a&gt;hexo -v没有结果&lt;/h2&gt;&lt;p&gt;安装hexo后使用&lt;code&gt;hexo -v&lt;/code&gt;查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。&lt;br&gt;&lt;img src=&quot;markdown-img-paste-20161115170121138.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
+    
+      <category term="hexo" scheme="http://litao.work/tags/hexo/"/>
     
   </entry>
   

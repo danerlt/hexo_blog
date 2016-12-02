@@ -2,23 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://litao.work/2016/12/03/css%E6%8A%80%E5%B7%A7/</loc>
+    <loc>http://litao.work/2016/12/03/hexo%E4%B9%8Bhello-world/</loc>
     
-    <lastmod>2016-12-02T16:52:23.398Z</lastmod>
+    <lastmod>2016-12-02T17:31:16.803Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://litao.work/ttt/css%E6%8A%80%E5%B7%A7.html</loc>
+    <loc>http://litao.work/2016/12/03/Html%E8%A7%84%E8%8C%83form-Google-Code-Style/</loc>
     
-    <lastmod>2016-12-02T16:40:58.695Z</lastmod>
+    <lastmod>2016-12-02T17:29:41.789Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/</loc>
+    
+    <lastmod>2016-12-02T17:27:40.053Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2016/11/15/hexo%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2016-12-02T17:22:17.051Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://litao.work/2016/11/23/python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/</loc>
     
-    <lastmod>2016-11-23T08:39:18.393Z</lastmod>
+    <lastmod>2016-12-02T17:16:05.770Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    
+    <lastmod>2016-12-02T17:13:40.107Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2016/12/03/Java%E8%8E%B7%E5%8F%96%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</loc>
+    
+    <lastmod>2016-12-02T17:12:00.426Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2016/12/03/css%E6%8A%80%E5%B7%A7/</loc>
+    
+    <lastmod>2016-12-02T16:52:23.398Z</lastmod>
     
   </url>
   
@@ -44,44 +79,9 @@
   </url>
   
   <url>
-    <loc>http://litao.work/2016/11/15/hexo%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2016-11-18T08:19:19.989Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://litao.work/ttt/putty%E8%BF%9E%E6%8E%A5Linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
     
     <lastmod>2016-11-18T08:18:39.504Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/ttt/linux%E5%AE%89%E8%A3%85chrome.html</loc>
-    
-    <lastmod>2016-11-18T08:17:00.936Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/ttt/Java%E8%8E%B7%E5%8F%96%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4.html</loc>
-    
-    <lastmod>2016-11-18T08:16:08.314Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/ttt/HTML%E8%A7%84%E8%8C%83From%20Google%20Code%20Style.html</loc>
-    
-    <lastmod>2016-11-18T08:13:28.429Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/ttt/failed%20to%20push%20some%20refs%20to%20'urls-username-repo_name.git'%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
-    
-    <lastmod>2016-11-18T08:11:05.587Z</lastmod>
     
   </url>
   
@@ -145,13 +145,6 @@
     <loc>http://litao.work/about/index.html</loc>
     
     <lastmod>2016-11-17T06:04:03.620Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/ttt/hello-world.html</loc>
-    
-    <lastmod>2016-11-15T03:49:49.089Z</lastmod>
     
   </url>
   
