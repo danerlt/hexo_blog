@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2016-12-02T17:27:40.053Z</updated>
+  <updated>2016-12-03T05:57:22.308Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,174 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>运行，控制面板，命令提示符被禁用的解决方案</title>
+    <link href="http://litao.work/2016/12/03/%E8%BF%90%E8%A1%8C%EF%BC%8C%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%EF%BC%8C%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%A2%AB%E7%A6%81%E7%94%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/2016/12/03/运行，控制面板，命令提示符被禁用的解决方案/</id>
+    <published>2016-12-03T05:55:47.000Z</published>
+    <updated>2016-12-03T05:57:22.308Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>电脑的运行、控制面板、命令提示符被禁用了</p>
+<a id="more"></a>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><blockquote>
+<p>一：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;系统(单击选中)–&gt;右边找到“阻止访问命令提示符”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定<br>二：—&gt;gpedit.msc—&gt;用户配置–&gt;管理模块–&gt;控制面板(单击选中)–&gt;右边找到“禁止访问控制面板”，鼠标双击，弹出窗口，点选“未配置”–&gt;应用–确定<br>三：—&gt;c:\windows\regedit.exe,HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,在右边空白处右键，选择“新建”的“DWORD”,然后输入名字“NoRun”，然后双击它，修改NoRun为0即可</p>
+</blockquote>
+<p>转载自：<a href="http://www.33lc.com/article/6617.html" target="_blank" rel="external">http://www.33lc.com/article/6617.html</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h3&gt;&lt;p&gt;电脑的运行、控制面板、命令提示符被禁用了&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="windows" scheme="http://litao.work/tags/windows/"/>
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《代码整洁之道》读书笔记</title>
+    <link href="http://litao.work/2016/12/03/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://litao.work/2016/12/03/《代码整洁之道》读书笔记/</id>
+    <published>2016-12-03T05:53:30.000Z</published>
+    <updated>2016-12-03T05:54:25.227Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-类名"><a href="#1-类名" class="headerlink" title="1.类名"></a>1.类名</h3><blockquote>
+<p>类名和对象名应该是名词或者名词短语，入Customer，WikiPage，Account和AddressParser。避免使用Manager、Processor、Data、或Info这样的类名。类名不应该是动词</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="2-方法名"><a href="#2-方法名" class="headerlink" title="2.方法名"></a>2.方法名</h3><blockquote>
+<p>方法名应该是动词或动词短语，入postPayment、deletePage、或save、。属性访问器、修改器和<a href="http://baike.baidu.com/link?url=HpPwqDS9OReMBJjliI30AoLHlDClNwGDanFghF85KO3HzEGF5ih_pWUDBlWEaA1qs1EOSa_Lh3yWaZT4I0FS_6vpxJs7gPjs72H-MGbP8We" target="_blank" rel="external">断言</a>应该根据其值命名，值并根据JavaBean标准加速get、set和is前缀。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-类名&quot;&gt;&lt;a href=&quot;#1-类名&quot; class=&quot;headerlink&quot; title=&quot;1.类名&quot;&gt;&lt;/a&gt;1.类名&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;类名和对象名应该是名词或者名词短语，入Customer，WikiPage，Account和AddressParser。避免使用Manager、Processor、Data、或Info这样的类名。类名不应该是动词&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="http://litao.work/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查看电脑信息命令大全</title>
+    <link href="http://litao.work/2016/12/03/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    <id>http://litao.work/2016/12/03/查看电脑信息命令大全/</id>
+    <published>2016-12-03T05:45:24.000Z</published>
+    <updated>2016-12-03T05:51:48.462Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>查看电脑配置信息指令。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="1-查看电脑配置命令：dxdiag"><a href="#1-查看电脑配置命令：dxdiag" class="headerlink" title="1.查看电脑配置命令：dxdiag"></a>1.查看电脑配置命令：<code>dxdiag</code></h3><p><img src="http://static.zybuluo.com/danerlt/gd3ck9isli9ii43x52yznbed/image_1aoo1hpnag8i1trm1s871c41e879.png" alt="image_1aoo1hpnag8i1trm1s871c41e879.png-62.6kB"><br><a id="more"></a></p>
+<h3 id="2查看系统属性命令：sysdm-cpl"><a href="#2查看系统属性命令：sysdm-cpl" class="headerlink" title="2查看系统属性命令：sysdm.cpl"></a>2查看系统属性命令：<code>sysdm.cpl</code></h3><p><img src="http://static.zybuluo.com/danerlt/60rbc4m4wkto1u1l9cng1psk/image_1aoo1q7qo1lce1jus1cq81sgu1d54m.png" alt="image_1aoo1q7qo1lce1jus1cq81sgu1d54m.png-35.8kB"></p>
+<h3 id="3-查看系统信息命令：msinfo32"><a href="#3-查看系统信息命令：msinfo32" class="headerlink" title="3.查看系统信息命令：msinfo32"></a>3.查看系统信息命令：<code>msinfo32</code></h3><p><img src="http://static.zybuluo.com/danerlt/mo05695bndo1e8k5ulyjr0c0/image_1aoo1si7mekbfeh1hf91k8u12u313.png" alt="image_1aoo1si7mekbfeh1hf91k8u12u313.png-81.5kB"></p>
+<h3 id="3-查看当前ip命令-在cmd里输入ipconfig-all"><a href="#3-查看当前ip命令-在cmd里输入ipconfig-all" class="headerlink" title="3.查看当前ip命令: 在cmd里输入ipconfig/all"></a>3.查看当前ip命令: 在cmd里输入<code>ipconfig/all</code></h3><p>这个学计算机的我不相信他不会，就不截图了。</p>
+<h3 id="4-查看注册表信息命令-—-gt-regedit"><a href="#4-查看注册表信息命令-—-gt-regedit" class="headerlink" title="4.查看注册表信息命令 —-&gt;regedit"></a>4.查看注册表信息命令 —-&gt;<code>regedit</code></h3><p>同上</p>
+<h3 id="5-查看网络命令：nbtstat-aAn"><a href="#5-查看网络命令：nbtstat-aAn" class="headerlink" title="5.查看网络命令：nbtstat -aAn"></a>5.查看网络命令：<code>nbtstat -aAn</code></h3><p><img src="http://static.zybuluo.com/danerlt/d4r1gh36d34gk8qb88f2jwdi/image_1aoo21pfo12sk1kh4iet1apk1n591g.png" alt="image_1aoo21pfo12sk1kh4iet1apk1n591g.png-25.6kB"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">-a   (适配器状态)    列出指定名称的远程机器的名称表</div><div class="line">-A   (适配器状态)    列出指定 IP 地址的远程机器的名称表。</div><div class="line">-c   (缓存)          列出远程[计算机]名称及其 IP 地址的 NBT 缓存</div><div class="line">-n   (名称)          列出本地 NetBIOS 名称。</div><div class="line">-r   (已解析)        列出通过广播和经由 WINS 解析的名称</div><div class="line">-R   (重新加载)      清除和重新加载远程缓存名称表</div><div class="line">-S   (会话)          列出具有目标 IP 地址的会话表</div><div class="line">-s   (会话)          列出将目标 IP 地址转换成计算机 NETBIOS 名称的会话表。</div><div class="line">-RR  (释放刷新)      将名称释放包发送到 WINS，然后启动刷新</div><div class="line">RemoteName   远程主机计算机名。</div><div class="line">IP address   用点分隔的十进制表示的 IP 地址。</div><div class="line">interval     重新显示选定的统计、每次显示之间暂停的间隔秒数。</div><div class="line">            按 Ctrl+C 停止重新显示统计。</div></pre></td></tr></table></figure></p>
+<h3 id="6-查看网络状态命令：netstat-ar"><a href="#6-查看网络状态命令：netstat-ar" class="headerlink" title="6.查看网络状态命令：netstat -ar"></a>6.查看网络状态命令：<code>netstat -ar</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a 查看本地机器的所有的端口 可以有效发现、防范木马，及知道机器所开的服务信息。用法 netstat -a IP</div><div class="line"></div><div class="line">r 列出当前的路由信息 告知本地机器的网关、子网掩码。 用法：netstat -r IP</div></pre></td></tr></table></figure>
+<h3 id="7-跟踪路由信息命令：tracert-IP"><a href="#7-跟踪路由信息命令：tracert-IP" class="headerlink" title="7.跟踪路由信息命令：tracert IP"></a>7.跟踪路由信息命令：<code>tracert IP</code></h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h2&gt;&lt;p&gt;查看电脑配置信息指令。&lt;/p&gt;
+&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;h3 id=&quot;1-查看电脑配置命令：dxdiag&quot;&gt;&lt;a href=&quot;#1-查看电脑配置命令：dxdiag&quot; class=&quot;headerlink&quot; title=&quot;1.查看电脑配置命令：dxdiag&quot;&gt;&lt;/a&gt;1.查看电脑配置命令：&lt;code&gt;dxdiag&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/gd3ck9isli9ii43x52yznbed/image_1aoo1hpnag8i1trm1s871c41e879.png&quot; alt=&quot;image_1aoo1hpnag8i1trm1s871c41e879.png-62.6kB&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="windows" scheme="http://litao.work/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vmware安装苹果虚拟机常见错误</title>
+    <link href="http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
+    <id>http://litao.work/2016/12/03/vmware安装苹果虚拟机常见错误/</id>
+    <published>2016-12-03T05:40:58.000Z</published>
+    <updated>2016-12-03T05:43:56.411Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: vmware Max OS 常见错误<br>date: 2016-11-15 11:51:44<br>tag: vmware<br>—﻿<br>﻿<br> 1.开启虚拟机之前用记事本打开<em>*</em>.vmx，在最后加一句<code>smc.version=0</code><br><img src="http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png" alt="image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB"><br><a id="more"></a></p>
+<p>2.安装之前要格式化分区，选择GUID分区表。<br> <img src="http://static.zybuluo.com/danerlt/och4t4v9d2hfoylh9t4tbjaa/image_1arcpcaifond1kiuug97tu1e9mm.png" alt="image_1arcpcaifond1kiuug97tu1e9mm.png-134.1kB"></p>
+<p>3.安装好Mac OS后，屏幕没有全屏，需要安装Vmware tools,先关闭虚拟机，在设置里的CD/DVD里面选择加载Vmware安装目录(默认是<code>C:\Program Files (x86)\VMware\VMware Workstation</code>)下的<code>darwin.iso</code>,再次开启虚拟机，安装Vmware tools后即可显示全屏的效果。<br><img src="http://static.zybuluo.com/danerlt/irf1h1tp8qjn3043v94uqw7h/image_1arcpl01uilp1q0cm141tqe1thg13.png" alt="image_1arcpl01uilp1q0cm141tqe1thg13.png-55.4kB"><br><img src="http://static.zybuluo.com/danerlt/0bvbc4tcearbts6xqm05rob6/image_1arcpp89lpcsqg520q1d2nicr1g.png" alt="image_1arcpp89lpcsqg520q1d2nicr1g.png-149.6kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: vmware Max OS 常见错误&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: vmware&lt;br&gt;—﻿&lt;br&gt;﻿&lt;br&gt; 1.开启虚拟机之前用记事本打开&lt;em&gt;*&lt;/em&gt;.vmx，在最后加一句&lt;code&gt;smc.version=0&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png&quot; alt=&quot;image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
+    
+      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>U盘文件夹变成快捷方式的解决方案</title>
+    <link href="http://litao.work/2016/12/03/U%E7%9B%98%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%98%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/2016/12/03/U盘文件夹变成快捷方式的解决方案/</id>
+    <published>2016-12-03T05:37:34.000Z</published>
+    <updated>2016-12-03T05:39:37.405Z</updated>
+    
+    <content type="html"><![CDATA[<p>有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/28jr3b8hg0c7qgx2pgpaxgr3/image_1b0ni0gt31e551mca1bk61nbc8mp9.png" alt="image_1b0ni0gt31e551mca1bk61nbc8mp9.png-4.1kB"><br>然后问记事本或者任意一个文本编辑器打开这个文件，在里面输入下面的代码，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo 本程序消除文件夹被病毒设置的隐藏属性</div><div class="line">@echo</div><div class="line">@echo 2016.11</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo.</div><div class="line">@ECHO 可能需要一段时间，请耐心等待</div><div class="line">@echo 耐心等待...</div><div class="line">attrib -s -h *. /S /D</div><div class="line">attrib +s +h System~1</div><div class="line">attrib +s +h Recycled</div><div class="line">attrib +s +h +a ntldr</div><div class="line">@ECHO 完成！</div><div class="line"></div><div class="line">@echo on</div></pre></td></tr></table></figure></p>
+<p>然后使用管理员身份运行一次，等待一下，你的文件夹就能打开了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="windows" scheme="http://litao.work/tags/windows/"/>
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>putty连接linux中文乱码的解决方案</title>
+    <link href="http://litao.work/2016/12/03/putty%E8%BF%9E%E6%8E%A5linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/2016/12/03/putty连接linux中文乱码的解决方案/</id>
+    <published>2016-12-03T05:34:28.000Z</published>
+    <updated>2016-12-03T05:39:37.416Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><h2 id="问题描述：使用putty连接Linux后中文显示乱码"><a href="#问题描述：使用putty连接Linux后中文显示乱码" class="headerlink" title="问题描述：使用putty连接Linux后中文显示乱码"></a>问题描述：使用putty连接Linux后中文显示乱码</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"><br><a id="more"></a><br>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
+<blockquote>
+<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
+<blockquote>
+<p>至此，大功告成，可以正常显示中文了。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;a href=&quot;#putty连接Linux中文乱码解决方案&quot; class=&quot;headerlink&quot; title=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;/a&gt;putty连接Linux中文乱码解决方案&lt;/h2&gt;&lt;h2 id=&quot;问题描述：使用putty连接Linux后中文显示乱码&quot;&gt;&lt;a href=&quot;#问题描述：使用putty连接Linux后中文显示乱码&quot; class=&quot;headerlink&quot; title=&quot;问题描述：使用putty连接Linux后中文显示乱码&quot;&gt;&lt;/a&gt;问题描述：使用putty连接Linux后中文显示乱码&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png&quot; alt=&quot;image_1aolonhin3cj52fltehiq1rma9.png-23kB&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>linux安装chrome</title>
@@ -111,7 +279,7 @@
     <link href="http://litao.work/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/12/03/failed-to-push-some-refs-to-git的解决方案/</id>
     <published>2016-12-02T17:13:11.000Z</published>
-    <updated>2016-12-02T17:13:40.107Z</updated>
+    <updated>2016-12-03T05:39:31.406Z</updated>
     
     <content type="html"><![CDATA[<h2 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h2><p><img src="http://static.zybuluo.com/danerlt/n8psdkld5as44plb37meusu4/image_1ar80krop1n4jlak99k14i0odr9.png" alt="image_1ar80krop1n4jlak99k14i0odr9.png-24.1kB"></p>
 <a id="more"></a>
@@ -135,6 +303,8 @@
     
     </summary>
     
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
       <category term="git" scheme="http://litao.work/tags/git/"/>
     
