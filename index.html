@@ -277,7 +277,7 @@
               
                 
                 <a class="post-title-link" href="/2016/12/15/git配置ssh/" itemprop="url">
-                  git配置ssh
+                  github配置sshkey
                 </a>
               
             
@@ -335,19 +335,16 @@
 
       
         
-          
-            <h2 id="github-生成sshkey"><a href="#github-生成sshkey" class="headerlink" title="github 生成sshkey"></a>github 生成sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
+          <h2 id="github-配置sshkey"><a href="#github-配置sshkey" class="headerlink" title="github 配置sshkey"></a>github 配置sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
 <p>s.g.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;test@126.com&quot;</div></pre></td></tr></table></figure>
-<p><img src="http://static.zybuluo.com/danerlt/ahbmypha8g7xlmfzjpxkciv5/image_1b304rntm1jbk116m1k3p57m1hbs9.png" alt="image_1b304rntm1jbk116m1k3p57m1hbs9.png-44.9kB"></p>
-<h2 id="测试ssh-keys是否设置成功"><a href="#测试ssh-keys是否设置成功" class="headerlink" title="测试ssh keys是否设置成功"></a>测试ssh keys是否设置成功</h2><p>使用ssh -T 命令测试设置是否成功,如果出现</p>
-<blockquote>
-<p>You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
-<p>表示设置成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/v1sema0z1dwyuiqykou6ucni/image_1b3053n67d731l18rha33arurm.png" alt="image_1b3053n67d731l18rha33arurm.png-10.8kB"></p>
-
-          
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/15/git配置ssh/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
