@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2016-12-03T05:57:22.308Z</updated>
+  <updated>2016-12-14T17:59:59.090Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git配置ssh</title>
+    <link href="http://litao.work/2016/12/15/git%E9%85%8D%E7%BD%AEssh/"/>
+    <id>http://litao.work/2016/12/15/git配置ssh/</id>
+    <published>2016-12-14T17:58:11.000Z</published>
+    <updated>2016-12-14T17:59:59.090Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="github-sshkey"><a href="#github-sshkey" class="headerlink" title="github sshkey"></a>github sshkey</h1><p>标签（空格分隔）： git</p>
+<hr>
+<h2 id="github-生成sshkey"><a href="#github-生成sshkey" class="headerlink" title="github 生成sshkey"></a>github 生成sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rea -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
+<p>s.g.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rea -C &quot;test@126.com&quot;</div></pre></td></tr></table></figure>
+<p><img src="http://static.zybuluo.com/danerlt/ahbmypha8g7xlmfzjpxkciv5/image_1b304rntm1jbk116m1k3p57m1hbs9.png" alt="image_1b304rntm1jbk116m1k3p57m1hbs9.png-44.9kB"></p>
+<h2 id="测试ssh-keys是否设置成功"><a href="#测试ssh-keys是否设置成功" class="headerlink" title="测试ssh keys是否设置成功"></a>测试ssh keys是否设置成功</h2><p>使用ssh -T 命令测试设置是否成功,如果出现</p>
+<blockquote>
+<p>You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<p>表示设置成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/v1sema0z1dwyuiqykou6ucni/image_1b3053n67d731l18rha33arurm.png" alt="image_1b3053n67d731l18rha33arurm.png-10.8kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;github-sshkey&quot;&gt;&lt;a href=&quot;#github-sshkey&quot; class=&quot;headerlink&quot; title=&quot;github sshkey&quot;&gt;&lt;/a&gt;github sshkey&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： git&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://litao.work/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>运行，控制面板，命令提示符被禁用的解决方案</title>
