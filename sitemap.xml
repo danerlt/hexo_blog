@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/tags/index.html</loc>
+    
+    <lastmod>2016-12-15T04:08:48.994Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/2016/12/15/git%E9%85%8D%E7%BD%AEssh/</loc>
     
     <lastmod>2016-12-14T18:17:28.542Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>http://litao.work/2016/11/23/python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2016-12-02T17:16:05.770Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/tags/index.html</loc>
-    
-    <lastmod>2016-11-18T08:30:36.057Z</lastmod>
     
   </url>
   
