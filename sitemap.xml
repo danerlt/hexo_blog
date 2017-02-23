@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/about/index.html</loc>
+    
+    <lastmod>2017-02-23T08:38:32.631Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/tags/index.html</loc>
     
     <lastmod>2016-12-15T04:13:06.906Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>http://litao.work/categories/index.html</loc>
     
     <lastmod>2016-11-17T07:37:01.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/about/index.html</loc>
-    
-    <lastmod>2016-11-17T06:04:03.620Z</lastmod>
     
   </url>
   
