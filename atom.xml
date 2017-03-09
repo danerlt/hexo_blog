@@ -431,10 +431,10 @@
     <link href="http://litao.work/2016/11/15/hexo%E7%AC%94%E8%AE%B0/"/>
     <id>http://litao.work/2016/11/15/hexo笔记/</id>
     <published>2016-11-15T03:51:44.000Z</published>
-    <updated>2016-12-02T17:22:17.051Z</updated>
+    <updated>2017-03-09T01:59:49.535Z</updated>
     
     <content type="html"><![CDATA[<p>花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文网站</a>,还有一部分来自<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">不如的博客</a>。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。</p>
-<h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="markdown-img-paste-20161115170121138.png" alt=""><br><a id="more"></a><br>解决方案：在环境变量中新建一个叫做<code>HEXO_HOME</code>的环境变量，其值为<code>D:\Program Files\nodejs\node_global</code>（选择nodejs安装路径下的node_global）<br><img src="markdown-img-paste-2016111517030152.png" alt=""></p>
+<h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="http://static.zybuluo.com/danerlt/3z6xirqsi64hrv6259o0ru1e/image_1baocdkohkkofrob283mkoq79.png" alt="image_1baocdkohkkofrob283mkoq79.png-69.6kB"><br><a id="more"></a><br>解决方案：在环境变量中新建一个叫做<code>HEXO_HOME</code>的环境变量，其值为<code>D:\Program Files\nodejs\node_global</code>（选择nodejs安装路径下的node_global）<br><img src="http://static.zybuluo.com/danerlt/qr7ifklyft6i1ypd8xm5cxp6/image_1baock82p1u0kqv21cea1fjqpalm.png" alt="image_1baock82p1u0kqv21cea1fjqpalm.png-9.5kB"></p>
 <p>此时在使用命令行输入<code>hexo -v</code>能显示出版本号就说明hexo是配置好了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">C:\Users\tao&gt;hexo -v</div><div class="line">hexo-cli: 1.0.2</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.5.2</div><div class="line">node: 4.4.1</div><div class="line">v8: 4.5.103.35</div><div class="line">uv: 1.8.0</div><div class="line">zlib: 1.2.8</div><div class="line">ares: 1.10.1-DEV</div><div class="line">icu: 56.1</div><div class="line">modules: 46</div><div class="line">openssl: 1.0.2g</div></pre></td></tr></table></figure></p>
 <h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><table>
 <thead>
@@ -480,7 +480,7 @@
     <summary type="html">
     
       &lt;p&gt;花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;hexo中文网站&lt;/a&gt;,还有一部分来自&lt;a href=&quot;http://ibruce.info/2013/11/22/hexo-your-blog/&quot;&gt;不如的博客&lt;/a&gt;。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。&lt;/p&gt;
-&lt;h2 id=&quot;hexo-v没有结果&quot;&gt;&lt;a href=&quot;#hexo-v没有结果&quot; class=&quot;headerlink&quot; title=&quot;hexo -v没有结果&quot;&gt;&lt;/a&gt;hexo -v没有结果&lt;/h2&gt;&lt;p&gt;安装hexo后使用&lt;code&gt;hexo -v&lt;/code&gt;查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。&lt;br&gt;&lt;img src=&quot;markdown-img-paste-20161115170121138.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+&lt;h2 id=&quot;hexo-v没有结果&quot;&gt;&lt;a href=&quot;#hexo-v没有结果&quot; class=&quot;headerlink&quot; title=&quot;hexo -v没有结果&quot;&gt;&lt;/a&gt;hexo -v没有结果&lt;/h2&gt;&lt;p&gt;安装hexo后使用&lt;code&gt;hexo -v&lt;/code&gt;查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/3z6xirqsi64hrv6259o0ru1e/image_1baocdkohkkofrob283mkoq79.png&quot; alt=&quot;image_1baocdkohkkofrob283mkoq79.png-69.6kB&quot;&gt;&lt;br&gt;
     
     </summary>
     
