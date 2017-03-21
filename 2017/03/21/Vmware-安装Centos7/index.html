@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -86,16 +86,47 @@
 
 
 
-<meta name="description" content="在fedora或者centos上安装chrome:在/etc/yum.reos.d文件夹下创建一个叫google-chrome.repo的配置文件 /etc/yum.repos.d/google-chrome.repo:123456[google-chrome]name=google-chromebaseurl=http://dl.google.com/linux/chrome/rpm/stabl">
+<meta name="description" content="由于安装Oracle时虚拟机出了故障，遂决定重装centos7.
+1.选择打开电源时进入固件
+2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存
+3.直接安装centos7这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。这里按回车键或者等待60秒即可跳过
+4.安装语言选择中文或者English,然后继续
+5.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux安装chrome">
-<meta property="og:url" content="http://litao.work/2016/12/03/linux安装chrome/index.html">
+<meta property="og:title" content="Vmware安装CentOS7">
+<meta property="og:url" content="http://litao.work/2017/03/21/Vmware-安装Centos7/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="在fedora或者centos上安装chrome:在/etc/yum.reos.d文件夹下创建一个叫google-chrome.repo的配置文件 /etc/yum.repos.d/google-chrome.repo:123456[google-chrome]name=google-chromebaseurl=http://dl.google.com/linux/chrome/rpm/stabl">
-<meta property="og:updated_time" content="2016-12-02T17:27:40.053Z">
+<meta property="og:description" content="由于安装Oracle时虚拟机出了故障，遂决定重装centos7.
+1.选择打开电源时进入固件
+2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存
+3.直接安装centos7这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。这里按回车键或者等待60秒即可跳过
+4.安装语言选择中文或者English,然后继续
+5.">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/2l7xpb2i79ackly75qr8uo3z/image_1bbns84rirbpq391c9r1b4115hfm.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/7cjzn587mhbhrfgwf21hhop5/image_1bbnsb2b41qepf4iuc0hda133o13.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/nql49nnes2ofpm3esd0m5evq/image_1bbnsmmh31c19iba1vjgjlv173v1g.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/d5184hxdxmk0sl4hpwde9jok/image_1bbnsujj61lqa1lr381h1f5t5jv1t.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/oq4tl2j2rillfqfds6q1ah30/image_1bbnt28i21gv5fge1uimr3k15ln2a.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/mbkt4pb5d9y4xq5jx5bpec7i/image_1bbnt6dj1cf81r3cskg1mnbsju2n.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/k6wueqqyvqkf4rtuiu24bqj6/image_1bbntan9kq52in8n7vet1ihg34.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/y13mp0awn9am5wyy02svnnro/image_1bbntd358jc28dk1i5a15vuq73h.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/9yds524oaosylvv69il8w5cu/image_1bbntgthed0sdm1mq41ni7j0b3u.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/qb3995rn977y65s70n3i6igo/image_1bbntm7eh13ss16hg12111t86m3l4b.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/466wn9wuee4f4e42wkg0a74j/image_1bbntook77s3169m1q2c29s17th4o.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/imkmo6owa7m3jvmgcsay9l1t/image_1bbojlrpusas7emt94dddvkg55.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/dcotjoos172hgr845u7d8gzp/image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/c4crry9uz4hy06697u0njaqi/image_1bbojo4dn62s1acr13tr4o396l5v.png">
+<meta property="og:updated_time" content="2017-03-21T14:30:56.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux安装chrome">
-<meta name="twitter:description" content="在fedora或者centos上安装chrome:在/etc/yum.reos.d文件夹下创建一个叫google-chrome.repo的配置文件 /etc/yum.repos.d/google-chrome.repo:123456[google-chrome]name=google-chromebaseurl=http://dl.google.com/linux/chrome/rpm/stabl">
+<meta name="twitter:title" content="Vmware安装CentOS7">
+<meta name="twitter:description" content="由于安装Oracle时虚拟机出了故障，遂决定重装centos7.
+1.选择打开电源时进入固件
+2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存
+3.直接安装centos7这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。这里按回车键或者等待60秒即可跳过
+4.安装语言选择中文或者English,然后继续
+5.">
+<meta name="twitter:image" content="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png">
 
 
 
@@ -123,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://litao.work/2016/12/03/linux安装chrome/"/>
+  <link rel="canonical" href="http://litao.work/2017/03/21/Vmware-安装Centos7/"/>
 
 
 
 
 
-  <title> linux安装chrome | Litao's Blog </title>
+  <title> Vmware安装CentOS7 | Litao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +281,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://litao.work/2016/12/03/linux安装chrome/">
+  <link itemprop="mainEntityOfPage" href="http://litao.work/2017/03/21/Vmware-安装Centos7/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="李滔">
@@ -274,7 +305,7 @@
             
             
               
-                linux安装chrome
+                Vmware安装CentOS7
               
             
           </h1>
@@ -287,8 +318,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-03T01:27:21+08:00">
-                2016-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T22:30:00+08:00">
+                2017-03-21
               </time>
             
 
@@ -303,8 +334,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/03/linux安装chrome/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/03/linux安装chrome/" itemprop="commentCount"></span>
+                <a href="/2017/03/21/Vmware-安装Centos7/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/21/Vmware-安装Centos7/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -335,12 +366,16 @@
       
 
       
-        <p>在fedora或者centos上安装chrome:<br>在<code>/etc/yum.reos.d</code>文件夹下创建一个叫<code>google-chrome.repo</code>的配置文件 <code>/etc/yum.repos.d/google-chrome.repo</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[google-chrome]</div><div class="line">name=google-chrome</div><div class="line">baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/</div><div class="line">gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>Install google-chrome-stable rpm package:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># yum install google-chrome-stable</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>参自 <a href="https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html" target="_blank" rel="external">https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html</a></p>
-</blockquote>
+        <p>由于安装Oracle时虚拟机出了故障，遂决定重装centos7.</p>
+<h2 id="1-选择打开电源时进入固件"><a href="#1-选择打开电源时进入固件" class="headerlink" title="1.选择打开电源时进入固件"></a>1.选择打开电源时进入固件</h2><p><img src="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png" alt="image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB"></p>
+<h2 id="2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"><a href="#2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存" class="headerlink" title="2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"></a>2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存</h2><p><img src="http://static.zybuluo.com/danerlt/2l7xpb2i79ackly75qr8uo3z/image_1bbns84rirbpq391c9r1b4115hfm.png" alt="image_1bbns84rirbpq391c9r1b4115hfm.png-112.4kB"></p>
+<h2 id="3-直接安装centos7"><a href="#3-直接安装centos7" class="headerlink" title="3.直接安装centos7"></a>3.直接安装centos7</h2><p>这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。<br><img src="http://static.zybuluo.com/danerlt/7cjzn587mhbhrfgwf21hhop5/image_1bbnsb2b41qepf4iuc0hda133o13.png" alt="image_1bbnsb2b41qepf4iuc0hda133o13.png-10.9kB"><br>这里按回车键或者等待60秒即可跳过<br><img src="http://static.zybuluo.com/danerlt/nql49nnes2ofpm3esd0m5evq/image_1bbnsmmh31c19iba1vjgjlv173v1g.png" alt="image_1bbnsmmh31c19iba1vjgjlv173v1g.png-9.5kB"></p>
+<h2 id="4-安装语言选择中文或者English-然后继续"><a href="#4-安装语言选择中文或者English-然后继续" class="headerlink" title="4.安装语言选择中文或者English,然后继续"></a>4.安装语言选择中文或者English,然后继续</h2><p><img src="http://static.zybuluo.com/danerlt/d5184hxdxmk0sl4hpwde9jok/image_1bbnsujj61lqa1lr381h1f5t5jv1t.png" alt="image_1bbnsujj61lqa1lr381h1f5t5jv1t.png-126.2kB"></p>
+<h2 id="5-软件安装"><a href="#5-软件安装" class="headerlink" title="5.软件安装"></a>5.软件安装</h2><p><img src="http://static.zybuluo.com/danerlt/oq4tl2j2rillfqfds6q1ah30/image_1bbnt28i21gv5fge1uimr3k15ln2a.png" alt="image_1bbnt28i21gv5fge1uimr3k15ln2a.png-149.8kB"><br>这里面Java，PHP，Python等开发语言我们自己安装，就不需要勾选。然后点击完成即可。<br><img src="http://static.zybuluo.com/danerlt/mbkt4pb5d9y4xq5jx5bpec7i/image_1bbnt6dj1cf81r3cskg1mnbsju2n.png" alt="image_1bbnt6dj1cf81r3cskg1mnbsju2n.png-205.2kB"></p>
+<h2 id="6-安装目录位置"><a href="#6-安装目录位置" class="headerlink" title="6.安装目录位置"></a>6.安装目录位置</h2><p>可以选择系统自动配置，也可选择自己配置，这里我选择的是自动配置。<br><img src="http://static.zybuluo.com/danerlt/k6wueqqyvqkf4rtuiu24bqj6/image_1bbntan9kq52in8n7vet1ihg34.png" alt="image_1bbntan9kq52in8n7vet1ihg34.png-113.1kB"><br>提示空间不足，点击回收空间即可。<br><img src="http://static.zybuluo.com/danerlt/y13mp0awn9am5wyy02svnnro/image_1bbntd358jc28dk1i5a15vuq73h.png" alt="image_1bbntd358jc28dk1i5a15vuq73h.png-131.8kB"><br>选择全部删除，确定后<strong>整个硬盘就格式化了，整个硬盘就格式化了，整个硬盘就格式化了</strong>，一定要考虑好了再决定是否全部格式化。<br><img src="http://static.zybuluo.com/danerlt/9yds524oaosylvv69il8w5cu/image_1bbntgthed0sdm1mq41ni7j0b3u.png" alt="image_1bbntgthed0sdm1mq41ni7j0b3u.png-95kB"></p>
+<h2 id="7-设置ROOT密码，密码比较简单需要点两次完成。"><a href="#7-设置ROOT密码，密码比较简单需要点两次完成。" class="headerlink" title="7.设置ROOT密码，密码比较简单需要点两次完成。"></a>7.设置ROOT密码，密码比较简单需要点两次完成。</h2><p><img src="http://static.zybuluo.com/danerlt/qb3995rn977y65s70n3i6igo/image_1bbntm7eh13ss16hg12111t86m3l4b.png" alt="image_1bbntm7eh13ss16hg12111t86m3l4b.png-73.6kB"></p>
+<h2 id="8-等待完成重启即可"><a href="#8-等待完成重启即可" class="headerlink" title="8.等待完成重启即可"></a>8.等待完成重启即可</h2><p><img src="http://static.zybuluo.com/danerlt/466wn9wuee4f4e42wkg0a74j/image_1bbntook77s3169m1q2c29s17th4o.png" alt="image_1bbntook77s3169m1q2c29s17th4o.png-206.2kB"></p>
+<h2 id="9-接受许可证"><a href="#9-接受许可证" class="headerlink" title="9.接受许可证"></a>9.接受许可证</h2><p><img src="http://static.zybuluo.com/danerlt/imkmo6owa7m3jvmgcsay9l1t/image_1bbojlrpusas7emt94dddvkg55.png" alt="image_1bbojlrpusas7emt94dddvkg55.png-99.7kB"><br><img src="http://static.zybuluo.com/danerlt/dcotjoos172hgr845u7d8gzp/image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png" alt="image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png-33.5kB"><br><img src="http://static.zybuluo.com/danerlt/c4crry9uz4hy06697u0njaqi/image_1bbojo4dn62s1acr13tr4o396l5v.png" alt="image_1bbojo4dn62s1acr13tr4o396l5v.png-99.3kB"></p>
 
       
     </div>
@@ -364,7 +399,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -373,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/03/Html规范form-Google-Code-Style/" rel="next" title="Html规范form Google Code Style">
-                <i class="fa fa-chevron-left"></i> Html规范form Google Code Style
+              <a href="/2016/12/15/git配置ssh/" rel="next" title="github配置sshkey">
+                <i class="fa fa-chevron-left"></i> github配置sshkey
               </a>
             
           </div>
@@ -382,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/03/putty连接linux中文乱码的解决方案/" rel="prev" title="putty连接linux中文乱码的解决方案">
-                putty连接linux中文乱码的解决方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -434,8 +465,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/03/linux安装chrome/"
-           data-title="linux安装chrome" data-url="http://litao.work/2016/12/03/linux安装chrome/">
+      <div class="ds-thread" data-thread-key="2017/03/21/Vmware-安装Centos7/"
+           data-title="Vmware安装CentOS7" data-url="http://litao.work/2017/03/21/Vmware-安装Centos7/">
       </div>
     
   </div>
@@ -459,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://litao.work/images/avatar.jpg"
@@ -542,6 +582,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-选择打开电源时进入固件"><span class="nav-number">1.</span> <span class="nav-text">1.选择打开电源时进入固件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"><span class="nav-number">2.</span> <span class="nav-text">2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-直接安装centos7"><span class="nav-number">3.</span> <span class="nav-text">3.直接安装centos7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装语言选择中文或者English-然后继续"><span class="nav-number">4.</span> <span class="nav-text">4.安装语言选择中文或者English,然后继续</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-软件安装"><span class="nav-number">5.</span> <span class="nav-text">5.软件安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-安装目录位置"><span class="nav-number">6.</span> <span class="nav-text">6.安装目录位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-设置ROOT密码，密码比较简单需要点两次完成。"><span class="nav-number">7.</span> <span class="nav-text">7.设置ROOT密码，密码比较简单需要点两次完成。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-等待完成重启即可"><span class="nav-number">8.</span> <span class="nav-text">8.等待完成重启即可</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-接受许可证"><span class="nav-number">9.</span> <span class="nav-text">9.接受许可证</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

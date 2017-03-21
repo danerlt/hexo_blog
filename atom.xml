@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2016-12-14T18:17:28.542Z</updated>
+  <updated>2017-03-21T14:30:56.287Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vmware安装CentOS7</title>
+    <link href="http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/"/>
+    <id>http://litao.work/2017/03/21/Vmware-安装Centos7/</id>
+    <published>2017-03-21T14:30:00.000Z</published>
+    <updated>2017-03-21T14:30:56.287Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于安装Oracle时虚拟机出了故障，遂决定重装centos7.</p>
+<h2 id="1-选择打开电源时进入固件"><a href="#1-选择打开电源时进入固件" class="headerlink" title="1.选择打开电源时进入固件"></a>1.选择打开电源时进入固件</h2><p><img src="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png" alt="image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB"></p>
+<h2 id="2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"><a href="#2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存" class="headerlink" title="2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"></a>2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存</h2><p><img src="http://static.zybuluo.com/danerlt/2l7xpb2i79ackly75qr8uo3z/image_1bbns84rirbpq391c9r1b4115hfm.png" alt="image_1bbns84rirbpq391c9r1b4115hfm.png-112.4kB"></p>
+<h2 id="3-直接安装centos7"><a href="#3-直接安装centos7" class="headerlink" title="3.直接安装centos7"></a>3.直接安装centos7</h2><p>这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。<br><img src="http://static.zybuluo.com/danerlt/7cjzn587mhbhrfgwf21hhop5/image_1bbnsb2b41qepf4iuc0hda133o13.png" alt="image_1bbnsb2b41qepf4iuc0hda133o13.png-10.9kB"><br>这里按回车键或者等待60秒即可跳过<br><img src="http://static.zybuluo.com/danerlt/nql49nnes2ofpm3esd0m5evq/image_1bbnsmmh31c19iba1vjgjlv173v1g.png" alt="image_1bbnsmmh31c19iba1vjgjlv173v1g.png-9.5kB"></p>
+<h2 id="4-安装语言选择中文或者English-然后继续"><a href="#4-安装语言选择中文或者English-然后继续" class="headerlink" title="4.安装语言选择中文或者English,然后继续"></a>4.安装语言选择中文或者English,然后继续</h2><p><img src="http://static.zybuluo.com/danerlt/d5184hxdxmk0sl4hpwde9jok/image_1bbnsujj61lqa1lr381h1f5t5jv1t.png" alt="image_1bbnsujj61lqa1lr381h1f5t5jv1t.png-126.2kB"></p>
+<h2 id="5-软件安装"><a href="#5-软件安装" class="headerlink" title="5.软件安装"></a>5.软件安装</h2><p><img src="http://static.zybuluo.com/danerlt/oq4tl2j2rillfqfds6q1ah30/image_1bbnt28i21gv5fge1uimr3k15ln2a.png" alt="image_1bbnt28i21gv5fge1uimr3k15ln2a.png-149.8kB"><br>这里面Java，PHP，Python等开发语言我们自己安装，就不需要勾选。然后点击完成即可。<br><img src="http://static.zybuluo.com/danerlt/mbkt4pb5d9y4xq5jx5bpec7i/image_1bbnt6dj1cf81r3cskg1mnbsju2n.png" alt="image_1bbnt6dj1cf81r3cskg1mnbsju2n.png-205.2kB"></p>
+<h2 id="6-安装目录位置"><a href="#6-安装目录位置" class="headerlink" title="6.安装目录位置"></a>6.安装目录位置</h2><p>可以选择系统自动配置，也可选择自己配置，这里我选择的是自动配置。<br><img src="http://static.zybuluo.com/danerlt/k6wueqqyvqkf4rtuiu24bqj6/image_1bbntan9kq52in8n7vet1ihg34.png" alt="image_1bbntan9kq52in8n7vet1ihg34.png-113.1kB"><br>提示空间不足，点击回收空间即可。<br><img src="http://static.zybuluo.com/danerlt/y13mp0awn9am5wyy02svnnro/image_1bbntd358jc28dk1i5a15vuq73h.png" alt="image_1bbntd358jc28dk1i5a15vuq73h.png-131.8kB"><br>选择全部删除，确定后<strong>整个硬盘就格式化了，整个硬盘就格式化了，整个硬盘就格式化了</strong>，一定要考虑好了再决定是否全部格式化。<br><img src="http://static.zybuluo.com/danerlt/9yds524oaosylvv69il8w5cu/image_1bbntgthed0sdm1mq41ni7j0b3u.png" alt="image_1bbntgthed0sdm1mq41ni7j0b3u.png-95kB"></p>
+<h2 id="7-设置ROOT密码，密码比较简单需要点两次完成。"><a href="#7-设置ROOT密码，密码比较简单需要点两次完成。" class="headerlink" title="7.设置ROOT密码，密码比较简单需要点两次完成。"></a>7.设置ROOT密码，密码比较简单需要点两次完成。</h2><p><img src="http://static.zybuluo.com/danerlt/qb3995rn977y65s70n3i6igo/image_1bbntm7eh13ss16hg12111t86m3l4b.png" alt="image_1bbntm7eh13ss16hg12111t86m3l4b.png-73.6kB"></p>
+<h2 id="8-等待完成重启即可"><a href="#8-等待完成重启即可" class="headerlink" title="8.等待完成重启即可"></a>8.等待完成重启即可</h2><p><img src="http://static.zybuluo.com/danerlt/466wn9wuee4f4e42wkg0a74j/image_1bbntook77s3169m1q2c29s17th4o.png" alt="image_1bbntook77s3169m1q2c29s17th4o.png-206.2kB"></p>
+<h2 id="9-接受许可证"><a href="#9-接受许可证" class="headerlink" title="9.接受许可证"></a>9.接受许可证</h2><p><img src="http://static.zybuluo.com/danerlt/imkmo6owa7m3jvmgcsay9l1t/image_1bbojlrpusas7emt94dddvkg55.png" alt="image_1bbojlrpusas7emt94dddvkg55.png-99.7kB"><br><img src="http://static.zybuluo.com/danerlt/dcotjoos172hgr845u7d8gzp/image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png" alt="image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png-33.5kB"><br><img src="http://static.zybuluo.com/danerlt/c4crry9uz4hy06697u0njaqi/image_1bbojo4dn62s1acr13tr4o396l5v.png" alt="image_1bbojo4dn62s1acr13tr4o396l5v.png-99.3kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于安装Oracle时虚拟机出了故障，遂决定重装centos7.&lt;/p&gt;
+&lt;h2 id=&quot;1-选择打开电源时进入固件&quot;&gt;&lt;a href=&quot;#1-选择打开电源时进入固件&quot; class=&quot;headerlink&quot; title=&quot;1.选择打开电源时进入固件&quot;&gt;&lt;/a&gt;1.选择打开电
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://litao.work/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>github配置sshkey</title>
