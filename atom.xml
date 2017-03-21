@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-03-21T14:30:56.287Z</updated>
+  <updated>2017-03-21T14:32:47.699Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/"/>
     <id>http://litao.work/2017/03/21/Vmware-安装Centos7/</id>
     <published>2017-03-21T14:30:00.000Z</published>
-    <updated>2017-03-21T14:30:56.287Z</updated>
+    <updated>2017-03-21T14:32:47.699Z</updated>
     
     <content type="html"><![CDATA[<p>由于安装Oracle时虚拟机出了故障，遂决定重装centos7.</p>
-<h2 id="1-选择打开电源时进入固件"><a href="#1-选择打开电源时进入固件" class="headerlink" title="1.选择打开电源时进入固件"></a>1.选择打开电源时进入固件</h2><p><img src="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png" alt="image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB"></p>
+<h2 id="1-选择打开电源时进入固件"><a href="#1-选择打开电源时进入固件" class="headerlink" title="1.选择打开电源时进入固件"></a>1.选择打开电源时进入固件</h2><p><img src="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png" alt="image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB"><br><a id="more"></a></p>
 <h2 id="2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"><a href="#2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存" class="headerlink" title="2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"></a>2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存</h2><p><img src="http://static.zybuluo.com/danerlt/2l7xpb2i79ackly75qr8uo3z/image_1bbns84rirbpq391c9r1b4115hfm.png" alt="image_1bbns84rirbpq391c9r1b4115hfm.png-112.4kB"></p>
 <h2 id="3-直接安装centos7"><a href="#3-直接安装centos7" class="headerlink" title="3.直接安装centos7"></a>3.直接安装centos7</h2><p>这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。<br><img src="http://static.zybuluo.com/danerlt/7cjzn587mhbhrfgwf21hhop5/image_1bbnsb2b41qepf4iuc0hda133o13.png" alt="image_1bbnsb2b41qepf4iuc0hda133o13.png-10.9kB"><br>这里按回车键或者等待60秒即可跳过<br><img src="http://static.zybuluo.com/danerlt/nql49nnes2ofpm3esd0m5evq/image_1bbnsmmh31c19iba1vjgjlv173v1g.png" alt="image_1bbnsmmh31c19iba1vjgjlv173v1g.png-9.5kB"></p>
 <h2 id="4-安装语言选择中文或者English-然后继续"><a href="#4-安装语言选择中文或者English-然后继续" class="headerlink" title="4.安装语言选择中文或者English,然后继续"></a>4.安装语言选择中文或者English,然后继续</h2><p><img src="http://static.zybuluo.com/danerlt/d5184hxdxmk0sl4hpwde9jok/image_1bbnsujj61lqa1lr381h1f5t5jv1t.png" alt="image_1bbnsujj61lqa1lr381h1f5t5jv1t.png-126.2kB"></p>
@@ -37,7 +37,7 @@
     <summary type="html">
     
       &lt;p&gt;由于安装Oracle时虚拟机出了故障，遂决定重装centos7.&lt;/p&gt;
-&lt;h2 id=&quot;1-选择打开电源时进入固件&quot;&gt;&lt;a href=&quot;#1-选择打开电源时进入固件&quot; class=&quot;headerlink&quot; title=&quot;1.选择打开电源时进入固件&quot;&gt;&lt;/a&gt;1.选择打开电
+&lt;h2 id=&quot;1-选择打开电源时进入固件&quot;&gt;&lt;a href=&quot;#1-选择打开电源时进入固件&quot; class=&quot;headerlink&quot; title=&quot;1.选择打开电源时进入固件&quot;&gt;&lt;/a&gt;1.选择打开电源时进入固件&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png&quot; alt=&quot;image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB&quot;&gt;&lt;br&gt;
     
     </summary>
     
