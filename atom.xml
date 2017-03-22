@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-03-21T14:58:35.205Z</updated>
+  <updated>2017-03-22T01:51:56.715Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 安装SQL Server</title>
+    <link href="http://litao.work/2017/03/22/CentOS-%E5%AE%89%E8%A3%85SQL-Server/"/>
+    <id>http://litao.work/2017/03/22/CentOS-安装SQL-Server/</id>
+    <published>2017-03-22T01:49:51.000Z</published>
+    <updated>2017-03-22T01:51:56.715Z</updated>
+    
+    <content type="html"><![CDATA[<p>本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。</p>
+<h2 id="1-导入repo包"><a href="#1-导入repo包" class="headerlink" title="1.导入repo包"></a>1.导入repo包</h2><p>使用xftp将mssql-server.repo和prod.repo包放到<code>/etc/yum.repos.d</code></p>
+<blockquote>
+<p>curl <a href="https://packages.microsoft.com/config/rhel/7/mssql-server.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/mssql-server.repo</a> &gt; /etc/yum.repos.d/mssql-server.repo<br>curl <a href="https://packages.microsoft.com/config/rhel/7/prod.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/prod.repo</a> &gt; /etc/yum.repos.d/msprod.repo</p>
+</blockquote>
+<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
+<h2 id="2-使用yum安装SQL-Server"><a href="#2-使用yum安装SQL-Server" class="headerlink" title="2.使用yum安装SQL-Server"></a>2.使用yum安装SQL-Server</h2><p>使用yum install安装SQL-Server</p>
+<blockquote>
+<p>yum install -y mssql-server</p>
+</blockquote>
+<p><img src="http://static.zybuluo.com/danerlt/hghtt5etrj6znys74e9tu7mf/image_1bbppstsb16g91hm51drk1gk61cjp13.png" alt="image_1bbppstsb16g91hm51drk1gk61cjp13.png-90.2kB"><br>出现已安装:<code>mssql-server.x86_64 0:14.0.405.200-1</code>说明SQL Server安装成功<br><img src="http://static.zybuluo.com/danerlt/8amgkx893ygwzayk00xe4ang/image_1bbpq0ked16rh1dj03jhj5r7ij1g.png" alt="image_1bbpq0ked16rh1dj03jhj5r7ij1g.png-48.7kB"></p>
+<h2 id="安装完成后使用mssql-conf-setup进行配置"><a href="#安装完成后使用mssql-conf-setup进行配置" class="headerlink" title="安装完成后使用mssql-conf setup进行配置"></a>安装完成后使用mssql-conf setup进行配置</h2><p>首次运行时需要输入<code>Yes</code>接受Lincense，然后输入SQL-Server的密码，请确保超级管理员（SA）的密码足够强，最小长度为8个字符，包括大写和小写字母，10进制数字或非字母数字符号</p>
+<blockquote>
+<p>/opt/mssql/bin/mssql-conf setup</p>
+</blockquote>
+<p><img src="http://static.zybuluo.com/danerlt/86lbqlvb545hont75ttw0ei7/image_1bbpqdkmh40ktdl5hileu17rv9.png" alt="image_1bbpqdkmh40ktdl5hileu17rv9.png-13.9kB"><br>看到setup completed sucessfully说明配置成功，接下来我们看SQL-Servlet服务启动没有<br><img src="http://static.zybuluo.com/danerlt/kfs6rstx1x9cp3k0chkj0x6v/image_1bbpqhob19051oa11o24cpgn2jm.png" alt="image_1bbpqhob19051oa11o24cpgn2jm.png-19.2kB"></p>
+<h2 id="配置完成后，验证服务是否启动"><a href="#配置完成后，验证服务是否启动" class="headerlink" title="配置完成后，验证服务是否启动"></a>配置完成后，验证服务是否启动</h2><p>主要看Active对应的值是什么，active表示启动了，inactive表示未启动。</p>
+<blockquote>
+<p>systemctl status mssql-server</p>
+</blockquote>
+<p>看到active (running)说明服务启动了。<br><img src="http://static.zybuluo.com/danerlt/7cgzvsg1f81ye1vfhv85gh4w/image_1bbpqpg3p29c1r51jfb1bgbm7m.png" alt="image_1bbpqpg3p29c1r51jfb1bgbm7m.png-59.1kB"><br>mysql-server没启动是下面这样的，<br><img src="http://static.zybuluo.com/danerlt/qgvk8dktde5va8rj6gngmdiv/image_1bbpqs17o1qo68bc98h173vi9i13.png" alt="image_1bbpqs17o1qo68bc98h173vi9i13.png-54.2kB"></p>
+<h2 id="允许远程连接，打开在CentOS的防火墙SQL服务器端口。"><a href="#允许远程连接，打开在CentOS的防火墙SQL服务器端口。" class="headerlink" title="允许远程连接，打开在CentOS的防火墙SQL服务器端口。"></a>允许远程连接，打开在CentOS的防火墙SQL服务器端口。</h2><p>默认的SQL服务器端口是TCP 1433。如果你正在使用的防火墙是firewalld，你可以使用下面的命令</p>
+<blockquote>
+<p>sudo firewall-cmd –zone=public –add-port=1433/tcp –permanent<br>sudo firewall-cmd –reload</p>
+</blockquote>
+<p>出现sucess表示设置成功<br><img src="http://static.zybuluo.com/danerlt/slqqbqr1sbhde0wqg7s52o8l/image_1bbpr1oj872i15u9v4m1dhlcbp9.png" alt="image_1bbpr1oj872i15u9v4m1dhlcbp9.png-7.5kB"></p>
+<h2 id="升级SQL-Server"><a href="#升级SQL-Server" class="headerlink" title="升级SQL Server"></a>升级SQL Server</h2><blockquote>
+<p>sudo yum update mssql-server</p>
+</blockquote>
+<p>这些命令将下载最新的软件包和替换二进制文件位于下<code>/opt/mssql</code>。用户生成的数据库和系统数据库不会受此操作的影响。我这里安装时安装的最新的，所以没有升级包。<br><img src="http://static.zybuluo.com/danerlt/9rq4lsb1v6rb83t5hur8opc8/image_1bbpr4dqoroo195s15e51b35888m.png" alt="image_1bbpr4dqoroo195s15e51b35888m.png-14.8kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。&lt;/p&gt;
+&lt;h2 id=&quot;1-导入repo包&quot;&gt;&lt;a href=&quot;#1-导入repo包&quot; class=&quot;headerlink&quot; title=&quot;1.导入repo包&quot;&gt;&lt;/a&gt;1.
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>git常用命令</title>
@@ -372,9 +423,9 @@
     </summary>
     
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
-    
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
   </entry>
   
