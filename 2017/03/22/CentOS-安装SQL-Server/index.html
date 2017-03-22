@@ -108,7 +108,7 @@ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /et
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/qgvk8dktde5va8rj6gngmdiv/image_1bbpqs17o1qo68bc98h173vi9i13.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/slqqbqr1sbhde0wqg7s52o8l/image_1bbpr1oj872i15u9v4m1dhlcbp9.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/9rq4lsb1v6rb83t5hur8opc8/image_1bbpr4dqoroo195s15e51b35888m.png">
-<meta property="og:updated_time" content="2017-03-22T01:51:56.715Z">
+<meta property="og:updated_time" content="2017-03-22T01:52:44.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS 安装SQL Server">
 <meta name="twitter:description" content="本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。
@@ -360,7 +360,7 @@ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /et
 <blockquote>
 <p>curl <a href="https://packages.microsoft.com/config/rhel/7/mssql-server.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/mssql-server.repo</a> &gt; /etc/yum.repos.d/mssql-server.repo<br>curl <a href="https://packages.microsoft.com/config/rhel/7/prod.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/prod.repo</a> &gt; /etc/yum.repos.d/msprod.repo</p>
 </blockquote>
-<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
+<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
 <h2 id="2-使用yum安装SQL-Server"><a href="#2-使用yum安装SQL-Server" class="headerlink" title="2.使用yum安装SQL-Server"></a>2.使用yum安装SQL-Server</h2><p>使用yum install安装SQL-Server</p>
 <blockquote>
 <p>yum install -y mssql-server</p>

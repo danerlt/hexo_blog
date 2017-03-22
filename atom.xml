@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-03-22T01:51:56.715Z</updated>
+  <updated>2017-03-22T01:52:44.545Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://litao.work/2017/03/22/CentOS-%E5%AE%89%E8%A3%85SQL-Server/"/>
     <id>http://litao.work/2017/03/22/CentOS-安装SQL-Server/</id>
     <published>2017-03-22T01:49:51.000Z</published>
-    <updated>2017-03-22T01:51:56.715Z</updated>
+    <updated>2017-03-22T01:52:44.545Z</updated>
     
     <content type="html"><![CDATA[<p>本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。</p>
 <h2 id="1-导入repo包"><a href="#1-导入repo包" class="headerlink" title="1.导入repo包"></a>1.导入repo包</h2><p>使用xftp将mssql-server.repo和prod.repo包放到<code>/etc/yum.repos.d</code></p>
 <blockquote>
 <p>curl <a href="https://packages.microsoft.com/config/rhel/7/mssql-server.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/mssql-server.repo</a> &gt; /etc/yum.repos.d/mssql-server.repo<br>curl <a href="https://packages.microsoft.com/config/rhel/7/prod.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/prod.repo</a> &gt; /etc/yum.repos.d/msprod.repo</p>
 </blockquote>
-<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
+<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
 <h2 id="2-使用yum安装SQL-Server"><a href="#2-使用yum安装SQL-Server" class="headerlink" title="2.使用yum安装SQL-Server"></a>2.使用yum安装SQL-Server</h2><p>使用yum install安装SQL-Server</p>
 <blockquote>
 <p>yum install -y mssql-server</p>
@@ -57,7 +57,11 @@
     <summary type="html">
     
       &lt;p&gt;本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。&lt;/p&gt;
-&lt;h2 id=&quot;1-导入repo包&quot;&gt;&lt;a href=&quot;#1-导入repo包&quot; class=&quot;headerlink&quot; title=&quot;1.导入repo包&quot;&gt;&lt;/a&gt;1.
+&lt;h2 id=&quot;1-导入repo包&quot;&gt;&lt;a href=&quot;#1-导入repo包&quot; class=&quot;headerlink&quot; title=&quot;1.导入repo包&quot;&gt;&lt;/a&gt;1.导入repo包&lt;/h2&gt;&lt;p&gt;使用xftp将mssql-server.repo和prod.repo包放到&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;curl &lt;a href=&quot;https://packages.microsoft.com/config/rhel/7/mssql-server.repo&quot;&gt;https://packages.microsoft.com/config/rhel/7/mssql-server.repo&lt;/a&gt; &amp;gt; /etc/yum.repos.d/mssql-server.repo&lt;br&gt;curl &lt;a href=&quot;https://packages.microsoft.com/config/rhel/7/prod.repo&quot;&gt;https://packages.microsoft.com/config/rhel/7/prod.repo&lt;/a&gt; &amp;gt; /etc/yum.repos.d/msprod.repo&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;或者使用curl命令&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png&quot; alt=&quot;image_1bbppervk1ebs7de11ucaei12com.png-11.6kB&quot;&gt;&lt;br&gt;使用ls命令在&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）&lt;br&gt;
     
     </summary>
     
