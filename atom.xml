@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-03-22T01:52:44.545Z</updated>
+  <updated>2017-03-23T07:24:50.528Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux安装mssql-tools</title>
+    <link href="http://litao.work/2017/03/23/Linux%E5%AE%89%E8%A3%85mssql-tools/"/>
+    <id>http://litao.work/2017/03/23/Linux安装mssql-tools/</id>
+    <published>2017-03-23T07:23:22.000Z</published>
+    <updated>2017-03-23T07:24:50.528Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
+<p>使用ls命令查看<code>/etc/yum.repos.d</code>目录下是否有prod.repo文件,有即说明导入成功。<br><img src="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png" alt="image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB"></p>
+<h2 id="2-移除旧版本"><a href="#2-移除旧版本" class="headerlink" title="2.移除旧版本"></a>2.移除旧版本</h2><p>如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p><img src="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png" alt="image_1bbprteosd3213897i714qf1ri5m.png-102.2kB"><br><img src="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png" alt="image_1bbpsdkm81rir1kcbjadvls1sgb13.png-18.2kB"></p>
+<h2 id="3-安装mysql-tools"><a href="#3-安装mysql-tools" class="headerlink" title="3.安装mysql-tools"></a>3.安装mysql-tools</h2><p>使用下面的命令安装mysql-tools，一路YES<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/rkbgitslpfmcev2y9dd7oa80/image_1bbpsg85g1rn0p5ju51fafmcg1g.png" alt="image_1bbpsg85g1rn0p5ju51fafmcg1g.png-60.5kB"><br><img src="http://static.zybuluo.com/danerlt/5ri1ne6spoizj0cqp4qxd1du/image_1bbpsgstk1ui814tlel1nugoff1t.png" alt="image_1bbpsgstk1ui814tlel1nugoff1t.png-31.1kB"><br>，看到如下图所示说明mysql-tools安装成功<br><img src="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png" alt="image_1bbpshdam1m0c142s1cb5hcb5482a.png-18.8kB"><br>如何你需要生气mysql-tools可以使用以下命令升级<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum check-update</div><div class="line">sudo yum update mssql-tools</div></pre></td></tr></table></figure></p>
+<h2 id="4-设置环境变量"><a href="#4-设置环境变量" class="headerlink" title="4.设置环境变量"></a>4.设置环境变量</h2><p>要想在任何路径下运行mssql-tools，你需要将<code>/opt/mssql-tools/bin/</code>添加到PATH里面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo &apos;export PATH=&quot;$PATH:/opt/mssql-tools/bin&quot;&apos; &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/2buhs5a1ao3tnqvhd5svcs1v/image_1bbt0854er1le2i1f8012vc1mr69.png" alt="image_1bbt0854er1le2i1f8012vc1mr69.png-43.8kB"></p>
+<h2 id="5-测试是否可以连接到SQL-Server"><a href="#5-测试是否可以连接到SQL-Server" class="headerlink" title="5.测试是否可以连接到SQL Server"></a>5.测试是否可以连接到SQL Server</h2><p>使用以下命令连接到你的SQL Server实例上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlcmd -S localhost -U SA</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/maz3in3kz7x6jr9awe1g3gq6/image_1bbt0jtvru001jor104tqjgvs2m.png" alt="image_1bbt0jtvru001jor104tqjgvs2m.png-15.7kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-导入repo&quot;&gt;&lt;a href=&quot;#1-导入repo&quot; class=&quot;headerlink&quot; title=&quot;1.导入repo&quot;&gt;&lt;/a&gt;1.导入repo&lt;/h2&gt;&lt;p&gt;将prod.repo导入的&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;目录下&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;使用ls命令查看&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;目录下是否有prod.repo文件,有即说明导入成功。&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png&quot; alt=&quot;image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2-移除旧版本&quot;&gt;&lt;a href=&quot;#2-移除旧版本&quot; class=&quot;headerlink&quot; title=&quot;2.移除旧版本&quot;&gt;&lt;/a&gt;2.移除旧版本&lt;/h2&gt;&lt;p&gt;如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo yum update&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo yum install mssql-tools unixODBC-devel&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS 安装SQL Server</title>
@@ -427,9 +460,9 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
   </entry>
   
