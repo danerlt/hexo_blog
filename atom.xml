@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-03-23T07:24:50.528Z</updated>
+  <updated>2017-03-27T04:32:59.442Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos安装.NET Core</title>
+    <link href="http://litao.work/2017/03/27/centos%E5%AE%89%E8%A3%85-NET-Core/"/>
+    <id>http://litao.work/2017/03/27/centos安装-NET-Core/</id>
+    <published>2017-03-27T04:32:18.000Z</published>
+    <updated>2017-03-27T04:32:59.442Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装-net-core"><a href="#安装-net-core" class="headerlink" title="安装.net core"></a>安装.net core</h2><h3 id="安装依赖的库文件"><a href="#安装依赖的库文件" class="headerlink" title="安装依赖的库文件"></a>安装依赖的库文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y libunwind libicu</div></pre></td></tr></table></figure>
+<p><img src="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" alt="image_1bc6vmvlaetorpeqhhr0hu7i9.png-23.3kB"></p>
+<h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><p>将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png" alt="image_1bc6vq96b1o1afe61r5virt9a613.png-13.3kB"></p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>将压缩包解压到<code>/opt/dotnet</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mkdir -p /opt/dotnet &amp;&amp; sudo tar zxf dotnet.tar.gz -C /opt/dotnet</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p><img src="http://static.zybuluo.com/danerlt/fcrpepfzeodbouh8ziu6aamo/image_1bc6vvdrm1df148k1k17128p1u011g.png" alt="image_1bc6vvdrm1df148k1k17128p1u011g.png-9.5kB"></p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>将dotnet创建一个链接到<code>/usr/local/bin</code>目录下，从而达到在任何目录下都可以运行dotnet<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /opt/dotnet/dotnet /usr/local/bin</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/017amet2egfea7737kpm62k5/image_1bc70608u1531nb019nj1cdu1hvv1t.png" alt="image_1bc70608u1531nb019nj1cdu1hvv1t.png-3.3kB"></p>
+<h2 id="创建HelloWorld"><a href="#创建HelloWorld" class="headerlink" title="创建HelloWorld"></a>创建HelloWorld</h2><p>让我们来初始化一个简单的HelloWorld应用吧<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet new console -o hwapp</div></pre></td></tr></table></figure></p>
+<p>如图所示，表示创建成功。<br><img src="http://static.zybuluo.com/danerlt/ch9o5cca65cbylyqhjc0ux1e/image_1bc709o111a1g1gcs1qdpiq165d37.png" alt="image_1bc709o111a1g1gcs1qdpiq165d37.png-42kB"></p>
+<h2 id="运行HelloWorld"><a href="#运行HelloWorld" class="headerlink" title="运行HelloWorld"></a>运行HelloWorld</h2><p>首先进入<code>hwapp</code>目录，然后运行即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd hwapp</div><div class="line">dotnet restore</div><div class="line">dotnet run</div></pre></td></tr></table></figure></p>
+<p>如图所示，执行成功，dotnet core的环境就搭建好了。<br><img src="http://static.zybuluo.com/danerlt/ygor8jgr8og0qe2e3t2tqtqt/image_1bc70gghn1hvm18jp7811q91eh73k.png" alt="image_1bc70gghn1hvm18jp7811q91eh73k.png-28.8kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装-net-core&quot;&gt;&lt;a href=&quot;#安装-net-core&quot; class=&quot;headerlink&quot; title=&quot;安装.net core&quot;&gt;&lt;/a&gt;安装.net core&lt;/h2&gt;&lt;h3 id=&quot;安装依赖的库文件&quot;&gt;&lt;a href=&quot;#安装依赖的库文件&quot; class=&quot;headerlink&quot; title=&quot;安装依赖的库文件&quot;&gt;&lt;/a&gt;安装依赖的库文件&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo yum install -y libunwind libicu&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png&quot; alt=&quot;image_1bc6vmvlaetorpeqhhr0hu7i9.png-23.3kB&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;下载压缩包&quot;&gt;&lt;a href=&quot;#下载压缩包&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包&quot;&gt;&lt;/a&gt;下载压缩包&lt;/h3&gt;&lt;p&gt;将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png&quot; alt=&quot;image_1bc6vq96b1o1afe61r5virt9a613.png-13.3kB&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;解压&quot;&gt;&lt;a href=&quot;#解压&quot; class=&quot;headerlink&quot; title=&quot;解压&quot;&gt;&lt;/a&gt;解压&lt;/h3&gt;&lt;p&gt;将压缩包解压到&lt;code&gt;/opt/dotnet&lt;/code&gt;目录下&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo mkdir -p /opt/dotnet &amp;amp;&amp;amp; sudo tar zxf dotnet.tar.gz -C /opt/dotnet&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux安装mssql-tools</title>
@@ -545,9 +582,9 @@
     </summary>
     
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
-    
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
   </entry>
   
@@ -758,69 +795,6 @@
     
     
       <category term="python" scheme="http://litao.work/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo笔记</title>
-    <link href="http://litao.work/2016/11/15/hexo%E7%AC%94%E8%AE%B0/"/>
-    <id>http://litao.work/2016/11/15/hexo笔记/</id>
-    <published>2016-11-15T03:51:44.000Z</published>
-    <updated>2017-03-09T01:59:49.535Z</updated>
-    
-    <content type="html"><![CDATA[<p>花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文网站</a>,还有一部分来自<a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">不如的博客</a>。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。</p>
-<h2 id="hexo-v没有结果"><a href="#hexo-v没有结果" class="headerlink" title="hexo -v没有结果"></a>hexo -v没有结果</h2><p>安装hexo后使用<code>hexo -v</code>查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。<br><img src="http://static.zybuluo.com/danerlt/3z6xirqsi64hrv6259o0ru1e/image_1baocdkohkkofrob283mkoq79.png" alt="image_1baocdkohkkofrob283mkoq79.png-69.6kB"><br><a id="more"></a><br>解决方案：在环境变量中新建一个叫做<code>HEXO_HOME</code>的环境变量，其值为<code>D:\Program Files\nodejs\node_global</code>（选择nodejs安装路径下的node_global）<br><img src="http://static.zybuluo.com/danerlt/qr7ifklyft6i1ypd8xm5cxp6/image_1baock82p1u0kqv21cea1fjqpalm.png" alt="image_1baock82p1u0kqv21cea1fjqpalm.png-9.5kB"></p>
-<p>此时在使用命令行输入<code>hexo -v</code>能显示出版本号就说明hexo是配置好了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">C:\Users\tao&gt;hexo -v</div><div class="line">hexo-cli: 1.0.2</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.5.2</div><div class="line">node: 4.4.1</div><div class="line">v8: 4.5.103.35</div><div class="line">uv: 1.8.0</div><div class="line">zlib: 1.2.8</div><div class="line">ares: 1.10.1-DEV</div><div class="line">icu: 56.1</div><div class="line">modules: 46</div><div class="line">openssl: 1.0.2g</div></pre></td></tr></table></figure></p>
-<h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">hexo init</td>
-<td>初始化一个网站。</td>
-</tr>
-<tr>
-<td style="text-align:center">hexo -v</td>
-<td>查看hexo版本号</td>
-</tr>
-<tr>
-<td style="text-align:center">hexo -new “title”</td>
-<td>生成一个md文件，用来写博客的内容。title里面没有空格可以不用写引号</td>
-</tr>
-<tr>
-<td style="text-align:center">hexo -g</td>
-<td>生成</td>
-</tr>
-<tr>
-<td style="text-align:center">hexo -d</td>
-<td>发布</td>
-</tr>
-<tr>
-<td style="text-align:center">hexo d -g</td>
-<td>生成并发布</td>
-</tr>
-<tr>
-<td style="text-align:center">hexo g -d</td>
-<td>生成并发布</td>
-</tr>
-</tbody>
-</table>
-<h2 id="hexo多个标签"><a href="#hexo多个标签" class="headerlink" title="hexo多个标签"></a>hexo多个标签</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tags</span>: <span class="selector-attr">[标签1，标签2,标签3]</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;花了两天时间使用hexo来搭建一个博客系统，权当练手。参考文档一部分来自&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;hexo中文网站&lt;/a&gt;,还有一部分来自&lt;a href=&quot;http://ibruce.info/2013/11/22/hexo-your-blog/&quot;&gt;不如的博客&lt;/a&gt;。搭建步骤写的很详细，不在赘述，写一下搭建过程遇到问题。本文所有测试均在windows平台下。&lt;/p&gt;
-&lt;h2 id=&quot;hexo-v没有结果&quot;&gt;&lt;a href=&quot;#hexo-v没有结果&quot; class=&quot;headerlink&quot; title=&quot;hexo -v没有结果&quot;&gt;&lt;/a&gt;hexo -v没有结果&lt;/h2&gt;&lt;p&gt;安装hexo后使用&lt;code&gt;hexo -v&lt;/code&gt;查看hexo的版本，提示’hexo’ 不是内部或外部命令，也不是可运行的程序或批处理文件。&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/3z6xirqsi64hrv6259o0ru1e/image_1baocdkohkkofrob283mkoq79.png&quot; alt=&quot;image_1baocdkohkkofrob283mkoq79.png-69.6kB&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://litao.work/tags/hexo/"/>
     
   </entry>
   
