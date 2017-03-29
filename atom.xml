@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-03-29T16:58:01.057Z</updated>
+  <updated>2017-03-29T16:59:23.545Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,13 +20,12 @@
     <link href="http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85Oracle-11g-%E4%B8%80/"/>
     <id>http://litao.work/2017/03/30/centos安装Oracle-11g-一/</id>
     <published>2017-03-29T16:57:29.000Z</published>
-    <updated>2017-03-29T16:58:01.057Z</updated>
+    <updated>2017-03-29T16:59:23.545Z</updated>
     
     <content type="html"><![CDATA[<h1 id="centos安装Oracle11g-一"><a href="#centos安装Oracle11g-一" class="headerlink" title="centos安装Oracle11g (一)"></a>centos安装Oracle11g (一)</h1><p>标签（空格分隔）： linux</p>
 <hr>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的<a href="https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1" target="_blank" rel="external">https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1</a>,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。</p>
-<p><strong>注意:本文主要讲解到图形化安装前的配置,因为Oracle安装需要使用256位的图像显示,所以图形化界面的安装请戳<a href="https://www.baidu.com" target="_blank" rel="external">这里</a>.</strong></p>
-<p>在CentOS7 64位上安装Oracle 11g数据库，首先验证系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hostnamectl</div></pre></td></tr></table></figure></p>
+<p><strong>注意:本文主要讲解到图形化安装前的配置,因为Oracle安装需要使用256位的图像显示,所以图形化界面的安装请戳<a href="https://www.baidu.com" target="_blank" rel="external">这里</a>.</strong><br><a id="more"></a><br>在CentOS7 64位上安装Oracle 11g数据库，首先验证系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hostnamectl</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/0iff1p5gakqmxr0j0uvy6zh1/image_1bcamf2a6uig10rt5ea1f7ojnr26.png" alt="image_1bcamf2a6uig10rt5ea1f7ojnr26.png-39.4kB"></p>
 <h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><p>当操作系统被成功安装后，要记得验证和登记在你的DNS主机名。另外加上你的主机名或<code>IP</code>和<code>/etc/hosts</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/hostname</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/lanvwz6s4rdcggqeaihkydla/image_1bcamt09dujec8bdj994ssg033.png" alt="image_1bcamt09dujec8bdj994ssg033.png-9.8kB"><br>离开SELinux执行模式以及防火墙启用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sestatus</div></pre></td></tr></table></figure></p>
@@ -50,7 +49,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;centos安装Oracle11g-一&quot;&gt;&lt;a href=&quot;#centos安装Oracle11g-一&quot; class=&quot;headerlink&quot; title=&quot;centos安装Oracle11g (一)&quot;&gt;&lt;/a&gt;centos安装Oracle11g (一)&lt;/h1&gt;&lt;
+      &lt;h1 id=&quot;centos安装Oracle11g-一&quot;&gt;&lt;a href=&quot;#centos安装Oracle11g-一&quot; class=&quot;headerlink&quot; title=&quot;centos安装Oracle11g (一)&quot;&gt;&lt;/a&gt;centos安装Oracle11g (一)&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： linux&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的&lt;a href=&quot;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&quot;&gt;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&lt;/a&gt;,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意:本文主要讲解到图形化安装前的配置,因为Oracle安装需要使用256位的图像显示,所以图形化界面的安装请戳&lt;a href=&quot;https://www.baidu.com&quot;&gt;这里&lt;/a&gt;.&lt;/strong&gt;&lt;br&gt;
     
     </summary>
     
