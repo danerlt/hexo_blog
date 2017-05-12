@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-05-12T04:39:27.451Z</updated>
+  <updated>2017-05-12T04:40:31.856Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -16,15 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>IDEA使用Maven构建Java Web项目</title>
     <link href="http://litao.work/2017/05/12/IDEA%E4%BD%BF%E7%94%A8Maven%E6%9E%84%E5%BB%BAJava-Web%E9%A1%B9%E7%9B%AE/"/>
     <id>http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/</id>
-    <published>2017-05-12T04:35:30.991Z</published>
-    <updated>2017-05-12T04:39:27.451Z</updated>
+    <published>2017-05-12T04:35:30.000Z</published>
+    <updated>2017-05-12T04:40:31.856Z</updated>
     
-    <content type="html"><![CDATA[<hr>
-<p>title: IDEA使用Maven构建Java Web项目<br>date: 2017-05-12 12:35:30<br>tags: [javaweb,idea,maven]</p>
-<h2 id="1-打开IDEA"><a href="#1-打开IDEA" class="headerlink" title="1.打开IDEA"></a>1.打开IDEA</h2><p>点击<code>create new project</code>,在左侧选择Maven,然后勾选<code>create from archetype</code>,然后点击<code>maven-archetype-webapp</code>,如图1,2,3,然后点击next.</p>
+    <content type="html"><![CDATA[<h2 id="1-打开IDEA"><a href="#1-打开IDEA" class="headerlink" title="1.打开IDEA"></a>1.打开IDEA</h2><p>点击<code>create new project</code>,在左侧选择Maven,然后勾选<code>create from archetype</code>,然后点击<code>maven-archetype-webapp</code>,如图1,2,3,然后点击next.</p>
 <p><img src="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png" alt="create new project"><br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/han82isrlxo262ai7n91wg6w/image_1bftab91r43c1ijl6a1iju1f6813.png" alt="image_1bftab91r43c1ijl6a1iju1f6813.png-96kB"></p>
 <h2 id="2-填写maven项目的groupId-artifactId-version"><a href="#2-填写maven项目的groupId-artifactId-version" class="headerlink" title="2.填写maven项目的groupId,artifactId,version."></a>2.填写maven项目的groupId,artifactId,version.</h2><p>其中groupId一般是公司域名的反写,artifactId一般是项目名-模块名,version表示版本,snapshot是快照的意思.<br><img src="http://static.zybuluo.com/danerlt/j90u3jd62iu6wldwuinxjn8p/image_1bftadg19e51bvj37617pr1lqj1g.png" alt="image_1bftadg19e51bvj37617pr1lqj1g.png-27.5kB"></p>
 <h2 id="3-配置maven"><a href="#3-配置maven" class="headerlink" title="3.配置maven"></a>3.配置maven</h2><p>1表示的是maven的安装目录,2表示的是maven的setting文件,在maven安装目录下的<code>conf</code>目录下,3表示的是maven的仓库地址,默认为<code>C:\Users\username</code>目录下的<code>.m2</code>目录下.<br><img src="http://static.zybuluo.com/danerlt/c306srof2nn4gypkpxfh7nip/image_1bftakrnm1vhu1evv3findl1hcr1t.png" alt="image_1bftakrnm1vhu1evv3findl1hcr1t.png-42.9kB"></p>
@@ -37,13 +35,17 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title: IDEA使用Maven构建Java Web项目&lt;br&gt;date: 2017-05-12 12:35:30&lt;br&gt;tags: [javaweb,idea,maven]&lt;/p&gt;
-&lt;h2 id=&quot;1-打开IDEA&quot;&gt;&lt;a href=&quot;#1-打开IDEA&quot; class=&quot;headerlink&quot; title=&quot;1.打开IDEA&quot;&gt;&lt;/a&gt;1.打开IDEA&lt;/h2&gt;&lt;p&gt;点击&lt;code&gt;create new project&lt;/code&gt;,在左侧选择Maven,然后勾选&lt;code&gt;create from archetype&lt;/code&gt;,然后点击&lt;code&gt;maven-archetype-webapp&lt;/code&gt;,如图1,2,3,然后点击next.&lt;/p&gt;
+      &lt;h2 id=&quot;1-打开IDEA&quot;&gt;&lt;a href=&quot;#1-打开IDEA&quot; class=&quot;headerlink&quot; title=&quot;1.打开IDEA&quot;&gt;&lt;/a&gt;1.打开IDEA&lt;/h2&gt;&lt;p&gt;点击&lt;code&gt;create new project&lt;/code&gt;,在左侧选择Maven,然后勾选&lt;code&gt;create from archetype&lt;/code&gt;,然后点击&lt;code&gt;maven-archetype-webapp&lt;/code&gt;,如图1,2,3,然后点击next.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png&quot; alt=&quot;create new project&quot;&gt;&lt;br&gt;
     
     </summary>
     
+    
+      <category term="javaweb" scheme="http://litao.work/tags/javaweb/"/>
+    
+      <category term="idea" scheme="http://litao.work/tags/idea/"/>
+    
+      <category term="maven" scheme="http://litao.work/tags/maven/"/>
     
   </entry>
   
