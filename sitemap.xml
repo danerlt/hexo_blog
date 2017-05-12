@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/2017/05/12/IDEA%E4%BD%BF%E7%94%A8Maven%E6%9E%84%E5%BB%BAJava-Web%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2017-05-12T04:39:27.451Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/</loc>
+    
+    <lastmod>2017-05-12T04:37:17.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85oracle-11g-%E4%BA%8C/</loc>
+    
+    <lastmod>2017-03-29T17:06:08.797Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85Oracle-11g-%E4%B8%80/</loc>
     
     <lastmod>2017-03-29T16:59:23.545Z</lastmod>
@@ -40,13 +61,6 @@
     <loc>http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/</loc>
     
     <lastmod>2017-03-21T14:46:17.212Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/</loc>
-    
-    <lastmod>2017-03-21T14:32:47.699Z</lastmod>
     
   </url>
   

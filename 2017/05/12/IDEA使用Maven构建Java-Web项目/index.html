@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="litao,litao.work,李滔,李滔的工作空间" />
 
 
 
@@ -86,31 +86,33 @@
 
 
 
-<meta name="description" content="1.导入repo将prod.repo导入的/etc/yum.repos.d目录下1curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo
-使用ls命令查看/etc/yum.repos.d目录下是否有prod.repo文件,有即说明导入成功。
-2.移除旧版本如果你以前安">
+<meta name="description" content="title: IDEA使用Maven构建Java Web项目date: 2017-05-12 12:35:30tags: [javaweb,idea,maven]
+1.打开IDEA点击create new project,在左侧选择Maven,然后勾选create from archetype,然后点击maven-archetype-webapp,如图1,2,3,然后点击next.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux安装mssql-tools">
-<meta property="og:url" content="http://litao.work/2017/03/23/Linux安装mssql-tools/index.html">
+<meta property="og:title" content="Litao's Blog">
+<meta property="og:url" content="http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="1.导入repo将prod.repo导入的/etc/yum.repos.d目录下1curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo
-使用ls命令查看/etc/yum.repos.d目录下是否有prod.repo文件,有即说明导入成功。
-2.移除旧版本如果你以前安">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/rkbgitslpfmcev2y9dd7oa80/image_1bbpsg85g1rn0p5ju51fafmcg1g.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/5ri1ne6spoizj0cqp4qxd1du/image_1bbpsgstk1ui814tlel1nugoff1t.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/2buhs5a1ao3tnqvhd5svcs1v/image_1bbt0854er1le2i1f8012vc1mr69.png">
-<meta property="og:image" content="http://static.zybuluo.com/danerlt/maz3in3kz7x6jr9awe1g3gq6/image_1bbt0jtvru001jor104tqjgvs2m.png">
-<meta property="og:updated_time" content="2017-03-23T07:24:50.528Z">
+<meta property="og:description" content="title: IDEA使用Maven构建Java Web项目date: 2017-05-12 12:35:30tags: [javaweb,idea,maven]
+1.打开IDEA点击create new project,在左侧选择Maven,然后勾选create from archetype,然后点击maven-archetype-webapp,如图1,2,3,然后点击next.">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/han82isrlxo262ai7n91wg6w/image_1bftab91r43c1ijl6a1iju1f6813.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/j90u3jd62iu6wldwuinxjn8p/image_1bftadg19e51bvj37617pr1lqj1g.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/c306srof2nn4gypkpxfh7nip/image_1bftakrnm1vhu1evv3findl1hcr1t.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/n90zqprs8rkmxcn7rrxgs3h3/image_1bftbrt6n1vhp9uh11tu168612fb2a.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/0tkdho13yikauadw5lrwakwo/image_1bftc2o7fv3l1rarhu41tfid182n.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/pez7aomdzi6aaqv6dmmm288a/image_1bftcb84aeb8i93la227918ci3h.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/yhzk54x873mqq2mp0vnbwx7q/image_1bftci552917rjp15vg1s4v453u.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/rwm5m7v3amhq5fhg7ju3pmqx/image_1bftec89sjh3cdoa11mgl1l1l4b.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/h8ejz2kciq0ckx3b0wjqmebf/image_1bftef11j11oq1d591uu8m0h1gki4o.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/27q917n4cshxjoq0uw6zo2h8/image_1bftek8vdnu5e811nm6cpgmva55.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/7lq95th7pchdklaksd4h2snx/image_1bften1vv1pa21sl7sq21l8t1pko5i.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/ar1v983yq6y7h6zfc4hxpgmc/image_1bftetdeg1kb2g1ser31a1m6sa5v.png">
+<meta property="og:updated_time" content="2017-05-12T04:39:27.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux安装mssql-tools">
-<meta name="twitter:description" content="1.导入repo将prod.repo导入的/etc/yum.repos.d目录下1curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo
-使用ls命令查看/etc/yum.repos.d目录下是否有prod.repo文件,有即说明导入成功。
-2.移除旧版本如果你以前安">
-<meta name="twitter:image" content="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png">
+<meta name="twitter:title" content="Litao's Blog">
+<meta name="twitter:description" content="title: IDEA使用Maven构建Java Web项目date: 2017-05-12 12:35:30tags: [javaweb,idea,maven]
+1.打开IDEA点击create new project,在左侧选择Maven,然后勾选create from archetype,然后点击maven-archetype-webapp,如图1,2,3,然后点击next.">
+<meta name="twitter:image" content="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png">
 
 
 
@@ -138,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://litao.work/2017/03/23/Linux安装mssql-tools/"/>
+  <link rel="canonical" href="http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/"/>
 
 
 
 
 
-  <title> Linux安装mssql-tools | Litao's Blog </title>
+  <title>  | Litao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +267,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://litao.work/2017/03/23/Linux安装mssql-tools/">
+  <link itemprop="mainEntityOfPage" href="http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="李滔">
@@ -289,7 +291,7 @@
             
             
               
-                Linux安装mssql-tools
+                
               
             
           </h1>
@@ -302,8 +304,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-23T15:23:22+08:00">
-                2017-03-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T12:35:30+08:00">
+                2017-05-12
               </time>
             
 
@@ -318,8 +320,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2017/03/23/Linux安装mssql-tools/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/Linux安装mssql-tools/" itemprop="commentCount"></span>
+                <a href="/2017/05/12/IDEA使用Maven构建Java-Web项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/12/IDEA使用Maven构建Java-Web项目/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -350,17 +352,17 @@
       
 
       
-        <h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
-<p>使用ls命令查看<code>/etc/yum.repos.d</code>目录下是否有prod.repo文件,有即说明导入成功。<br><img src="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png" alt="image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB"></p>
-<h2 id="2-移除旧版本"><a href="#2-移除旧版本" class="headerlink" title="2.移除旧版本"></a>2.移除旧版本</h2><p>如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p><img src="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png" alt="image_1bbprteosd3213897i714qf1ri5m.png-102.2kB"><br><img src="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png" alt="image_1bbpsdkm81rir1kcbjadvls1sgb13.png-18.2kB"></p>
-<h2 id="3-安装mysql-tools"><a href="#3-安装mysql-tools" class="headerlink" title="3.安装mysql-tools"></a>3.安装mysql-tools</h2><p>使用下面的命令安装mysql-tools，一路YES<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/rkbgitslpfmcev2y9dd7oa80/image_1bbpsg85g1rn0p5ju51fafmcg1g.png" alt="image_1bbpsg85g1rn0p5ju51fafmcg1g.png-60.5kB"><br><img src="http://static.zybuluo.com/danerlt/5ri1ne6spoizj0cqp4qxd1du/image_1bbpsgstk1ui814tlel1nugoff1t.png" alt="image_1bbpsgstk1ui814tlel1nugoff1t.png-31.1kB"><br>，看到如下图所示说明mysql-tools安装成功<br><img src="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png" alt="image_1bbpshdam1m0c142s1cb5hcb5482a.png-18.8kB"><br>如何你需要生气mysql-tools可以使用以下命令升级<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum check-update</div><div class="line">sudo yum update mssql-tools</div></pre></td></tr></table></figure></p>
-<h2 id="4-设置环境变量"><a href="#4-设置环境变量" class="headerlink" title="4.设置环境变量"></a>4.设置环境变量</h2><p>要想在任何路径下运行mssql-tools，你需要将<code>/opt/mssql-tools/bin/</code>添加到PATH里面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo &apos;export PATH=&quot;$PATH:/opt/mssql-tools/bin&quot;&apos; &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/2buhs5a1ao3tnqvhd5svcs1v/image_1bbt0854er1le2i1f8012vc1mr69.png" alt="image_1bbt0854er1le2i1f8012vc1mr69.png-43.8kB"></p>
-<h2 id="5-测试是否可以连接到SQL-Server"><a href="#5-测试是否可以连接到SQL-Server" class="headerlink" title="5.测试是否可以连接到SQL Server"></a>5.测试是否可以连接到SQL Server</h2><p>使用以下命令连接到你的SQL Server实例上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlcmd -S localhost -U SA</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/maz3in3kz7x6jr9awe1g3gq6/image_1bbt0jtvru001jor104tqjgvs2m.png" alt="image_1bbt0jtvru001jor104tqjgvs2m.png-15.7kB"></p>
+        <hr>
+<p>title: IDEA使用Maven构建Java Web项目<br>date: 2017-05-12 12:35:30<br>tags: [javaweb,idea,maven]</p>
+<h2 id="1-打开IDEA"><a href="#1-打开IDEA" class="headerlink" title="1.打开IDEA"></a>1.打开IDEA</h2><p>点击<code>create new project</code>,在左侧选择Maven,然后勾选<code>create from archetype</code>,然后点击<code>maven-archetype-webapp</code>,如图1,2,3,然后点击next.</p>
+<p><img src="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png" alt="create new project"><br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/han82isrlxo262ai7n91wg6w/image_1bftab91r43c1ijl6a1iju1f6813.png" alt="image_1bftab91r43c1ijl6a1iju1f6813.png-96kB"></p>
+<h2 id="2-填写maven项目的groupId-artifactId-version"><a href="#2-填写maven项目的groupId-artifactId-version" class="headerlink" title="2.填写maven项目的groupId,artifactId,version."></a>2.填写maven项目的groupId,artifactId,version.</h2><p>其中groupId一般是公司域名的反写,artifactId一般是项目名-模块名,version表示版本,snapshot是快照的意思.<br><img src="http://static.zybuluo.com/danerlt/j90u3jd62iu6wldwuinxjn8p/image_1bftadg19e51bvj37617pr1lqj1g.png" alt="image_1bftadg19e51bvj37617pr1lqj1g.png-27.5kB"></p>
+<h2 id="3-配置maven"><a href="#3-配置maven" class="headerlink" title="3.配置maven"></a>3.配置maven</h2><p>1表示的是maven的安装目录,2表示的是maven的setting文件,在maven安装目录下的<code>conf</code>目录下,3表示的是maven的仓库地址,默认为<code>C:\Users\username</code>目录下的<code>.m2</code>目录下.<br><img src="http://static.zybuluo.com/danerlt/c306srof2nn4gypkpxfh7nip/image_1bftakrnm1vhu1evv3findl1hcr1t.png" alt="image_1bftakrnm1vhu1evv3findl1hcr1t.png-42.9kB"></p>
+<h2 id="4-配置project"><a href="#4-配置project" class="headerlink" title="4.配置project"></a>4.配置project</h2><p>输入项目名,项目在本地的路径然后点击finsh就ok了.<br><img src="http://static.zybuluo.com/danerlt/n90zqprs8rkmxcn7rrxgs3h3/image_1bftbrt6n1vhp9uh11tu168612fb2a.png" alt="image_1bftbrt6n1vhp9uh11tu168612fb2a.png-32.4kB"></p>
+<h2 id="5-maven自动导包"><a href="#5-maven自动导包" class="headerlink" title="5.maven自动导包"></a>5.maven自动导包</h2><p><img src="http://static.zybuluo.com/danerlt/0tkdho13yikauadw5lrwakwo/image_1bftc2o7fv3l1rarhu41tfid182n.png" alt="image_1bftc2o7fv3l1rarhu41tfid182n.png-138.9kB"></p>
+<h2 id="6-新建java目录和test目录"><a href="#6-新建java目录和test目录" class="headerlink" title="6.新建java目录和test目录"></a>6.新建java目录和test目录</h2><p>默认情况下<code>src</code>目录下没有<code>java</code>目录和<code>test</code>目录,如有必要还需要新建<code>resours</code>目录我们需要手动建立,建好之后还需要配置一下.按下<code>Ctrl+Shift+Alt+S</code>快捷键或者点击<code>File-&gt;Project Structure</code>.<br><img src="http://static.zybuluo.com/danerlt/pez7aomdzi6aaqv6dmmm288a/image_1bftcb84aeb8i93la227918ci3h.png" alt="image_1bftcb84aeb8i93la227918ci3h.png-16.4kB"><br>点击Moudle,如图1,然后点击Sources,选中目录,然后点击对应的3,4,5,6.<br><code>java</code>目录对应<code>Sources</code>,<code>test</code>目录对应<code>Tests</code>,<code>java</code>目录下的<code>resources</code>对应<code>Resources</code>,<code>test</code>目录下的<code>resources</code>对应<code>Test Resources</code>.<br><img src="http://static.zybuluo.com/danerlt/yhzk54x873mqq2mp0vnbwx7q/image_1bftci552917rjp15vg1s4v453u.png" alt="image_1bftci552917rjp15vg1s4v453u.png-85.3kB"></p>
+<h2 id="配置tomcat"><a href="#配置tomcat" class="headerlink" title="配置tomcat"></a>配置tomcat</h2><p>先选择tomcat的版本,<br><img src="http://static.zybuluo.com/danerlt/rwm5m7v3amhq5fhg7ju3pmqx/image_1bftec89sjh3cdoa11mgl1l1l4b.png" alt="image_1bftec89sjh3cdoa11mgl1l1l4b.png-71.6kB"><br>然后点击deployment,点击加号,选择artifacts.选择后缀为exploded,<br><img src="http://static.zybuluo.com/danerlt/h8ejz2kciq0ckx3b0wjqmebf/image_1bftef11j11oq1d591uu8m0h1gki4o.png" alt="image_1bftef11j11oq1d591uu8m0h1gki4o.png-17.1kB"><br>然后点击编辑,这里可以修改发布的位置,可以选择tomcat的webapp目录<br><img src="http://static.zybuluo.com/danerlt/27q917n4cshxjoq0uw6zo2h8/image_1bftek8vdnu5e811nm6cpgmva55.png" alt="image_1bftek8vdnu5e811nm6cpgmva55.png-67.5kB"><br>然后将箭头指的位置改为<code>Updata classes and resources</code><br><img src="http://static.zybuluo.com/danerlt/7lq95th7pchdklaksd4h2snx/image_1bften1vv1pa21sl7sq21l8t1pko5i.png" alt="image_1bften1vv1pa21sl7sq21l8t1pko5i.png-70.4kB"></p>
+<h2 id="测试是否配置成功"><a href="#测试是否配置成功" class="headerlink" title="测试是否配置成功"></a>测试是否配置成功</h2><p>在webapp目录下的index.jsp添加一些内容,点击debug,浏览器自动打开如下页面就成功了.<br><img src="http://static.zybuluo.com/danerlt/ar1v983yq6y7h6zfc4hxpgmc/image_1bftetdeg1kb2g1ser31a1m6sa5v.png" alt="image_1bftetdeg1kb2g1ser31a1m6sa5v.png-82kB"></p>
 
       
     </div>
@@ -382,19 +384,13 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/22/CentOS-安装SQL-Server/" rel="next" title="CentOS 安装SQL Server">
-                <i class="fa fa-chevron-left"></i> CentOS 安装SQL Server
+              <a href="/2017/03/30/centos安装oracle-11g-二/" rel="next" title="centos安装oracle 11g(二)">
+                <i class="fa fa-chevron-left"></i> centos安装oracle 11g(二)
               </a>
             
           </div>
@@ -402,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/27/centos安装-NET-Core/" rel="prev" title="centos安装.NET Core">
-                centos安装.NET Core <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -454,8 +446,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/23/Linux安装mssql-tools/"
-           data-title="Linux安装mssql-tools" data-url="http://litao.work/2017/03/23/Linux安装mssql-tools/">
+      <div class="ds-thread" data-thread-key="2017/05/12/IDEA使用Maven构建Java-Web项目/"
+           data-title="" data-url="http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/">
       </div>
     
   </div>
@@ -581,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-导入repo"><span class="nav-number">1.</span> <span class="nav-text">1.导入repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-移除旧版本"><span class="nav-number">2.</span> <span class="nav-text">2.移除旧版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装mysql-tools"><span class="nav-number">3.</span> <span class="nav-text">3.安装mysql-tools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-设置环境变量"><span class="nav-number">4.</span> <span class="nav-text">4.设置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试是否可以连接到SQL-Server"><span class="nav-number">5.</span> <span class="nav-text">5.测试是否可以连接到SQL Server</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-打开IDEA"><span class="nav-number">1.</span> <span class="nav-text">1.打开IDEA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-填写maven项目的groupId-artifactId-version"><span class="nav-number">2.</span> <span class="nav-text">2.填写maven项目的groupId,artifactId,version.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置maven"><span class="nav-number">3.</span> <span class="nav-text">3.配置maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-配置project"><span class="nav-number">4.</span> <span class="nav-text">4.配置project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-maven自动导包"><span class="nav-number">5.</span> <span class="nav-text">5.maven自动导包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-新建java目录和test目录"><span class="nav-number">6.</span> <span class="nav-text">6.新建java目录和test目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置tomcat"><span class="nav-number">7.</span> <span class="nav-text">配置tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试是否配置成功"><span class="nav-number">8.</span> <span class="nav-text">测试是否配置成功</span></a></li></ol></div>
             
 
           </div>
