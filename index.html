@@ -335,15 +335,19 @@
 
       
         
-          <h2 id="1-打开IDEA"><a href="#1-打开IDEA" class="headerlink" title="1.打开IDEA"></a>1.打开IDEA</h2><p>点击<code>create new project</code>,在左侧选择Maven,然后勾选<code>create from archetype</code>,然后点击<code>maven-archetype-webapp</code>,如图1,2,3,然后点击next.</p>
-<p><img src="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png" alt="create new project"><br>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/05/12/IDEA使用Maven构建Java-Web项目/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="1-打开IDEA"><a href="#1-打开IDEA" class="headerlink" title="1.打开IDEA"></a>1.打开IDEA</h2><p>点击<code>create new project</code>,在左侧选择Maven,然后勾选<code>create from archetype</code>,然后点击<code>maven-archetype-webapp</code>,如图1,2,3,然后点击next.</p>
+<p><img src="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png" alt="create new project"></p>
+<p><img src="http://static.zybuluo.com/danerlt/han82isrlxo262ai7n91wg6w/image_1bftab91r43c1ijl6a1iju1f6813.png" alt="image_1bftab91r43c1ijl6a1iju1f6813.png-96kB"></p>
+<h2 id="2-填写maven项目的groupId-artifactId-version"><a href="#2-填写maven项目的groupId-artifactId-version" class="headerlink" title="2.填写maven项目的groupId,artifactId,version."></a>2.填写maven项目的groupId,artifactId,version.</h2><p>其中groupId一般是公司域名的反写,artifactId一般是项目名-模块名,version表示版本,snapshot是快照的意思.<br><img src="http://static.zybuluo.com/danerlt/j90u3jd62iu6wldwuinxjn8p/image_1bftadg19e51bvj37617pr1lqj1g.png" alt="image_1bftadg19e51bvj37617pr1lqj1g.png-27.5kB"></p>
+<h2 id="3-配置maven"><a href="#3-配置maven" class="headerlink" title="3.配置maven"></a>3.配置maven</h2><p>1表示的是maven的安装目录,2表示的是maven的setting文件,在maven安装目录下的<code>conf</code>目录下,3表示的是maven的仓库地址,默认为<code>C:\Users\username</code>目录下的<code>.m2</code>目录下.<br><img src="http://static.zybuluo.com/danerlt/c306srof2nn4gypkpxfh7nip/image_1bftakrnm1vhu1evv3findl1hcr1t.png" alt="image_1bftakrnm1vhu1evv3findl1hcr1t.png-42.9kB"></p>
+<h2 id="4-配置project"><a href="#4-配置project" class="headerlink" title="4.配置project"></a>4.配置project</h2><p>输入项目名,项目在本地的路径然后点击finsh就ok了.<br><img src="http://static.zybuluo.com/danerlt/n90zqprs8rkmxcn7rrxgs3h3/image_1bftbrt6n1vhp9uh11tu168612fb2a.png" alt="image_1bftbrt6n1vhp9uh11tu168612fb2a.png-32.4kB"></p>
+<h2 id="5-maven自动导包"><a href="#5-maven自动导包" class="headerlink" title="5.maven自动导包"></a>5.maven自动导包</h2><p><img src="http://static.zybuluo.com/danerlt/0tkdho13yikauadw5lrwakwo/image_1bftc2o7fv3l1rarhu41tfid182n.png" alt="image_1bftc2o7fv3l1rarhu41tfid182n.png-138.9kB"></p>
+<h2 id="6-新建java目录和test目录"><a href="#6-新建java目录和test目录" class="headerlink" title="6.新建java目录和test目录"></a>6.新建java目录和test目录</h2><p>默认情况下<code>src</code>目录下没有<code>java</code>目录和<code>test</code>目录,如有必要还需要新建<code>resours</code>目录我们需要手动建立,建好之后还需要配置一下.按下<code>Ctrl+Shift+Alt+S</code>快捷键或者点击<code>File-&gt;Project Structure</code>.<br><img src="http://static.zybuluo.com/danerlt/2p9ecqp1lyx6h7byyw9bkuoq/image_1bftg00ngivi1mj21dnv1ngj5ng6p.png" alt="image_1bftg00ngivi1mj21dnv1ngj5ng6p.png-16.7kB"><br>点击Moudle,如图1,然后点击Sources,选中目录,然后点击对应的3,4,5,6.<br><code>java</code>目录对应<code>Sources</code>,<code>test</code>目录对应<code>Tests</code>,<code>java</code>目录下的<code>resources</code>对应<code>Resources</code>,<code>test</code>目录下的<code>resources</code>对应<code>Test Resources</code>.<br><img src="http://static.zybuluo.com/danerlt/yhzk54x873mqq2mp0vnbwx7q/image_1bftci552917rjp15vg1s4v453u.png" alt="image_1bftci552917rjp15vg1s4v453u.png-85.3kB"></p>
+<h2 id="7-配置tomcat"><a href="#7-配置tomcat" class="headerlink" title="7.配置tomcat"></a>7.配置tomcat</h2><p>先选择tomcat的版本,<br><img src="http://static.zybuluo.com/danerlt/rwm5m7v3amhq5fhg7ju3pmqx/image_1bftec89sjh3cdoa11mgl1l1l4b.png" alt="image_1bftec89sjh3cdoa11mgl1l1l4b.png-71.6kB"><br>然后点击deployment,点击加号,选择artifacts.选择后缀为exploded,<br><img src="http://static.zybuluo.com/danerlt/h8ejz2kciq0ckx3b0wjqmebf/image_1bftef11j11oq1d591uu8m0h1gki4o.png" alt="image_1bftef11j11oq1d591uu8m0h1gki4o.png-17.1kB"><br>然后点击编辑,这里可以修改发布的位置,可以选择tomcat的webapp目录<br><img src="http://static.zybuluo.com/danerlt/27q917n4cshxjoq0uw6zo2h8/image_1bftek8vdnu5e811nm6cpgmva55.png" alt="image_1bftek8vdnu5e811nm6cpgmva55.png-67.5kB"><br>然后将箭头指的位置改为<code>Updata classes and resources</code><br><img src="http://static.zybuluo.com/danerlt/7lq95th7pchdklaksd4h2snx/image_1bften1vv1pa21sl7sq21l8t1pko5i.png" alt="image_1bften1vv1pa21sl7sq21l8t1pko5i.png-70.4kB"></p>
+<h2 id="8-测试是否配置成功"><a href="#8-测试是否配置成功" class="headerlink" title="8.测试是否配置成功"></a>8.测试是否配置成功</h2><p>在webapp目录下的index.jsp添加一些内容,点击debug,浏览器自动打开如下就可以了<br><img src="http://static.zybuluo.com/danerlt/ar1v983yq6y7h6zfc4hxpgmc/image_1bftetdeg1kb2g1ser31a1m6sa5v.png" alt="image_1bftetdeg1kb2g1ser31a1m6sa5v.png-82kB"></p>
+
+          
         
       
     </div>
