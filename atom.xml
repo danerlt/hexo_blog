@@ -50,7 +50,7 @@
   </entry>
   
   <entry>
-    <title>centos安装oracle 11g(二)</title>
+    <title>Centos安装oracle 11g(二)</title>
     <link href="http://litao.work/blog/2017/03/30/centos%E5%AE%89%E8%A3%85oracle-11g-%E4%BA%8C/"/>
     <id>http://litao.work/blog/2017/03/30/centos安装oracle-11g-二/</id>
     <published>2017-03-29T17:06:08.000Z</published>
@@ -147,7 +147,7 @@
   </entry>
   
   <entry>
-    <title>Linux安装mssql-tools</title>
+    <title>Linux安装mssql-Tools</title>
     <link href="http://litao.work/blog/2017/03/23/Linux%E5%AE%89%E8%A3%85mssql-tools/"/>
     <id>http://litao.work/blog/2017/03/23/Linux安装mssql-tools/</id>
     <published>2017-03-23T07:23:22.000Z</published>
@@ -235,7 +235,7 @@
   </entry>
   
   <entry>
-    <title>git常用命令</title>
+    <title>Git常用命令</title>
     <link href="http://litao.work/blog/2017/03/21/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://litao.work/blog/2017/03/21/git常用命令/</id>
     <published>2017-03-21T14:49:06.000Z</published>
@@ -425,7 +425,7 @@
   </entry>
   
   <entry>
-    <title>LF will be replaced by CRLF in *</title>
+    <title>LF Will Be Replaced by CRLF in *</title>
     <link href="http://litao.work/blog/2017/03/21/LF-will-be-replaced-by-CRLF-in/"/>
     <id>http://litao.work/blog/2017/03/21/LF-will-be-replaced-by-CRLF-in/</id>
     <published>2017-03-21T14:41:41.000Z</published>
@@ -482,7 +482,7 @@
   </entry>
   
   <entry>
-    <title>github配置sshkey</title>
+    <title>Github配置sshkey</title>
     <link href="http://litao.work/blog/2016/12/15/git%E9%85%8D%E7%BD%AEssh/"/>
     <id>http://litao.work/blog/2016/12/15/git配置ssh/</id>
     <published>2016-12-14T17:58:11.000Z</published>
@@ -601,7 +601,7 @@
   </entry>
   
   <entry>
-    <title>vmware安装苹果虚拟机常见错误</title>
+    <title>Vmware安装苹果虚拟机常见错误</title>
     <link href="http://litao.work/blog/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
     <id>http://litao.work/blog/2016/12/03/vmware安装苹果虚拟机常见错误/</id>
     <published>2016-12-03T05:40:58.000Z</published>
@@ -652,7 +652,7 @@
   </entry>
   
   <entry>
-    <title>putty连接linux中文乱码的解决方案</title>
+    <title>Putty连接linux中文乱码的解决方案</title>
     <link href="http://litao.work/blog/2016/12/03/putty%E8%BF%9E%E6%8E%A5linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/blog/2016/12/03/putty连接linux中文乱码的解决方案/</id>
     <published>2016-12-03T05:34:28.000Z</published>
@@ -676,14 +676,14 @@
     </summary>
     
     
-      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
-    
       <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
+    
+      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
     
   </entry>
   
   <entry>
-    <title>linux安装chrome</title>
+    <title>Linux安装chrome</title>
     <link href="http://litao.work/blog/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/"/>
     <id>http://litao.work/blog/2016/12/03/linux安装chrome/</id>
     <published>2016-12-02T17:27:21.000Z</published>
@@ -743,7 +743,7 @@
   </entry>
   
   <entry>
-    <title>hexo之hello world</title>
+    <title>Hexo之hello World</title>
     <link href="http://litao.work/blog/2016/12/03/hexo%E4%B9%8Bhello-world/"/>
     <id>http://litao.work/blog/2016/12/03/hexo之hello-world/</id>
     <published>2016-12-02T17:15:21.000Z</published>
@@ -774,7 +774,7 @@
   </entry>
   
   <entry>
-    <title>failed to push some refs to *.git的解决方案</title>
+    <title>Failed to Push Some Refs to *.Git的解决方案</title>
     <link href="http://litao.work/blog/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/blog/2016/12/03/failed-to-push-some-refs-to-git的解决方案/</id>
     <published>2016-12-02T17:13:11.000Z</published>
