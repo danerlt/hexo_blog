@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Litao&#39;s Blog</title>
   <subtitle>一个不太勤快的程序猿，偶尔写写自己的心得。</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://litao.work/"/>
+  <link href="http://litao.work/blog/"/>
   <updated>2017-06-06T06:29:19.733Z</updated>
-  <id>http://litao.work/</id>
+  <id>http://litao.work/blog/</id>
   
   <author>
     <name>李滔</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>IDEA使用Maven构建Java Web项目</title>
-    <link href="http://litao.work/2017/05/12/IDEA%E4%BD%BF%E7%94%A8Maven%E6%9E%84%E5%BB%BAJava-Web%E9%A1%B9%E7%9B%AE/"/>
-    <id>http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/</id>
+    <link href="http://litao.work/blog/2017/05/12/IDEA%E4%BD%BF%E7%94%A8Maven%E6%9E%84%E5%BB%BAJava-Web%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://litao.work/blog/2017/05/12/IDEA使用Maven构建Java-Web项目/</id>
     <published>2017-05-12T04:35:30.000Z</published>
     <updated>2017-06-06T06:29:19.733Z</updated>
     
@@ -41,18 +41,18 @@
     </summary>
     
     
-      <category term="javaweb" scheme="http://litao.work/tags/javaweb/"/>
+      <category term="javaweb" scheme="http://litao.work/blog/tags/javaweb/"/>
     
-      <category term="idea" scheme="http://litao.work/tags/idea/"/>
+      <category term="idea" scheme="http://litao.work/blog/tags/idea/"/>
     
-      <category term="maven" scheme="http://litao.work/tags/maven/"/>
+      <category term="maven" scheme="http://litao.work/blog/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>centos安装oracle 11g(二)</title>
-    <link href="http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85oracle-11g-%E4%BA%8C/"/>
-    <id>http://litao.work/2017/03/30/centos安装oracle-11g-二/</id>
+    <link href="http://litao.work/blog/2017/03/30/centos%E5%AE%89%E8%A3%85oracle-11g-%E4%BA%8C/"/>
+    <id>http://litao.work/blog/2017/03/30/centos安装oracle-11g-二/</id>
     <published>2017-03-29T17:06:08.000Z</published>
     <updated>2017-03-29T17:06:08.797Z</updated>
     
@@ -65,8 +65,8 @@
   
   <entry>
     <title>centos安装Oracle 11g(一)</title>
-    <link href="http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85Oracle-11g-%E4%B8%80/"/>
-    <id>http://litao.work/2017/03/30/centos安装Oracle-11g-一/</id>
+    <link href="http://litao.work/blog/2017/03/30/centos%E5%AE%89%E8%A3%85Oracle-11g-%E4%B8%80/"/>
+    <id>http://litao.work/blog/2017/03/30/centos安装Oracle-11g-一/</id>
     <published>2017-03-29T16:57:29.000Z</published>
     <updated>2017-03-29T16:59:23.545Z</updated>
     
@@ -105,14 +105,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>centos安装.NET Core</title>
-    <link href="http://litao.work/2017/03/27/centos%E5%AE%89%E8%A3%85-NET-Core/"/>
-    <id>http://litao.work/2017/03/27/centos安装-NET-Core/</id>
+    <link href="http://litao.work/blog/2017/03/27/centos%E5%AE%89%E8%A3%85-NET-Core/"/>
+    <id>http://litao.work/blog/2017/03/27/centos安装-NET-Core/</id>
     <published>2017-03-27T04:32:18.000Z</published>
     <updated>2017-03-27T04:32:59.442Z</updated>
     
@@ -142,14 +142,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux安装mssql-tools</title>
-    <link href="http://litao.work/2017/03/23/Linux%E5%AE%89%E8%A3%85mssql-tools/"/>
-    <id>http://litao.work/2017/03/23/Linux安装mssql-tools/</id>
+    <link href="http://litao.work/blog/2017/03/23/Linux%E5%AE%89%E8%A3%85mssql-tools/"/>
+    <id>http://litao.work/blog/2017/03/23/Linux安装mssql-tools/</id>
     <published>2017-03-23T07:23:22.000Z</published>
     <updated>2017-03-23T07:24:50.528Z</updated>
     
@@ -175,14 +175,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>CentOS 安装SQL Server</title>
-    <link href="http://litao.work/2017/03/22/CentOS-%E5%AE%89%E8%A3%85SQL-Server/"/>
-    <id>http://litao.work/2017/03/22/CentOS-安装SQL-Server/</id>
+    <link href="http://litao.work/blog/2017/03/22/CentOS-%E5%AE%89%E8%A3%85SQL-Server/"/>
+    <id>http://litao.work/blog/2017/03/22/CentOS-安装SQL-Server/</id>
     <published>2017-03-22T01:49:51.000Z</published>
     <updated>2017-03-22T01:52:44.545Z</updated>
     
@@ -230,14 +230,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>git常用命令</title>
-    <link href="http://litao.work/2017/03/21/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://litao.work/2017/03/21/git常用命令/</id>
+    <link href="http://litao.work/blog/2017/03/21/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://litao.work/blog/2017/03/21/git常用命令/</id>
     <published>2017-03-21T14:49:06.000Z</published>
     <updated>2017-03-24T05:07:48.070Z</updated>
     
@@ -420,14 +420,14 @@
     </summary>
     
     
-      <category term="git" scheme="http://litao.work/tags/git/"/>
+      <category term="git" scheme="http://litao.work/blog/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>LF will be replaced by CRLF in *</title>
-    <link href="http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/"/>
-    <id>http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/</id>
+    <link href="http://litao.work/blog/2017/03/21/LF-will-be-replaced-by-CRLF-in/"/>
+    <id>http://litao.work/blog/2017/03/21/LF-will-be-replaced-by-CRLF-in/</id>
     <published>2017-03-21T14:41:41.000Z</published>
     <updated>2017-03-21T14:46:17.212Z</updated>
     
@@ -444,16 +444,16 @@
     </summary>
     
     
-      <category term="git" scheme="http://litao.work/tags/git/"/>
+      <category term="git" scheme="http://litao.work/blog/tags/git/"/>
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
     
   </entry>
   
   <entry>
     <title>Vmware安装CentOS7</title>
-    <link href="http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/"/>
-    <id>http://litao.work/2017/03/21/Vmware-安装Centos7/</id>
+    <link href="http://litao.work/blog/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/"/>
+    <id>http://litao.work/blog/2017/03/21/Vmware-安装Centos7/</id>
     <published>2017-03-21T14:30:00.000Z</published>
     <updated>2017-05-12T04:37:17.450Z</updated>
     
@@ -477,14 +477,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>github配置sshkey</title>
-    <link href="http://litao.work/2016/12/15/git%E9%85%8D%E7%BD%AEssh/"/>
-    <id>http://litao.work/2016/12/15/git配置ssh/</id>
+    <link href="http://litao.work/blog/2016/12/15/git%E9%85%8D%E7%BD%AEssh/"/>
+    <id>http://litao.work/blog/2016/12/15/git配置ssh/</id>
     <published>2016-12-14T17:58:11.000Z</published>
     <updated>2016-12-14T18:17:28.542Z</updated>
     
@@ -510,14 +510,14 @@
     </summary>
     
     
-      <category term="git" scheme="http://litao.work/tags/git/"/>
+      <category term="git" scheme="http://litao.work/blog/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>运行，控制面板，命令提示符被禁用的解决方案</title>
-    <link href="http://litao.work/2016/12/03/%E8%BF%90%E8%A1%8C%EF%BC%8C%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%EF%BC%8C%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%A2%AB%E7%A6%81%E7%94%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/运行，控制面板，命令提示符被禁用的解决方案/</id>
+    <link href="http://litao.work/blog/2016/12/03/%E8%BF%90%E8%A1%8C%EF%BC%8C%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%EF%BC%8C%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%A2%AB%E7%A6%81%E7%94%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/blog/2016/12/03/运行，控制面板，命令提示符被禁用的解决方案/</id>
     <published>2016-12-03T05:55:47.000Z</published>
     <updated>2016-12-03T05:57:22.308Z</updated>
     
@@ -536,16 +536,16 @@
     </summary>
     
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
     
-      <category term="windows" scheme="http://litao.work/tags/windows/"/>
+      <category term="windows" scheme="http://litao.work/blog/tags/windows/"/>
     
   </entry>
   
   <entry>
     <title>《代码整洁之道》读书笔记</title>
-    <link href="http://litao.work/2016/12/03/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>http://litao.work/2016/12/03/《代码整洁之道》读书笔记/</id>
+    <link href="http://litao.work/blog/2016/12/03/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>http://litao.work/blog/2016/12/03/《代码整洁之道》读书笔记/</id>
     <published>2016-12-03T05:53:30.000Z</published>
     <updated>2016-12-03T17:14:38.939Z</updated>
     
@@ -567,14 +567,14 @@
     </summary>
     
     
-      <category term="读书笔记" scheme="http://litao.work/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="http://litao.work/blog/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>查看电脑信息命令大全</title>
-    <link href="http://litao.work/2016/12/03/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
-    <id>http://litao.work/2016/12/03/查看电脑信息命令大全/</id>
+    <link href="http://litao.work/blog/2016/12/03/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    <id>http://litao.work/blog/2016/12/03/查看电脑信息命令大全/</id>
     <published>2016-12-03T05:45:24.000Z</published>
     <updated>2016-12-03T17:15:16.810Z</updated>
     
@@ -596,14 +596,14 @@
     </summary>
     
     
-      <category term="windows" scheme="http://litao.work/tags/windows/"/>
+      <category term="windows" scheme="http://litao.work/blog/tags/windows/"/>
     
   </entry>
   
   <entry>
     <title>vmware安装苹果虚拟机常见错误</title>
-    <link href="http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
-    <id>http://litao.work/2016/12/03/vmware安装苹果虚拟机常见错误/</id>
+    <link href="http://litao.work/blog/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
+    <id>http://litao.work/blog/2016/12/03/vmware安装苹果虚拟机常见错误/</id>
     <published>2016-12-03T05:40:58.000Z</published>
     <updated>2016-12-03T17:17:16.949Z</updated>
     
@@ -621,16 +621,16 @@
     </summary>
     
     
-      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
+      <category term="mac os" scheme="http://litao.work/blog/tags/mac-os/"/>
     
-      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
+      <category term="vmware" scheme="http://litao.work/blog/tags/vmware/"/>
     
   </entry>
   
   <entry>
     <title>U盘文件夹变成快捷方式的解决方案</title>
-    <link href="http://litao.work/2016/12/03/U%E7%9B%98%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%98%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/U盘文件夹变成快捷方式的解决方案/</id>
+    <link href="http://litao.work/blog/2016/12/03/U%E7%9B%98%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%98%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/blog/2016/12/03/U盘文件夹变成快捷方式的解决方案/</id>
     <published>2016-12-03T05:37:34.000Z</published>
     <updated>2016-12-03T05:39:37.405Z</updated>
     
@@ -645,16 +645,16 @@
     </summary>
     
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
     
-      <category term="windows" scheme="http://litao.work/tags/windows/"/>
+      <category term="windows" scheme="http://litao.work/blog/tags/windows/"/>
     
   </entry>
   
   <entry>
     <title>putty连接linux中文乱码的解决方案</title>
-    <link href="http://litao.work/2016/12/03/putty%E8%BF%9E%E6%8E%A5linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/putty连接linux中文乱码的解决方案/</id>
+    <link href="http://litao.work/blog/2016/12/03/putty%E8%BF%9E%E6%8E%A5linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/blog/2016/12/03/putty连接linux中文乱码的解决方案/</id>
     <published>2016-12-03T05:34:28.000Z</published>
     <updated>2016-12-03T05:39:37.416Z</updated>
     
@@ -676,16 +676,16 @@
     </summary>
     
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>linux安装chrome</title>
-    <link href="http://litao.work/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/"/>
-    <id>http://litao.work/2016/12/03/linux安装chrome/</id>
+    <link href="http://litao.work/blog/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/"/>
+    <id>http://litao.work/blog/2016/12/03/linux安装chrome/</id>
     <published>2016-12-02T17:27:21.000Z</published>
     <updated>2016-12-02T17:27:40.053Z</updated>
     
@@ -704,14 +704,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Html规范form Google Code Style</title>
-    <link href="http://litao.work/2016/12/03/Html%E8%A7%84%E8%8C%83form-Google-Code-Style/"/>
-    <id>http://litao.work/2016/12/03/Html规范form-Google-Code-Style/</id>
+    <link href="http://litao.work/blog/2016/12/03/Html%E8%A7%84%E8%8C%83form-Google-Code-Style/"/>
+    <id>http://litao.work/blog/2016/12/03/Html规范form-Google-Code-Style/</id>
     <published>2016-12-02T17:17:09.000Z</published>
     <updated>2016-12-03T17:16:47.460Z</updated>
     
@@ -736,16 +736,16 @@
     </summary>
     
     
-      <category term="html" scheme="http://litao.work/tags/html/"/>
+      <category term="html" scheme="http://litao.work/blog/tags/html/"/>
     
-      <category term="code style" scheme="http://litao.work/tags/code-style/"/>
+      <category term="code style" scheme="http://litao.work/blog/tags/code-style/"/>
     
   </entry>
   
   <entry>
     <title>hexo之hello world</title>
-    <link href="http://litao.work/2016/12/03/hexo%E4%B9%8Bhello-world/"/>
-    <id>http://litao.work/2016/12/03/hexo之hello-world/</id>
+    <link href="http://litao.work/blog/2016/12/03/hexo%E4%B9%8Bhello-world/"/>
+    <id>http://litao.work/blog/2016/12/03/hexo之hello-world/</id>
     <published>2016-12-02T17:15:21.000Z</published>
     <updated>2016-12-02T17:31:16.803Z</updated>
     
@@ -769,14 +769,14 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://litao.work/tags/hexo/"/>
+      <category term="hexo" scheme="http://litao.work/blog/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>failed to push some refs to *.git的解决方案</title>
-    <link href="http://litao.work/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/failed-to-push-some-refs-to-git的解决方案/</id>
+    <link href="http://litao.work/blog/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://litao.work/blog/2016/12/03/failed-to-push-some-refs-to-git的解决方案/</id>
     <published>2016-12-02T17:13:11.000Z</published>
     <updated>2016-12-03T05:39:31.406Z</updated>
     
@@ -803,9 +803,9 @@
     </summary>
     
     
-      <category term="git" scheme="http://litao.work/tags/git/"/>
+      <category term="git" scheme="http://litao.work/blog/tags/git/"/>
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
+      <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
     
   </entry>
   
