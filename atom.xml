@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-06-06T06:29:19.733Z</updated>
+  <updated>2017-06-29T03:00:59.000Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,99 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>查找二维数组</title>
+    <link href="http://litao.work/2017/06/29/%E6%9F%A5%E6%89%BE%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/"/>
+    <id>http://litao.work/2017/06/29/查找二维数组/</id>
+    <published>2017-06-29T01:55:23.000Z</published>
+    <updated>2017-06-29T03:00:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和一个数组中,是否含有该整数.详情请点击<a href="https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&amp;tqId=11154&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">这里</a>.(题目来源牛客网剑指offer).</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//二维数组</div><div class="line">&#123;1, 2, 8, 9&#125;,</div><div class="line">&#123;2, 4, 9, 12&#125;,</div><div class="line">&#123;4, 7, 10, 13&#125;,</div><div class="line">6, 8, 11, 15&#125;</div><div class="line">//目标数字</div><div class="line">7</div></pre></td></tr></table></figure>
+<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">true</div></pre></td></tr></table></figure>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p> number从左下角开始,又三种可能的情况:<br>1.number == target,这种情况直接返回true;<br>2.number &lt; target,那么target的范围不可能number的这一列,<br>就在number这一列的右边去找,然后将number的值设为number右边的数,再次比较和target比较<br>3.number &gt; target,那么target的范围不可能number的这一行,<br>就在number这一行的上边去找,然后将number的值设为number上边的数,再次比较和target比较</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public boolean hasNumber(int[][] arr, int target) &#123;</div><div class="line">        boolean found = false;</div><div class="line">        int rows = arr.length;</div><div class="line">        int columns = arr[0].length;</div><div class="line">        if (arr != null &amp;&amp; rows &gt; 0 &amp;&amp; columns &gt; 0) &#123;</div><div class="line">            int row = rows - 1;</div><div class="line">            int column = 0;</div><div class="line"></div><div class="line">            while (row &gt;= 0 &amp;&amp; column &lt; columns) &#123;</div><div class="line">                int number = arr[row][column];//起始位置为左下角的值.</div><div class="line">                if (number == target) &#123;</div><div class="line">                    found = true;</div><div class="line">                    break;</div><div class="line">                &#125; else if (number &lt; target) &#123;</div><div class="line">                    ++column;</div><div class="line">                &#125; else &#123;</div><div class="line">                    --row;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return found;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="代码详细源码"><a href="#代码详细源码" class="headerlink" title="代码详细源码"></a>代码详细源码</h2><p>也可在<a href="https://github.com/Lt-grint/offer-java/blob/master/src/offer/Example03.java" target="_blank" rel="external">这里</a>查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">package offer;</div><div class="line"></div><div class="line"></div><div class="line">import org.junit.Test;</div><div class="line"></div><div class="line">import static org.junit.Assert.*;</div><div class="line"></div><div class="line">/**</div><div class="line"> * @describute 題目描述：</div><div class="line"> * 在一个二维数组中,每一行都按照从到右递增的顺序,</div><div class="line"> * 每一列都按照从上到下递增的顺序排序.请完成一个函数,输入</div><div class="line"> * 这样的一个二维数组和一个数组中,是否含有该整数.</div><div class="line"> * &lt;p&gt;</div><div class="line"> * 解题思路:</div><div class="line"> * number从左下角开始,又三种可能的情况:</div><div class="line"> * 1.number == target,这种情况直接返回true;</div><div class="line"> * 2.number &lt; target,那么target的范围不可能number的这一列,</div><div class="line"> * 就在number这一列的右边去找,然后将number的值设为number右边的数,再次比较和target比较</div><div class="line"> * 3.number &gt; target,那么target的范围不可能number的这一行,</div><div class="line"> * 就在number这一行的上边去找,然后将number的值设为number上边的数,再次比较和target比较</div><div class="line"> * Created by danerlt on 17-6-28.</div><div class="line"> */</div><div class="line">public class Example03 &#123;</div><div class="line">    public boolean hasNumber(int[][] arr, int target) &#123;</div><div class="line">        boolean found = false;</div><div class="line">        int rows = arr.length;</div><div class="line">        int columns = arr[0].length;</div><div class="line">        if (arr != null &amp;&amp; rows &gt; 0 &amp;&amp; columns &gt; 0) &#123;</div><div class="line">            int row = rows - 1;</div><div class="line">            int column = 0;</div><div class="line"></div><div class="line">            while (row &gt;= 0 &amp;&amp; column &lt; columns) &#123;</div><div class="line">                int number = arr[row][column];//起始位置为左下角的值.</div><div class="line">                if (number == target) &#123;</div><div class="line">                    found = true;</div><div class="line">                    break;</div><div class="line">                &#125; else if (number &lt; target) &#123;</div><div class="line">                    ++column;</div><div class="line">                &#125; else &#123;</div><div class="line">                    --row;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return found;</div><div class="line">    &#125;</div><div class="line">    @Test</div><div class="line">    public void testHasNumber () &#123;</div><div class="line">        int[][] arr = new int[][]&#123;</div><div class="line">                &#123;1, 2, 8, 9&#125;,</div><div class="line">                &#123;2, 4, 9, 12&#125;,</div><div class="line">                &#123;4, 7, 10, 13&#125;,</div><div class="line">                &#123;6, 8, 11, 15&#125;</div><div class="line">        &#125;;</div><div class="line">        assertTrue(hasNumber(arr, 15));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Test</div><div class="line">    public void testHasNotNumber () &#123;</div><div class="line">        int[][] arr = new int[][]&#123;</div><div class="line">                &#123;1, 2, 8, 9&#125;,</div><div class="line">                &#123;2, 4, 9, 12&#125;,</div><div class="line">                &#123;4, 7, 10, 13&#125;,</div><div class="line">                &#123;6, 8, 11, 15&#125;</div><div class="line">        &#125;;</div><div class="line">        assertFalse(hasNumber(arr, 5));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和
+    
+    </summary>
+    
+    
+      <category term="剑指offer" scheme="http://litao.work/tags/%E5%89%91%E6%8C%87offer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://litao.work/2017/06/06/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%20--2016-7-27/"/>
+    <id>http://litao.work/2017/06/06/学习总结 --2016-7-27/</id>
+    <published>2017-06-06T06:37:17.804Z</published>
+    <updated>2016-11-18T08:06:30.256Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: Javascript笔记<br>date: 2016-11-15 11:51:44<br>tag: javascript<br>—﻿</p>
+<h2 id="1-Javascript"><a href="#1-Javascript" class="headerlink" title="1.Javascript"></a>1.Javascript</h2><h3 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h3><ul>
+<li>false</li>
+<li>null</li>
+<li>undefined</li>
+<li>空字符串’ ‘</li>
+<li>数字0</li>
+<li>数字NaN</li>
+</ul>
+<h3 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h3><p>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。</p>
+<h3 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h3><p>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</p>
+<h3 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h3><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"></p>
+<p>节选自JavaScriptDOM编程]</p>
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
+<p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
+<blockquote>
+<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
+<blockquote>
+<p>至此，大功告成，可以正常显示中文了。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: Javascript笔记&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: javascript&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;1-Javascript&quot;&gt;&lt;a href=&quot;#1-Javascript&quot; class=&quot;h
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://litao.work/2017/06/06/%E8%BD%AF%E8%80%83%E4%B9%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2%EF%BC%882016%E4%B8%8B%E5%8D%8A%E5%B9%B4%EF%BC%89/"/>
+    <id>http://litao.work/2017/06/06/软考之软件设计师考试大纲（2016下半年）/</id>
+    <published>2017-06-06T06:37:17.801Z</published>
+    <updated>2016-11-18T08:03:47.771Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: 软考之软件设计师大纲（2016下半年）<br>date: 2016-11-15 11:51:44<br>tag: 软考<br>—﻿</p>
+<p>博主开学就大三了，二流学校在读，暑假留校，没什么项目练手，索性报个软考来系统的整理下自己的专业知识。<br>软考大纲，2016年下半年。考试大纲图：<img src="http://static.zybuluo.com/danerlt/gng2z4zy995njf2w1rys9eow/%E8%BD%AF%E8%80%83.xmind.svg" alt="软考.xmind.svg-177.8kB"><br>本思维导图使用百度脑图绘制，高清无码大图请戳<a href="http://static.zybuluo.com/danerlt/gng2z4zy995njf2w1rys9eow/%E8%BD%AF%E8%80%83.xmind.svg" target="_blank" rel="external">这里</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: 软考之软件设计师大纲（2016下半年）&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: 软考&lt;br&gt;—﻿&lt;/p&gt;
+&lt;p&gt;博主开学就大三了，二流学校在读，暑假留校，没什么项目练手，索性报个软考来系统的整理下自己的专业知识。&lt;b
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>IDEA使用Maven构建Java Web项目</title>
@@ -705,107 +798,6 @@
     
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Html规范form Google Code Style</title>
-    <link href="http://litao.work/2016/12/03/Html%E8%A7%84%E8%8C%83form-Google-Code-Style/"/>
-    <id>http://litao.work/2016/12/03/Html规范form-Google-Code-Style/</id>
-    <published>2016-12-02T17:17:09.000Z</published>
-    <updated>2016-12-03T17:16:47.460Z</updated>
-    
-    <content type="html"><![CDATA[<p>Html规范From Google Code Style</p>
-<h2 id="通用规范"><a href="#通用规范" class="headerlink" title="通用规范"></a>通用规范</h2><h3 id="通用样式规范"><a href="#通用样式规范" class="headerlink" title="通用样式规范"></a>通用样式规范</h3><p>隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(https://www.google.com/images/example);</div><div class="line">&#125;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(//www.google.com/images/example);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="通用格式规范"><a href="#通用格式规范" class="headerlink" title="通用格式规范"></a>通用格式规范</h3><h4 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h4><p>实验两个空格缩进而不是使用tab键或者混合使用tab键和空格键</p>
-<h4 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h4><p>仅使用小写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">A</span> <span class="attr">HREF</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">A</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"google.png"</span> <span class="attr">alt</span>=<span class="string">"Google"</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#E5E5E5</span>;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#e5e5e5</span>;</div></pre></td></tr></table></figure>
-<h3 id="通用meta规范"><a href="#通用meta规范" class="headerlink" title="通用meta规范"></a>通用meta规范</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><p>使用UTF-8无BOM<br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></p>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>当代码需要注释的时候添加注释。对代码注释，需要指明代码的功能。</p>
-<h4 id="Action-Item"><a href="#Action-Item" class="headerlink" title="Action Item"></a>Action Item</h4><p>只用TODO标记待办事宜（todos），不能使用其他的格式来表述。在TODO后面追加描述信息（如用户名或者邮件列表），将待办事宜追加到TODO后面。例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;# TODO(john.doe): revisit centering #&#125;</div><div class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">center</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- <span class="doctag">TODO:</span> remove optional tags --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Oranges<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="HTML规范"><a href="#HTML规范" class="headerlink" title="HTML规范"></a>HTML规范</h2><h3 id="HTML样式规范"><a href="#HTML样式规范" class="headerlink" title="HTML样式规范"></a>HTML样式规范</h3><h3 id="HTML格式规范"><a href="#HTML格式规范" class="headerlink" title="HTML格式规范"></a>HTML格式规范</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Html规范From Google Code Style&lt;/p&gt;
-&lt;h2 id=&quot;通用规范&quot;&gt;&lt;a href=&quot;#通用规范&quot; class=&quot;headerlink&quot; title=&quot;通用规范&quot;&gt;&lt;/a&gt;通用规范&lt;/h2&gt;&lt;h3 id=&quot;通用样式规范&quot;&gt;&lt;a href=&quot;#通用样式规范&quot; class=&quot;headerlink&quot; title=&quot;通用样式规范&quot;&gt;&lt;/a&gt;通用样式规范&lt;/h3&gt;&lt;p&gt;隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Not recommended --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://www.google.com/js/gweb/analytics/autotrack.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Recommended --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//www.google.com/js/gweb/analytics/autotrack.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="html" scheme="http://litao.work/tags/html/"/>
-    
-      <category term="code style" scheme="http://litao.work/tags/code-style/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo之hello World</title>
-    <link href="http://litao.work/2016/12/03/hexo%E4%B9%8Bhello-world/"/>
-    <id>http://litao.work/2016/12/03/hexo之hello-world/</id>
-    <published>2016-12-02T17:15:21.000Z</published>
-    <updated>2016-12-02T17:31:16.803Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://litao.work/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Failed to Push Some Refs to *.Git的解决方案</title>
-    <link href="http://litao.work/2016/12/03/failed-to-push-some-refs-to-git%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/failed-to-push-some-refs-to-git的解决方案/</id>
-    <published>2016-12-02T17:13:11.000Z</published>
-    <updated>2016-12-03T05:39:31.406Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h2><p><img src="http://static.zybuluo.com/danerlt/n8psdkld5as44plb37meusu4/image_1ar80krop1n4jlak99k14i0odr9.png" alt="image_1ar80krop1n4jlak99k14i0odr9.png-24.1kB"></p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">error: failed to push some refs to &apos;git@github.com:username/repo_name.git&apos;</div><div class="line">hint: Updates were rejected because the tip of your current branch is behind</div><div class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</div><div class="line">hint: &apos;git pull ...&apos;) before pushing again.</div><div class="line">hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</div></pre></td></tr></table></figure>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
-<p>git pull –rebase</p>
-</blockquote>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><blockquote>
-<p>提示里说更新被拒绝，因为你当前的分支在前面。大意就是你本地的仓库不是最新的，要和远程库合并之后再<code>push</code>,要你在使用<code>git push orign master</code>之前使用<code>git pull</code>合并远程仓库。但是但我使用<code>git pull</code>之后，又出现了下面的错误。</p>
-</blockquote>
-<p><img src="http://static.zybuluo.com/danerlt/do5js74k8d43w7altrwbpchr/image_1ar817spe1989vqv1oho1rc7vlbm.png" alt="image_1ar817spe1989vqv1oho1rc7vlbm.png-20.1kB"></p>
-<blockquote>
-<p>要我去查看<code>git-pull(1)</code>这个网页,（原网页关闭了，找不到原图，）其中有一个图很关键，指出了原因。由于<code>git pull</code>是相当于是<code>git fetch</code>和<code>git merge</code>的，所以只需要使用<code>git pull --rabase</code>就可以解决了。</p>
-</blockquote>
-<p><img src="http://static.zybuluo.com/danerlt/4nn9p7p7uwzwiyueccduu0zu/image_1ar81khnk1b2oa5815spiqqr6f13.png" alt="image_1ar81khnk1b2oa5815spiqqr6f13.png-13kB">（图侵删）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;错误提示&quot;&gt;&lt;a href=&quot;#错误提示&quot; class=&quot;headerlink&quot; title=&quot;错误提示&quot;&gt;&lt;/a&gt;错误提示&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/n8psdkld5as44plb37meusu4/image_1ar80krop1n4jlak99k14i0odr9.png&quot; alt=&quot;image_1ar80krop1n4jlak99k14i0odr9.png-24.1kB&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="git" scheme="http://litao.work/tags/git/"/>
-    
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
   </entry>
   
