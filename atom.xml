@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2016-11-18T08:06:30.256Z</updated>
+  <updated>2017-06-29T03:11:00.000Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,50 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://litao.work/2017/06/29/Javascript%E7%AC%94%E8%AE%B0/"/>
-    <id>http://litao.work/2017/06/29/Javascript笔记/</id>
-    <published>2017-06-29T03:15:02.011Z</published>
-    <updated>2016-11-18T08:06:30.256Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<p>title: Javascript笔记<br>date: 2016-11-15 11:51:44<br>tag: javascript<br>—﻿</p>
-<h2 id="1-Javascript"><a href="#1-Javascript" class="headerlink" title="1.Javascript"></a>1.Javascript</h2><h3 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h3><ul>
-<li>false</li>
-<li>null</li>
-<li>undefined</li>
-<li>空字符串’ ‘</li>
-<li>数字0</li>
-<li>数字NaN</li>
-</ul>
-<h3 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h3><p>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。</p>
-<h3 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h3><p>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</p>
-<h3 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h3><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"></p>
-<p>节选自JavaScriptDOM编程]</p>
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
-<p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
-<blockquote>
-<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
-</blockquote>
-<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
-<blockquote>
-<p>至此，大功告成，可以正常显示中文了。</p>
-</blockquote>
-<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;title: Javascript笔记&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: javascript&lt;br&gt;—﻿&lt;/p&gt;
-&lt;h2 id=&quot;1-Javascript&quot;&gt;&lt;a href=&quot;#1-Javascript&quot; class=&quot;h
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>查找二维数组</title>
@@ -798,6 +754,40 @@
     
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Html规范form Google Code Style</title>
+    <link href="http://litao.work/2016/12/03/Html%E8%A7%84%E8%8C%83form-Google-Code-Style/"/>
+    <id>http://litao.work/2016/12/03/Html规范form-Google-Code-Style/</id>
+    <published>2016-12-02T17:17:09.000Z</published>
+    <updated>2016-12-03T17:16:47.460Z</updated>
+    
+    <content type="html"><![CDATA[<p>Html规范From Google Code Style</p>
+<h2 id="通用规范"><a href="#通用规范" class="headerlink" title="通用规范"></a>通用规范</h2><h3 id="通用样式规范"><a href="#通用样式规范" class="headerlink" title="通用样式规范"></a>通用样式规范</h3><p>隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//www.google.com/js/gweb/analytics/autotrack.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(https://www.google.com/images/example);</div><div class="line">&#125;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(//www.google.com/images/example);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="通用格式规范"><a href="#通用格式规范" class="headerlink" title="通用格式规范"></a>通用格式规范</h3><h4 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h4><p>实验两个空格缩进而不是使用tab键或者混合使用tab键和空格键</p>
+<h4 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h4><p>仅使用小写<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Not recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">A</span> <span class="attr">HREF</span>=<span class="string">"/"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">A</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Recommended --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"google.png"</span> <span class="attr">alt</span>=<span class="string">"Google"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Not recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#E5E5E5</span>;</div><div class="line"><span class="comment">/* Recommended */</span></div><div class="line"><span class="selector-tag">color</span>: <span class="selector-id">#e5e5e5</span>;</div></pre></td></tr></table></figure>
+<h3 id="通用meta规范"><a href="#通用meta规范" class="headerlink" title="通用meta规范"></a>通用meta规范</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><p>使用UTF-8无BOM<br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>当代码需要注释的时候添加注释。对代码注释，需要指明代码的功能。</p>
+<h4 id="Action-Item"><a href="#Action-Item" class="headerlink" title="Action Item"></a>Action Item</h4><p>只用TODO标记待办事宜（todos），不能使用其他的格式来表述。在TODO后面追加描述信息（如用户名或者邮件列表），将待办事宜追加到TODO后面。例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;# TODO(john.doe): revisit centering #&#125;</div><div class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">center</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- <span class="doctag">TODO:</span> remove optional tags --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Apples<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Oranges<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="HTML规范"><a href="#HTML规范" class="headerlink" title="HTML规范"></a>HTML规范</h2><h3 id="HTML样式规范"><a href="#HTML样式规范" class="headerlink" title="HTML样式规范"></a>HTML样式规范</h3><h3 id="HTML格式规范"><a href="#HTML格式规范" class="headerlink" title="HTML格式规范"></a>HTML格式规范</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Html规范From Google Code Style&lt;/p&gt;
+&lt;h2 id=&quot;通用规范&quot;&gt;&lt;a href=&quot;#通用规范&quot; class=&quot;headerlink&quot; title=&quot;通用规范&quot;&gt;&lt;/a&gt;通用规范&lt;/h2&gt;&lt;h3 id=&quot;通用样式规范&quot;&gt;&lt;a href=&quot;#通用样式规范&quot; class=&quot;headerlink&quot; title=&quot;通用样式规范&quot;&gt;&lt;/a&gt;通用样式规范&lt;/h3&gt;&lt;p&gt;隐藏来自通过URL引入的外部图片，样式表，js脚本或者其他文件。&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Not recommended --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://www.google.com/js/gweb/analytics/autotrack.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Recommended --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;//www.google.com/js/gweb/analytics/autotrack.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="html" scheme="http://litao.work/tags/html/"/>
+    
+      <category term="code style" scheme="http://litao.work/tags/code-style/"/>
     
   </entry>
   
