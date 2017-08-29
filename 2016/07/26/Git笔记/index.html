@@ -162,6 +162,9 @@
 
 </head>
 
+<script type="text/javascript"
+color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
@@ -171,7 +174,7 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
+    <a href="https://github.com/Lt-grint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -292,7 +295,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李滔">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -322,7 +325,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-06-29T23:37:16+08:00">
+                2017-06-29
+              </time>
             
           </span>
 
@@ -344,9 +359,52 @@
 
           
           
+             <span id="/2016/07/26/Git笔记/" class="leancloud_visitors" data-flag-title="Git笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"</span>
+                 <span>℃</span>
+             </span>
+          
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  242
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
           
 
           
@@ -366,7 +424,7 @@
       
         <h2 id="git-连接远程库。"><a href="#git-连接远程库。" class="headerlink" title="git 连接远程库。"></a>git 连接远程库。</h2><p>首先要使用ssh-keygen 生成公钥，引号里输入自己的邮箱地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</div></pre></td></tr></table></figure></p>
 <p>执行这个命令后可以一路回车，然后会生成一个私钥和一个公钥，公钥可以随便告诉别人，私钥一定不要让它泄密。Linux下默认保存在<code>/root/.ssh</code>下windows默认保存在<code>C:\Users\window用户名\.ssh</code>下。<code>.ssh</code>文件夹下会产生如下几个文件。<br><img src="http://static.zybuluo.com/danerlt/tpu33lwmzt8yhblbt73huzfn/image_1aojnbro51kd21jujvm4ib5ii6m.png" alt="image_1aojnbro51kd21jujvm4ib5ii6m.png-16.3kB"><br>其中的<code>id_rsa.pub</code>就是公钥,在文本编辑器打开，复制里面的内容，在你的github账号下选择<code>Settings</code>，然后选择<code>SSH and GPG keys</code>，点击<code>new ssh key</code>,粘贴进去就可以使用<code>git clone git@github.com:github用户名/远程仓库名.git</code> 愉快地将远程仓库克隆下来了。<br><img src="http://static.zybuluo.com/danerlt/jwzzmndkhzit8nxjsq4picri/image_1aojngm9p1invlahj8l1t3u1ne513.png" alt="image_1aojngm9p1invlahj8l1t3u1ne513.png-15.4kB"><br><img src="http://static.zybuluo.com/danerlt/ud7hl8ior9od4t0z50n10pl1/image_1aojnl61a1ckes717p11bcjeav9.png" alt="image_1aojnl61a1ckes717p11bcjeav9.png-26.8kB"></p>
-<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="NaN是一个数值，它不等于任何值，包括它自己。"><a href="#NaN是一个数值，它不等于任何值，包括它自己。" class="headerlink" title="NaN是一个数值，它不等于任何值，包括它自己。"></a>NaN是一个数值，它不等于任何值，包括它自己。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="literal">NaN</span>));</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="string">'a'</span>));</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="number">1</span>));</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<h1 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h1><h2 id="NaN是一个数值，它不等于任何值，包括它自己。"><a href="#NaN是一个数值，它不等于任何值，包括它自己。" class="headerlink" title="NaN是一个数值，它不等于任何值，包括它自己。"></a>NaN是一个数值，它不等于任何值，包括它自己。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="literal">NaN</span>));</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="string">'a'</span>));</div><div class="line">		<span class="built_in">document</span>.writeln(<span class="built_in">isNaN</span>(<span class="number">1</span>));</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>运行截图<br><img src="http://static.zybuluo.com/danerlt/hi7hdtll42lrca1a4hnk15qp/image_1aojmukvf1adu8lq1tkuuuuttb9.png" alt="image_1aojmukvf1adu8lq1tkuuuuttb9.png-2.4kB"></p>
 <p>##</p>
 
@@ -375,7 +433,16 @@
     
     
     
-
+    <div>
+        
+            
+<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+            
+    </div>
     
 
     
@@ -389,14 +456,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/updates/ali.png" alt="李滔 WeChat Pay"/>
+        <img id="wechat_qr" src="/updates/weixin.jpg" alt="李滔 WeChat Pay"/>
         <p>WeChat Pay</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/updates/weixin.jpg" alt="李滔 Alipay"/>
+        <img id="alipay_qr" src="/updates/ali.png" alt="李滔 Alipay"/>
         <p>Alipay</p>
       </div>
     
@@ -410,12 +477,12 @@
     
 
     
-
+    
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/git/" <i class="fa fa-tag"></i> git</a>
           
         </div>
       
@@ -434,8 +501,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/15/软考之软件设计师大纲/" rel="prev" title="软考之软件设计师大纲">
-                软考之软件设计师大纲 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/15/hexo笔记/" rel="prev" title="Hexo笔记">
+                Hexo笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -531,7 +598,7 @@ var jiathis_config={
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/uploads/avatar.jpg"
                alt="李滔" />
           <p class="site-author-name" itemprop="name">李滔</p>
            
@@ -665,14 +732,27 @@ var jiathis_config={
   <span class="author" itemprop="copyrightHolder">李滔</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">
+      6.9k
+    </span>
+  
 </div>
 
 
   <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
   <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+  <div class="theme-info">
+    <div class="powered-by">NexT.Mist</div>
+    <span class="post-count">博客全站共6.9k字</span>
+  </div> 
 
 
         
@@ -715,6 +795,8 @@ var jiathis_config={
   
 
 
+  
+
 
 
 
@@ -742,6 +824,9 @@ var jiathis_config={
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -823,6 +908,111 @@ var jiathis_config={
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
@@ -832,5 +1022,9 @@ var jiathis_config={
 
   
 
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>
