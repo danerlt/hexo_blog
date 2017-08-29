@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="剑指offer," />
+  <meta name="keywords" content="linux,git," />
 
 
 
@@ -106,16 +106,37 @@
 
 
 
-<meta name="description" content="题目描述在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和一个数组中,是否含有该整数.详情请点击这里.(题目来源牛客网剑指offer).">
+<meta name="description" content="参考廖雪峰搭建Git服务器
+
+服务器版本：Centos7.0
+##　１.建立git用户1sudo useradd -m git
+2.创建证书登录在git用户文件夹中，创建.ssh文件夹1mkdir .ssh
+在.ssh中touch authorized_keys文件1touch .ssh/authorized_keys
+收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查找二维数组">
-<meta property="og:url" content="http://litao.work/2017/06/29/查找二维数组/index.html">
+<meta property="og:title" content="Git服务器配置">
+<meta property="og:url" content="http://litao.work/2017/08/29/Git服务器配置/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="题目描述在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和一个数组中,是否含有该整数.详情请点击这里.(题目来源牛客网剑指offer).">
-<meta property="og:updated_time" content="2017-06-29T03:11:00.000Z">
+<meta property="og:description" content="参考廖雪峰搭建Git服务器
+
+服务器版本：Centos7.0
+##　１.建立git用户1sudo useradd -m git
+2.创建证书登录在git用户文件夹中，创建.ssh文件夹1mkdir .ssh
+在.ssh中touch authorized_keys文件1touch .ssh/authorized_keys
+收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/zgq005r4xt6mad0ou7xlhfaa/image_1bojgtg029oq1ug1st1g1t13t19.png">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/qccrnl81spv7fpxq097xqckn/image_1bojh4i38v5ei0m7u1vm31kk5m.png">
+<meta property="og:updated_time" content="2017-08-29T09:46:46.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查找二维数组">
-<meta name="twitter:description" content="题目描述在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和一个数组中,是否含有该整数.详情请点击这里.(题目来源牛客网剑指offer).">
+<meta name="twitter:title" content="Git服务器配置">
+<meta name="twitter:description" content="参考廖雪峰搭建Git服务器
+
+服务器版本：Centos7.0
+##　１.建立git用户1sudo useradd -m git
+2.创建证书登录在git用户文件夹中，创建.ssh文件夹1mkdir .ssh
+在.ssh中touch authorized_keys文件1touch .ssh/authorized_keys
+收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有">
+<meta name="twitter:image" content="http://static.zybuluo.com/danerlt/zgq005r4xt6mad0ou7xlhfaa/image_1bojgtg029oq1ug1st1g1t13t19.png">
 
 
 
@@ -145,13 +166,13 @@
 
 
 
-  <link rel="canonical" href="http://litao.work/2017/06/29/查找二维数组/"/>
+  <link rel="canonical" href="http://litao.work/2017/08/29/Git服务器配置/"/>
 
 
 
 
 
-  <title>查找二维数组 | Litao's Blog</title>
+  <title>Git服务器配置 | Litao's Blog</title>
   
 
 
@@ -291,7 +312,7 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://litao.work/2017/06/29/查找二维数组/">
+    <link itemprop="mainEntityOfPage" href="http://litao.work/2017/08/29/Git服务器配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李滔">
@@ -308,7 +329,7 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
 
         
         
-          <h1 class="post-title" itemprop="name headline">查找二维数组</h1>
+          <h1 class="post-title" itemprop="name headline">Git服务器配置</h1>
         
 
         <div class="post-meta">
@@ -320,8 +341,8 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T09:55:23+08:00">
-                2017-06-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T17:43:52+08:00">
+                2017-08-29
               </time>
             
 
@@ -336,12 +357,34 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-06-29T11:11:00+08:00">
-                2017-06-29
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-29T17:46:46+08:00">
+                2017-08-29
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -351,8 +394,8 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/29/查找二维数组/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/29/查找二维数组/" itemprop="commentCount"></span>
+                <a href="/2017/08/29/Git服务器配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/29/Git服务器配置/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,7 +417,7 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  681
+                  865
                 </span>
               
 
@@ -390,7 +433,7 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -411,12 +454,25 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
       
 
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和一个数组中,是否含有该整数.详情请点击<a href="https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&amp;tqId=11154&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">这里</a>.(题目来源牛客网剑指offer).<br><a id="more"></a></p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//二维数组</div><div class="line">&#123;1, 2, 8, 9&#125;,</div><div class="line">&#123;2, 4, 9, 12&#125;,</div><div class="line">&#123;4, 7, 10, 13&#125;,</div><div class="line">6, 8, 11, 15&#125;</div><div class="line">//目标数字</div><div class="line">7</div></pre></td></tr></table></figure>
-<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">true</div></pre></td></tr></table></figure>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p> number从左下角开始,又三种可能的情况:<br>1.number == target,这种情况直接返回true;<br>2.number &lt; target,那么target的范围不可能number的这一列,<br>就在number这一列的右边去找,然后将number的值设为number右边的数,再次比较和target比较<br>3.number &gt; target,那么target的范围不可能number的这一行,<br>就在number这一行的上边去找,然后将number的值设为number上边的数,再次比较和target比较</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public boolean hasNumber(int[][] arr, int target) &#123;</div><div class="line">        boolean found = false;</div><div class="line">        int rows = arr.length;</div><div class="line">        int columns = arr[0].length;</div><div class="line">        if (arr != null &amp;&amp; rows &gt; 0 &amp;&amp; columns &gt; 0) &#123;</div><div class="line">            int row = rows - 1;</div><div class="line">            int column = 0;</div><div class="line"></div><div class="line">            while (row &gt;= 0 &amp;&amp; column &lt; columns) &#123;</div><div class="line">                int number = arr[row][column];//起始位置为左下角的值.</div><div class="line">                if (number == target) &#123;</div><div class="line">                    found = true;</div><div class="line">                    break;</div><div class="line">                &#125; else if (number &lt; target) &#123;</div><div class="line">                    ++column;</div><div class="line">                &#125; else &#123;</div><div class="line">                    --row;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return found;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h2 id="代码详细源码"><a href="#代码详细源码" class="headerlink" title="代码详细源码"></a>代码详细源码</h2><p>也可在<a href="https://github.com/Lt-grint/offer-java/blob/master/src/offer/Example03.java" target="_blank" rel="external">这里</a>查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">package offer;</div><div class="line"></div><div class="line"></div><div class="line">import org.junit.Test;</div><div class="line"></div><div class="line">import static org.junit.Assert.*;</div><div class="line"></div><div class="line">/**</div><div class="line"> * @describute 題目描述：</div><div class="line"> * 在一个二维数组中,每一行都按照从到右递增的顺序,</div><div class="line"> * 每一列都按照从上到下递增的顺序排序.请完成一个函数,输入</div><div class="line"> * 这样的一个二维数组和一个数组中,是否含有该整数.</div><div class="line"> * &lt;p&gt;</div><div class="line"> * 解题思路:</div><div class="line"> * number从左下角开始,又三种可能的情况:</div><div class="line"> * 1.number == target,这种情况直接返回true;</div><div class="line"> * 2.number &lt; target,那么target的范围不可能number的这一列,</div><div class="line"> * 就在number这一列的右边去找,然后将number的值设为number右边的数,再次比较和target比较</div><div class="line"> * 3.number &gt; target,那么target的范围不可能number的这一行,</div><div class="line"> * 就在number这一行的上边去找,然后将number的值设为number上边的数,再次比较和target比较</div><div class="line"> * Created by danerlt on 17-6-28.</div><div class="line"> */</div><div class="line">public class Example03 &#123;</div><div class="line">    public boolean hasNumber(int[][] arr, int target) &#123;</div><div class="line">        boolean found = false;</div><div class="line">        int rows = arr.length;</div><div class="line">        int columns = arr[0].length;</div><div class="line">        if (arr != null &amp;&amp; rows &gt; 0 &amp;&amp; columns &gt; 0) &#123;</div><div class="line">            int row = rows - 1;</div><div class="line">            int column = 0;</div><div class="line"></div><div class="line">            while (row &gt;= 0 &amp;&amp; column &lt; columns) &#123;</div><div class="line">                int number = arr[row][column];//起始位置为左下角的值.</div><div class="line">                if (number == target) &#123;</div><div class="line">                    found = true;</div><div class="line">                    break;</div><div class="line">                &#125; else if (number &lt; target) &#123;</div><div class="line">                    ++column;</div><div class="line">                &#125; else &#123;</div><div class="line">                    --row;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return found;</div><div class="line">    &#125;</div><div class="line">    @Test</div><div class="line">    public void testHasNumber () &#123;</div><div class="line">        int[][] arr = new int[][]&#123;</div><div class="line">                &#123;1, 2, 8, 9&#125;,</div><div class="line">                &#123;2, 4, 9, 12&#125;,</div><div class="line">                &#123;4, 7, 10, 13&#125;,</div><div class="line">                &#123;6, 8, 11, 15&#125;</div><div class="line">        &#125;;</div><div class="line">        assertTrue(hasNumber(arr, 15));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Test</div><div class="line">    public void testHasNotNumber () &#123;</div><div class="line">        int[][] arr = new int[][]&#123;</div><div class="line">                &#123;1, 2, 8, 9&#125;,</div><div class="line">                &#123;2, 4, 9, 12&#125;,</div><div class="line">                &#123;4, 7, 10, 13&#125;,</div><div class="line">                &#123;6, 8, 11, 15&#125;</div><div class="line">        &#125;;</div><div class="line">        assertFalse(hasNumber(arr, 5));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>参考廖雪峰<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000" target="_blank" rel="external">搭建Git服务器</a></p>
+</blockquote>
+<p>服务器版本：Centos7.0</p>
+<p>##　１.建立git用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo useradd -m git</div></pre></td></tr></table></figure></p>
+<h2 id="2-创建证书登录"><a href="#2-创建证书登录" class="headerlink" title="2.创建证书登录"></a>2.创建证书登录</h2><p>在git用户文件夹中，创建.ssh文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir .ssh</div></pre></td></tr></table></figure></p>
+<p>在<code>.ssh</code>中<code>touch authorized_keys</code>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
+<p>收集所有需要登录的用户的公钥，就是他们自己的<code>id_rsa.pub</code>文件，把所有公钥导入到<code>/home/git/.ssh/authorized_keys</code>文件里，一行一个。<br>可以使用<code>scp</code>命令将本地文件上传到远程服务器上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 将服务器IP地址换成你自己的</div><div class="line">scp .ssh/id_rsa.pub root@IP地址:/home/git/.ssh</div></pre></td></tr></table></figure></p>
+<p>然后使用一下命令追加到<code>authorized_keys</code>文件中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub &gt;&gt; authorized_keys</div></pre></td></tr></table></figure></p>
+<p>PS：客户端配置git常用命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global user.name yourname</div><div class="line">git config --blabal user.email your_email@example.com</div><div class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</div></pre></td></tr></table></figure></p>
+<h2 id="3-禁用shell登录"><a href="#3-禁用shell登录" class="headerlink" title="3.禁用shell登录"></a>3.禁用shell登录</h2><p>出于安全考虑，第二步创建的git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。找到类似下面的一行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git:x:1001:1001:,,,:/home/git:/bin/bash</div></pre></td></tr></table></figure></p>
+<p>改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell</div></pre></td></tr></table></figure></p>
+<p>这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。</p>
+<h2 id="5-将服务器IP地址配置在host文件中"><a href="#5-将服务器IP地址配置在host文件中" class="headerlink" title="5.将服务器IP地址配置在host文件中"></a>5.将服务器IP地址配置在<code>host</code>文件中</h2><p>用编辑器编辑<code>/etc/hosts</code>文件，将IP 主机名添加进去。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">123.123.123.123 server</div></pre></td></tr></table></figure></p>
+<h2 id="4-初始化一个git仓库"><a href="#4-初始化一个git仓库" class="headerlink" title="4.初始化一个git仓库"></a>4.初始化一个git仓库</h2><p>先选定一个目录作为Git仓库，假定是<code>/opt</code>，在<code>/opt</code>目录下输入命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo git init --bare test.git</div></pre></td></tr></table></figure></p>
+<p>看到“初始化空的 Git 版本库于 /opt/test.git/”提示说明git仓库创建成功，git会创建一个裸仓库，裸仓库没有工作区，因为服务器上的Git仓库纯粹是为了共享，所以不让用户直接登录到服务器上去改工作区，并且服务器上的Git仓库通常都以.git结尾。然后，把owner改为git：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo chown -R git:git test.git</div></pre></td></tr></table></figure></p>
+<h2 id="5-克隆仓库"><a href="#5-克隆仓库" class="headerlink" title="5.克隆仓库"></a>5.克隆仓库</h2><p>server就是hosts文件里面配置与服务器IP对应的主机名，<code>server：</code>后面跟的就是git服务器上的仓库地址绝对路径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> ~/Desktop  git clone git@server:/opt/test.git</div><div class="line">正克隆到 &apos;test&apos;...</div><div class="line">The authenticity of host &apos;server (123.207.14.144)&apos; can&apos;t be established.</div><div class="line">ECDSA key fingerprint is SHA256:yxZ7puk5qP4H1+ikqIqMcc51j0Y7hm2U8RjlynCZM30.</div><div class="line">Are you sure you want to continue connecting (yes/no)? yes</div><div class="line">Warning: Permanently added &apos;server&apos; (ECDSA) to the list of known hosts.</div><div class="line">warning: 您似乎克隆了一个空仓库。</div><div class="line"> ~/Desktop </div></pre></td></tr></table></figure></p>
+<h2 id="6-在客户端提交修改"><a href="#6-在客户端提交修改" class="headerlink" title="6.在客户端提交修改"></a>6.在客户端提交修改</h2><p>然后在客户机上新建一个文件test.txt，然后提交，测试提交是否能够成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> ~/Desktop/test   master  vi test.txt</div><div class="line"> ~/Desktop/test   master  ls</div><div class="line">test.txt</div><div class="line"> ~/Desktop/test   master  git add test.txt</div><div class="line"> ~/Desktop/test   master ✚  git log</div><div class="line">fatal: 您的当前分支 &apos;master&apos; 尚无任何提交</div><div class="line"> ✘  ~/Desktop/test   master ✚  git commit -m &quot;add test.txt&quot; </div><div class="line">[master（根提交） f9c522e] add test.txt</div><div class="line"> 1 file changed, 1 insertion(+)</div><div class="line"> create mode 100644 test.txt</div><div class="line"> ~/Desktop/test   master  git  log</div><div class="line"> commit f9c522ee0e603d715b6e276e077a2e2bc04dac4a</div><div class="line">Author: Lt-grint &lt;1598552894@qq.com&gt;</div><div class="line">Date:   Mon Aug 28 12:07:19 2017 +0800</div><div class="line"></div><div class="line">    add test.txt</div><div class="line">~/Desktop/test   master  git push</div><div class="line">对象计数中: 3, 完成.</div><div class="line">写入对象中: 100% (3/3), 236 bytes | 0 bytes/s, 完成.</div><div class="line">Total 3 (delta 0), reused 0 (delta 0)</div><div class="line">To server:/opt/test.git</div><div class="line"> * [new branch]      master -&gt; master</div></pre></td></tr></table></figure></p>
+<h2 id="7-重新clone一次查看是否提交成功"><a href="#7-重新clone一次查看是否提交成功" class="headerlink" title="7.重新clone一次查看是否提交成功"></a>7.重新clone一次查看是否提交成功</h2><p>先在服务器上查看，提交时成功了的。<br><img src="http://static.zybuluo.com/danerlt/zgq005r4xt6mad0ou7xlhfaa/image_1bojgtg029oq1ug1st1g1t13t19.png" alt="image_1bojgtg029oq1ug1st1g1t13t19.png-131.4kB"><br>重新克隆一次，可以看出之前的提交已经成功了，到此git服务器配置已经完成了。接下来就可以愉快的push，pull了。<br> <img src="http://static.zybuluo.com/danerlt/qccrnl81spv7fpxq097xqckn/image_1bojh4i38v5ei0m7u1vm31kk5m.png" alt="image_1bojh4i38v5ei0m7u1vm31kk5m.png-115.5kB"></p>
 
       
     </div>
@@ -477,7 +533,9 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
       
         <div class="post-tags">
           
-            <a href="/tags/剑指offer/" <i class="fa fa-tag"></i> 剑指offer</a>
+            <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
+          
+            <a href="/tags/git/" <i class="fa fa-tag"></i> git</a>
           
         </div>
       
@@ -490,8 +548,8 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/12/IDEA使用Maven构建Java-Web项目/" rel="next" title="IDEA使用Maven构建Java Web项目">
-                <i class="fa fa-chevron-left"></i> IDEA使用Maven构建Java Web项目
+              <a href="/2017/06/29/Javascript笔记/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -499,10 +557,6 @@ color="255,30,30" opacity='1s' zIndex="-2" count="150" src="//cdn.bootcss.com/ca
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/29/Javascript笔记/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -558,8 +612,8 @@ var jiathis_config={
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/06/29/查找二维数组/"
-           data-title="查找二维数组" data-url="http://litao.work/2017/06/29/查找二维数组/">
+      <div class="ds-thread" data-thread-key="2017/08/29/Git服务器配置/"
+           data-title="Git服务器配置" data-url="http://litao.work/2017/08/29/Git服务器配置/">
       </div>
     
   </div>
@@ -710,7 +764,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#input"><span class="nav-number">2.1.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#output"><span class="nav-number">2.2.</span> <span class="nav-text">output</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">3.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">4.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码详细源码"><span class="nav-number">5.</span> <span class="nav-text">代码详细源码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建证书登录"><span class="nav-number">1.</span> <span class="nav-text">2.创建证书登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-禁用shell登录"><span class="nav-number">2.</span> <span class="nav-text">3.禁用shell登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-将服务器IP地址配置在host文件中"><span class="nav-number">3.</span> <span class="nav-text">5.将服务器IP地址配置在host文件中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-初始化一个git仓库"><span class="nav-number">4.</span> <span class="nav-text">4.初始化一个git仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-克隆仓库"><span class="nav-number">5.</span> <span class="nav-text">5.克隆仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在客户端提交修改"><span class="nav-number">6.</span> <span class="nav-text">6.在客户端提交修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-重新clone一次查看是否提交成功"><span class="nav-number">7.</span> <span class="nav-text">7.重新clone一次查看是否提交成功</span></a></li></ol></div>
             
 
           </div>
