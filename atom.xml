@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-29T09:46:46.478Z</updated>
+  <updated>2017-08-29T09:50:31.533Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://litao.work/2017/08/29/Git%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/"/>
     <id>http://litao.work/2017/08/29/Git服务器配置/</id>
     <published>2017-08-29T09:43:52.000Z</published>
-    <updated>2017-08-29T09:46:46.478Z</updated>
+    <updated>2017-08-29T09:50:31.533Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p>Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。<br>这时我们就需要自己搭建一台Git服务器作为私有仓库使用。<br>接下来我们将以 Centos 为例搭建 Git 服务器。服务器版本：Centos7.0<br><a id="more"></a></p>
+<blockquote>
 <p>参考廖雪峰<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000" target="_blank" rel="external">搭建Git服务器</a></p>
 </blockquote>
-<p>服务器版本：Centos7.0</p>
-<p>##　１.建立git用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo useradd -m git</div></pre></td></tr></table></figure></p>
+<h2 id="１-建立git用户"><a href="#１-建立git用户" class="headerlink" title="１.建立git用户"></a>１.建立git用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo useradd -m git</div></pre></td></tr></table></figure>
 <h2 id="2-创建证书登录"><a href="#2-创建证书登录" class="headerlink" title="2.创建证书登录"></a>2.创建证书登录</h2><p>在git用户文件夹中，创建.ssh文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir .ssh</div></pre></td></tr></table></figure></p>
 <p>在<code>.ssh</code>中<code>touch authorized_keys</code>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
 <p>收集所有需要登录的用户的公钥，就是他们自己的<code>id_rsa.pub</code>文件，把所有公钥导入到<code>/home/git/.ssh/authorized_keys</code>文件里，一行一个。<br>可以使用<code>scp</code>命令将本地文件上传到远程服务器上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 将服务器IP地址换成你自己的</div><div class="line">scp .ssh/id_rsa.pub root@IP地址:/home/git/.ssh</div></pre></td></tr></table></figure></p>
@@ -45,8 +45,7 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;参考廖雪峰&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f0
+      &lt;p&gt;Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。&lt;br&gt;这时我们就需要自己搭建一台Git服务器作为私有仓库使用。&lt;br&gt;接下来我们将以 Centos 为例搭建 Git 服务器。服务器版本：Centos7.0&lt;br&gt;
     
     </summary>
     

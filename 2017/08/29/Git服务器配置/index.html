@@ -106,36 +106,18 @@
 
 
 
-<meta name="description" content="参考廖雪峰搭建Git服务器
-
-服务器版本：Centos7.0
-##　１.建立git用户1sudo useradd -m git
-2.创建证书登录在git用户文件夹中，创建.ssh文件夹1mkdir .ssh
-在.ssh中touch authorized_keys文件1touch .ssh/authorized_keys
-收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有">
+<meta name="description" content="Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。这时我们就需要自己搭建一台Git服务器作为私有仓库使用。接下来我们将以 Centos 为例搭建 Git 服务器。服务器版本：Centos7.0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git服务器配置">
 <meta property="og:url" content="http://litao.work/2017/08/29/Git服务器配置/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="参考廖雪峰搭建Git服务器
-
-服务器版本：Centos7.0
-##　１.建立git用户1sudo useradd -m git
-2.创建证书登录在git用户文件夹中，创建.ssh文件夹1mkdir .ssh
-在.ssh中touch authorized_keys文件1touch .ssh/authorized_keys
-收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有">
+<meta property="og:description" content="Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。这时我们就需要自己搭建一台Git服务器作为私有仓库使用。接下来我们将以 Centos 为例搭建 Git 服务器。服务器版本：Centos7.0">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/zgq005r4xt6mad0ou7xlhfaa/image_1bojgtg029oq1ug1st1g1t13t19.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/qccrnl81spv7fpxq097xqckn/image_1bojh4i38v5ei0m7u1vm31kk5m.png">
-<meta property="og:updated_time" content="2017-08-29T09:46:46.478Z">
+<meta property="og:updated_time" content="2017-08-29T09:50:31.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git服务器配置">
-<meta name="twitter:description" content="参考廖雪峰搭建Git服务器
-
-服务器版本：Centos7.0
-##　１.建立git用户1sudo useradd -m git
-2.创建证书登录在git用户文件夹中，创建.ssh文件夹1mkdir .ssh
-在.ssh中touch authorized_keys文件1touch .ssh/authorized_keys
-收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有">
+<meta name="twitter:description" content="Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。这时我们就需要自己搭建一台Git服务器作为私有仓库使用。接下来我们将以 Centos 为例搭建 Git 服务器。服务器版本：Centos7.0">
 <meta name="twitter:image" content="http://static.zybuluo.com/danerlt/zgq005r4xt6mad0ou7xlhfaa/image_1bojgtg029oq1ug1st1g1t13t19.png">
 
 
@@ -357,7 +339,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-08-29T17:46:46+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-29T17:50:31+08:00">
                 2017-08-29
               </time>
             
@@ -417,7 +399,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  865
+                  938
                 </span>
               
 
@@ -454,11 +436,11 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
 
       
-        <blockquote>
+        <p>Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。<br>这时我们就需要自己搭建一台Git服务器作为私有仓库使用。<br>接下来我们将以 Centos 为例搭建 Git 服务器。服务器版本：Centos7.0<br><a id="more"></a></p>
+<blockquote>
 <p>参考廖雪峰<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000" target="_blank" rel="external">搭建Git服务器</a></p>
 </blockquote>
-<p>服务器版本：Centos7.0</p>
-<p>##　１.建立git用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo useradd -m git</div></pre></td></tr></table></figure></p>
+<h2 id="１-建立git用户"><a href="#１-建立git用户" class="headerlink" title="１.建立git用户"></a>１.建立git用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo useradd -m git</div></pre></td></tr></table></figure>
 <h2 id="2-创建证书登录"><a href="#2-创建证书登录" class="headerlink" title="2.创建证书登录"></a>2.创建证书登录</h2><p>在git用户文件夹中，创建.ssh文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir .ssh</div></pre></td></tr></table></figure></p>
 <p>在<code>.ssh</code>中<code>touch authorized_keys</code>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
 <p>收集所有需要登录的用户的公钥，就是他们自己的<code>id_rsa.pub</code>文件，把所有公钥导入到<code>/home/git/.ssh/authorized_keys</code>文件里，一行一个。<br>可以使用<code>scp</code>命令将本地文件上传到远程服务器上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 将服务器IP地址换成你自己的</div><div class="line">scp .ssh/id_rsa.pub root@IP地址:/home/git/.ssh</div></pre></td></tr></table></figure></p>
@@ -764,7 +746,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建证书登录"><span class="nav-number">1.</span> <span class="nav-text">2.创建证书登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-禁用shell登录"><span class="nav-number">2.</span> <span class="nav-text">3.禁用shell登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-将服务器IP地址配置在host文件中"><span class="nav-number">3.</span> <span class="nav-text">5.将服务器IP地址配置在host文件中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-初始化一个git仓库"><span class="nav-number">4.</span> <span class="nav-text">4.初始化一个git仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-克隆仓库"><span class="nav-number">5.</span> <span class="nav-text">5.克隆仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在客户端提交修改"><span class="nav-number">6.</span> <span class="nav-text">6.在客户端提交修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-重新clone一次查看是否提交成功"><span class="nav-number">7.</span> <span class="nav-text">7.重新clone一次查看是否提交成功</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#１-建立git用户"><span class="nav-number">1.</span> <span class="nav-text">１.建立git用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建证书登录"><span class="nav-number">2.</span> <span class="nav-text">2.创建证书登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-禁用shell登录"><span class="nav-number">3.</span> <span class="nav-text">3.禁用shell登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-将服务器IP地址配置在host文件中"><span class="nav-number">4.</span> <span class="nav-text">5.将服务器IP地址配置在host文件中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-初始化一个git仓库"><span class="nav-number">5.</span> <span class="nav-text">4.初始化一个git仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-克隆仓库"><span class="nav-number">6.</span> <span class="nav-text">5.克隆仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在客户端提交修改"><span class="nav-number">7.</span> <span class="nav-text">6.在客户端提交修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-重新clone一次查看是否提交成功"><span class="nav-number">8.</span> <span class="nav-text">7.重新clone一次查看是否提交成功</span></a></li></ol></div>
             
 
           </div>
