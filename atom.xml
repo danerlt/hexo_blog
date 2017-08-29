@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-06-29T03:11:00.000Z</updated>
+  <updated>2017-06-29T15:37:07.036Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://litao.work/2017/06/29/Javascript%E7%AC%94%E8%AE%B0/"/>
+    <id>http://litao.work/2017/06/29/Javascript笔记/</id>
+    <published>2017-06-29T15:37:07.036Z</published>
+    <updated>2017-06-29T15:37:07.036Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: Javascript笔记<br>date: 2016-11-15 11:51:44<br>tag: javascript<br>—﻿</p>
+<h3 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h3><ul>
+<li>false</li>
+<li>null</li>
+<li>undefined</li>
+<li>空字符串’ ‘</li>
+<li>数字0</li>
+<li>数字NaN</li>
+</ul>
+<h3 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h3><p>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。</p>
+<h3 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h3><p>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</p>
+<h3 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h3><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"></p>
+<p>节选自JavaScriptDOM编程]</p>
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
+<p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
+<blockquote>
+<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
+<blockquote>
+<p>至此，大功告成，可以正常显示中文了。</p>
+</blockquote>
+<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: Javascript笔记&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: javascript&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h3 id=&quot;下列的值在javascript中表示false&quot;&gt;&lt;a href=&quot;#下列的值在javasc
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>查找二维数组</title>
@@ -765,37 +809,6 @@
       <category term="html" scheme="http://litao.work/tags/html/"/>
     
       <category term="code style" scheme="http://litao.work/tags/code-style/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo之hello World</title>
-    <link href="http://litao.work/2016/12/03/hexo%E4%B9%8Bhello-world/"/>
-    <id>http://litao.work/2016/12/03/hexo之hello-world/</id>
-    <published>2016-12-02T17:15:21.000Z</published>
-    <updated>2016-12-02T17:31:16.803Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://litao.work/tags/hexo/"/>
     
   </entry>
   
