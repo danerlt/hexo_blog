@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-30T07:13:46.064Z</updated>
+  <updated>2017-08-30T08:16:30.706Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ajax笔记</title>
+    <link href="http://litao.work/2017/08/30/Ajax%E7%AC%94%E8%AE%B0/"/>
+    <id>http://litao.work/2017/08/30/Ajax笔记/</id>
+    <published>2017-08-30T08:06:55.000Z</published>
+    <updated>2017-08-30T08:16:30.706Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>参考链接：<br><a href="http://www.jianshu.com/p/a47120678b86#" target="_blank" rel="external">简书橙小张</a></p>
+</blockquote>
+<p><strong>背景描述：</strong>在浏览器中使用Servlet更新数据时，页面每次都要刷新，用户体验十分不好，随决定学习Ajax来解决这个问题。<br><a id="more"></a></p>
+<h2 id="1-什么是Ajax"><a href="#1-什么是Ajax" class="headerlink" title="1.什么是Ajax"></a>1.什么是Ajax</h2><p>AJAX（Asynchronous Javascript And XML）翻译成中文就是“异步Javascript和XML”。即使用Javascript语言与服务器进行异步交互，传输的数据为XML（当然，传输的数据不只是XML）。<br>AJAX还有一个最大的特点就是，当服务器响应时，不用刷新整个浏览器页面，而是可以局部刷新。这一特点给用户的感受是在不知不觉中完成请求和响应过程。<br>它包括：</p>
+<ul>
+<li>与服务器的异步交互</li>
+<li>浏览器的局部刷新<h2 id="2-Ajax工作原理"><a href="#2-Ajax工作原理" class="headerlink" title="2.Ajax工作原理"></a>2.Ajax工作原理</h2>传统web通信<br><img src="http://static.zybuluo.com/danerlt/ms428mcei02q8b4vg37efh9o/image_1b1k4n3r81f9iecbdhl1m4r10s39.png" alt="image_1b1k4n3r81f9iecbdhl1m4r10s39.png-116.3kB"><br>Ajax工作原理<br><img src="http://static.zybuluo.com/danerlt/2ow6jrb4xjwov0zx84boaob2/image_1b1k4np1c74h8m0tir38n2jim.png" alt="image_1b1k4np1c74h8m0tir38n2jim.png-124.2kB"><br>由图中可以看出传统的web通信中，客户端发送一个HTTP请求道服务器，服务器在返回一个新的页面给客户端。而Ajax在返回时返回了多个响应。</li>
+</ul>
+<h2 id="3-原生JS代码"><a href="#3-原生JS代码" class="headerlink" title="3.原生JS代码"></a>3.原生JS代码</h2><p>其中<code>/ajaxdemo1/Bservlet</code>,就是获取数据的url。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">function createXMLHttpRequest() &#123;</div><div class="line">				try &#123;</div><div class="line">					return new XMLHttpRequest();</div><div class="line">				&#125; catch(e) &#123;</div><div class="line">					try &#123;</div><div class="line">						return new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);</div><div class="line">					&#125; catch(e) &#123;</div><div class="line">						return new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			function check() &#123;</div><div class="line">                var xmlHttp = createXMLHttpRequest();</div><div class="line">                xmlHttp.onreadystatechange = function() &#123;</div><div class="line">                    if(xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200) &#123;</div><div class="line">                        if(xmlHttp.responseText == &quot;true&quot;) &#123;</div><div class="line">                            document.getElementById(&quot;error&quot;).innerHTML = &quot;用户名已被注册！&quot;;</div><div class="line">                        &#125; else &#123;</div><div class="line">                             document.getElementById(&quot;error&quot;).innerHTML = &quot;&quot;;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;;</div><div class="line">                xmlHttp.open(&quot;POST&quot;, &quot;/ajaxdemo1/BServlet&quot;, true);</div><div class="line">                xmlHttp.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);</div><div class="line">                var username = document.getElementById(&quot;username&quot;).value;</div><div class="line">                xmlHttp.send(&quot;username=&quot; + username);</div><div class="line">			&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;参考链接：&lt;br&gt;&lt;a href=&quot;http://www.jianshu.com/p/a47120678b86#&quot;&gt;简书橙小张&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;背景描述：&lt;/strong&gt;在浏览器中使用Servlet更新数据时，页面每次都要刷新，用户体验十分不好，随决定学习Ajax来解决这个问题。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="ajax" scheme="http://litao.work/tags/ajax/"/>
+    
+      <category term="javaweb" scheme="http://litao.work/tags/javaweb/"/>
+    
+  </entry>
   
   <entry>
     <title>Python安装配置</title>
@@ -88,9 +125,9 @@
       <category term="linux" scheme="http://litao.work/categories/linux/"/>
     
     
-      <category term="git" scheme="http://litao.work/tags/git/"/>
-    
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="git" scheme="http://litao.work/tags/git/"/>
     
   </entry>
   
@@ -791,9 +828,9 @@
       <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
-    
       <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
+    
+      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
     
   </entry>
   
@@ -820,9 +857,9 @@
       <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
-    
       <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
+    
+      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
     
   </entry>
   
@@ -849,39 +886,6 @@
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
       <category term="windows" scheme="http://litao.work/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Putty连接linux中文乱码的解决方案</title>
-    <link href="http://litao.work/2016/12/03/putty%E8%BF%9E%E6%8E%A5linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/putty连接linux中文乱码的解决方案/</id>
-    <published>2016-12-03T05:34:28.000Z</published>
-    <updated>2017-08-30T07:47:18.619Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><h2 id="问题描述：使用putty连接Linux后中文显示乱码"><a href="#问题描述：使用putty连接Linux后中文显示乱码" class="headerlink" title="问题描述：使用putty连接Linux后中文显示乱码"></a>问题描述：使用putty连接Linux后中文显示乱码</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"><br><a id="more"></a><br>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
-<blockquote>
-<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
-</blockquote>
-<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
-<blockquote>
-<p>至此，大功告成，可以正常显示中文了。</p>
-</blockquote>
-<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;a href=&quot;#putty连接Linux中文乱码解决方案&quot; class=&quot;headerlink&quot; title=&quot;putty连接Linux中文乱码解决方案&quot;&gt;&lt;/a&gt;putty连接Linux中文乱码解决方案&lt;/h2&gt;&lt;h2 id=&quot;问题描述：使用putty连接Linux后中文显示乱码&quot;&gt;&lt;a href=&quot;#问题描述：使用putty连接Linux后中文显示乱码&quot; class=&quot;headerlink&quot; title=&quot;问题描述：使用putty连接Linux后中文显示乱码&quot;&gt;&lt;/a&gt;问题描述：使用putty连接Linux后中文显示乱码&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png&quot; alt=&quot;image_1aolonhin3cj52fltehiq1rma9.png-23kB&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://litao.work/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
   </entry>
   
