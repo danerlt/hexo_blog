@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://litao.work/blog/"/>
-  <updated>2017-08-30T09:45:34.526Z</updated>
+  <updated>2017-08-30T10:17:40.502Z</updated>
   <id>http://litao.work/blog/</id>
   
   <author>
@@ -14,6 +14,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo Next添加访客量</title>
+    <link href="http://litao.work/blog/2017/08/30/hexo-next%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E9%87%8F/"/>
+    <id>http://litao.work/blog/2017/08/30/hexo-next添加访客量/</id>
+    <published>2017-08-30T10:15:16.000Z</published>
+    <updated>2017-08-30T10:17:40.502Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>转载自：Jey Zhang :<a href="http://www.jeyzhang.com/hexo-next-add-post-views.html" target="_blank" rel="external">Hexo的NexT主题个性化：添加文章阅读量</a></p>
+</blockquote>
+<p>关于Hexo的文章阅读量设置问题，大多数人都是使用<a href="http://service.ibruce.info/" target="_blank" rel="external">不蒜子</a>的代码实现。但是这个方法仅局限于在文章页面显示阅读数，首页是不显示的。<br><a id="more"></a><br>下面介绍如何在首页及文章页面都显示<code>文章的阅读量</code>，显示效果如下：</p>
+<p><img src="http://i.imgur.com/AMdIdpW.png" alt=""></p>
+<hr>
+<h2 id="配置LeanCloud"><a href="#配置LeanCloud" class="headerlink" title="配置LeanCloud"></a><strong>配置<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a></strong></h2><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>打开LeanCloud官网，进入<a href="https://leancloud.cn/login.html#/signup" target="_blank" rel="external">注册页面</a>注册。完成邮箱激活后，点击头像，进入<code>控制台</code>页面，如下：</p>
+<p><img src="http://i.imgur.com/WyRLYr3.png" alt=""></p>
+<h3 id="创建新应用"><a href="#创建新应用" class="headerlink" title="创建新应用"></a>创建新应用</h3><p>创建一个新应用(类型为<code>JavaScript SDK</code>)，点击应用进入；</p>
+<p>创建名称为<code>Counter</code>的Class</p>
+<p><img src="http://i.imgur.com/5VUiBAy.png" alt=""></p>
+<p><img src="http://i.imgur.com/C8LWKT2.png" alt=""></p>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>编辑网站根目录下的<code>_config.yml</code>文件，添加如下：</p>
+<pre><code># add post views
+leancloud_visitors:
+  enable: true
+  app_id: **你的app_id**
+  app_key: **你的app_key**
+</code></pre><p>其中，app_id和app_key在你所创建的应用的<code>设置-&gt;应用Key</code>中。</p>
+<h3 id="Web安全性"><a href="#Web安全性" class="headerlink" title="Web安全性"></a>Web安全性</h3><p>为了保证应用的统计计数功能仅应用于自己的博客系统，你可以在<code>应用-&gt;设置-&gt;安全中心</code>的<code>Web安全域名</code>中加入自己的博客域名，以保证数据的调用安全。</p>
+<h2 id="修改NexT主题文件"><a href="#修改NexT主题文件" class="headerlink" title="修改NexT主题文件"></a><strong>修改NexT主题文件</strong></h2><h3 id="添加lean-analytics-swig文件"><a href="#添加lean-analytics-swig文件" class="headerlink" title="添加lean-analytics.swig文件"></a>添加lean-analytics.swig文件</h3><p>在主题目录下的<code>\layout\_scripts</code>路径下，新建一个名称为<code>lean-analytics.swig</code>的文件，并添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">&lt;!-- custom analytics part create by xiamo --&gt;</div><div class="line">&lt;script src=&quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;AV.initialize(&quot;&#123;&#123;theme.leancloud_visitors.app_id&#125;&#125;&quot;, &quot;&#123;&#123;theme.leancloud_visitors.app_key&#125;&#125;&quot;);&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function showTime(Counter) &#123;</div><div class="line">	var query = new AV.Query(Counter);</div><div class="line">	$(&quot;.leancloud_visitors&quot;).each(function() &#123;</div><div class="line">		var url = $(this).attr(&quot;id&quot;).trim();</div><div class="line">		query.equalTo(&quot;url&quot;, url);</div><div class="line">		query.find(&#123;</div><div class="line">			success: function(results) &#123;</div><div class="line">				if (results.length == 0) &#123;</div><div class="line">					var content = &apos;0 &apos; + $(document.getElementById(url)).text();</div><div class="line">					$(document.getElementById(url)).text(content);</div><div class="line">					return;</div><div class="line">				&#125;</div><div class="line">				for (var i = 0; i &lt; results.length; i++) &#123;</div><div class="line">					var object = results[i];</div><div class="line">					var content = object.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();</div><div class="line">					$(document.getElementById(url)).text(content);</div><div class="line">				&#125;</div><div class="line">			&#125;,</div><div class="line">			error: function(object, error) &#123;</div><div class="line">				console.log(&quot;Error: &quot; + error.code + &quot; &quot; + error.message);</div><div class="line">			&#125;</div><div class="line">		&#125;);</div><div class="line"></div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function addCount(Counter) &#123;</div><div class="line">	var Counter = AV.Object.extend(&quot;Counter&quot;);</div><div class="line">	url = $(&quot;.leancloud_visitors&quot;).attr(&apos;id&apos;).trim();</div><div class="line">	title = $(&quot;.leancloud_visitors&quot;).attr(&apos;data-flag-title&apos;).trim();</div><div class="line">	var query = new AV.Query(Counter);</div><div class="line">	query.equalTo(&quot;url&quot;, url);</div><div class="line">	query.find(&#123;</div><div class="line">		success: function(results) &#123;</div><div class="line">			if (results.length &gt; 0) &#123;</div><div class="line">				var counter = results[0];</div><div class="line">				counter.fetchWhenSave(true);</div><div class="line">				counter.increment(&quot;time&quot;);</div><div class="line">				counter.save(null, &#123;</div><div class="line">					success: function(counter) &#123;</div><div class="line">						var content =  counter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();</div><div class="line">						$(document.getElementById(url)).text(content);</div><div class="line">					&#125;,</div><div class="line">					error: function(counter, error) &#123;</div><div class="line">						console.log(&apos;Failed to save Visitor num, with error message: &apos; + error.message);</div><div class="line">					&#125;</div><div class="line">				&#125;);</div><div class="line">			&#125; else &#123;</div><div class="line">				var newcounter = new Counter();</div><div class="line">				newcounter.set(&quot;title&quot;, title);</div><div class="line">				newcounter.set(&quot;url&quot;, url);</div><div class="line">				newcounter.set(&quot;time&quot;, 1);</div><div class="line">				newcounter.save(null, &#123;</div><div class="line">					success: function(newcounter) &#123;</div><div class="line">					    console.log(&quot;newcounter.get(&apos;time&apos;)=&quot;+newcounter.get(&apos;time&apos;));</div><div class="line">						var content = newcounter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();</div><div class="line">						$(document.getElementById(url)).text(content);</div><div class="line">					&#125;,</div><div class="line">					error: function(newcounter, error) &#123;</div><div class="line">						console.log(&apos;Failed to create&apos;);</div><div class="line">					&#125;</div><div class="line">				&#125;);</div><div class="line">			&#125;</div><div class="line">		&#125;,</div><div class="line">		error: function(error) &#123;</div><div class="line">			console.log(&apos;Error:&apos; + error.code + &quot; &quot; + error.message);</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">$(function() &#123;</div><div class="line">	var Counter = AV.Object.extend(&quot;Counter&quot;);</div><div class="line">	if ($(&apos;.leancloud_visitors&apos;).length == 1) &#123;</div><div class="line">		addCount(Counter);</div><div class="line">	&#125; else if ($(&apos;.post-title-link&apos;).length &gt; 1) &#123;</div><div class="line">		showTime(Counter);</div><div class="line">	&#125;</div><div class="line">&#125;); </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>其中，控制显示的格式的主要为<code>content</code>变量，按自己的需求相应修改即可。</p>
+<h3 id="修改post-swig文件"><a href="#修改post-swig文件" class="headerlink" title="修改post.swig文件"></a>修改post.swig文件</h3><p>在主题的<code>layout\_macro</code>路径下，编辑<code>post.swig</code>文件，找到相应的插入位置（大概在98行左右）：</p>
+<p><img src="http://i.imgur.com/l21gZ2f.png" alt=""></p>
+<p>插入如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.leancloud_visitors.enable %&#125;</div><div class="line">&amp;nbsp; | &amp;nbsp;</div><div class="line">&lt;span id=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot;class=&quot;leancloud_visitors&quot; data-flag-title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;</div><div class="line">         &amp;nbsp;&#123;&#123;__(&apos;post.visitors&apos;)&#125;&#125;</div><div class="line">        &lt;/span&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<h3 id="修改layout-swig文件"><a href="#修改layout-swig文件" class="headerlink" title="修改layout.swig文件"></a>修改layout.swig文件</h3><p>在主题目录下的<code>layout</code>目录下，编辑<code>_layout.swig</code>文件，在<code>&lt;/body&gt;</code>的上方（大概在70行左右）插入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% if theme.leancloud_visitors.enable %&#125;</div><div class="line">&#123;% include &apos;_scripts/lean-analytics.swig&apos; %&#125;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<h3 id="修改语言配置文件"><a href="#修改语言配置文件" class="headerlink" title="修改语言配置文件"></a>修改语言配置文件</h3><p>如果你的网站使用的是英语，则只需要编辑主题目录下的<code>languages\en.yml</code>文件，增加<code>post</code>字段如下：</p>
+<pre><code>post:
+  sticky: Sticky
+  posted: Posted on
+  visitors: Views // 增加的字段
+  ...
+</code></pre><p>如果网站使用的是中文，则编辑<code>languages\zh-Hans.yml</code>文件，相应的增加</p>
+<pre><code>post:
+  posted: 发表于
+  visitors: 阅读次数
+  ...
+</code></pre><p>其他语言与之类似，将<code>visitors</code>设置成你希望翻译的字段。</p>
+<p><strong>最后，重新生成并部署你的网站即可。</strong></p>
+<h2 id="增加网站的浏览次数与访客数量统计功能"><a href="#增加网站的浏览次数与访客数量统计功能" class="headerlink" title="增加网站的浏览次数与访客数量统计功能"></a><strong>增加网站的浏览次数与访客数量统计功能</strong></h2><p>网站的浏览次数，即<code>pv</code>；网站的访客数为<code>uv</code>。<code>pv</code>的计算方式是，单个用户连续点击n篇文章，记录n次访问量；<code>uv</code>的计算方式是，单个用户连续点击n篇文章，只记录1次访客数。你可以根据需要添加相应的统计功能。</p>
+<h2 id="安装busuanzi-js脚本"><a href="#安装busuanzi-js脚本" class="headerlink" title="安装busuanzi.js脚本"></a>安装<code>busuanzi.js</code>脚本</h2><p>如果你使用的是NexT主题（其他主题类似），打开<code>/theme/next/layout/_partial/footer.swig</code>文件，拷贝下面的代码至文件的开头。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="显示统计标签"><a href="#显示统计标签" class="headerlink" title="显示统计标签"></a>显示统计标签</h2><p>同样编辑<code>/theme/next/layout/_partial/footer.swig</code>文件。</p>
+<p>如果你想要显示<code>pv</code>统计量，复制以下代码至你想要放置的位置，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
+<p>如果你想要显示<code>uv</code>统计量，复制以下代码至你想要放置的位置，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;转载自：Jey Zhang :&lt;a href=&quot;http://www.jeyzhang.com/hexo-next-add-post-views.html&quot;&gt;Hexo的NexT主题个性化：添加文章阅读量&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于Hexo的文章阅读量设置问题，大多数人都是使用&lt;a href=&quot;http://service.ibruce.info/&quot;&gt;不蒜子&lt;/a&gt;的代码实现。但是这个方法仅局限于在文章页面显示阅读数，首页是不显示的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="其他" scheme="http://litao.work/blog/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="hexo" scheme="http://litao.work/blog/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker配置MySQL</title>
@@ -46,9 +121,9 @@
       <category term="后端" scheme="http://litao.work/blog/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="docker" scheme="http://litao.work/blog/tags/docker/"/>
-    
       <category term="mysql" scheme="http://litao.work/blog/tags/mysql/"/>
+    
+      <category term="docker" scheme="http://litao.work/blog/tags/docker/"/>
     
   </entry>
   
@@ -826,9 +901,9 @@
       <category term="其他" scheme="http://litao.work/blog/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="windows" scheme="http://litao.work/blog/tags/windows/"/>
-    
       <category term="solution" scheme="http://litao.work/blog/tags/solution/"/>
+    
+      <category term="windows" scheme="http://litao.work/blog/tags/windows/"/>
     
   </entry>
   
@@ -892,35 +967,6 @@
     
     
       <category term="windows" scheme="http://litao.work/blog/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vmware安装苹果虚拟机常见错误</title>
-    <link href="http://litao.work/blog/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
-    <id>http://litao.work/blog/2016/12/03/vmware安装苹果虚拟机常见错误/</id>
-    <published>2016-12-03T05:40:58.000Z</published>
-    <updated>2017-08-30T07:43:24.505Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<p>title: vmware Max OS 常见错误<br>date: 2016-11-15 11:51:44<br>tag: vmware<br>—﻿<br>﻿<br> 1.开启虚拟机之前用记事本打开<em>*</em>.vmx，在最后加一句<code>smc.version=0</code><br><img src="http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png" alt="image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB"><br><a id="more"></a></p>
-<p>2.安装之前要格式化分区，选择GUID分区表。<br> <img src="http://static.zybuluo.com/danerlt/och4t4v9d2hfoylh9t4tbjaa/image_1arcpcaifond1kiuug97tu1e9mm.png" alt="image_1arcpcaifond1kiuug97tu1e9mm.png-134.1kB"></p>
-<p>3.安装好Mac OS后，屏幕没有全屏，需要安装Vmware tools,先关闭虚拟机，在设置里的CD/DVD里面选择加载Vmware安装目录(默认是<code>C:\Program Files (x86)\VMware\VMware Workstation</code>)下的<code>darwin.iso</code>,再次开启虚拟机，安装Vmware tools后即可显示全屏的效果。<br><img src="http://static.zybuluo.com/danerlt/irf1h1tp8qjn3043v94uqw7h/image_1arcpl01uilp1q0cm141tqe1thg13.png" alt="image_1arcpl01uilp1q0cm141tqe1thg13.png-55.4kB"><br><img src="http://static.zybuluo.com/danerlt/0bvbc4tcearbts6xqm05rob6/image_1arcpp89lpcsqg520q1d2nicr1g.png" alt="image_1arcpp89lpcsqg520q1d2nicr1g.png-149.6kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;title: vmware Max OS 常见错误&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: vmware&lt;br&gt;—﻿&lt;br&gt;﻿&lt;br&gt; 1.开启虚拟机之前用记事本打开&lt;em&gt;*&lt;/em&gt;.vmx，在最后加一句&lt;code&gt;smc.version=0&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png&quot; alt=&quot;image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="其他" scheme="http://litao.work/blog/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="vmware" scheme="http://litao.work/blog/tags/vmware/"/>
-    
-      <category term="mac os" scheme="http://litao.work/blog/tags/mac-os/"/>
     
   </entry>
   
