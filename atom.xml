@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-30T08:25:48.296Z</updated>
+  <updated>2017-08-30T09:38:06.346Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker配置MySQL</title>
+    <link href="http://litao.work/2017/08/30/docker%E9%85%8D%E7%BD%AEMySQL/"/>
+    <id>http://litao.work/2017/08/30/docker配置MySQL/</id>
+    <published>2017-08-30T09:37:21.000Z</published>
+    <updated>2017-08-30T09:38:06.346Z</updated>
+    
+    <content type="html"><![CDATA[<p>在学习python的时候,看到需要使用mysql数据库,又不想在windows上安装mysql,遂决定使用docker来配置mysql.</p>
+<p>参考<a href="https://hub.docker.com/_/mysql/" target="_blank" rel="external">docker mysql 官方说明</a>.<br><a id="more"></a></p>
+<h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p>首先使用 <code>docker pull</code>命令获取镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">C:\Users\tao&gt;docker pull mysql:5.7</div><div class="line">5.7: Pulling from library/mysql</div><div class="line">ad74af05f5a2: Already exists</div><div class="line">0639788facc8: Pull complete</div><div class="line">de70fa77eb2b: Pull complete</div><div class="line">724179e94999: Pull complete</div><div class="line">50c77fb16ba6: Pull complete</div><div class="line">d51f459239fb: Pull complete</div><div class="line">937bbdd4305a: Pull complete</div><div class="line">35369f9634e1: Pull complete</div><div class="line">f6016aab25f1: Pull complete</div><div class="line">5f1901e920da: Pull complete</div><div class="line">fdf808213c5b: Pull complete</div><div class="line">Digest: sha256:96edf37370df96d2a4ee1715cc5c7820a0ec6286551a927981ed50f0273d9b43</div><div class="line">Status: Downloaded newer image for mysql:5.7</div></pre></td></tr></table></figure></p>
+<h2 id="启动MySQL服务器实例"><a href="#启动MySQL服务器实例" class="headerlink" title="启动MySQL服务器实例"></a>启动MySQL服务器实例</h2><p>启动MySQL实例很简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag</div></pre></td></tr></table></figure></p>
+<p>其中<code>some-mysql</code>是要分配给容器的名称，<code>my-secret-pw</code>是要为MySQL root用户设置的密码，标签是指定所需MySQL版本的标签。比如说我的数据库名字是<code>test</code>,密码也为<code>test</code>,我就可以像下面这样设.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ docker run --name test -e MYSQL_ROOT_PASSWORD=test -d mysql:5.7</div></pre></td></tr></table></figure></p>
+<h2 id="从另一个Docker容器中的应用程序连接到MySQL"><a href="#从另一个Docker容器中的应用程序连接到MySQL" class="headerlink" title="从另一个Docker容器中的应用程序连接到MySQL"></a>从另一个Docker容器中的应用程序连接到MySQL</h2><p>本镜像会暴露 MySQL 的标准端口 3306，你可以使用 link 功能来让其他应用容器能够访问 MySQL 容器，就像下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name some-app --link some-mysql:mysql -d app-that-uses-mysql</div></pre></td></tr></table></figure></p>
+<h2 id="从MySQL命令行客户端连接到MySQL"><a href="#从MySQL命令行客户端连接到MySQL" class="headerlink" title="从MySQL命令行客户端连接到MySQL"></a>从MySQL命令行客户端连接到MySQL</h2><p>以下命令启动另一个mysql容器实例，并对你的原始mysql容器运行mysql命令行，允许您针对数据库实例执行SQL语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker exec -it test mysql -u root -p</div></pre></td></tr></table></figure></p>
+<p>输入密码就进入到常见的myssql终端了.<br>![conn mysql comand][1]</p>
+<h2 id="使用本地连接MySQL容器"><a href="#使用本地连接MySQL容器" class="headerlink" title="使用本地连接MySQL容器"></a>使用本地连接MySQL容器</h2><p>首先运行MySQL容器，使用<code>-p</code>制定本地端口和容器端口的映射。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name samle-mysql -p 33060:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7</div></pre></td></tr></table></figure></p>
+<p>然后使用MySQL的<code>-h</code>指定主机，<code>-P</code>指定端口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">$ mysql -h 0.0.0.0 -P 33060 -u root -p </div><div class="line">Enter password: </div><div class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</div><div class="line">Your MySQL connection id is 5</div><div class="line">Server version: 5.7.19 MySQL Community Server (GPL)</div><div class="line"></div><div class="line">Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.</div><div class="line"></div><div class="line">Oracle is a registered trademark of Oracle Corporation and/or its</div><div class="line">affiliates. Other names may be trademarks of their respective</div><div class="line">owners.</div><div class="line"></div><div class="line">Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.</div><div class="line"></div><div class="line">mysql&gt; create database test;</div><div class="line">Query OK, 1 row affected (0.00 sec)</div><div class="line"></div><div class="line">mysql&gt; show databases;</div><div class="line">+--------------------+</div><div class="line">| Database           |</div><div class="line">+--------------------+</div><div class="line">| information_schema |</div><div class="line">| mysql              |</div><div class="line">| performance_schema |</div><div class="line">| sys                |</div><div class="line">| test               |</div><div class="line">+--------------------+</div><div class="line">5 rows in set (0.00 sec)</div><div class="line"></div><div class="line">mysql&gt; use test;</div><div class="line">Database changed</div><div class="line">mysql&gt; show tables;</div><div class="line">Empty set (0.01 sec)</div><div class="line"></div><div class="line">mysql&gt;</div></pre></td></tr></table></figure></p>
+<p>使用<code>docker exec</code>运行MySQL:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">$ docker exec -it samle-mysql mysql -u root -p</div><div class="line">Enter password: </div><div class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</div><div class="line">Your MySQL connection id is 7</div><div class="line">Server version: 5.7.19 MySQL Community Server (GPL)</div><div class="line"></div><div class="line">Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.</div><div class="line"></div><div class="line">Oracle is a registered trademark of Oracle Corporation and/or its</div><div class="line">affiliates. Other names may be trademarks of their respective</div><div class="line">owners.</div><div class="line"></div><div class="line">Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.</div><div class="line"></div><div class="line">mysql&gt; show databases;</div><div class="line">+--------------------+</div><div class="line">| Database           |</div><div class="line">+--------------------+</div><div class="line">| information_schema |</div><div class="line">| mysql              |</div><div class="line">| performance_schema |</div><div class="line">| sys                |</div><div class="line">| test               |</div><div class="line">+--------------------+</div><div class="line">5 rows in set (0.00 sec)</div><div class="line"></div><div class="line">mysql&gt; use test;</div><div class="line">Database changed</div><div class="line">mysql&gt; create table hello(id int);</div><div class="line">Query OK, 0 rows affected (0.01 sec)</div><div class="line"></div><div class="line">mysql&gt;</div></pre></td></tr></table></figure></p>
+<p>再回到Linux终端，查看table是否增加就可以看出本地连接MySQL容器就成功了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mysql&gt; show tables;</div><div class="line">+----------------+</div><div class="line">| Tables_in_test |</div><div class="line">+----------------+</div><div class="line">| hello          |</div><div class="line">+----------------+</div><div class="line">1 row in set (0.00 sec)</div><div class="line"></div><div class="line">mysql&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学习python的时候,看到需要使用mysql数据库,又不想在windows上安装mysql,遂决定使用docker来配置mysql.&lt;/p&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://hub.docker.com/_/mysql/&quot;&gt;docker mysql 官方说明&lt;/a&gt;.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="docker" scheme="http://litao.work/tags/docker/"/>
+    
+      <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker安装配置</title>
@@ -789,9 +826,9 @@
       <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
-    
       <category term="windows" scheme="http://litao.work/tags/windows/"/>
+    
+      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
   </entry>
   
@@ -855,33 +892,6 @@
     
     
       <category term="windows" scheme="http://litao.work/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vmware安装苹果虚拟机常见错误</title>
-    <link href="http://litao.work/2016/12/03/Vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
-    <id>http://litao.work/2016/12/03/Vmware安装苹果虚拟机常见错误/</id>
-    <published>2016-12-03T05:40:58.000Z</published>
-    <updated>2017-08-30T07:56:52.738Z</updated>
-    
-    <content type="html"><![CDATA[<p> 1.开启虚拟机之前用记事本打开<em>*</em>.vmx，在最后加一句<code>smc.version=0</code><br> <a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png" alt="image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB"></p>
-<p>2.安装之前要格式化分区，选择GUID分区表。<br> <img src="http://static.zybuluo.com/danerlt/och4t4v9d2hfoylh9t4tbjaa/image_1arcpcaifond1kiuug97tu1e9mm.png" alt="image_1arcpcaifond1kiuug97tu1e9mm.png-134.1kB"></p>
-<p>3.安装好Mac OS后，屏幕没有全屏，需要安装Vmware tools,先关闭虚拟机，在设置里的CD/DVD里面选择加载Vmware安装目录(默认是<code>C:\Program Files (x86)\VMware\VMware Workstation</code>)下的<code>darwin.iso</code>,再次开启虚拟机，安装Vmware tools后即可显示全屏的效果。<br><img src="http://static.zybuluo.com/danerlt/irf1h1tp8qjn3043v94uqw7h/image_1arcpl01uilp1q0cm141tqe1thg13.png" alt="image_1arcpl01uilp1q0cm141tqe1thg13.png-55.4kB"><br><img src="http://static.zybuluo.com/danerlt/0bvbc4tcearbts6xqm05rob6/image_1arcpp89lpcsqg520q1d2nicr1g.png" alt="image_1arcpp89lpcsqg520q1d2nicr1g.png-149.6kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt; 1.开启虚拟机之前用记事本打开&lt;em&gt;*&lt;/em&gt;.vmx，在最后加一句&lt;code&gt;smc.version=0&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
-    
-      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
     
   </entry>
   
