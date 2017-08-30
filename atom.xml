@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-30T08:16:30.706Z</updated>
+  <updated>2017-08-30T08:25:48.296Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker安装配置</title>
+    <link href="http://litao.work/2017/08/30/docker%E7%AC%94%E8%AE%B0/"/>
+    <id>http://litao.work/2017/08/30/docker笔记/</id>
+    <published>2017-08-30T08:21:02.000Z</published>
+    <updated>2017-08-30T08:25:48.296Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Docker是世界领先的软件容器平台。 开发人员使用Docker来消除与同事的代码协作时的“我机器上的工作”问题。 运营商使用Docker在独立的容器中并行运行和管理应用程序，以获得更好的计算密度。 企业使用Docker构建灵活的软件传送流程，可以更快，更安全地发布新功能，并且对于Linux，Windows Server和Linux-on-mainframe应用程序都有信心。<br><a id="more"></a></p>
+<h2 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h2><p>官方网站上有各种环境下的 <a href="https://docs.docker.com/installation/#installation" target="_blank" rel="external">安装指南</a></p>
+<h3 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h3><p>阿里云的安装脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>DaoCloud 的安装脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL https://get.daocloud.io/docker | sh</div></pre></td></tr></table></figure></p>
+<h3 id="镜像加速器"><a href="#镜像加速器" class="headerlink" title="镜像加速器"></a>镜像加速器</h3><p>国内访问 Docker Hub 有时会遇到困难，此时可以配置镜像加速器。国内很多云服务商都提供了加速器服务，例如：</p>
+<ul>
+<li>阿里云加速器</li>
+<li>DaoCloud 加速器</li>
+<li>灵雀云加速器</li>
+</ul>
+<p>注册用户并且申请加速器，会获得如 <a href="https://xxxxxxxxxxx.mirror.aliyuncs.com" target="_blank" rel="external">https://xxxxxxxxxxx.mirror.aliyuncs.com</a> 这样的地址。我们需要将其配置给 Docker 引擎。</p>
+<h4 id="Ubuntu-14-04、Debian-7-Wheezy"><a href="#Ubuntu-14-04、Debian-7-Wheezy" class="headerlink" title="Ubuntu 14.04、Debian 7 Wheezy"></a>Ubuntu 14.04、Debian 7 Wheezy</h4><p>对于使用 <strong>upstart</strong> 的系统而言，编辑 <code>/etc/default/docker</code> 文件，在其中的 DOCKER_OPTS 中添加获得的加速器配置 –registry-mirror=&lt;加速器地址&gt;，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DOCKER_OPTS=&quot;--registry-mirror=https://xxxxxxxxxxx.mirror.aliyuncs.com&quot;</div></pre></td></tr></table></figure>
+<p>重新启动服务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo service docker restart</div></pre></td></tr></table></figure></p>
+<h4 id="Ubuntu-16-04、Debian-8-Jessie、CentOS-7"><a href="#Ubuntu-16-04、Debian-8-Jessie、CentOS-7" class="headerlink" title="Ubuntu 16.04、Debian 8 Jessie、CentOS 7"></a>Ubuntu 16.04、Debian 8 Jessie、CentOS 7</h4><p>对于使用 <strong>systemd</strong> 的系统，用 <code>systemctl enable docker</code> 启用服务后，编辑 <code>/etc/systemd/system/multi-user.target.wants/docker.service</code> 文件，找到 <code>ExecStart=</code> 这一行，在这行最后添加加速器地址 <code>--registry-mirror=&lt;加速器地址&gt;</code>，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ExecStart=/usr/bin/dockerd --registry-mirror=https://xxxxxxxxxxx.mirror.aliyuncs.com</div></pre></td></tr></table></figure></p>
+<p>注：对于 1.12 以前的版本，dockerd 换成 docker daemon。</p>
+<p>重新加载配置并且重新启动。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo systemctl daemon-reload</div><div class="line">$ sudo systemctl restart docker</div></pre></td></tr></table></figure></p>
+<h4 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h4><p>对于使用 WINDOWS 10 的系统，在系统右下角托盘图标内右键菜单选择 Settings，打开配置窗口后左侧导航菜单选择 Docker Daemon。编辑窗口内的JSON串，填写如阿里云、DaoCloud之类的加速器地址，如：</p>
+<p>{<br>  “registry-mirrors”: [<br>    “<a href="https://xxxxxxxxxxx.mirror.aliyuncs.com" target="_blank" rel="external">https://xxxxxxxxxxx.mirror.aliyuncs.com</a>“<br>  ],<br>  “insecure-registries”: []<br>}<br>编辑完成，点击Apply保存后Docker服务会重新启动。</p>
+<h2 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>命令: <code>docker pull</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;</div></pre></td></tr></table></figure></p>
+<p>Docker Registry地址：地址的格式一般是 <code>&lt;域名/IP&gt;[:端口号]</code>。默认地址是 Docker Hub。<br>仓库名：如之前所说，这里的仓库名是两段式名称，既 <code>&lt;用户名&gt;/&lt;软件名&gt;</code>。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像.</p>
+<h3 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h3><p>命令: <code>docker images</code><br>查看结果包含了仓库名、标签、镜像 ID、创建时间以及所占用的空间。</p>
+<h3 id="定制镜像"><a href="#定制镜像" class="headerlink" title="定制镜像"></a>定制镜像</h3><p>命令:<code>docker build</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker build [选项] &lt;上下文路径/URL/-&gt;</div></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">###注意,下面这种方式要进入到Dockerfile的目录下执行</div><div class="line">docker build -t nginx:v3 .</div><div class="line">docker build https://github.com/twang2218/gitlab-ce-zh.git</div><div class="line">docker build http://server/context.tar.gz</div><div class="line">docker build - &lt; Dockerfile</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Docker是世界领先的软件容器平台。 开发人员使用Docker来消除与同事的代码协作时的“我机器上的工作”问题。 运营商使用Docker在独立的容器中并行运行和管理应用程序，以获得更好的计算密度。 企业使用Docker构建灵活的软件传送流程，可以更快，更安全地发布新功能，并且对于Linux，Windows Server和Linux-on-mainframe应用程序都有信心。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="docker" scheme="http://litao.work/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Ajax笔记</title>
@@ -860,32 +911,6 @@
       <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
     
       <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>U盘文件夹变成快捷方式的解决方案</title>
-    <link href="http://litao.work/2016/12/03/U%E7%9B%98%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%98%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://litao.work/2016/12/03/U盘文件夹变成快捷方式的解决方案/</id>
-    <published>2016-12-03T05:37:34.000Z</published>
-    <updated>2017-08-30T07:47:53.849Z</updated>
-    
-    <content type="html"><![CDATA[<p>有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/28jr3b8hg0c7qgx2pgpaxgr3/image_1b0ni0gt31e551mca1bk61nbc8mp9.png" alt="image_1b0ni0gt31e551mca1bk61nbc8mp9.png-4.1kB"><br>然后问记事本或者任意一个文本编辑器打开这个文件，在里面输入下面的代码，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo 本程序消除文件夹被病毒设置的隐藏属性</div><div class="line">@echo</div><div class="line">@echo 2016.11</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo.</div><div class="line">@ECHO 可能需要一段时间，请耐心等待</div><div class="line">@echo 耐心等待...</div><div class="line">attrib -s -h *. /S /D</div><div class="line">attrib +s +h System~1</div><div class="line">attrib +s +h Recycled</div><div class="line">attrib +s +h +a ntldr</div><div class="line">@ECHO 完成！</div><div class="line"></div><div class="line">@echo on</div></pre></td></tr></table></figure></p>
-<p>然后使用管理员身份运行一次，等待一下，你的文件夹就能打开了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
-    
-      <category term="windows" scheme="http://litao.work/tags/windows/"/>
     
   </entry>
   
