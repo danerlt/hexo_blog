@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-29T09:50:31.533Z</updated>
+  <updated>2017-08-30T03:58:06.758Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python安装配置</title>
+    <link href="http://litao.work/2017/08/30/Python%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    <id>http://litao.work/2017/08/30/Python安装配置/</id>
+    <published>2017-08-30T03:56:12.000Z</published>
+    <updated>2017-08-30T03:58:06.758Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python3-6安装配置"><a href="#Python3-6安装配置" class="headerlink" title="Python3.6安装配置"></a>Python3.6安装配置</h1><p>标签（空格分隔）： python install </p>
+<hr>
+<blockquote>
+<p>Python<a href="http://static.zybuluo.com/danerlt/gravoqcqtjjbgzsi4gasc9f8/image_1boodesql175n1mi81r3run6eigm.png" target="_blank" rel="external">1</a>  （英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）, 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。<br>Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL(GNU General Public License)协议<a href="http://static.zybuluo.com/danerlt/pmuqlj6qtahzh3b3hrl49qkw/image_1boodncih1ov67131ptsi7i2hb13.png" target="_blank" rel="external">2</a>  。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Python下载"><a href="#Python下载" class="headerlink" title="Python下载"></a>Python下载</h2><p>我们选择安装的Python版本为Python3,首先打开Python的官方网站:<a href="https://www.python.org/" target="_blank" rel="external">https://www.python.org/</a>,就像下面这个样子,鼠标移到<code>Downloads</code>点击<code>Windows</code>:<br><img src="http://static.zybuluo.com/danerlt/gravoqcqtjjbgzsi4gasc9f8/image_1boodesql175n1mi81r3run6eigm.png" alt="image_1boodesql175n1mi81r3run6eigm.png-263.6kB"><br>选择<code>3.5.4</code>的版本,下载到本机.<br><img src="http://static.zybuluo.com/danerlt/pmuqlj6qtahzh3b3hrl49qkw/image_1boodncih1ov67131ptsi7i2hb13.png" alt="image_1boodncih1ov67131ptsi7i2hb13.png-141kB"></p>
+<h2 id="Python安装"><a href="#Python安装" class="headerlink" title="Python安装"></a>Python安装</h2><p>安装的时候勾选<code>install for all user</code>,高级选项里面全选就行了.然后点击install.<br><img src="http://static.zybuluo.com/danerlt/dgwmbhtm6enhbs3lykkbirem/image_1boojdladhom1jp31r851dcg198k21.png" alt="image_1boojdladhom1jp31r851dcg198k21.png-236.4kB"><br>输入<code>python -V</code>查看版本,输出Python版本说明配置好了.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">C:\Users\litao_sx&gt;python -V</div><div class="line">Python 3.5.4</div></pre></td></tr></table></figure></p>
+<h2 id="Python配置"><a href="#Python配置" class="headerlink" title="Python配置"></a>Python配置</h2><h3 id="将PYTHON3-HOME添加到PATH中"><a href="#将PYTHON3-HOME添加到PATH中" class="headerlink" title="将PYTHON3_HOME添加到PATH中"></a>将<code>PYTHON3_HOME</code>添加到<code>PATH</code>中</h3><p>点击<code>我的电脑</code>,右键点击<code>属性</code>,然后点击<code>高级系统设置</code>,然后点击环境变量.<br><img src="http://static.zybuluo.com/danerlt/51d1e26akbq9tgz2d8jp57n0/image_1boojkqnctc71k1erk718a86qo2e.png" alt="image_1boojkqnctc71k1erk718a86qo2e.png-90.9kB"><br><img src="http://static.zybuluo.com/danerlt/6zzhnfwjc1242sezg8edam0p/image_1boojl5r8105511gsqrc1lac1kl22r.png" alt="image_1boojl5r8105511gsqrc1lac1kl22r.png-35kB"><br>新建<code>PYTHON3_HOME</code>环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PYTHON3_HOME</div><div class="line">D:\Program Files\Python35</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/4c8a2kf62oygnkryw4y17lje/image_1boojoa02145n1c2715lvtnv18b38.png" alt="image_1boojoa02145n1c2715lvtnv18b38.png-54.5kB"><br>将环境变量添加到PATH中.将下面的内容添加到PATH的最前面.<br>PS: <code>%PYTHON3_HOME%</code>表示取<code>PYTHON3_HOME</code>环境变量的值,<code>;</code>用来分隔环境变量,一定是英文半角下的分号,写错会运行失败.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">%PYTHON3_HOME%;%PYTHON3_HOME%\Scripts;</div></pre></td></tr></table></figure></p>
+<h3 id="Python-HelloWorld"><a href="#Python-HelloWorld" class="headerlink" title="Python HelloWorld"></a>Python HelloWorld</h3><p>在命令提示符中输入<code>python</code>,进入交互模式,输入下面代码,Hello World就出来了.输入<code>quit()</code>或者按下<code>Ctrl+Z</code>退出交互模式.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">print(&apos;Hello World&apos;)</div></pre></td></tr></table></figure></p>
+<p><img src="http://static.zybuluo.com/danerlt/b260c7he4tnxcevjzi6o1pq9/image_1book78ammd518pucadqfukp242.png" alt="image_1book78ammd518pucadqfukp242.png-113.6kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Python3-6安装配置&quot;&gt;&lt;a href=&quot;#Python3-6安装配置&quot; class=&quot;headerlink&quot; title=&quot;Python3.6安装配置&quot;&gt;&lt;/a&gt;Python3.6安装配置&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： python install &lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python&lt;a href=&quot;http://static.zybuluo.com/danerlt/gravoqcqtjjbgzsi4gasc9f8/image_1boodesql175n1mi81r3run6eigm.png&quot;&gt;1&lt;/a&gt;  （英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）, 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。&lt;br&gt;Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL(GNU General Public License)协议&lt;a href=&quot;http://static.zybuluo.com/danerlt/pmuqlj6qtahzh3b3hrl49qkw/image_1boodncih1ov67131ptsi7i2hb13.png&quot;&gt;2&lt;/a&gt;  。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="python" scheme="http://litao.work/tags/python/"/>
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+  </entry>
   
   <entry>
     <title>Git服务器配置</title>
@@ -792,32 +832,6 @@
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux安装chrome</title>
-    <link href="http://litao.work/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/"/>
-    <id>http://litao.work/2016/12/03/linux安装chrome/</id>
-    <published>2016-12-02T17:27:21.000Z</published>
-    <updated>2016-12-02T17:27:40.053Z</updated>
-    
-    <content type="html"><![CDATA[<p>在fedora或者centos上安装chrome:<br>在<code>/etc/yum.reos.d</code>文件夹下创建一个叫<code>google-chrome.repo</code>的配置文件 <code>/etc/yum.repos.d/google-chrome.repo</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[google-chrome]</div><div class="line">name=google-chrome</div><div class="line">baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/</div><div class="line">gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>Install google-chrome-stable rpm package:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># yum install google-chrome-stable</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>参自 <a href="https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html" target="_blank" rel="external">https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html</a></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在fedora或者centos上安装chrome:&lt;br&gt;在&lt;code&gt;/etc/yum.reos.d&lt;/code&gt;文件夹下创建一个叫&lt;code&gt;google-chrome.repo&lt;/code&gt;的配置文件 &lt;code&gt;/etc/yum.repos.d/google-chrome.repo&lt;/code&gt;:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[google-chrome]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;name=google-chrome&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;enabled=1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgcheck=1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
   </entry>
   
