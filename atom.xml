@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-30T09:38:06.346Z</updated>
+  <updated>2017-08-30T09:45:34.526Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>docker配置MySQL</title>
+    <title>Docker配置MySQL</title>
     <link href="http://litao.work/2017/08/30/docker%E9%85%8D%E7%BD%AEMySQL/"/>
     <id>http://litao.work/2017/08/30/docker配置MySQL/</id>
     <published>2017-08-30T09:37:21.000Z</published>
-    <updated>2017-08-30T09:38:06.346Z</updated>
+    <updated>2017-08-30T09:45:34.526Z</updated>
     
     <content type="html"><![CDATA[<p>在学习python的时候,看到需要使用mysql数据库,又不想在windows上安装mysql,遂决定使用docker来配置mysql.</p>
 <p>参考<a href="https://hub.docker.com/_/mysql/" target="_blank" rel="external">docker mysql 官方说明</a>.<br><a id="more"></a></p>
