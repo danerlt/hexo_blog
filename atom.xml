@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Litao&#39;s Blog</title>
   <subtitle>一个不太勤快的程序猿，偶尔写写自己的心得。</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/?/atom.xml" rel="self"/>
   
   <link href="http://litao.work/blog/"/>
   <updated>2017-08-30T10:17:40.502Z</updated>
