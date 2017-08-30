@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="linux,install,centos," />
 
 
 
@@ -106,18 +106,16 @@
 
 
 
-<meta name="description" content="本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。
-1.导入repo包使用xftp将mssql-server.repo和prod.repo包放到/etc/yum.repos.d
+<meta name="description" content="MS SQL Server是微软开发的关系数据库管理系统（RDBMS）。此产品是为存储检索数据的基本功能而构建的，它是其他应用程序所要求的。它可以在同一台计算机上运行，也可以在网络上运行。
 
-curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /etc/yum.repo">
+本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS 安装SQL Server">
+<meta property="og:title" content="centos安装SQL Server">
 <meta property="og:url" content="http://litao.work/2017/03/22/CentOS-安装SQL-Server/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。
-1.导入repo包使用xftp将mssql-server.repo和prod.repo包放到/etc/yum.repos.d
+<meta property="og:description" content="MS SQL Server是微软开发的关系数据库管理系统（RDBMS）。此产品是为存储检索数据的基本功能而构建的，它是其他应用程序所要求的。它可以在同一台计算机上运行，也可以在网络上运行。
 
-curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /etc/yum.repo">
+本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/hghtt5etrj6znys74e9tu7mf/image_1bbppstsb16g91hm51drk1gk61cjp13.png">
@@ -128,13 +126,12 @@ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /et
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/qgvk8dktde5va8rj6gngmdiv/image_1bbpqs17o1qo68bc98h173vi9i13.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/slqqbqr1sbhde0wqg7s52o8l/image_1bbpr1oj872i15u9v4m1dhlcbp9.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/9rq4lsb1v6rb83t5hur8opc8/image_1bbpr4dqoroo195s15e51b35888m.png">
-<meta property="og:updated_time" content="2017-03-22T01:52:44.545Z">
+<meta property="og:updated_time" content="2017-08-30T07:32:58.226Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS 安装SQL Server">
-<meta name="twitter:description" content="本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。
-1.导入repo包使用xftp将mssql-server.repo和prod.repo包放到/etc/yum.repos.d
+<meta name="twitter:title" content="centos安装SQL Server">
+<meta name="twitter:description" content="MS SQL Server是微软开发的关系数据库管理系统（RDBMS）。此产品是为存储检索数据的基本功能而构建的，它是其他应用程序所要求的。它可以在同一台计算机上运行，也可以在网络上运行。
 
-curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /etc/yum.repo">
+本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。">
 <meta name="twitter:image" content="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png">
 
 
@@ -171,7 +168,7 @@ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo &amp;gt; /et
 
 
 
-  <title>CentOS 安装SQL Server | Litao's Blog</title>
+  <title>centos安装SQL Server | Litao's Blog</title>
   
 
 
@@ -328,7 +325,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
         
         
-          <h1 class="post-title" itemprop="name headline">CentOS 安装SQL Server</h1>
+          <h1 class="post-title" itemprop="name headline">centos安装SQL Server</h1>
         
 
         <div class="post-meta">
@@ -356,12 +353,34 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-03-22T09:52:44+08:00">
-                2017-03-22
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-30T15:32:58+08:00">
+                2017-08-30
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -394,7 +413,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  477
+                  550
                 </span>
               
 
@@ -431,12 +450,15 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
 
       
-        <p>本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。</p>
+        <blockquote>
+<p>MS SQL Server是微软开发的关系数据库管理系统（RDBMS）。此产品是为存储检索数据的基本功能而构建的，它是其他应用程序所要求的。它可以在同一台计算机上运行，也可以在网络上运行。</p>
+</blockquote>
+<p>本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。<br><a id="more"></a></p>
 <h2 id="1-导入repo包"><a href="#1-导入repo包" class="headerlink" title="1.导入repo包"></a>1.导入repo包</h2><p>使用xftp将mssql-server.repo和prod.repo包放到<code>/etc/yum.repos.d</code></p>
 <blockquote>
 <p>curl <a href="https://packages.microsoft.com/config/rhel/7/mssql-server.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/mssql-server.repo</a> &gt; /etc/yum.repos.d/mssql-server.repo<br>curl <a href="https://packages.microsoft.com/config/rhel/7/prod.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/prod.repo</a> &gt; /etc/yum.repos.d/msprod.repo</p>
 </blockquote>
-<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
+<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><!--more--><br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
 <h2 id="2-使用yum安装SQL-Server"><a href="#2-使用yum安装SQL-Server" class="headerlink" title="2.使用yum安装SQL-Server"></a>2.使用yum安装SQL-Server</h2><p>使用yum install安装SQL-Server</p>
 <blockquote>
 <p>yum install -y mssql-server</p>
@@ -523,6 +545,10 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           
             <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
           
+            <a href="/tags/install/" <i class="fa fa-tag"></i> install</a>
+          
+            <a href="/tags/centos/" <i class="fa fa-tag"></i> centos</a>
+          
         </div>
       
 
@@ -544,8 +570,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/23/Linux安装mssql-tools/" rel="prev" title="Linux安装mssql-Tools">
-                Linux安装mssql-Tools <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/23/Linux安装mssql-tools/" rel="prev" title="Centos7安装mssql-Tools">
+                Centos7安装mssql-Tools <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -603,7 +629,7 @@ var jiathis_config={
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/22/CentOS-安装SQL-Server/"
-           data-title="CentOS 安装SQL Server" data-url="http://litao.work/2017/03/22/CentOS-安装SQL-Server/">
+           data-title="centos安装SQL Server" data-url="http://litao.work/2017/03/22/CentOS-安装SQL-Server/">
       </div>
     
   </div>
@@ -666,7 +692,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -677,7 +703,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -792,7 +818,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      8.2k
+      8.6k
     </span>
   
 </div>
@@ -803,7 +829,7 @@ var jiathis_config={
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
     <div class="powered-by">NexT.Mist</div>
-    <span class="post-count">博客全站共8.2k字</span>
+    <span class="post-count">博客全站共8.6k字</span>
   </div> 
 
 

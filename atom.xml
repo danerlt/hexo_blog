@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-08-30T03:58:06.758Z</updated>
+  <updated>2017-08-30T07:13:46.064Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,11 +20,9 @@
     <link href="http://litao.work/2017/08/30/Python%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
     <id>http://litao.work/2017/08/30/Python安装配置/</id>
     <published>2017-08-30T03:56:12.000Z</published>
-    <updated>2017-08-30T03:58:06.758Z</updated>
+    <updated>2017-08-30T07:13:46.064Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Python3-6安装配置"><a href="#Python3-6安装配置" class="headerlink" title="Python3.6安装配置"></a>Python3.6安装配置</h1><p>标签（空格分隔）： python install </p>
-<hr>
-<blockquote>
+    <content type="html"><![CDATA[<blockquote>
 <p>Python<a href="http://static.zybuluo.com/danerlt/gravoqcqtjjbgzsi4gasc9f8/image_1boodesql175n1mi81r3run6eigm.png" target="_blank" rel="external">1</a>  （英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）, 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。<br>Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL(GNU General Public License)协议<a href="http://static.zybuluo.com/danerlt/pmuqlj6qtahzh3b3hrl49qkw/image_1boodncih1ov67131ptsi7i2hb13.png" target="_blank" rel="external">2</a>  。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。</p>
 </blockquote>
 <a id="more"></a>
@@ -38,9 +36,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Python3-6安装配置&quot;&gt;&lt;a href=&quot;#Python3-6安装配置&quot; class=&quot;headerlink&quot; title=&quot;Python3.6安装配置&quot;&gt;&lt;/a&gt;Python3.6安装配置&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： python install &lt;/p&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;Python&lt;a href=&quot;http://static.zybuluo.com/danerlt/gravoqcqtjjbgzsi4gasc9f8/image_1boodesql175n1mi81r3run6eigm.png&quot;&gt;1&lt;/a&gt;  （英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）, 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。&lt;br&gt;Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL(GNU General Public License)协议&lt;a href=&quot;http://static.zybuluo.com/danerlt/pmuqlj6qtahzh3b3hrl49qkw/image_1boodncih1ov67131ptsi7i2hb13.png&quot;&gt;2&lt;/a&gt;  。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。&lt;/p&gt;
 &lt;/blockquote&gt;
     
@@ -99,55 +95,11 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://litao.work/2017/06/29/Javascript%E7%AC%94%E8%AE%B0/"/>
-    <id>http://litao.work/2017/06/29/Javascript笔记/</id>
-    <published>2017-06-29T15:37:07.036Z</published>
-    <updated>2017-06-29T15:37:07.036Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<p>title: Javascript笔记<br>date: 2016-11-15 11:51:44<br>tag: javascript<br>—﻿</p>
-<h3 id="下列的值在javascript中表示false"><a href="#下列的值在javascript中表示false" class="headerlink" title="下列的值在javascript中表示false"></a>下列的值在javascript中表示false</h3><ul>
-<li>false</li>
-<li>null</li>
-<li>undefined</li>
-<li>空字符串’ ‘</li>
-<li>数字0</li>
-<li>数字NaN</li>
-</ul>
-<h3 id="逻辑与：-amp-amp"><a href="#逻辑与：-amp-amp" class="headerlink" title="逻辑与：&amp;&amp;"></a>逻辑与：&amp;&amp;</h3><p>当&amp;&amp;的第一个运算数的值为假，表达式为第一个运算数的值，否则表达式为第二个运算数的值。</p>
-<h3 id="逻辑或："><a href="#逻辑或：" class="headerlink" title="逻辑或：||"></a>逻辑或：||</h3><p>当||的第一个运算数的值为假时，表达式为第二个运算数的值，否则表达式为第一个运算数的值。</p>
-<h3 id="拦截网页的默认行为"><a href="#拦截网页的默认行为" class="headerlink" title="拦截网页的默认行为"></a>拦截网页的默认行为</h3><p>在事件处理函数的后面加一句<code>return false;</code>语句,就可以了。<br><img src="http://static.zybuluo.com/danerlt/l1fgzlcisb52v62oo3jzql4l/image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png" alt="image_1aq3ipcj71jcf1jtn1ict1i4q1j0g9.png-425.3kB"></p>
-<p>节选自JavaScriptDOM编程]</p>
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"></p>
-<p>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
-<blockquote>
-<p>点击Putty左上角的图标，找到Change Settings,再找到Window——&gt;Translation——–&gt;Remote character set，把它改为你设置的字符集，这里以UTF-8为例。</p>
-</blockquote>
-<p> <img src="http://static.zybuluo.com/danerlt/jtfjt1cwpvk9266c61lllkan/image_1aolp160f1jqvvmo1iesjer13d213.png" alt="image_1aolp160f1jqvvmo1iesjer13d213.png-165.6kB"></p>
-<blockquote>
-<p>至此，大功告成，可以正常显示中文了。</p>
-</blockquote>
-<p> <img src="http://static.zybuluo.com/danerlt/zf8xlec2hhw1wykc2bz3xwuu/image_1aolos02vt271kkh11lp1crb1hbnm.png" alt="image_1aolos02vt271kkh11lp1crb1hbnm.png-36kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;title: Javascript笔记&lt;br&gt;date: 2016-11-15 11:51:44&lt;br&gt;tag: javascript&lt;br&gt;—﻿&lt;/p&gt;
-&lt;h3 id=&quot;下列的值在javascript中表示false&quot;&gt;&lt;a href=&quot;#下列的值在javasc
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>查找二维数组</title>
     <link href="http://litao.work/2017/06/29/%E6%9F%A5%E6%89%BE%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/"/>
     <id>http://litao.work/2017/06/29/查找二维数组/</id>
     <published>2017-06-29T01:55:23.000Z</published>
-    <updated>2017-06-29T03:11:00.000Z</updated>
+    <updated>2017-08-30T07:15:03.101Z</updated>
     
     <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>在一个二维数组中,每一行都按照从到右递增的顺序,每一列都按照从上到下递增的顺序排序.请完成一个函数,输入这样的一个二维数组和一个数组中,是否含有该整数.详情请点击<a href="https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&amp;tqId=11154&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">这里</a>.(题目来源牛客网剑指offer).<br><a id="more"></a></p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//二维数组</div><div class="line">&#123;1, 2, 8, 9&#125;,</div><div class="line">&#123;2, 4, 9, 12&#125;,</div><div class="line">&#123;4, 7, 10, 13&#125;,</div><div class="line">6, 8, 11, 15&#125;</div><div class="line">//目标数字</div><div class="line">7</div></pre></td></tr></table></figure>
@@ -163,6 +115,8 @@
     
     </summary>
     
+      <category term="刷题" scheme="http://litao.work/categories/%E5%88%B7%E9%A2%98/"/>
+    
     
       <category term="剑指offer" scheme="http://litao.work/tags/%E5%89%91%E6%8C%87offer/"/>
     
@@ -173,7 +127,7 @@
     <link href="http://litao.work/2017/05/12/IDEA%E4%BD%BF%E7%94%A8Maven%E6%9E%84%E5%BB%BAJava-Web%E9%A1%B9%E7%9B%AE/"/>
     <id>http://litao.work/2017/05/12/IDEA使用Maven构建Java-Web项目/</id>
     <published>2017-05-12T04:35:30.000Z</published>
-    <updated>2017-06-06T06:29:19.733Z</updated>
+    <updated>2017-08-30T07:15:28.703Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-打开IDEA"><a href="#1-打开IDEA" class="headerlink" title="1.打开IDEA"></a>1.打开IDEA</h2><p>点击<code>create new project</code>,在左侧选择Maven,然后勾选<code>create from archetype</code>,然后点击<code>maven-archetype-webapp</code>,如图1,2,3,然后点击next.</p>
 <p><img src="http://static.zybuluo.com/danerlt/o4iy8fiqsdi6y4x330g72mys/image_1bfta2fdv2ac1q1u1t0hl4unv9.png" alt="create new project"><br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/han82isrlxo262ai7n91wg6w/image_1bftab91r43c1ijl6a1iju1f6813.png" alt="image_1bftab91r43c1ijl6a1iju1f6813.png-96kB"></p>
@@ -193,6 +147,8 @@
     
     </summary>
     
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
     
       <category term="javaweb" scheme="http://litao.work/tags/javaweb/"/>
     
@@ -207,25 +163,31 @@
     <link href="http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85oracle-11g-%E4%BA%8C/"/>
     <id>http://litao.work/2017/03/30/centos安装oracle-11g-二/</id>
     <published>2017-03-29T17:06:08.000Z</published>
-    <updated>2017-03-29T17:06:08.797Z</updated>
+    <updated>2017-08-30T07:28:00.863Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
     
   </entry>
   
   <entry>
-    <title>centos安装Oracle 11g(一)</title>
+    <title>centos7安装Oracle 11g(一)</title>
     <link href="http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85Oracle-11g-%E4%B8%80/"/>
     <id>http://litao.work/2017/03/30/centos安装Oracle-11g-一/</id>
     <published>2017-03-29T16:57:29.000Z</published>
-    <updated>2017-03-29T16:59:23.545Z</updated>
+    <updated>2017-08-30T07:26:15.463Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="centos安装Oracle11g-一"><a href="#centos安装Oracle11g-一" class="headerlink" title="centos安装Oracle11g (一)"></a>centos安装Oracle11g (一)</h1><p>标签（空格分隔）： linux</p>
-<hr>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的<a href="https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1" target="_blank" rel="external">https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1</a>,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。</p>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的<a href="https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1" target="_blank" rel="external">https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1</a>,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。</p>
 <p><strong>注意:本文主要讲解到图形化安装前的配置,因为Oracle安装需要使用256位的图像显示,所以图形化界面的安装请戳<a href="https://www.baidu.com" target="_blank" rel="external">这里</a>.</strong><br><a id="more"></a><br>在CentOS7 64位上安装Oracle 11g数据库，首先验证系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hostnamectl</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/0iff1p5gakqmxr0j0uvy6zh1/image_1bcamf2a6uig10rt5ea1f7ojnr26.png" alt="image_1bcamf2a6uig10rt5ea1f7ojnr26.png-39.4kB"></p>
 <h2 id="安装前配置"><a href="#安装前配置" class="headerlink" title="安装前配置"></a>安装前配置</h2><p>当操作系统被成功安装后，要记得验证和登记在你的DNS主机名。另外加上你的主机名或<code>IP</code>和<code>/etc/hosts</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/hostname</div></pre></td></tr></table></figure></p>
@@ -250,31 +212,39 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;centos安装Oracle11g-一&quot;&gt;&lt;a href=&quot;#centos安装Oracle11g-一&quot; class=&quot;headerlink&quot; title=&quot;centos安装Oracle11g (一)&quot;&gt;&lt;/a&gt;centos安装Oracle11g (一)&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： linux&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的&lt;a href=&quot;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&quot;&gt;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&lt;/a&gt;,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。&lt;/p&gt;
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的&lt;a href=&quot;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&quot;&gt;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&lt;/a&gt;,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意:本文主要讲解到图形化安装前的配置,因为Oracle安装需要使用256位的图像显示,所以图形化界面的安装请戳&lt;a href=&quot;https://www.baidu.com&quot;&gt;这里&lt;/a&gt;.&lt;/strong&gt;&lt;br&gt;
     
     </summary>
     
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
     
   </entry>
   
   <entry>
-    <title>centos安装.NET Core</title>
+    <title>centos7安装.NET Core</title>
     <link href="http://litao.work/2017/03/27/centos%E5%AE%89%E8%A3%85-NET-Core/"/>
     <id>http://litao.work/2017/03/27/centos安装-NET-Core/</id>
     <published>2017-03-27T04:32:18.000Z</published>
-    <updated>2017-03-27T04:32:59.442Z</updated>
+    <updated>2017-08-30T07:27:49.960Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="安装-net-core"><a href="#安装-net-core" class="headerlink" title="安装.net core"></a>安装.net core</h2><h3 id="安装依赖的库文件"><a href="#安装依赖的库文件" class="headerlink" title="安装依赖的库文件"></a>安装依赖的库文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y libunwind libicu</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<blockquote>
+<p>.NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台<a href="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" target="_blank" rel="external">1</a>  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。<br>由于 .NET Core 的开发目标是跨平台的 .NET 平台，因此 .NET Core 会包含 .NET Framework 的类库，但与 .NET Framework 不同的是 .NET Core 采用包化 (Packages) 的管理方式，应用程序只需要获取需要的组件即可，与 .NET Framework 大包式安装的作法截然不同，同时各包亦有独立的版本线 (Version line)，不再硬性要求应用程序跟随主线版本。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="安装-net-core"><a href="#安装-net-core" class="headerlink" title="安装.net core"></a>安装.net core</h2><h3 id="安装依赖的库文件"><a href="#安装依赖的库文件" class="headerlink" title="安装依赖的库文件"></a>安装依赖的库文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y libunwind libicu</div></pre></td></tr></table></figure>
 <p><img src="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" alt="image_1bc6vmvlaetorpeqhhr0hu7i9.png-23.3kB"></p>
 <h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><p>将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png" alt="image_1bc6vq96b1o1afe61r5virt9a613.png-13.3kB"></p>
 <h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>将压缩包解压到<code>/opt/dotnet</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mkdir -p /opt/dotnet &amp;&amp; sudo tar zxf dotnet.tar.gz -C /opt/dotnet</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
+<!--more-->
 <p><img src="http://static.zybuluo.com/danerlt/fcrpepfzeodbouh8ziu6aamo/image_1bc6vvdrm1df148k1k17128p1u011g.png" alt="image_1bc6vvdrm1df148k1k17128p1u011g.png-9.5kB"></p>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>将dotnet创建一个链接到<code>/usr/local/bin</code>目录下，从而达到在任何目录下都可以运行dotnet<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /opt/dotnet/dotnet /usr/local/bin</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/017amet2egfea7737kpm62k5/image_1bc70608u1531nb019nj1cdu1hvv1t.png" alt="image_1bc70608u1531nb019nj1cdu1hvv1t.png-3.3kB"></p>
@@ -286,30 +256,38 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;安装-net-core&quot;&gt;&lt;a href=&quot;#安装-net-core&quot; class=&quot;headerlink&quot; title=&quot;安装.net core&quot;&gt;&lt;/a&gt;安装.net core&lt;/h2&gt;&lt;h3 id=&quot;安装依赖的库文件&quot;&gt;&lt;a href=&quot;#安装依赖的库文件&quot; class=&quot;headerlink&quot; title=&quot;安装依赖的库文件&quot;&gt;&lt;/a&gt;安装依赖的库文件&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo yum install -y libunwind libicu&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png&quot; alt=&quot;image_1bc6vmvlaetorpeqhhr0hu7i9.png-23.3kB&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;下载压缩包&quot;&gt;&lt;a href=&quot;#下载压缩包&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包&quot;&gt;&lt;/a&gt;下载压缩包&lt;/h3&gt;&lt;p&gt;将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png&quot; alt=&quot;image_1bc6vq96b1o1afe61r5virt9a613.png-13.3kB&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;解压&quot;&gt;&lt;a href=&quot;#解压&quot; class=&quot;headerlink&quot; title=&quot;解压&quot;&gt;&lt;/a&gt;解压&lt;/h3&gt;&lt;p&gt;将压缩包解压到&lt;code&gt;/opt/dotnet&lt;/code&gt;目录下&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo mkdir -p /opt/dotnet &amp;amp;&amp;amp; sudo tar zxf dotnet.tar.gz -C /opt/dotnet&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;.NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台&lt;a href=&quot;http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png&quot;&gt;1&lt;/a&gt;  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。&lt;br&gt;由于 .NET Core 的开发目标是跨平台的 .NET 平台，因此 .NET Core 会包含 .NET Framework 的类库，但与 .NET Framework 不同的是 .NET Core 采用包化 (Packages) 的管理方式，应用程序只需要获取需要的组件即可，与 .NET Framework 大包式安装的作法截然不同，同时各包亦有独立的版本线 (Version line)，不再硬性要求应用程序跟随主线版本。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
+    
   </entry>
   
   <entry>
-    <title>Linux安装mssql-Tools</title>
+    <title>Centos7安装mssql-Tools</title>
     <link href="http://litao.work/2017/03/23/Linux%E5%AE%89%E8%A3%85mssql-tools/"/>
     <id>http://litao.work/2017/03/23/Linux安装mssql-tools/</id>
     <published>2017-03-23T07:23:22.000Z</published>
-    <updated>2017-03-23T07:24:50.528Z</updated>
+    <updated>2017-08-30T07:29:21.622Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<blockquote>
+<p>MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
 <p>使用ls命令查看<code>/etc/yum.repos.d</code>目录下是否有prod.repo文件,有即说明导入成功。<br><img src="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png" alt="image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB"></p>
 <h2 id="2-移除旧版本"><a href="#2-移除旧版本" class="headerlink" title="2.移除旧版本"></a>2.移除旧版本</h2><p>如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
+<!--more-->
 <p><img src="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png" alt="image_1bbprteosd3213897i714qf1ri5m.png-102.2kB"><br><img src="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png" alt="image_1bbpsdkm81rir1kcbjadvls1sgb13.png-18.2kB"></p>
 <h2 id="3-安装mysql-tools"><a href="#3-安装mysql-tools" class="headerlink" title="3.安装mysql-tools"></a>3.安装mysql-tools</h2><p>使用下面的命令安装mysql-tools，一路YES<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/rkbgitslpfmcev2y9dd7oa80/image_1bbpsg85g1rn0p5ju51fafmcg1g.png" alt="image_1bbpsg85g1rn0p5ju51fafmcg1g.png-60.5kB"><br><img src="http://static.zybuluo.com/danerlt/5ri1ne6spoizj0cqp4qxd1du/image_1bbpsgstk1ui814tlel1nugoff1t.png" alt="image_1bbpsgstk1ui814tlel1nugoff1t.png-31.1kB"><br>，看到如下图所示说明mysql-tools安装成功<br><img src="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png" alt="image_1bbpshdam1m0c142s1cb5hcb5482a.png-18.8kB"><br>如何你需要生气mysql-tools可以使用以下命令升级<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum check-update</div><div class="line">sudo yum update mssql-tools</div></pre></td></tr></table></figure></p>
@@ -321,30 +299,39 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-导入repo&quot;&gt;&lt;a href=&quot;#1-导入repo&quot; class=&quot;headerlink&quot; title=&quot;1.导入repo&quot;&gt;&lt;/a&gt;1.导入repo&lt;/h2&gt;&lt;p&gt;将prod.repo导入的&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;目录下&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;使用ls命令查看&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;目录下是否有prod.repo文件,有即说明导入成功。&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png&quot; alt=&quot;image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2-移除旧版本&quot;&gt;&lt;a href=&quot;#2-移除旧版本&quot; class=&quot;headerlink&quot; title=&quot;2.移除旧版本&quot;&gt;&lt;/a&gt;2.移除旧版本&lt;/h2&gt;&lt;p&gt;如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo yum update&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo yum install mssql-tools unixODBC-devel&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
+    
   </entry>
   
   <entry>
-    <title>CentOS 安装SQL Server</title>
+    <title>centos安装SQL Server</title>
     <link href="http://litao.work/2017/03/22/CentOS-%E5%AE%89%E8%A3%85SQL-Server/"/>
     <id>http://litao.work/2017/03/22/CentOS-安装SQL-Server/</id>
     <published>2017-03-22T01:49:51.000Z</published>
-    <updated>2017-03-22T01:52:44.545Z</updated>
+    <updated>2017-08-30T07:32:58.226Z</updated>
     
-    <content type="html"><![CDATA[<p>本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>MS SQL Server是微软开发的关系数据库管理系统（RDBMS）。此产品是为存储检索数据的基本功能而构建的，它是其他应用程序所要求的。它可以在同一台计算机上运行，也可以在网络上运行。</p>
+</blockquote>
+<p>本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。<br><a id="more"></a></p>
 <h2 id="1-导入repo包"><a href="#1-导入repo包" class="headerlink" title="1.导入repo包"></a>1.导入repo包</h2><p>使用xftp将mssql-server.repo和prod.repo包放到<code>/etc/yum.repos.d</code></p>
 <blockquote>
 <p>curl <a href="https://packages.microsoft.com/config/rhel/7/mssql-server.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/mssql-server.repo</a> &gt; /etc/yum.repos.d/mssql-server.repo<br>curl <a href="https://packages.microsoft.com/config/rhel/7/prod.repo" target="_blank" rel="external">https://packages.microsoft.com/config/rhel/7/prod.repo</a> &gt; /etc/yum.repos.d/msprod.repo</p>
 </blockquote>
-<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
+<p>或者使用curl命令<br><img src="http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png" alt="image_1bbppervk1ebs7de11ucaei12com.png-11.6kB"><br>使用ls命令在<code>/etc/yum.repos.d</code>目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）<br><!--more--><br><img src="http://static.zybuluo.com/danerlt/3cby07w24dr3fmti13lkl3lc/image_1bbppclc515bd82j1fm59fol8c9.png" alt="image_1bbppclc515bd82j1fm59fol8c9.png-61.3kB"></p>
 <h2 id="2-使用yum安装SQL-Server"><a href="#2-使用yum安装SQL-Server" class="headerlink" title="2.使用yum安装SQL-Server"></a>2.使用yum安装SQL-Server</h2><p>使用yum install安装SQL-Server</p>
 <blockquote>
 <p>yum install -y mssql-server</p>
@@ -373,17 +360,21 @@
     
     <summary type="html">
     
-      &lt;p&gt;本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。&lt;/p&gt;
-&lt;h2 id=&quot;1-导入repo包&quot;&gt;&lt;a href=&quot;#1-导入repo包&quot; class=&quot;headerlink&quot; title=&quot;1.导入repo包&quot;&gt;&lt;/a&gt;1.导入repo包&lt;/h2&gt;&lt;p&gt;使用xftp将mssql-server.repo和prod.repo包放到&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;curl &lt;a href=&quot;https://packages.microsoft.com/config/rhel/7/mssql-server.repo&quot;&gt;https://packages.microsoft.com/config/rhel/7/mssql-server.repo&lt;/a&gt; &amp;gt; /etc/yum.repos.d/mssql-server.repo&lt;br&gt;curl &lt;a href=&quot;https://packages.microsoft.com/config/rhel/7/prod.repo&quot;&gt;https://packages.microsoft.com/config/rhel/7/prod.repo&lt;/a&gt; &amp;gt; /etc/yum.repos.d/msprod.repo&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;MS SQL Server是微软开发的关系数据库管理系统（RDBMS）。此产品是为存储检索数据的基本功能而构建的，它是其他应用程序所要求的。它可以在同一台计算机上运行，也可以在网络上运行。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;或者使用curl命令&lt;br&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/oyb59dbtpjhxyttfjcsn1aja/image_1bbppervk1ebs7de11ucaei12com.png&quot; alt=&quot;image_1bbppervk1ebs7de11ucaei12com.png-11.6kB&quot;&gt;&lt;br&gt;使用ls命令在&lt;code&gt;/etc/yum.repos.d&lt;/code&gt;目录下查看到了mysql-server.repo即可，（prod.repo在安装sqltool时需要用到）&lt;br&gt;
+&lt;p&gt;本次安装SQL Server的Linux版本为Centos7，使用xshell和xftp远程操作。&lt;br&gt;
     
     </summary>
     
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
     
   </entry>
   
@@ -392,7 +383,7 @@
     <link href="http://litao.work/2017/03/21/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://litao.work/2017/03/21/git常用命令/</id>
     <published>2017-03-21T14:49:06.000Z</published>
-    <updated>2017-03-24T05:07:48.070Z</updated>
+    <updated>2017-08-30T07:24:06.304Z</updated>
     
     <content type="html"><![CDATA[<table>
 <thead>
@@ -572,19 +563,24 @@
     
     </summary>
     
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
     
       <category term="git" scheme="http://litao.work/tags/git/"/>
+    
+      <category term="commands" scheme="http://litao.work/tags/commands/"/>
     
   </entry>
   
   <entry>
-    <title>LF Will Be Replaced by CRLF in *</title>
+    <title>LF Will Be Replaced by CRLF解决方案</title>
     <link href="http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/"/>
     <id>http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/</id>
     <published>2017-03-21T14:41:41.000Z</published>
-    <updated>2017-03-21T14:46:17.212Z</updated>
+    <updated>2017-08-30T07:32:44.680Z</updated>
     
     <content type="html"><![CDATA[<p>在使用git提交时出现错误提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LF will be replaced by CRLF in *** . The file will have its original line endings in your working directory.</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>出现这个问题的原因是window平台下的换行符合Linux下的换行符不一致，Git是Linux平台下，所以在window平台下使用Git就会报这样的错.</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在shell中将autocrlf改为false。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config –-global core.autocrlf false</div></pre></td></tr></table></figure></p>
 <p>接下来你就可以继续你的github之旅了。</p>
@@ -592,9 +588,11 @@
     
     <summary type="html">
     
-      &lt;p&gt;在使用git提交时出现错误提示&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code
+      &lt;p&gt;在使用git提交时出现错误提示&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;LF will be replaced by CRLF in *** . The file will have its original line endings in your working directory.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="git" scheme="http://litao.work/tags/git/"/>
@@ -608,7 +606,7 @@
     <link href="http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/"/>
     <id>http://litao.work/2017/03/21/Vmware-安装Centos7/</id>
     <published>2017-03-21T14:30:00.000Z</published>
-    <updated>2017-05-12T04:37:17.450Z</updated>
+    <updated>2017-08-30T07:43:39.900Z</updated>
     
     <content type="html"><![CDATA[<p>由于安装Oracle时虚拟机出了故障，遂决定重装centos7.</p>
 <h2 id="1-选择打开电源时进入固件"><a href="#1-选择打开电源时进入固件" class="headerlink" title="1.选择打开电源时进入固件"></a>1.选择打开电源时进入固件</h2><p><img src="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png" alt="image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB"><br><a id="more"></a></p>
@@ -629,8 +627,16 @@
     
     </summary>
     
+      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
+    
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
     
   </entry>
   
@@ -639,9 +645,10 @@
     <link href="http://litao.work/2016/12/15/git%E9%85%8D%E7%BD%AEssh/"/>
     <id>http://litao.work/2016/12/15/git配置ssh/</id>
     <published>2016-12-14T17:58:11.000Z</published>
-    <updated>2016-12-14T18:17:28.542Z</updated>
+    <updated>2017-08-30T07:36:43.501Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="github-配置sshkey"><a href="#github-配置sshkey" class="headerlink" title="github 配置sshkey"></a>github 配置sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>git使用https协议，每次pull, push都要输入密码，相当的烦。<br>使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。</p>
+<h2 id="github-配置sshkey"><a href="#github-配置sshkey" class="headerlink" title="github 配置sshkey"></a>github 配置sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
 <p>s.g.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;test@126.com&quot;</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -656,14 +663,21 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;github-配置sshkey&quot;&gt;&lt;a href=&quot;#github-配置sshkey&quot; class=&quot;headerlink&quot; title=&quot;github 配置sshkey&quot;&gt;&lt;/a&gt;github 配置sshkey&lt;/h2&gt;&lt;p&gt;使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次&lt;code&gt;git push&lt;/code&gt;时就不用输入密码了。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ssh-keygen -t rsa -C &amp;quot;youremail@example&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      &lt;p&gt;git使用https协议，每次pull, push都要输入密码，相当的烦。&lt;br&gt;使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。&lt;/p&gt;
+&lt;h2 id=&quot;github-配置sshkey&quot;&gt;&lt;a href=&quot;#github-配置sshkey&quot; class=&quot;headerlink&quot; title=&quot;github 配置sshkey&quot;&gt;&lt;/a&gt;github 配置sshkey&lt;/h2&gt;&lt;p&gt;使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次&lt;code&gt;git push&lt;/code&gt;时就不用输入密码了。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ssh-keygen -t rsa -C &amp;quot;youremail@example&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;s.g.&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ssh-keygen -t rsa -C &amp;quot;test@126.com&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
     
       <category term="git" scheme="http://litao.work/tags/git/"/>
+    
+      <category term="github" scheme="http://litao.work/tags/github/"/>
+    
+      <category term="config" scheme="http://litao.work/tags/config/"/>
     
   </entry>
   
@@ -672,7 +686,7 @@
     <link href="http://litao.work/2016/12/03/%E8%BF%90%E8%A1%8C%EF%BC%8C%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%EF%BC%8C%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E8%A2%AB%E7%A6%81%E7%94%A8%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/12/03/运行，控制面板，命令提示符被禁用的解决方案/</id>
     <published>2016-12-03T05:55:47.000Z</published>
-    <updated>2016-12-03T05:57:22.308Z</updated>
+    <updated>2017-08-30T07:47:01.122Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>电脑的运行、控制面板、命令提示符被禁用了</p>
 <a id="more"></a>
@@ -688,6 +702,8 @@
     
     </summary>
     
+      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
+    
     
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
@@ -700,7 +716,7 @@
     <link href="http://litao.work/2016/12/03/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>http://litao.work/2016/12/03/《代码整洁之道》读书笔记/</id>
     <published>2016-12-03T05:53:30.000Z</published>
-    <updated>2016-12-03T17:14:38.939Z</updated>
+    <updated>2017-08-30T07:46:32.910Z</updated>
     
     <content type="html"><![CDATA[<h3 id="类名"><a href="#类名" class="headerlink" title="类名"></a>类名</h3><blockquote>
 <p>类名和对象名应该是名词或者名词短语，入Customer，WikiPage，Account和AddressParser。避免使用Manager、Processor、Data、或Info这样的类名。类名不应该是动词</p>
@@ -719,6 +735,8 @@
     
     </summary>
     
+      <category term="读书" scheme="http://litao.work/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
     
       <category term="读书笔记" scheme="http://litao.work/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
@@ -729,7 +747,7 @@
     <link href="http://litao.work/2016/12/03/%E6%9F%A5%E7%9C%8B%E7%94%B5%E8%84%91%E4%BF%A1%E6%81%AF%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
     <id>http://litao.work/2016/12/03/查看电脑信息命令大全/</id>
     <published>2016-12-03T05:45:24.000Z</published>
-    <updated>2016-12-03T17:15:16.810Z</updated>
+    <updated>2017-08-30T07:44:58.992Z</updated>
     
     <content type="html"><![CDATA[<h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>查看电脑配置信息指令。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="查看电脑配置命令：dxdiag"><a href="#查看电脑配置命令：dxdiag" class="headerlink" title="查看电脑配置命令：dxdiag"></a>查看电脑配置命令：<code>dxdiag</code></h3><p><img src="http://static.zybuluo.com/danerlt/gd3ck9isli9ii43x52yznbed/image_1aoo1hpnag8i1trm1s871c41e879.png" alt="image_1aoo1hpnag8i1trm1s871c41e879.png-62.6kB"><br><a id="more"></a></p>
@@ -748,6 +766,8 @@
     
     </summary>
     
+      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
+    
     
       <category term="windows" scheme="http://litao.work/tags/windows/"/>
     
@@ -758,7 +778,7 @@
     <link href="http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
     <id>http://litao.work/2016/12/03/vmware安装苹果虚拟机常见错误/</id>
     <published>2016-12-03T05:40:58.000Z</published>
-    <updated>2016-12-03T17:17:16.949Z</updated>
+    <updated>2017-08-30T07:43:24.505Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <p>title: vmware Max OS 常见错误<br>date: 2016-11-15 11:51:44<br>tag: vmware<br>—﻿<br>﻿<br> 1.开启虚拟机之前用记事本打开<em>*</em>.vmx，在最后加一句<code>smc.version=0</code><br><img src="http://static.zybuluo.com/danerlt/6vaxl36cadwvuxw4am66yggm/image_1arcp8osu100qgd91li9oesrrs9.png" alt="image_1arcp8osu100qgd91li9oesrrs9.png-59.7kB"><br><a id="more"></a></p>
@@ -773,6 +793,8 @@
     
     </summary>
     
+      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
+    
     
       <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
     
@@ -785,7 +807,7 @@
     <link href="http://litao.work/2016/12/03/U%E7%9B%98%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%98%E6%88%90%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/12/03/U盘文件夹变成快捷方式的解决方案/</id>
     <published>2016-12-03T05:37:34.000Z</published>
-    <updated>2016-12-03T05:39:37.405Z</updated>
+    <updated>2017-08-30T07:47:53.849Z</updated>
     
     <content type="html"><![CDATA[<p>有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。<br><a id="more"></a><br><img src="http://static.zybuluo.com/danerlt/28jr3b8hg0c7qgx2pgpaxgr3/image_1b0ni0gt31e551mca1bk61nbc8mp9.png" alt="image_1b0ni0gt31e551mca1bk61nbc8mp9.png-4.1kB"><br>然后问记事本或者任意一个文本编辑器打开这个文件，在里面输入下面的代码，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo 本程序消除文件夹被病毒设置的隐藏属性</div><div class="line">@echo</div><div class="line">@echo 2016.11</div><div class="line">@echo +-------------------------------------------------------------+</div><div class="line">@echo.</div><div class="line">@ECHO 可能需要一段时间，请耐心等待</div><div class="line">@echo 耐心等待...</div><div class="line">attrib -s -h *. /S /D</div><div class="line">attrib +s +h System~1</div><div class="line">attrib +s +h Recycled</div><div class="line">attrib +s +h +a ntldr</div><div class="line">@ECHO 完成！</div><div class="line"></div><div class="line">@echo on</div></pre></td></tr></table></figure></p>
 <p>然后使用管理员身份运行一次，等待一下，你的文件夹就能打开了。</p>
@@ -796,6 +818,8 @@
       &lt;p&gt;有时候当我们的U盘在别人电脑上使用后，一不小心所有的文件夹都变成了快捷方式了。而单独的文件没事，只有文件夹变成了快捷方式。话不多说，让我们来解决这个小bug吧。首先在你的U盘下建立一个名为杀毒的bat文件，像这样，名字你可以随便取，只要后缀是.bat就行。什么，你看不到后缀名，请百度关键词为“windows显示文件后缀名”的词条。&lt;br&gt;
     
     </summary>
+    
+      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
     
     
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
@@ -809,7 +833,7 @@
     <link href="http://litao.work/2016/12/03/putty%E8%BF%9E%E6%8E%A5linux%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2016/12/03/putty连接linux中文乱码的解决方案/</id>
     <published>2016-12-03T05:34:28.000Z</published>
-    <updated>2016-12-03T05:39:37.416Z</updated>
+    <updated>2017-08-30T07:47:18.619Z</updated>
     
     <content type="html"><![CDATA[<h2 id="putty连接Linux中文乱码解决方案"><a href="#putty连接Linux中文乱码解决方案" class="headerlink" title="putty连接Linux中文乱码解决方案"></a>putty连接Linux中文乱码解决方案</h2><h2 id="问题描述：使用putty连接Linux后中文显示乱码"><a href="#问题描述：使用putty连接Linux后中文显示乱码" class="headerlink" title="问题描述：使用putty连接Linux后中文显示乱码"></a>问题描述：使用putty连接Linux后中文显示乱码</h2><p><img src="http://static.zybuluo.com/danerlt/84u1tjn8ytbptgshc8cn3nha/image_1aolonhin3cj52fltehiq1rma9.png" alt="image_1aolonhin3cj52fltehiq1rma9.png-23kB"><br><a id="more"></a><br>在Linux中输入<code>LANG=zh_CN.utf-8</code></p>
 <blockquote>
@@ -828,10 +852,44 @@
     
     </summary>
     
+      <category term="工具" scheme="http://litao.work/categories/%E5%B7%A5%E5%85%B7/"/>
+    
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7安装chrome</title>
+    <link href="http://litao.work/2016/12/03/linux%E5%AE%89%E8%A3%85chrome/"/>
+    <id>http://litao.work/2016/12/03/linux安装chrome/</id>
+    <published>2016-12-02T17:27:21.000Z</published>
+    <updated>2017-08-30T07:49:08.696Z</updated>
+    
+    <content type="html"><![CDATA[<p>在fedora或者centos上安装chrome:<br>在<code>/etc/yum.reos.d</code>文件夹下创建一个叫<code>google-chrome.repo</code>的配置文件 <code>/etc/yum.repos.d/google-chrome.repo</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[google-chrome]</div><div class="line">name=google-chrome</div><div class="line">baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/</div><div class="line">gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub</div><div class="line">enabled=1</div><div class="line">gpgcheck=1</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>Install google-chrome-stable rpm package:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># yum install google-chrome-stable</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参自 <a href="https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html" target="_blank" rel="external">https://pkgs.org/fedora-centos-rhel-opensuse-mandriva/google-chrome-x86_64/google-chrome-stable-53.0.2785.143-1.x86_64.rpm.html</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在fedora或者centos上安装chrome:&lt;br&gt;在&lt;code&gt;/etc/yum.reos.d&lt;/code&gt;文件夹下创建一个叫&lt;code&gt;google-chrome.repo&lt;/code&gt;的配置文件 &lt;code&gt;/etc/yum.repos.d/google-chrome.repo&lt;/code&gt;:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[google-chrome]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;name=google-chrome&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;enabled=1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgcheck=1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://litao.work/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="centos" scheme="http://litao.work/tags/centos/"/>
     
   </entry>
   

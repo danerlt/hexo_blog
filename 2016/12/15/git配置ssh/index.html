@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="git,github,config," />
 
 
 
@@ -106,24 +106,21 @@
 
 
 
-<meta name="description" content="github 配置sshkey使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次git push时就不用输入密码了。1ssh-keygen -t rsa -C &amp;quot;youremail@example&amp;quot;
-s.g.
-1ssh-keygen -t rsa -C &amp;quot;test@126.com&amp;">
+<meta name="description" content="git使用https协议，每次pull, push都要输入密码，相当的烦。使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。
+github 配置sshkey使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次git push时就不用输入密码了。1ssh-keygen -t rsa -C &amp;quot;y">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github配置sshkey">
 <meta property="og:url" content="http://litao.work/2016/12/15/git配置ssh/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="github 配置sshkey使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次git push时就不用输入密码了。1ssh-keygen -t rsa -C &amp;quot;youremail@example&amp;quot;
-s.g.
-1ssh-keygen -t rsa -C &amp;quot;test@126.com&amp;">
+<meta property="og:description" content="git使用https协议，每次pull, push都要输入密码，相当的烦。使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。
+github 配置sshkey使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次git push时就不用输入密码了。1ssh-keygen -t rsa -C &amp;quot;y">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/ahbmypha8g7xlmfzjpxkciv5/image_1b304rntm1jbk116m1k3p57m1hbs9.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/v1sema0z1dwyuiqykou6ucni/image_1b3053n67d731l18rha33arurm.png">
-<meta property="og:updated_time" content="2016-12-14T18:17:28.542Z">
+<meta property="og:updated_time" content="2017-08-30T07:36:43.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github配置sshkey">
-<meta name="twitter:description" content="github 配置sshkey使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次git push时就不用输入密码了。1ssh-keygen -t rsa -C &amp;quot;youremail@example&amp;quot;
-s.g.
-1ssh-keygen -t rsa -C &amp;quot;test@126.com&amp;">
+<meta name="twitter:description" content="git使用https协议，每次pull, push都要输入密码，相当的烦。使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。
+github 配置sshkey使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次git push时就不用输入密码了。1ssh-keygen -t rsa -C &amp;quot;y">
 <meta name="twitter:image" content="http://static.zybuluo.com/danerlt/ahbmypha8g7xlmfzjpxkciv5/image_1b304rntm1jbk116m1k3p57m1hbs9.png">
 
 
@@ -345,12 +342,34 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2016-12-15T02:17:28+08:00">
-                2016-12-15
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-30T15:36:43+08:00">
+                2017-08-30
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -383,7 +402,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  137
+                  180
                 </span>
               
 
@@ -420,7 +439,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
 
       
-        <h2 id="github-配置sshkey"><a href="#github-配置sshkey" class="headerlink" title="github 配置sshkey"></a>github 配置sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
+        <p>git使用https协议，每次pull, push都要输入密码，相当的烦。<br>使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。</p>
+<h2 id="github-配置sshkey"><a href="#github-配置sshkey" class="headerlink" title="github 配置sshkey"></a>github 配置sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
 <p>s.g.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;test@126.com&quot;</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -492,6 +512,10 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <div class="post-tags">
           
             <a href="/tags/git/" <i class="fa fa-tag"></i> git</a>
+          
+            <a href="/tags/github/" <i class="fa fa-tag"></i> github</a>
+          
+            <a href="/tags/config/" <i class="fa fa-tag"></i> config</a>
           
         </div>
       
@@ -636,7 +660,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -647,7 +671,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -762,7 +786,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      8.2k
+      8.6k
     </span>
   
 </div>
@@ -773,7 +797,7 @@ var jiathis_config={
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
     <div class="powered-by">NexT.Mist</div>
-    <span class="post-count">博客全站共8.2k字</span>
+    <span class="post-count">博客全站共8.6k字</span>
   </div> 
 
 

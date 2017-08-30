@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="linux,install,centos," />
 
 
 
@@ -106,34 +106,22 @@
 
 
 
-<meta name="description" content="安装.net core安装依赖的库文件1sudo yum install -y libunwind libicu
-
-下载压缩包将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。1curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449
-
-解压将压缩包解压到/opt/d">
+<meta name="description" content=".NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台1  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。由于 .NE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos安装.NET Core">
+<meta property="og:title" content="centos7安装.NET Core">
 <meta property="og:url" content="http://litao.work/2017/03/27/centos安装-NET-Core/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="安装.net core安装依赖的库文件1sudo yum install -y libunwind libicu
-
-下载压缩包将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。1curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449
-
-解压将压缩包解压到/opt/d">
+<meta property="og:description" content=".NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台1  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。由于 .NE">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/fcrpepfzeodbouh8ziu6aamo/image_1bc6vvdrm1df148k1k17128p1u011g.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/017amet2egfea7737kpm62k5/image_1bc70608u1531nb019nj1cdu1hvv1t.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/ch9o5cca65cbylyqhjc0ux1e/image_1bc709o111a1g1gcs1qdpiq165d37.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/ygor8jgr8og0qe2e3t2tqtqt/image_1bc70gghn1hvm18jp7811q91eh73k.png">
-<meta property="og:updated_time" content="2017-03-27T04:32:59.442Z">
+<meta property="og:updated_time" content="2017-08-30T07:27:49.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos安装.NET Core">
-<meta name="twitter:description" content="安装.net core安装依赖的库文件1sudo yum install -y libunwind libicu
-
-下载压缩包将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。1curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449
-
-解压将压缩包解压到/opt/d">
+<meta name="twitter:title" content="centos7安装.NET Core">
+<meta name="twitter:description" content=".NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台1  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。由于 .NE">
 <meta name="twitter:image" content="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png">
 
 
@@ -170,7 +158,7 @@
 
 
 
-  <title>centos安装.NET Core | Litao's Blog</title>
+  <title>centos7安装.NET Core | Litao's Blog</title>
   
 
 
@@ -327,7 +315,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
         
         
-          <h1 class="post-title" itemprop="name headline">centos安装.NET Core</h1>
+          <h1 class="post-title" itemprop="name headline">centos7安装.NET Core</h1>
         
 
         <div class="post-meta">
@@ -355,12 +343,34 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-03-27T12:32:59+08:00">
-                2017-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-30T15:27:49+08:00">
+                2017-08-30
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -393,7 +403,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  218
+                  425
                 </span>
               
 
@@ -409,7 +419,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -430,12 +440,16 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
 
       
-        <h2 id="安装-net-core"><a href="#安装-net-core" class="headerlink" title="安装.net core"></a>安装.net core</h2><h3 id="安装依赖的库文件"><a href="#安装依赖的库文件" class="headerlink" title="安装依赖的库文件"></a>安装依赖的库文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y libunwind libicu</div></pre></td></tr></table></figure>
+        <blockquote>
+<p>.NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台<a href="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" target="_blank" rel="external">1</a>  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。<br>由于 .NET Core 的开发目标是跨平台的 .NET 平台，因此 .NET Core 会包含 .NET Framework 的类库，但与 .NET Framework 不同的是 .NET Core 采用包化 (Packages) 的管理方式，应用程序只需要获取需要的组件即可，与 .NET Framework 大包式安装的作法截然不同，同时各包亦有独立的版本线 (Version line)，不再硬性要求应用程序跟随主线版本。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="安装-net-core"><a href="#安装-net-core" class="headerlink" title="安装.net core"></a>安装.net core</h2><h3 id="安装依赖的库文件"><a href="#安装依赖的库文件" class="headerlink" title="安装依赖的库文件"></a>安装依赖的库文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y libunwind libicu</div></pre></td></tr></table></figure>
 <p><img src="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" alt="image_1bc6vmvlaetorpeqhhr0hu7i9.png-23.3kB"></p>
 <h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><p>将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png" alt="image_1bc6vq96b1o1afe61r5virt9a613.png-13.3kB"></p>
 <h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>将压缩包解压到<code>/opt/dotnet</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mkdir -p /opt/dotnet &amp;&amp; sudo tar zxf dotnet.tar.gz -C /opt/dotnet</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
+<!--more-->
 <p><img src="http://static.zybuluo.com/danerlt/fcrpepfzeodbouh8ziu6aamo/image_1bc6vvdrm1df148k1k17128p1u011g.png" alt="image_1bc6vvdrm1df148k1k17128p1u011g.png-9.5kB"></p>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>将dotnet创建一个链接到<code>/usr/local/bin</code>目录下，从而达到在任何目录下都可以运行dotnet<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /opt/dotnet/dotnet /usr/local/bin</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/017amet2egfea7737kpm62k5/image_1bc70608u1531nb019nj1cdu1hvv1t.png" alt="image_1bc70608u1531nb019nj1cdu1hvv1t.png-3.3kB"></p>
@@ -505,6 +519,10 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           
             <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
           
+            <a href="/tags/install/" <i class="fa fa-tag"></i> install</a>
+          
+            <a href="/tags/centos/" <i class="fa fa-tag"></i> centos</a>
+          
         </div>
       
 
@@ -516,8 +534,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/23/Linux安装mssql-tools/" rel="next" title="Linux安装mssql-Tools">
-                <i class="fa fa-chevron-left"></i> Linux安装mssql-Tools
+              <a href="/2017/03/23/Linux安装mssql-tools/" rel="next" title="Centos7安装mssql-Tools">
+                <i class="fa fa-chevron-left"></i> Centos7安装mssql-Tools
               </a>
             
           </div>
@@ -526,8 +544,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/30/centos安装Oracle-11g-一/" rel="prev" title="centos安装Oracle 11g(一)">
-                centos安装Oracle 11g(一) <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/30/centos安装Oracle-11g-一/" rel="prev" title="centos7安装Oracle 11g(一)">
+                centos7安装Oracle 11g(一) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,7 +603,7 @@ var jiathis_config={
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/27/centos安装-NET-Core/"
-           data-title="centos安装.NET Core" data-url="http://litao.work/2017/03/27/centos安装-NET-Core/">
+           data-title="centos7安装.NET Core" data-url="http://litao.work/2017/03/27/centos安装-NET-Core/">
       </div>
     
   </div>
@@ -648,7 +666,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -659,7 +677,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -774,7 +792,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      8.2k
+      8.6k
     </span>
   
 </div>
@@ -785,7 +803,7 @@ var jiathis_config={
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
     <div class="powered-by">NexT.Mist</div>
-    <span class="post-count">博客全站共8.2k字</span>
+    <span class="post-count">博客全站共8.6k字</span>
   </div> 
 
 

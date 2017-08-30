@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="linux,install,centos," />
 
 
 
@@ -106,16 +106,12 @@
 
 
 
-<meta name="description" content="1.导入repo将prod.repo导入的/etc/yum.repos.d目录下1curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo
-使用ls命令查看/etc/yum.repos.d目录下是否有prod.repo文件,有即说明导入成功。
-2.移除旧版本如果你以前安">
+<meta name="description" content="MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux安装mssql-Tools">
+<meta property="og:title" content="Centos7安装mssql-Tools">
 <meta property="og:url" content="http://litao.work/2017/03/23/Linux安装mssql-tools/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="1.导入repo将prod.repo导入的/etc/yum.repos.d目录下1curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo
-使用ls命令查看/etc/yum.repos.d目录下是否有prod.repo文件,有即说明导入成功。
-2.移除旧版本如果你以前安">
+<meta property="og:description" content="MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png">
@@ -124,12 +120,10 @@
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/2buhs5a1ao3tnqvhd5svcs1v/image_1bbt0854er1le2i1f8012vc1mr69.png">
 <meta property="og:image" content="http://static.zybuluo.com/danerlt/maz3in3kz7x6jr9awe1g3gq6/image_1bbt0jtvru001jor104tqjgvs2m.png">
-<meta property="og:updated_time" content="2017-03-23T07:24:50.528Z">
+<meta property="og:updated_time" content="2017-08-30T07:29:21.622Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux安装mssql-Tools">
-<meta name="twitter:description" content="1.导入repo将prod.repo导入的/etc/yum.repos.d目录下1curl https://packages.microsoft.com/config/rhel/7/prod.repo &amp;gt; /etc/yum.repos.d/msprod.repo
-使用ls命令查看/etc/yum.repos.d目录下是否有prod.repo文件,有即说明导入成功。
-2.移除旧版本如果你以前安">
+<meta name="twitter:title" content="Centos7安装mssql-Tools">
+<meta name="twitter:description" content="MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。">
 <meta name="twitter:image" content="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png">
 
 
@@ -166,7 +160,7 @@
 
 
 
-  <title>Linux安装mssql-Tools | Litao's Blog</title>
+  <title>Centos7安装mssql-Tools | Litao's Blog</title>
   
 
 
@@ -323,7 +317,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux安装mssql-Tools</h1>
+          <h1 class="post-title" itemprop="name headline">Centos7安装mssql-Tools</h1>
         
 
         <div class="post-meta">
@@ -351,12 +345,34 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-03-23T15:24:50+08:00">
-                2017-03-23
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-30T15:29:21+08:00">
+                2017-08-30
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -389,7 +405,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  247
+                  313
                 </span>
               
 
@@ -426,10 +442,14 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
 
       
-        <h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
 <p>使用ls命令查看<code>/etc/yum.repos.d</code>目录下是否有prod.repo文件,有即说明导入成功。<br><img src="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png" alt="image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB"></p>
 <h2 id="2-移除旧版本"><a href="#2-移除旧版本" class="headerlink" title="2.移除旧版本"></a>2.移除旧版本</h2><p>如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
+<!--more-->
 <p><img src="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png" alt="image_1bbprteosd3213897i714qf1ri5m.png-102.2kB"><br><img src="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png" alt="image_1bbpsdkm81rir1kcbjadvls1sgb13.png-18.2kB"></p>
 <h2 id="3-安装mysql-tools"><a href="#3-安装mysql-tools" class="headerlink" title="3.安装mysql-tools"></a>3.安装mysql-tools</h2><p>使用下面的命令安装mysql-tools，一路YES<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
 <p><img src="http://static.zybuluo.com/danerlt/rkbgitslpfmcev2y9dd7oa80/image_1bbpsg85g1rn0p5ju51fafmcg1g.png" alt="image_1bbpsg85g1rn0p5ju51fafmcg1g.png-60.5kB"><br><img src="http://static.zybuluo.com/danerlt/5ri1ne6spoizj0cqp4qxd1du/image_1bbpsgstk1ui814tlel1nugoff1t.png" alt="image_1bbpsgstk1ui814tlel1nugoff1t.png-31.1kB"><br>，看到如下图所示说明mysql-tools安装成功<br><img src="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png" alt="image_1bbpshdam1m0c142s1cb5hcb5482a.png-18.8kB"><br>如何你需要生气mysql-tools可以使用以下命令升级<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum check-update</div><div class="line">sudo yum update mssql-tools</div></pre></td></tr></table></figure></p>
@@ -499,6 +519,10 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           
             <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
           
+            <a href="/tags/install/" <i class="fa fa-tag"></i> install</a>
+          
+            <a href="/tags/centos/" <i class="fa fa-tag"></i> centos</a>
+          
         </div>
       
 
@@ -510,8 +534,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/22/CentOS-安装SQL-Server/" rel="next" title="CentOS 安装SQL Server">
-                <i class="fa fa-chevron-left"></i> CentOS 安装SQL Server
+              <a href="/2017/03/22/CentOS-安装SQL-Server/" rel="next" title="centos安装SQL Server">
+                <i class="fa fa-chevron-left"></i> centos安装SQL Server
               </a>
             
           </div>
@@ -520,8 +544,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/27/centos安装-NET-Core/" rel="prev" title="centos安装.NET Core">
-                centos安装.NET Core <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/27/centos安装-NET-Core/" rel="prev" title="centos7安装.NET Core">
+                centos7安装.NET Core <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -579,7 +603,7 @@ var jiathis_config={
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/23/Linux安装mssql-tools/"
-           data-title="Linux安装mssql-Tools" data-url="http://litao.work/2017/03/23/Linux安装mssql-tools/">
+           data-title="Centos7安装mssql-Tools" data-url="http://litao.work/2017/03/23/Linux安装mssql-tools/">
       </div>
     
   </div>
@@ -642,7 +666,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -653,7 +677,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -768,7 +792,7 @@ var jiathis_config={
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      8.2k
+      8.6k
     </span>
   
 </div>
@@ -779,7 +803,7 @@ var jiathis_config={
   <span class="post-meta-divider">|</span>
   <div class="theme-info">
     <div class="powered-by">NexT.Mist</div>
-    <span class="post-count">博客全站共8.2k字</span>
+    <span class="post-count">博客全站共8.6k字</span>
   </div> 
 
 
