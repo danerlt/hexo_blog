@@ -121,9 +121,9 @@ leancloud_visitors:
       <category term="后端" scheme="http://litao.work/blog/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="mysql" scheme="http://litao.work/blog/tags/mysql/"/>
-    
       <category term="docker" scheme="http://litao.work/blog/tags/docker/"/>
+    
+      <category term="mysql" scheme="http://litao.work/blog/tags/mysql/"/>
     
   </entry>
   
