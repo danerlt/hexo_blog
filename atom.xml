@@ -45,9 +45,9 @@
       <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="python" scheme="http://litao.work/tags/python/"/>
-    
       <category term="install" scheme="http://litao.work/tags/install/"/>
+    
+      <category term="python" scheme="http://litao.work/tags/python/"/>
     
   </entry>
   
@@ -88,9 +88,9 @@
       <category term="linux" scheme="http://litao.work/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
       <category term="git" scheme="http://litao.work/tags/git/"/>
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
   </entry>
   
@@ -634,9 +634,9 @@
     
       <category term="install" scheme="http://litao.work/tags/install/"/>
     
-      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
-    
       <category term="centos" scheme="http://litao.work/tags/centos/"/>
+    
+      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
     
   </entry>
   
@@ -796,9 +796,9 @@
       <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
-    
       <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
+    
+      <category term="mac os" scheme="http://litao.work/tags/mac-os/"/>
     
   </entry>
   
