@@ -2,26 +2,17 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="">
 
 <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -85,7 +76,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="litao,litao.work,李滔,李滔的博客,李滔的工作空间" />
@@ -99,7 +90,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -123,11 +114,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '5.1.0',
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    tabs: ,
+    motion: "",
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -162,9 +153,6 @@
 
 </head>
 
-<script type="text/javascript"
-color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
@@ -177,7 +165,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
     <a href="https://github.com/Lt-grint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta custom-logo">
     
 
     <div class="custom-logo-site-title">
@@ -211,7 +199,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             首页
           </a>
@@ -221,7 +209,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             分类
           </a>
@@ -231,7 +219,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             归档
           </a>
@@ -241,7 +229,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             标签
           </a>
@@ -251,7 +239,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             关于
           </a>
@@ -412,7 +400,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
+               src="/uploads/avatar.jpg"
                alt="李滔" />
           <p class="site-author-name" itemprop="name">李滔</p>
            
@@ -424,7 +412,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           
             <div class="site-state-item site-state-posts">
             
-              <a href="/archives || archive">
+              <a href="/archives">
             
                 <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
@@ -469,34 +457,28 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/Lt-grint" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
+                <a href="https://github.com/Lt-grint" target="_blank" title="github">
                   
                     
-                      GitHub
+                      github
                     
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:litao_worker@163.com" target="_blank" title="E-Mail">
-                  
-                    <i class="fa fa-fw fa-envelope"></i>
+                <a href="http://blog.csdn.net/lt1598552894" target="_blank" title="csdn">
                   
                     
-                      E-Mail
+                      csdn
                     
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/danlovetao" target="_blank" title="zhihu">
-                  
-                    <i class="fa fa-fw fa-spinner"></i>
+                <a href="https://www.zhihu.com/people/danlovetao" target="_blank" title="知乎">
                   
                     
-                      zhihu
+                      知乎
                     
                 </a>
               </span>
@@ -536,21 +518,10 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
   &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">李滔</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">
-      11.6k
-    </span>
   
 </div>
 
@@ -575,6 +546,26 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
  
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
@@ -614,8 +605,6 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
   
 
 
-  
-
 
 
 
@@ -644,24 +633,21 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
   
   
 
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
 
 
   
@@ -669,7 +655,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -712,21 +698,6 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
 
 
-  
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine@1.1.4/dist/Valine.min.js"></script>
-  <script type="text/javascript">
-    new Valine({
-        av: AV,
-        el: '#vcomments' ,
-        verify: false,
-        notify: false,
-        app_id: 'FrcNY1n17l0t0uuJh6yyT30R-gzGzoHsz',
-        app_key: 'pI8S21OnlEgKrHUawGVNQt5Q',
-        placeholder: 'Comment input placeholder'
-    });
-  </script>
-
 
 
   
@@ -736,113 +707,6 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("FrcNY1n17l0t0uuJh6yyT30R-gzGzoHsz", "pI8S21OnlEgKrHUawGVNQt5Q");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
