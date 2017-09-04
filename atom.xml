@@ -288,9 +288,9 @@ leancloud_visitors:
       <category term="linux" scheme="http://litao.work/blog/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
-    
       <category term="git" scheme="http://litao.work/blog/tags/git/"/>
+    
+      <category term="linux" scheme="http://litao.work/blog/tags/linux/"/>
     
   </entry>
   
