@@ -1,0 +1,58 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import urllib2
+import urllib
+#url="http://10.23.71.44:3000/install/api/v1/mac"
+url='http://10.7.16.99:3000/install/api/v1/mac'
+#定义要提交的数据
+
+values={"sn":"6LQQ4Y1",
+        "nic":[
+            {"interface":"eth0","mac":"90:B1:1C:58:A3:67","speed":"1000baseT/Half"},
+            {"interface":"eth1","mac":"90:B1:1C:58:A3:68","speed":"1000baseT/Half"},
+            {"interface":"eth2","mac":"90:B1:1C:58:A3:69","speed":"1000baseT/Half"},
+            {"interface":"eth3","mac":"90:B1:1C:58:A3:6A","speed":"1000baseT/Half"},
+            {"interface":"eth4","mac":"A0:36:9F:D0:B9:4C","speed":"10000baseT/Half"},
+            {"interface":"eth5","mac":"A0:36:9F:D0:B9:4E","speed":"10000baseT/Half"}
+        ]}
+#url编码
+#data=urllib.urlencode(values)
+#print data
+req = urllib2.Request(url)
+req.add_header('Content-Type','application/json')
+response=urllib2.urlopen(req,json.dumps(values))
+print response
+
+#the_page=response.read()
+
+#print the_page
+
+这个是python通过api上传数据的
+
+#!/bin/bash
+#抓取sn
+sn=$(dmidecode -t 1 | grep Serial | cut -f 2 -d ":"|sed s/[[:space:]]//g)
+#echo "server sn is $sn"
+echo '{"''sn":"'$sn'",' > /root/$sn.txt
+echo '"nic":[' >>/root/$sn.txt
+#抓取物理interface信息,网口名、mac地址、速率
+for f in /sys/class/net/*; do
+  if [ -L $f ]; then
+     name=`readlink $f`
+     if echo $name | grep -v 'devices/virtual' > /dev/null; then
+        speed=$(ethtool `basename $f` | grep -A2 'Supported link modes' | tail -n 1 | awk '{print $1}'| tr -cd "[0-9]")
+        mac=$(ifconfig `basename $f` | head -n 1 | awk '{print $5}')
+        if [  -z "$mac" ]; then
+          speed=$(ethtool `basename $f` | grep -A2 'Supported link modes' | tail -n 1 | awk '{print $1}'| tr -cd "[0-9]")
+          mac=$(ifconfig `basename $f` | grep txqueuelen | awk '{print $2}')
+        fi
+        echo '{"eth":"'`basename $f`'","mac":"'$mac'","speed":"'$speed'"},' >>/root/$sn.txt
+      fi
+  fi
+done
+sed -i '$s/.$//' /root/$sn.txt
+echo ']}' >>/root/$sn.txt
+
+qiyimac=$(cat /root/$sn.txt)
+#curl -d "$qiyimac" "http://10.23.71.44:3000/install/api/v1/mac"
+curl -i -X POST -H "'Content-type':'application/json'" "$qiyimac" "http://10.23.71.44:3000/install/api/v1/mac"
