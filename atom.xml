@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-09-08T02:59:20.024Z</updated>
+  <updated>2017-09-08T00:48:54.272Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://litao.work/2017/09/08/Win10%E5%92%8Cdeepin%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%B7%AE8%E5%B0%8F%E6%97%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://litao.work/2017/09/08/Win10和deepin双系统时间差8小时解决方案/</id>
     <published>2017-09-08T02:58:15.000Z</published>
-    <updated>2017-09-08T02:59:20.024Z</updated>
+    <updated>2017-09-08T00:48:54.272Z</updated>
     
     <content type="html"><![CDATA[<p>在电脑中同时安装Windows和Linux操作系统时，可能会发生系统时间不一致的现象。以北京时间为例，两者相差8小时。<br><a id="more"></a><br>Linux系统会将UTC时间写入到了BIOS时钟内，在运行时会根据当前时区计算出本地时间。例如，如果UTC时间为7月1日0点0分，系统时区设置为东8区的Asia/Harbin，那么Linux系统的实际显示时间会是7月1日8点0分。</p>
 <p>Windows系统将本地时间写入到了BIOS时钟内，在运行时直接显示本地时间。</p>
@@ -28,6 +28,7 @@
 <p>按下win+R输入<code>regedit</code>打开注册表，找到下面这一<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation</div></pre></td></tr></table></figure></p>
 <p>键，在其下面新建DWORD 32bit类型的项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RealTimeIsUniversal</div></pre></td></tr></table></figure></p>
 <p>设置其值为1，保存后退出，重新系统即可。</p>
+<p><img src="http://static.zybuluo.com/danerlt/umebq8w7wgy32l2kq2bv8ilf/image_1bpertpkp17vh4v31ica189i9ne9.png" alt="images"></p>
 ]]></content>
     
     <summary type="html">
@@ -41,9 +42,9 @@
     
       <category term="linux" scheme="http://litao.work/tags/linux/"/>
     
-      <category term="windows" scheme="http://litao.work/tags/windows/"/>
-    
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+      <category term="windows" scheme="http://litao.work/tags/windows/"/>
     
   </entry>
   
@@ -241,9 +242,9 @@ leancloud_visitors:
       <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="ajax" scheme="http://litao.work/tags/ajax/"/>
-    
       <category term="javaweb" scheme="http://litao.work/tags/javaweb/"/>
+    
+      <category term="ajax" scheme="http://litao.work/tags/ajax/"/>
     
   </entry>
   
@@ -933,9 +934,9 @@ leancloud_visitors:
       <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="windows" scheme="http://litao.work/tags/windows/"/>
-    
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
+    
+      <category term="windows" scheme="http://litao.work/tags/windows/"/>
     
   </entry>
   

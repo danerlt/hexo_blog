@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux,windows,solution," />
+  <meta name="keywords" content="linux,solution,windows," />
 
 
 
@@ -112,10 +112,12 @@
 <meta property="og:url" content="http://litao.work/2017/09/08/Win10和deepin双系统时间差8小时解决方案/index.html">
 <meta property="og:site_name" content="Litao's Blog">
 <meta property="og:description" content="在电脑中同时安装Windows和Linux操作系统时，可能会发生系统时间不一致的现象。以北京时间为例，两者相差8小时。">
-<meta property="og:updated_time" content="2017-09-08T02:59:20.024Z">
+<meta property="og:image" content="http://static.zybuluo.com/danerlt/umebq8w7wgy32l2kq2bv8ilf/image_1bpertpkp17vh4v31ica189i9ne9.png">
+<meta property="og:updated_time" content="2017-09-08T00:48:54.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10和deepin双系统时间差8小时解决方案">
 <meta name="twitter:description" content="在电脑中同时安装Windows和Linux操作系统时，可能会发生系统时间不一致的现象。以北京时间为例，两者相差8小时。">
+<meta name="twitter:image" content="http://static.zybuluo.com/danerlt/umebq8w7wgy32l2kq2bv8ilf/image_1bpertpkp17vh4v31ica189i9ne9.png">
 
 
 
@@ -336,7 +338,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-08T10:59:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-08T08:48:54+08:00">
                 2017-09-08
               </time>
             
@@ -451,6 +453,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 <p>按下win+R输入<code>regedit</code>打开注册表，找到下面这一<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation</div></pre></td></tr></table></figure></p>
 <p>键，在其下面新建DWORD 32bit类型的项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RealTimeIsUniversal</div></pre></td></tr></table></figure></p>
 <p>设置其值为1，保存后退出，重新系统即可。</p>
+<p><img src="http://static.zybuluo.com/danerlt/umebq8w7wgy32l2kq2bv8ilf/image_1bpertpkp17vh4v31ica189i9ne9.png" alt="images"></p>
 
       
     </div>
@@ -513,9 +516,9 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           
             <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
           
-            <a href="/tags/windows/" <i class="fa fa-tag"></i> windows</a>
-          
             <a href="/tags/solution/" <i class="fa fa-tag"></i> solution</a>
+          
+            <a href="/tags/windows/" <i class="fa fa-tag"></i> windows</a>
           
         </div>
       
