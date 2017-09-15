@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="linux,转载," />
 
 
 
@@ -106,19 +106,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo之hello World">
-<meta property="og:url" content="http://litao.work/2016/12/03/hexo之hello-world/index.html">
+<meta property="og:title" content="Route命令">
+<meta property="og:url" content="http://litao.work/2017/09/15/route命令/index.html">
 <meta property="og:site_name" content="Litao's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-08-30T07:48:28.067Z">
+<meta property="og:description" content="Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址">
+<meta property="og:updated_time" content="2017-09-15T10:01:13.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo之hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Route命令">
+<meta name="twitter:description" content="Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址">
 
 
 
@@ -148,13 +145,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://litao.work/2016/12/03/hexo之hello-world/"/>
+  <link rel="canonical" href="http://litao.work/2017/09/15/route命令/"/>
 
 
 
 
 
-  <title>Hexo之hello World | Litao's Blog</title>
+  <title>Route命令 | Litao's Blog</title>
   
 
 
@@ -294,7 +291,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://litao.work/2016/12/03/hexo之hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://litao.work/2017/09/15/route命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李滔">
@@ -311,7 +308,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo之hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Route命令</h1>
         
 
         <div class="post-meta">
@@ -323,8 +320,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-03T01:15:21+08:00">
-                2016-12-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-15T17:57:00+08:00">
+                2017-09-15
               </time>
             
 
@@ -339,8 +336,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-08-30T15:48:28+08:00">
-                2017-08-30
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-15T18:01:13+08:00">
+                2017-09-15
               </time>
             
           </span>
@@ -358,8 +355,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
                   </a>
                 </span>
 
@@ -376,8 +373,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/03/hexo之hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/03/hexo之hello-world/" itemprop="commentCount"></span>
+                <a href="/2017/09/15/route命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/09/15/route命令/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -385,7 +382,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
           
           
-             <span id="/2016/12/03/hexo之hello-world/" class="leancloud_visitors" data-flag-title="Hexo之hello World">
+             <span id="/2017/09/15/route命令/" class="leancloud_visitors" data-flag-title="Route命令">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -411,7 +408,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  78
+                  1,890
                 </span>
               
 
@@ -427,7 +424,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  9
                 </span>
               
             </div>
@@ -448,15 +445,19 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a><br><a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <blockquote>
+<p>Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址设置为Linux机器的默认路由。要注意的是，直接在命令行下执行route命令来添加路由，不会永久保存，当网卡重启或者机器重启之后，该路由就失效了；可以在/etc/rc.local中添加route命令来保证该路由设置永久有效。<br><a id="more"></a><br>转自<a href="http://www.cnblogs.com/peida/archive/2013/03/05/2943698.html" target="_blank" rel="external">每天一个linux命令（53）：route命令</a><br>1．命令格式：<br>route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]]<br>2．命令功能：<br>Route命令是用于操作基于内核ip路由表，它的主要作用是创建一个静态路由让指定一个主机或者一个网络通过一个网络接口，如eth0。当使用”add”或者”del”参数时，路由表被修改，如果没有参数，则显示路由表当前的内容。<br>3．命令参数：<br>-c 显示更多信息<br>-n 不解析名字<br>-v 显示详细的处理信息<br>-F 显示发送信息<br>-C 显示路由缓存<br>-f 清除所有网关入口的路由表。<br>-p 与 add 命令一起使用时使路由具有永久性。</p>
+</blockquote>
+<p>add:添加一条新路由。<br>del:删除一条路由。<br>-net:目标地址是一个网络。<br>-host:目标地址是一个主机。<br>netmask:当添加一个网络路由时，需要使用网络掩码。<br>gw:路由数据包通过网关。注意，你指定的网关必须能够达到。<br>metric：设置路由跳数。<br>Command 指定您想运行的命令 (Add/Change/Delete/Print)。<br>Destination 指定该路由的网络目标。<br>mask Netmask 指定与网络目标相关的网络掩码（也被称作子网掩码）。<br>Gateway 指定网络目标定义的地址集和子网掩码可以到达的前进或下一跃点 IP 地址。<br>metric Metric 为路由指定一个整数成本值标（从 1 至 9999），当在路由表(与转发的数据包目标地址最匹配)的多个路由中进行选择时可以使用。<br>if Interface 为可以访问目标的接口指定接口索引。若要获得一个接口列表和它们相应的接口索引，使用 route print 命令的显示功能。可以使用十进制或十六进制值进行接口索引。<br>4．使用实例：<br>实例1：显示当前路由<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">route</div><div class="line">route -n</div></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">e192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div><div class="line">[root@localhost ~]# route -n</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   0.0.0.0         255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">0.0.0.0         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div></pre></td></tr></table></figure></p>
+<p>说明：<br>第一行表示主机所在网络的地址为192.168.120.0，若数据传送目标是在本局域网内通信，则可直接通过eth0转发数据包;<br>第四行表示数据传送目的是访问Internet，则由接口eth0，将数据包发送到网关192.168.120.240<br>其中Flags为路由标志，标记当前网络节点的状态。<br>Flags标志说明：<br>U Up表示此路由当前为启动状态<br>H Host，表示此网关为一主机<br>G Gateway，表示此网关为一路由器<br>R Reinstate Route，使用动态路由重新初始化的路由<br>D Dynamically,此路由是动态性地写入<br>M Modified，此路由是由路由守护程序或导向器动态修改<br>! 表示此路由当前为关闭状态<br>备注：<br>route -n (-n 表示不解析名字,列出速度会比route 快)<br>实例2：添加网关/设置网关<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0</div></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0</div><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">224.0.0.0       *               240.0.0.0       U     0      0        0 eth0</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div><div class="line">[root@localhost ~]#</div></pre></td></tr></table></figure></p>
+<p>说明：<br>增加一条 到达244.0.0.0的路由<br>实例3：屏蔽一条路由<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">route add -net 224.0.0.0 netmask 240.0.0.0 reject</div></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# route add -net 224.0.0.0 netmask 240.0.0.0 reject</div><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">224.0.0.0       -               240.0.0.0       !     0      -        0 -</div><div class="line">224.0.0.0       *               240.0.0.0       U     0      0        0 eth0</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div></pre></td></tr></table></figure></p>
+<p>说明：<br>增加一条屏蔽的路由，目的地址为 224.x.x.x 将被拒绝<br>实例4：删除路由记录<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">route del -net 224.0.0.0 netmask 240.0.0.0</div><div class="line">route del -net 224.0.0.0 netmask 240.0.0.0 reject</div></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">224.0.0.0       -               240.0.0.0       !     0      -        0 -</div><div class="line">224.0.0.0       *               240.0.0.0       U     0      0        0 eth0</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div><div class="line">[root@localhost ~]# route del -net 224.0.0.0 netmask 240.0.0.0</div><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">224.0.0.0       -               240.0.0.0       !     0      -        0 -</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div><div class="line">[root@localhost ~]# route del -net 224.0.0.0 netmask 240.0.0.0 reject</div><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div><div class="line">[root@localhost ~]#</div></pre></td></tr></table></figure></p>
+<p>说明：<br>实例5：删除和添加设置默认网关<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">route del default gw 192.168.120.240</div><div class="line">route add default gw 192.168.120.240</div></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# route del default gw 192.168.120.240</div><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">[root@localhost ~]# route add default gw 192.168.120.240</div><div class="line">[root@localhost ~]# route</div><div class="line">Kernel IP routing table</div><div class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</div><div class="line">192.168.120.0   *               255.255.255.0   U     0      0        0 eth0</div><div class="line">192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0</div><div class="line">10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0</div><div class="line">default         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</div><div class="line">[root@localhost ~]#</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -517,7 +518,9 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" <i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
+          
+            <a href="/tags/转载/" <i class="fa fa-tag"></i> 转载</a>
           
         </div>
       
@@ -530,8 +533,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/03/failed-to-push-some-refs-to-git的解决方案/" rel="next" title="Failed to Push Some Refs to *.Git的解决方案">
-                <i class="fa fa-chevron-left"></i> Failed to Push Some Refs to *.Git的解决方案
+              <a href="/2017/09/08/Win10和deepin双系统时间差8小时解决方案/" rel="next" title="Win10和deepin双系统时间差8小时解决方案">
+                <i class="fa fa-chevron-left"></i> Win10和deepin双系统时间差8小时解决方案
               </a>
             
           </div>
@@ -539,10 +542,6 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/03/Html规范form-Google-Code-Style/" rel="prev" title="Html规范form Google Code Style">
-                Html规范form Google Code Style <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -598,8 +597,8 @@ var jiathis_config={
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/03/hexo之hello-world/"
-           data-title="Hexo之hello World" data-url="http://litao.work/2016/12/03/hexo之hello-world/">
+      <div class="ds-thread" data-thread-key="2017/09/15/route命令/"
+           data-title="Route命令" data-url="http://litao.work/2017/09/15/route命令/">
       </div>
     
   </div>
@@ -624,17 +623,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -740,22 +730,6 @@ var jiathis_config={
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
