@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/2017/09/18/Java%E9%9B%86%E5%90%88%E4%B9%8BTreeSet/</loc>
+    
+    <lastmod>2017-09-18T07:46:21.582Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/2017/09/15/route%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2017-09-15T10:01:13.435Z</lastmod>
@@ -66,13 +73,6 @@
   
   <url>
     <loc>http://litao.work/2016/12/03/Vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
-    
-    <lastmod>2017-08-30T07:56:52.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
     
     <lastmod>2017-08-30T07:56:52.738Z</lastmod>
     
@@ -159,6 +159,13 @@
     <loc>http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/</loc>
     
     <lastmod>2017-08-30T07:43:39.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
+    
+    <lastmod>2017-08-30T07:43:24.505Z</lastmod>
     
   </url>
   
