@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-09-18T07:46:21.582Z</updated>
+  <updated>2017-10-12T03:42:09.773Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos7安装配置MongoDB</title>
+    <link href="http://litao.work/2017/10/12/Centos7%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEMongoDB/"/>
+    <id>http://litao.work/2017/10/12/Centos7安装配置MongoDB/</id>
+    <published>2017-10-12T03:40:50.000Z</published>
+    <updated>2017-10-12T03:42:09.773Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。<br><a id="more"></a></p>
+<h2 id="安装MongodbDB"><a href="#安装MongodbDB" class="headerlink" title="安装MongodbDB"></a>安装MongodbDB</h2><p>MongoDB 提供了 linux 各发行版本 64 位的安装包，你可以在官网下载安装包。<br>下载地址：<a href="https://www.mongodb.com/download-center#community" target="_blank" rel="external">https://www.mongodb.com/download-center#community</a><br><img src="http://static.zybuluo.com/danerlt/m50v1fgyjrkwq0v4sd8gomyz/image_1bs799lvm1ebutgnenar88o0j9.png" alt="image_1bs799lvm1ebutgnenar88o0j9.png-119.3kB"><br>下载完安装包，并解压 tgz（以下演示的是 64 位 Linux上的安装） 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">curl https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-3.4.9.tgz  -o mongodb  # 下载</div><div class="line">sudo tar -zxvf mongodb -C /usr/local   # 解压</div><div class="line">cd /usr/local                 </div><div class="line">sudo mv mongodb-linux-x86_64-rhel70-3.4.9 mongodb  #更改目录名</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="配置MongoDB"><a href="#配置MongoDB" class="headerlink" title="配置MongoDB"></a>配置MongoDB</h2><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/profile</div></pre></td></tr></table></figure>
+<p>在最后添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">MONGO_HOME=/usr/local/mongodb</div><div class="line">PATH=$MONGO_HOME/bin:$PATH</div></pre></td></tr></table></figure></p>
+<p>立即生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure></p>
+<h3 id="创建数据目录及日志目录"><a href="#创建数据目录及日志目录" class="headerlink" title="创建数据目录及日志目录"></a>创建数据目录及日志目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /data/db  #mongodb默认数据存放目录</div><div class="line">mkdir -p /var/log/mongodb</div></pre></td></tr></table></figure>
+<h3 id="创建启动参数脚本"><a href="#创建启动参数脚本" class="headerlink" title="创建启动参数脚本"></a>创建启动参数脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd MONGO_HOME</div><div class="line">vim mongo.conf</div></pre></td></tr></table></figure>
+<p>添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">dbpath=/data/db</div><div class="line">logpath=/var/log/mongodb</div><div class="line">logappend=true</div><div class="line">fork=true</div><div class="line">port=27017</div></pre></td></tr></table></figure></p>
+<p>手动开启mongodb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod -f mongo.conf</div></pre></td></tr></table></figure></p>
+<p>手动关闭mongodb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod -f mongo.conf  --shutdown</div></pre></td></tr></table></figure></p>
+<h3 id="设置mongodb开机启动"><a href="#设置mongodb开机启动" class="headerlink" title="设置mongodb开机启动"></a>设置mongodb开机启动</h3><p>编写启动脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/init.d/mongodb</div></pre></td></tr></table></figure></p>
+<p>添加如下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh  </div><div class="line">#  </div><div class="line">#chkconfig: 2345 80 90  </div><div class="line">#description: mongodb  </div><div class="line">start() &#123;  </div><div class="line"> /fugm/mongodb/bin/mongod -f /fugm/mongodb/mongo.conf  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">stop() &#123;  </div><div class="line">  /fugm/mongodb/bin/mongod -f /fugm/mongodb/mongo.conf --shutdown  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">case &quot;$1&quot; in  </div><div class="line">  start)  </div><div class="line"> start  </div><div class="line"> ;;  </div><div class="line">  stop)  </div><div class="line"> stop  </div><div class="line"> ;;  </div><div class="line">  restart)  </div><div class="line"> stop  </div><div class="line"> start  </div><div class="line"> ;;  </div><div class="line">  *)  </div><div class="line"> echo $&quot;Usage: $0 &#123;start|stop|restart&#125;&quot;  </div><div class="line"> exit 1  </div><div class="line">esac</div></pre></td></tr></table></figure></p>
+<p>点击Esc，输入 :wq 完成编辑并保存退出<br>之后执行如下脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd /etc/init.d  </div><div class="line">chkconfig --add mongodb  </div><div class="line">chmod +x  mongodb  </div><div class="line">chkconfig mongodb on</div></pre></td></tr></table></figure></p>
+<p>这样就可以使用systemctl来开启和结束mongodb了。<br>停止mongodb服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop mongodb</div></pre></td></tr></table></figure></p>
+<p>开启mongodb服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start mongodb</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。&lt;br&gt;MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="mongodb" scheme="http://litao.work/tags/mongodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7进入单用户</title>
+    <link href="http://litao.work/2017/09/20/centos7%E8%BF%9B%E5%85%A5%E5%8D%95%E7%94%A8%E6%88%B7/"/>
+    <id>http://litao.work/2017/09/20/centos7进入单用户/</id>
+    <published>2017-09-20T08:19:29.000Z</published>
+    <updated>2017-09-20T08:20:02.613Z</updated>
+    
+    <content type="html"><![CDATA[<p>单用户模式是Linux操作系统中的运行级别之一，Linux操作系统具有6种运行级别，用于不同的需求或情况。单用户模式主要用于执行清理文件系统，管理配额，恢复文件系统以及恢复丢失的根密码等管理任务。在这种模式下，服务将无法启动，除root以外，不允许任何用户登录，系统也不会要求输入密码进行登录。<br><a id="more"></a><br>1.重启linux系统<br>在启动时，你可能会看到如下所示的启动画面，grub正在计算引导默认操作系统的时间，如/etc/grub2.cfg中所述;此时按任意键可中断自动启动。我们进入单用户需要按e编辑内核参数。<br><img src="http://static.zybuluo.com/danerlt/90tjjqzni1cwt8dnhj9rdg6v/image_1bpqcs0qm6keib01jkd1a9j1nls9.png" alt="image_1bpqcs0qm6keib01jkd1a9j1nls9.png-45.1kB"><br>按下之后，您将看到有关所选操作系统的信息。它提供了有关安装操作系统的硬盘和分区的信息，内核的位置，语言，视频输出，键盘类型，键盘表，崩溃内核和initrd（初始RAM盘）<br><img src="http://static.zybuluo.com/danerlt/7p6gw338vtxcui5llyl2wnpj/image_1bqf5dpls1jbb1rmi129c1089l09p.png" alt="image_1bqf5dpls1jbb1rmi129c1089l09p.png-22.7kB"><br>进入单用户模式;转到第二行（使用linux 16或linuxefi开始）使用上下箭头，然后修改ro参数。修改为<code>rw init=/sysroot/bin/sh</code>。完成后，按“Ctrl + x”启动。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rw init=/sysroot/bin/sh</div></pre></td></tr></table></figure></p>
+<p>现在就可以使用具有root权限的命令行模式（不输入密码）。<br><img src="http://static.zybuluo.com/danerlt/8zr68w5bfoelsourxcts3kdy/image_1bqf5qsc11m9a7thfuc106e1fgh4m.png" alt="image_1bqf5qsc11m9a7thfuc106e1fgh4m.png-45.2kB"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;单用户模式是Linux操作系统中的运行级别之一，Linux操作系统具有6种运行级别，用于不同的需求或情况。单用户模式主要用于执行清理文件系统，管理配额，恢复文件系统以及恢复丢失的根密码等管理任务。在这种模式下，服务将无法启动，除root以外，不允许任何用户登录，系统也不会要求输入密码进行登录。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="运维" scheme="http://litao.work/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Java集合之TreeSet</title>
@@ -230,9 +296,9 @@ leancloud_visitors:
       <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="docker" scheme="http://litao.work/tags/docker/"/>
-    
       <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
+    
+      <category term="docker" scheme="http://litao.work/tags/docker/"/>
     
   </entry>
   
@@ -907,82 +973,6 @@ leancloud_visitors:
       <category term="git" scheme="http://litao.work/tags/git/"/>
     
       <category term="solution" scheme="http://litao.work/tags/solution/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vmware安装CentOS7</title>
-    <link href="http://litao.work/2017/03/21/Vmware-%E5%AE%89%E8%A3%85Centos7/"/>
-    <id>http://litao.work/2017/03/21/Vmware-安装Centos7/</id>
-    <published>2017-03-21T14:30:00.000Z</published>
-    <updated>2017-08-30T07:43:39.900Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于安装Oracle时虚拟机出了故障，遂决定重装centos7.</p>
-<h2 id="1-选择打开电源时进入固件"><a href="#1-选择打开电源时进入固件" class="headerlink" title="1.选择打开电源时进入固件"></a>1.选择打开电源时进入固件</h2><p><img src="http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png" alt="image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB"><br><a id="more"></a></p>
-<h2 id="2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"><a href="#2-进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存" class="headerlink" title="2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存"></a>2.进入boot选项，按加减法将CD-ROM移动到最顶上，按F10保存</h2><p><img src="http://static.zybuluo.com/danerlt/2l7xpb2i79ackly75qr8uo3z/image_1bbns84rirbpq391c9r1b4115hfm.png" alt="image_1bbns84rirbpq391c9r1b4115hfm.png-112.4kB"></p>
-<h2 id="3-直接安装centos7"><a href="#3-直接安装centos7" class="headerlink" title="3.直接安装centos7"></a>3.直接安装centos7</h2><p>这里我选择的是第一个直接安装centos7,第二个选项是测试光盘，我转过一次就没有再选择这个测试光盘了。回车进入安装。<br><img src="http://static.zybuluo.com/danerlt/7cjzn587mhbhrfgwf21hhop5/image_1bbnsb2b41qepf4iuc0hda133o13.png" alt="image_1bbnsb2b41qepf4iuc0hda133o13.png-10.9kB"><br>这里按回车键或者等待60秒即可跳过<br><img src="http://static.zybuluo.com/danerlt/nql49nnes2ofpm3esd0m5evq/image_1bbnsmmh31c19iba1vjgjlv173v1g.png" alt="image_1bbnsmmh31c19iba1vjgjlv173v1g.png-9.5kB"></p>
-<h2 id="4-安装语言选择中文或者English-然后继续"><a href="#4-安装语言选择中文或者English-然后继续" class="headerlink" title="4.安装语言选择中文或者English,然后继续"></a>4.安装语言选择中文或者English,然后继续</h2><p><img src="http://static.zybuluo.com/danerlt/d5184hxdxmk0sl4hpwde9jok/image_1bbnsujj61lqa1lr381h1f5t5jv1t.png" alt="image_1bbnsujj61lqa1lr381h1f5t5jv1t.png-126.2kB"></p>
-<h2 id="5-软件安装"><a href="#5-软件安装" class="headerlink" title="5.软件安装"></a>5.软件安装</h2><p><img src="http://static.zybuluo.com/danerlt/oq4tl2j2rillfqfds6q1ah30/image_1bbnt28i21gv5fge1uimr3k15ln2a.png" alt="image_1bbnt28i21gv5fge1uimr3k15ln2a.png-149.8kB"><br>这里面Java，PHP，Python等开发语言我们自己安装，就不需要勾选。然后点击完成即可。<br><img src="http://static.zybuluo.com/danerlt/mbkt4pb5d9y4xq5jx5bpec7i/image_1bbnt6dj1cf81r3cskg1mnbsju2n.png" alt="image_1bbnt6dj1cf81r3cskg1mnbsju2n.png-205.2kB"></p>
-<h2 id="6-安装目录位置"><a href="#6-安装目录位置" class="headerlink" title="6.安装目录位置"></a>6.安装目录位置</h2><p>可以选择系统自动配置，也可选择自己配置，这里我选择的是自动配置。<br><img src="http://static.zybuluo.com/danerlt/k6wueqqyvqkf4rtuiu24bqj6/image_1bbntan9kq52in8n7vet1ihg34.png" alt="image_1bbntan9kq52in8n7vet1ihg34.png-113.1kB"><br>提示空间不足，点击回收空间即可。<br><img src="http://static.zybuluo.com/danerlt/y13mp0awn9am5wyy02svnnro/image_1bbntd358jc28dk1i5a15vuq73h.png" alt="image_1bbntd358jc28dk1i5a15vuq73h.png-131.8kB"><br>选择全部删除，确定后<strong>整个硬盘就格式化了，整个硬盘就格式化了，整个硬盘就格式化了</strong>，一定要考虑好了再决定是否全部格式化。<br><img src="http://static.zybuluo.com/danerlt/9yds524oaosylvv69il8w5cu/image_1bbntgthed0sdm1mq41ni7j0b3u.png" alt="image_1bbntgthed0sdm1mq41ni7j0b3u.png-95kB"></p>
-<h2 id="7-设置ROOT密码，密码比较简单需要点两次完成。"><a href="#7-设置ROOT密码，密码比较简单需要点两次完成。" class="headerlink" title="7.设置ROOT密码，密码比较简单需要点两次完成。"></a>7.设置ROOT密码，密码比较简单需要点两次完成。</h2><p><img src="http://static.zybuluo.com/danerlt/qb3995rn977y65s70n3i6igo/image_1bbntm7eh13ss16hg12111t86m3l4b.png" alt="image_1bbntm7eh13ss16hg12111t86m3l4b.png-73.6kB"></p>
-<h2 id="8-等待完成重启即可"><a href="#8-等待完成重启即可" class="headerlink" title="8.等待完成重启即可"></a>8.等待完成重启即可</h2><p><img src="http://static.zybuluo.com/danerlt/466wn9wuee4f4e42wkg0a74j/image_1bbntook77s3169m1q2c29s17th4o.png" alt="image_1bbntook77s3169m1q2c29s17th4o.png-206.2kB"></p>
-<h2 id="9-接受许可证"><a href="#9-接受许可证" class="headerlink" title="9.接受许可证"></a>9.接受许可证</h2><p><img src="http://static.zybuluo.com/danerlt/imkmo6owa7m3jvmgcsay9l1t/image_1bbojlrpusas7emt94dddvkg55.png" alt="image_1bbojlrpusas7emt94dddvkg55.png-99.7kB"><br><img src="http://static.zybuluo.com/danerlt/dcotjoos172hgr845u7d8gzp/image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png" alt="image_1bbojmpq71ltavta1m6e1pgg1f7i5i.png-33.5kB"><br><img src="http://static.zybuluo.com/danerlt/c4crry9uz4hy06697u0njaqi/image_1bbojo4dn62s1acr13tr4o396l5v.png" alt="image_1bbojo4dn62s1acr13tr4o396l5v.png-99.3kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于安装Oracle时虚拟机出了故障，遂决定重装centos7.&lt;/p&gt;
-&lt;h2 id=&quot;1-选择打开电源时进入固件&quot;&gt;&lt;a href=&quot;#1-选择打开电源时进入固件&quot; class=&quot;headerlink&quot; title=&quot;1.选择打开电源时进入固件&quot;&gt;&lt;/a&gt;1.选择打开电源时进入固件&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/danerlt/ymikzetwhqubg4ksuhprffr3/image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png&quot; alt=&quot;image_1bbnrvrmd82o1uja1p6u15ll1h9b9.png-126.7kB&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="其他" scheme="http://litao.work/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
-      <category term="install" scheme="http://litao.work/tags/install/"/>
-    
-      <category term="centos" scheme="http://litao.work/tags/centos/"/>
-    
-      <category term="vmware" scheme="http://litao.work/tags/vmware/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github配置sshkey</title>
-    <link href="http://litao.work/2016/12/15/git%E9%85%8D%E7%BD%AEssh/"/>
-    <id>http://litao.work/2016/12/15/git配置ssh/</id>
-    <published>2016-12-14T17:58:11.000Z</published>
-    <updated>2017-08-30T07:55:06.262Z</updated>
-    
-    <content type="html"><![CDATA[<p>git使用https协议，每次pull, push都要输入密码，相当的烦。<br>使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。<br><a id="more"></a></p>
-<h2 id="github-配置sshkey"><a href="#github-配置sshkey" class="headerlink" title="github 配置sshkey"></a>github 配置sshkey</h2><p>使用ssh-keygen命令生成key,提示需要输入密码是可以按回车跳过，这里输入密码表示每次push时都需要输入密码，按下回车后以后每次<code>git push</code>时就不用输入密码了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example&quot;</div></pre></td></tr></table></figure></p>
-<p>s.g.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;test@126.com&quot;</div></pre></td></tr></table></figure>
-<p><img src="http://static.zybuluo.com/danerlt/ahbmypha8g7xlmfzjpxkciv5/image_1b304rntm1jbk116m1k3p57m1hbs9.png" alt="image_1b304rntm1jbk116m1k3p57m1hbs9.png-44.9kB"></p>
-<h2 id="测试ssh-keys是否设置成功"><a href="#测试ssh-keys是否设置成功" class="headerlink" title="测试ssh keys是否设置成功"></a>测试ssh keys是否设置成功</h2><p>使用ssh -T 命令测试设置是否成功,如果出现</p>
-<blockquote>
-<p>You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
-<p>表示设置成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/v1sema0z1dwyuiqykou6ucni/image_1b3053n67d731l18rha33arurm.png" alt="image_1b3053n67d731l18rha33arurm.png-10.8kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;git使用https协议，每次pull, push都要输入密码，相当的烦。&lt;br&gt;使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="git" scheme="http://litao.work/tags/git/"/>
-    
-      <category term="github" scheme="http://litao.work/tags/github/"/>
-    
-      <category term="config" scheme="http://litao.work/tags/config/"/>
     
   </entry>
   
