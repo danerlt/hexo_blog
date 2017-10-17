@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-10-12T03:42:09.773Z</updated>
+  <updated>2017-10-17T03:15:45.362Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux防SSH暴力登录</title>
+    <link href="http://litao.work/2017/10/17/Linux%E9%98%B2SSH%E6%9A%B4%E5%8A%9B%E7%99%BB%E5%BD%95/"/>
+    <id>http://litao.work/2017/10/17/Linux防SSH暴力登录/</id>
+    <published>2017-10-17T03:12:12.000Z</published>
+    <updated>2017-10-17T03:15:45.362Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言</p>
+<blockquote>
+<p>昨天利用flask搭建了一个查看访问本机IP的页面，发现除了我本人还有其他IP访问，因为端口是才设置的，所以推测是有人在扫描我的服务器。</p>
+</blockquote>
+<a id="more"></a>
+<p><img src="http://static.zybuluo.com/danerlt/6w94qhlbq5yw7dttn2gjjydg/image_1bsk1k28justijc1qmn3a91qvp9.png" alt="image_1bsk1k28justijc1qmn3a91qvp9.png-31.2kB"><br>通过表格中查看到一个ip为<code>180.163.8.253</code>，查看下登录日志</p>
+<blockquote>
+<p>sudo less /var/log/secure |grep 180.163.8.253<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 这里省略了之前出现的很多条一样的记录</div><div class="line">Oct 17 06:51:42 litao sshd[14908]: Did not receive identification string from 180.163.8.254</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>Google搜索关键字<code>Did not receive identification string from</code>,在Stackoverflow上有这样一个回答:</p>
+<blockquote>
+<p>Some miscreant (surprise!) is hammering at ssh to try to find a username/password combination that gets them into the system. Probably from some botnet doing the same to who knows how many other unsuspecting victims.</p>
+</blockquote>
+<p>Install something like fail2ban or DenyHosts (some of both should be available for any Linux distribution), or set up your local firewall to limit SSH connection attempts. Changing the SSH port makes the dumb brute force tries fail, but it also makes legitimate uses fail.<br>大意是：有人在尝试用用户名密码暴力使用ssh连接你的服务器，可以通过安装fail2ban或DenyHosts或者设置本地防火墙显示ssh连接，更改端口会使强制连接失败，也会让合法用户失败。</p>
+<p>所以接下来安装<code>fail2ban</code>,首先查看fail2ban信息</p>
+<blockquote>
+<p>yum info fail2ban<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">$ yum info fail2ban</div><div class="line">已加载插件：fastestmirror, langpacks</div><div class="line">Determining fastest mirrors</div><div class="line">可安装的软件包</div><div class="line">名称    ：fail2ban</div><div class="line">架构    ：noarch</div><div class="line">版本    ：0.9.7</div><div class="line">发布    ：1.el7</div><div class="line">大小    ：11 k</div><div class="line">源    ：epel/7/x86_64</div><div class="line">简介    ： Daemon to ban hosts that cause multiple authentication errors</div><div class="line">网址    ：http://fail2ban.sourceforge.net/</div><div class="line">协议    ： GPLv2+</div><div class="line">描述    ： Fail2Ban scans log files and bans IP addresses that makes too many password</div><div class="line">         : failures. It updates firewall rules to reject the IP address. These rules can</div><div class="line">         : be defined by the user. Fail2Ban can read multiple log files such as sshd or</div><div class="line">         : Apache web server ones.</div><div class="line">         :</div><div class="line">         : Fail2Ban is able to reduce the rate of incorrect authentications attempts</div><div class="line">         : however it cannot eliminate the risk that weak authentication presents.</div><div class="line">         : Configure services to use only two factor or public/private authentication</div><div class="line">         : mechanisms if you really want to protect services.</div><div class="line">         :</div><div class="line">         : This is a meta-package that will install the default configuration.  Other</div><div class="line">         : sub-packages are available to install support for other actions and</div><div class="line">         : configurations.</div><div class="line">$</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>安装fail2ban</p>
+<blockquote>
+<p>sudo yum install -y fail2ben<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">$ sudo yum install -y fail2ban</div><div class="line">已加载插件：fastestmirror, langpacks</div><div class="line">Loading mirror speeds from cached hostfile</div><div class="line">正在解决依赖关系</div><div class="line">--&gt; 正在检查事务</div><div class="line">---&gt; 软件包 fail2ban.noarch.0.0.9.7-1.el7 将被 安装</div><div class="line">--&gt; 正在处理依赖关系 fail2ban-server = 0.9.7-1.el7，它被软件包 fail2ban-0.9.7-1.el7.noarch 需要</div><div class="line">--&gt; 正在处理依赖关系 fail2ban-sendmail = 0.9.7-1.el7，它被软件包 fail2ban-0.9.7-1.el7.noarch 需要</div><div class="line">--&gt; 正在处理依赖关系 fail2ban-firewalld = 0.9.7-1.el7，它被软件包 fail2ban-0.9.7-1.el7.noarch 需要</div><div class="line">--&gt; 正在检查事务</div><div class="line">---&gt; 软件包 fail2ban-firewalld.noarch.0.0.9.7-1.el7 将被 安装</div><div class="line">---&gt; 软件包 fail2ban-sendmail.noarch.0.0.9.7-1.el7 将被 安装</div><div class="line">--&gt; 正在处理依赖关系 /usr/sbin/sendmail，它被软件包 fail2ban-sendmail-0.9.7-1.el7.noarch 需要</div><div class="line">---&gt; 软件包 fail2ban-server.noarch.0.0.9.7-1.el7 将被 安装</div><div class="line">--&gt; 正在检查事务</div><div class="line">---&gt; 软件包 ssmtp.x86_64.0.2.64-14.el7 将被 安装</div><div class="line">--&gt; 解决依赖关系完成</div><div class="line"></div><div class="line">依赖关系解决</div><div class="line"></div><div class="line">================================================================================================</div><div class="line"> Package                       架构              版本                     源               大小</div><div class="line">================================================================================================</div><div class="line">正在安装:</div><div class="line"> fail2ban                      noarch            0.9.7-1.el7              epel             11 k</div><div class="line">为依赖而安装:</div><div class="line"> fail2ban-firewalld            noarch            0.9.7-1.el7              epel             11 k</div><div class="line"> fail2ban-sendmail             noarch            0.9.7-1.el7              epel             14 k</div><div class="line"> fail2ban-server               noarch            0.9.7-1.el7              epel            288 k</div><div class="line"> ssmtp                         x86_64            2.64-14.el7              epel             50 k</div><div class="line"></div><div class="line">事务概要</div><div class="line">================================================================================================</div><div class="line">安装  1 软件包 (+4 依赖软件包)</div><div class="line"></div><div class="line">总下载量：376 k</div><div class="line">安装大小：1.0 M</div><div class="line">Downloading packages:</div><div class="line">(1/5): fail2ban-firewalld-0.9.7-1.el7.noarch.rpm                         |  11 kB  00:00:01</div><div class="line">(2/5): fail2ban-0.9.7-1.el7.noarch.rpm                                   |  11 kB  00:00:01</div><div class="line">(3/5): fail2ban-sendmail-0.9.7-1.el7.noarch.rpm                          |  14 kB  00:00:00</div><div class="line">(4/5): ssmtp-2.64-14.el7.x86_64.rpm                                      |  50 kB  00:00:00</div><div class="line">(5/5): fail2ban-server-0.9.7-1.el7.noarch.rpm                            | 288 kB  00:00:00</div><div class="line">------------------------------------------------------------------------------------------------</div><div class="line">总计                                                            157 kB/s | 376 kB  00:00:02</div><div class="line">Running transaction check</div><div class="line">Running transaction test</div><div class="line">Transaction test succeeded</div><div class="line">Running transaction</div><div class="line">  正在安装    : fail2ban-server-0.9.7-1.el7.noarch                                          1/5</div><div class="line">  正在安装    : fail2ban-firewalld-0.9.7-1.el7.noarch                                       2/5</div><div class="line">  正在安装    : ssmtp-2.64-14.el7.x86_64                                                    3/5</div><div class="line">  正在安装    : fail2ban-sendmail-0.9.7-1.el7.noarch                                        4/5</div><div class="line">  正在安装    : fail2ban-0.9.7-1.el7.noarch                                                 5/5</div><div class="line">  验证中      : fail2ban-sendmail-0.9.7-1.el7.noarch                                        1/5</div><div class="line">  验证中      : fail2ban-0.9.7-1.el7.noarch                                                 2/5</div><div class="line">  验证中      : fail2ban-firewalld-0.9.7-1.el7.noarch                                       3/5</div><div class="line">  验证中      : fail2ban-server-0.9.7-1.el7.noarch                                          4/5</div><div class="line">  验证中      : ssmtp-2.64-14.el7.x86_64                                                    5/5</div><div class="line"></div><div class="line">已安装:</div><div class="line">  fail2ban.noarch 0:0.9.7-1.el7</div><div class="line"></div><div class="line">作为依赖被安装:</div><div class="line">  fail2ban-firewalld.noarch 0:0.9.7-1.el7         fail2ban-sendmail.noarch 0:0.9.7-1.el7</div><div class="line">  fail2ban-server.noarch 0:0.9.7-1.el7            ssmtp.x86_64 0:2.64-14.el7</div><div class="line"></div><div class="line">完毕！</div><div class="line">$</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>启动fail2ban<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">systemctl enable fail2ban #开机启动</div><div class="line">systemctl start fail2ban</div></pre></td></tr></table></figure></p>
+<p>配置fail2ben</p>
+<blockquote>
+<p>/etc/fail2ban/jail.conf</p>
+</blockquote>
+<p>这个设定档是Fail2Ban 的重点，它是以[名称] 的方式来定义每个Profile，而[DEFAULT] 这个Profile 是代表所有Profile 的预设值。<br>所有参数的名称都是通用的，你可以依照你的需求做修改。<br>常见配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[DEFAULT]</div><div class="line"> ignoreip = 127.0.0.1/8 192.168.1.0/24 #忽略IP的清单，以空白区隔不同IP </div><div class="line"> bantime = 600 #封锁的时间，单位:秒，600=10分钟，改为-1表示「永久」封锁</div><div class="line"> findtime = 600 #在多久的时间内，单位:秒，600=10分钟</div><div class="line"> maxretry = 3 #登入失败几次封锁</div><div class="line">[ssh-iptables]</div><div class="line"> enabled  = true # 启用 SSH</div><div class="line"> filter   = sshd</div><div class="line"> action   = iptables[name=SSH, port=ssh, protocol=tcp]</div><div class="line">            sendmail-whois[name=SSH, dest=收件者 EMail, sender=收件人 EMail]</div><div class="line"> logpath  = /var/log/secure # 登录档的位置</div><div class="line"> maxretry = 10＃登入失败几次封锁</div><div class="line"> bantime = 14400＃封锁的时间，单位：秒，14400 = 4小时</div></pre></td></tr></table></figure></p>
+<p>具体配置可以查看官方Github仓库：<a href="https://github.com/fail2ban/fail2ban" target="_blank" rel="external">https://github.com/fail2ban/fail2ban</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前言&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;昨天利用flask搭建了一个查看访问本机IP的页面，发现除了我本人还有其他IP访问，因为端口是才设置的，所以推测是有人在扫描我的服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="运维" scheme="http://litao.work/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Centos7安装配置MongoDB</title>
@@ -296,9 +350,9 @@ leancloud_visitors:
       <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
-    
       <category term="docker" scheme="http://litao.work/tags/docker/"/>
+    
+      <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
     
   </entry>
   
@@ -944,35 +998,6 @@ leancloud_visitors:
       <category term="git" scheme="http://litao.work/tags/git/"/>
     
       <category term="commands" scheme="http://litao.work/tags/commands/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LF Will Be Replaced by CRLF解决方案</title>
-    <link href="http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/"/>
-    <id>http://litao.work/2017/03/21/LF-will-be-replaced-by-CRLF-in/</id>
-    <published>2017-03-21T14:41:41.000Z</published>
-    <updated>2017-08-30T07:32:44.680Z</updated>
-    
-    <content type="html"><![CDATA[<p>在使用git提交时出现错误提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LF will be replaced by CRLF in *** . The file will have its original line endings in your working directory.</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>出现这个问题的原因是window平台下的换行符合Linux下的换行符不一致，Git是Linux平台下，所以在window平台下使用Git就会报这样的错.</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在shell中将autocrlf改为false。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config –-global core.autocrlf false</div></pre></td></tr></table></figure></p>
-<p>接下来你就可以继续你的github之旅了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在使用git提交时出现错误提示&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;LF will be replaced by CRLF in *** . The file will have its original line endings in your working directory.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="git" scheme="http://litao.work/tags/git/"/>
-    
-      <category term="solution" scheme="http://litao.work/tags/solution/"/>
     
   </entry>
   
