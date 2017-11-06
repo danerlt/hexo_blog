@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-10-17T12:55:44.251Z</updated>
+  <updated>2017-11-06T00:52:51.388Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos搭建自己的Git服务器</title>
+    <link href="http://litao.work/2017/11/06/Centos%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Git%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://litao.work/2017/11/06/Centos搭建自己的Git服务器/</id>
+    <published>2017-11-06T00:51:52.000Z</published>
+    <updated>2017-11-06T00:52:51.388Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建Git服务器及使用"><a href="#搭建Git服务器及使用" class="headerlink" title="搭建Git服务器及使用"></a>搭建Git服务器及使用</h2><h3 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h3><p>执行以下命令安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel</div><div class="line">yum install git</div></pre></td></tr></table></figure></p>
+<p>接下来我们创建一个git用户组和用户，用来运行git服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">groupadd git</div><div class="line">useradd git -g git</div><div class="line">passwd git</div></pre></td></tr></table></figure></p>
+<p>最好切换到git用户 不然后面新建的git仓库都要改权限 烦烦烦！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su - git</div></pre></td></tr></table></figure></p>
+<h3 id="2、创建证书登录"><a href="#2、创建证书登录" class="headerlink" title="2、创建证书登录"></a>2、创建证书登录</h3><p>收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p>
+<p>如果没有该文件则创建它：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /home/git/</div><div class="line">mkdir .ssh</div><div class="line">chmod 700 .ssh</div><div class="line">touch .ssh/authorized_keys</div><div class="line">chmod 600 .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
+<h3 id="3、初始化Git仓库"><a href="#3、初始化Git仓库" class="headerlink" title="3、初始化Git仓库"></a>3、初始化Git仓库</h3><p>首先我们选定一个目录作为Git仓库，假定我们放在git用户的宿主目录/home/git/，在/home/git/目录下输入命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /home/git</div><div class="line">git init --bare test.git</div><div class="line">Initialized empty Git repository in /home/git/test.git/</div></pre></td></tr></table></figure></p>
+<p>以上命令会创建一个空仓库，服务器上的Git仓库通常都以.git结尾。</p>
+<h3 id="4、克隆仓库"><a href="#4、克隆仓库" class="headerlink" title="4、克隆仓库"></a>4、克隆仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git clone git@your-ip:test.git</div><div class="line">Cloning into &apos;test&apos;...</div><div class="line">warning: You appear to have cloned an empty repository.</div><div class="line">Checking connectivity... done.</div></pre></td></tr></table></figure>
+<p><strong>your-ip 为您 Git 所在服务器 ip 。</strong></p>
+<h3 id="5、禁止Shell登录"><a href="#5、禁止Shell登录" class="headerlink" title="5、禁止Shell登录"></a>5、禁止Shell登录</h3><p>出于安全考虑，git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。<br>找到类似下面的一行：</p>
+<p>git:x:502:502::/home/git:/bin/bash<br>改为</p>
+<p>git:x:502:502::/home/git:/usr/bin/git-shell<br>这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。</p>
+<h2 id="注意事项及说明"><a href="#注意事项及说明" class="headerlink" title="注意事项及说明"></a>注意事项及说明</h2><h3 id="1、git仓库可以放在任何目录"><a href="#1、git仓库可以放在任何目录" class="headerlink" title="1、git仓库可以放在任何目录"></a>1、git仓库可以放在任何目录</h3><p>放在/home/git目录下(clone相对于git宿主目录 /home/git/)<br>git clone git@your-ip:test.git<br>如果域名绑定IP就可以直接用域名clone<br>git clone git@www.mayanlong.com:test.git</p>
+<p>放在根目录，新建git目录作为仓库(绝对路径 /git/)<br>git clone git@your-ip:/git/test.git</p>
+<h3 id="2、目录权限问题"><a href="#2、目录权限问题" class="headerlink" title="2、目录权限问题"></a>2、目录权限问题</h3><p>如果不是用git用户创建的，注意以下目录文件的权限问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.ssh</div><div class="line">test.git</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p>如果有问题，可以把该目录的所属者改成git。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown -R git:git test.git</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;搭建Git服务器及使用&quot;&gt;&lt;a href=&quot;#搭建Git服务器及使用&quot; class=&quot;headerlink&quot; title=&quot;搭建Git服务器及使用&quot;&gt;&lt;/a&gt;搭建Git服务器及使用&lt;/h2&gt;&lt;h3 id=&quot;1、安装Git&quot;&gt;&lt;a href=&quot;#1、安装Git&quot; c
+    
+    </summary>
+    
+      <category term="运维" scheme="http://litao.work/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+      <category term="git" scheme="http://litao.work/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker镜像</title>
@@ -430,9 +470,9 @@ leancloud_visitors:
       <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="docker" scheme="http://litao.work/tags/docker/"/>
-    
       <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
+    
+      <category term="docker" scheme="http://litao.work/tags/docker/"/>
     
   </entry>
   
@@ -767,49 +807,6 @@ leancloud_visitors:
     
       &lt;blockquote&gt;
 &lt;p&gt;.NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台&lt;a href=&quot;http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png&quot;&gt;1&lt;/a&gt;  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。&lt;br&gt;由于 .NET Core 的开发目标是跨平台的 .NET 平台，因此 .NET Core 会包含 .NET Framework 的类库，但与 .NET Framework 不同的是 .NET Core 采用包化 (Packages) 的管理方式，应用程序只需要获取需要的组件即可，与 .NET Framework 大包式安装的作法截然不同，同时各包亦有独立的版本线 (Version line)，不再硬性要求应用程序跟随主线版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
-      <category term="install" scheme="http://litao.work/tags/install/"/>
-    
-      <category term="centos" scheme="http://litao.work/tags/centos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos7安装mssql-Tools</title>
-    <link href="http://litao.work/2017/03/23/Linux%E5%AE%89%E8%A3%85mssql-tools/"/>
-    <id>http://litao.work/2017/03/23/Linux安装mssql-tools/</id>
-    <published>2017-03-23T07:23:22.000Z</published>
-    <updated>2017-08-30T07:29:21.622Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="1-导入repo"><a href="#1-导入repo" class="headerlink" title="1.导入repo"></a>1.导入repo</h2><p>将prod.repo导入的<code>/etc/yum.repos.d</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://packages.microsoft.com/config/rhel/7/prod.repo &gt; /etc/yum.repos.d/msprod.repo</div></pre></td></tr></table></figure></p>
-<p>使用ls命令查看<code>/etc/yum.repos.d</code>目录下是否有prod.repo文件,有即说明导入成功。<br><img src="http://static.zybuluo.com/danerlt/9wchbfpvh42vn1tdjdvdnrn6/image_1bbprkd4jbvi2gq1hma1s00178t9.png" alt="image_1bbprkd4jbvi2gq1hma1s00178t9.png-17.2kB"></p>
-<h2 id="2-移除旧版本"><a href="#2-移除旧版本" class="headerlink" title="2.移除旧版本"></a>2.移除旧版本</h2><p>如果你以前安装过mysql-tools,需要移除掉以前的unixODBC包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
-<!--more-->
-<p><img src="http://static.zybuluo.com/danerlt/4x6t8mlfqys1e9h5m5nd9inr/image_1bbprteosd3213897i714qf1ri5m.png" alt="image_1bbprteosd3213897i714qf1ri5m.png-102.2kB"><br><img src="http://static.zybuluo.com/danerlt/78pt2mc3qt812bagz7dvaqna/image_1bbpsdkm81rir1kcbjadvls1sgb13.png" alt="image_1bbpsdkm81rir1kcbjadvls1sgb13.png-18.2kB"></p>
-<h2 id="3-安装mysql-tools"><a href="#3-安装mysql-tools" class="headerlink" title="3.安装mysql-tools"></a>3.安装mysql-tools</h2><p>使用下面的命令安装mysql-tools，一路YES<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum update</div><div class="line">sudo yum install mssql-tools unixODBC-devel</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/rkbgitslpfmcev2y9dd7oa80/image_1bbpsg85g1rn0p5ju51fafmcg1g.png" alt="image_1bbpsg85g1rn0p5ju51fafmcg1g.png-60.5kB"><br><img src="http://static.zybuluo.com/danerlt/5ri1ne6spoizj0cqp4qxd1du/image_1bbpsgstk1ui814tlel1nugoff1t.png" alt="image_1bbpsgstk1ui814tlel1nugoff1t.png-31.1kB"><br>，看到如下图所示说明mysql-tools安装成功<br><img src="http://static.zybuluo.com/danerlt/z7n0853v38lyocm9qdr8bt68/image_1bbpshdam1m0c142s1cb5hcb5482a.png" alt="image_1bbpshdam1m0c142s1cb5hcb5482a.png-18.8kB"><br>如何你需要生气mysql-tools可以使用以下命令升级<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum check-update</div><div class="line">sudo yum update mssql-tools</div></pre></td></tr></table></figure></p>
-<h2 id="4-设置环境变量"><a href="#4-设置环境变量" class="headerlink" title="4.设置环境变量"></a>4.设置环境变量</h2><p>要想在任何路径下运行mssql-tools，你需要将<code>/opt/mssql-tools/bin/</code>添加到PATH里面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo &apos;export PATH=&quot;$PATH:/opt/mssql-tools/bin&quot;&apos; &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/2buhs5a1ao3tnqvhd5svcs1v/image_1bbt0854er1le2i1f8012vc1mr69.png" alt="image_1bbt0854er1le2i1f8012vc1mr69.png-43.8kB"></p>
-<h2 id="5-测试是否可以连接到SQL-Server"><a href="#5-测试是否可以连接到SQL-Server" class="headerlink" title="5.测试是否可以连接到SQL Server"></a>5.测试是否可以连接到SQL Server</h2><p>使用以下命令连接到你的SQL Server实例上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlcmd -S localhost -U SA</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/maz3in3kz7x6jr9awe1g3gq6/image_1bbt0jtvru001jor104tqjgvs2m.png" alt="image_1bbt0jtvru001jor104tqjgvs2m.png-15.7kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;MSSQL.TOOLS（原名sqlmgmt。com）提供了有用的SQL工具，帮助数据库开发人员和/或数据库用户。sqlmgmt.com目前集中在微软SQL Server工具。许多工具都是免费软件，可以提高客户的效率和生产率。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>

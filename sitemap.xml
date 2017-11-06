@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/2017/11/06/Centos%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Git%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    
+    <lastmod>2017-11-06T00:52:51.388Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/2017/10/17/docker%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2017-10-17T12:57:37.404Z</lastmod>
@@ -107,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
+    <loc>http://litao.work/2016/12/03/Vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
     
     <lastmod>2017-08-30T07:56:52.738Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://litao.work/2016/12/03/Vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
+    <loc>http://litao.work/2016/12/03/vmware%E5%AE%89%E8%A3%85%E8%8B%B9%E6%9E%9C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</loc>
     
     <lastmod>2017-08-30T07:56:52.738Z</lastmod>
     
