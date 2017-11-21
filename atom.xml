@@ -62,7 +62,7 @@
     <link href="http://litao.work/2017/10/17/docker%E9%95%9C%E5%83%8F/"/>
     <id>http://litao.work/2017/10/17/docker镜像/</id>
     <published>2017-10-17T12:55:44.000Z</published>
-    <updated>2017-11-21T07:21:25.701Z</updated>
+    <updated>2017-11-21T07:22:06.250Z</updated>
     
     <content type="html"><![CDATA[<h2 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>命令: <code>docker pull</code>,从镜像仓库中拉取或者更新指定镜像</p>
 <h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><blockquote>
