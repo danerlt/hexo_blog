@@ -555,7 +555,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T15:14:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T15:15:47+08:00">
                 2017-11-21
               </time>
             
@@ -665,27 +665,20 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
       
         
-          
-            <h2 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>命令: <code>docker pull</code>,从镜像仓库中拉取或者更新指定镜像</p>
+          <h2 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>命令: <code>docker pull</code>,从镜像仓库中拉取或者更新指定镜像</p>
 <h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><blockquote>
 <p>docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;</p>
 <h4 id="OPTIONS说明："><a href="#OPTIONS说明：" class="headerlink" title="OPTIONS说明："></a>OPTIONS说明：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-a :拉取所有 tagged 镜像</div><div class="line">--disable-content-trust :忽略镜像的校验,默认开启</div></pre></td></tr></table></figure>
 </blockquote>
 <p>Docker Registry地址：地址的格式一般是 <code>&lt;域名/IP&gt;[:端口号]</code>。默认地址是 Docker Hub。<br>仓库名：如之前所说，这里的仓库名是两段式名称，既 <code>&lt;用户名&gt;/&lt;软件名&gt;</code>。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像.</p>
 <h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker pull java #从Docker Hub下载java最新版镜像。</div><div class="line">docker pull -a java #从Docker Hub下载REPOSITORY为java的所有镜像。</div></pre></td></tr></table></figure>
-<h3 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h3><p>命令: <code>docker images</code>，列出本地镜像<br>语法：</p>
-<blockquote>
-<p>docker images [OPTIONS] [REPOSITORY[:TAG]]</p>
-</blockquote>
-<p>OPTIONS说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-a :列出本地所有的镜像（含中间映像层，默认情况下，过滤掉中间映像层）；</div><div class="line">--digests :显示镜像的摘要信息；</div><div class="line">-f :显示满足条件的镜像；</div><div class="line">--format :指定返回值的模板文件；</div><div class="line">--no-trunc :显示完整的镜像信息；</div><div class="line">-q :只显示镜像ID。</div></pre></td></tr></table></figure></p>
-<h3 id="定制镜像"><a href="#定制镜像" class="headerlink" title="定制镜像"></a>定制镜像</h3><p>命令:<code>docker build</code>，使用Dockerfile创建镜像。</p>
-<h4 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h4><blockquote>
-<p>docker build [OPTIONS] PATH | URL | -</p>
-</blockquote>
-<h4 id="OPTIONS说明：-1"><a href="#OPTIONS说明：-1" class="headerlink" title="OPTIONS说明："></a>OPTIONS说明：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">--build-arg=[] :设置镜像创建时的变量；</div><div class="line">--cpu-shares :设置 cpu 使用权重；</div><div class="line">--cpu-period :限制 CPU CFS周期；</div><div class="line">--cpu-quota :限制 CPU CFS配额；</div><div class="line">--cpuset-cpus :指定使用的CPU id；</div><div class="line">--cpuset-mems :指定使用的内存 id；</div><div class="line">--disable-content-trust :忽略校验，默认开启；</div><div class="line">-f :指定要使用的Dockerfile路径；</div><div class="line">--force-rm :设置镜像过程中删除中间容器；</div><div class="line">--isolation :使用容器隔离技术；</div><div class="line">--label=[] :设置镜像使用的元数据；</div><div class="line">-m :设置内存最大值；</div><div class="line">--memory-swap :设置Swap的最大值为内存+swap，&quot;-1&quot;表示不限swap；</div><div class="line">--no-cache :创建镜像的过程不使用缓存；</div><div class="line">--pull :尝试去更新镜像的新版本；</div><div class="line">-q :安静模式，成功后只输出镜像ID；</div><div class="line">--rm :设置镜像成功后删除中间容器；</div><div class="line">--shm-size :设置/dev/shm的大小，默认值是64M；</div><div class="line">--ulimit :Ulimit配置。</div></pre></td></tr></table></figure>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子:"></a>例子:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">###注意,下面这种方式要进入到Dockerfile的目录下执行</div><div class="line">docker build -t nginx:v3 .</div><div class="line">docker build https://github.com/twang2218/gitlab-ce-zh.git</div><div class="line">docker build http://server/context.tar.gz</div><div class="line">docker build - &lt; Dockerfile</div></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/17/docker镜像/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
