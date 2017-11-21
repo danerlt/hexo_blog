@@ -338,8 +338,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-06T08:52:51+08:00">
-                2017-11-06
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T15:12:58+08:00">
+                2017-11-21
               </time>
             
           </span>
@@ -448,25 +448,15 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
 
       
         
-          
-            <h2 id="搭建Git服务器及使用"><a href="#搭建Git服务器及使用" class="headerlink" title="搭建Git服务器及使用"></a>搭建Git服务器及使用</h2><h3 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h3><p>执行以下命令安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel</div><div class="line">yum install git</div></pre></td></tr></table></figure></p>
+          <h2 id="搭建Git服务器及使用"><a href="#搭建Git服务器及使用" class="headerlink" title="搭建Git服务器及使用"></a>搭建Git服务器及使用</h2><h3 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h3><p>执行以下命令安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel</div><div class="line">yum install git</div></pre></td></tr></table></figure></p>
 <p>接下来我们创建一个git用户组和用户，用来运行git服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">groupadd git</div><div class="line">useradd git -g git</div><div class="line">passwd git</div></pre></td></tr></table></figure></p>
-<p>最好切换到git用户 不然后面新建的git仓库都要改权限 烦烦烦！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su - git</div></pre></td></tr></table></figure></p>
-<h3 id="2、创建证书登录"><a href="#2、创建证书登录" class="headerlink" title="2、创建证书登录"></a>2、创建证书登录</h3><p>收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p>
-<p>如果没有该文件则创建它：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /home/git/</div><div class="line">mkdir .ssh</div><div class="line">chmod 700 .ssh</div><div class="line">touch .ssh/authorized_keys</div><div class="line">chmod 600 .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
-<h3 id="3、初始化Git仓库"><a href="#3、初始化Git仓库" class="headerlink" title="3、初始化Git仓库"></a>3、初始化Git仓库</h3><p>首先我们选定一个目录作为Git仓库，假定我们放在git用户的宿主目录/home/git/，在/home/git/目录下输入命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /home/git</div><div class="line">git init --bare test.git</div><div class="line">Initialized empty Git repository in /home/git/test.git/</div></pre></td></tr></table></figure></p>
-<p>以上命令会创建一个空仓库，服务器上的Git仓库通常都以.git结尾。</p>
-<h3 id="4、克隆仓库"><a href="#4、克隆仓库" class="headerlink" title="4、克隆仓库"></a>4、克隆仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git clone git@your-ip:test.git</div><div class="line">Cloning into &apos;test&apos;...</div><div class="line">warning: You appear to have cloned an empty repository.</div><div class="line">Checking connectivity... done.</div></pre></td></tr></table></figure>
-<p><strong>your-ip 为您 Git 所在服务器 ip 。</strong></p>
-<h3 id="5、禁止Shell登录"><a href="#5、禁止Shell登录" class="headerlink" title="5、禁止Shell登录"></a>5、禁止Shell登录</h3><p>出于安全考虑，git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。<br>找到类似下面的一行：</p>
-<p>git:x:502:502::/home/git:/bin/bash<br>改为</p>
-<p>git:x:502:502::/home/git:/usr/bin/git-shell<br>这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。</p>
-<h2 id="注意事项及说明"><a href="#注意事项及说明" class="headerlink" title="注意事项及说明"></a>注意事项及说明</h2><h3 id="1、git仓库可以放在任何目录"><a href="#1、git仓库可以放在任何目录" class="headerlink" title="1、git仓库可以放在任何目录"></a>1、git仓库可以放在任何目录</h3><p>放在/home/git目录下(clone相对于git宿主目录 /home/git/)<br>git clone git@your-ip:test.git<br>如果域名绑定IP就可以直接用域名clone<br>git clone git@www.mayanlong.com:test.git</p>
-<p>放在根目录，新建git目录作为仓库(绝对路径 /git/)<br>git clone git@your-ip:/git/test.git</p>
-<h3 id="2、目录权限问题"><a href="#2、目录权限问题" class="headerlink" title="2、目录权限问题"></a>2、目录权限问题</h3><p>如果不是用git用户创建的，注意以下目录文件的权限问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.ssh</div><div class="line">test.git</div><div class="line">...</div></pre></td></tr></table></figure></p>
-<p>如果有问题，可以把该目录的所属者改成git。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown -R git:git test.git</div></pre></td></tr></table></figure></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/06/Centos搭建自己的Git服务器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

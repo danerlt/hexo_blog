@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-11-06T00:52:51.388Z</updated>
+  <updated>2017-11-21T07:12:58.161Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://litao.work/2017/11/06/Centos%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Git%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>http://litao.work/2017/11/06/Centos搭建自己的Git服务器/</id>
     <published>2017-11-06T00:51:52.000Z</published>
-    <updated>2017-11-06T00:52:51.388Z</updated>
+    <updated>2017-11-21T07:12:58.161Z</updated>
     
     <content type="html"><![CDATA[<h2 id="搭建Git服务器及使用"><a href="#搭建Git服务器及使用" class="headerlink" title="搭建Git服务器及使用"></a>搭建Git服务器及使用</h2><h3 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h3><p>执行以下命令安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel</div><div class="line">yum install git</div></pre></td></tr></table></figure></p>
 <p>接下来我们创建一个git用户组和用户，用来运行git服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">groupadd git</div><div class="line">useradd git -g git</div><div class="line">passwd git</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>最好切换到git用户 不然后面新建的git仓库都要改权限 烦烦烦！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su - git</div></pre></td></tr></table></figure></p>
 <h3 id="2、创建证书登录"><a href="#2、创建证书登录" class="headerlink" title="2、创建证书登录"></a>2、创建证书登录</h3><p>收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p>
 <p>如果没有该文件则创建它：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /home/git/</div><div class="line">mkdir .ssh</div><div class="line">chmod 700 .ssh</div><div class="line">touch .ssh/authorized_keys</div><div class="line">chmod 600 .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
@@ -42,7 +43,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;搭建Git服务器及使用&quot;&gt;&lt;a href=&quot;#搭建Git服务器及使用&quot; class=&quot;headerlink&quot; title=&quot;搭建Git服务器及使用&quot;&gt;&lt;/a&gt;搭建Git服务器及使用&lt;/h2&gt;&lt;h3 id=&quot;1、安装Git&quot;&gt;&lt;a href=&quot;#1、安装Git&quot; c
+      &lt;h2 id=&quot;搭建Git服务器及使用&quot;&gt;&lt;a href=&quot;#搭建Git服务器及使用&quot; class=&quot;headerlink&quot; title=&quot;搭建Git服务器及使用&quot;&gt;&lt;/a&gt;搭建Git服务器及使用&lt;/h2&gt;&lt;h3 id=&quot;1、安装Git&quot;&gt;&lt;a href=&quot;#1、安装Git&quot; class=&quot;headerlink&quot; title=&quot;1、安装Git&quot;&gt;&lt;/a&gt;1、安装Git&lt;/h3&gt;&lt;p&gt;执行以下命令安装git&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum install git&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;接下来我们创建一个git用户组和用户，用来运行git服务：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;groupadd git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;useradd git -g git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;passwd git&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     

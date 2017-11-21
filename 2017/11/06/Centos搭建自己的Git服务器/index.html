@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="Litao's Blog">
 <meta property="og:description" content="搭建Git服务器及使用1、安装Git执行以下命令安装git12yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-develyum install git
 接下来我们创建一个git用户组和用户，用来运行git服务：123groupadd gituseradd git -g gitpasswd">
-<meta property="og:updated_time" content="2017-11-06T00:52:51.388Z">
+<meta property="og:updated_time" content="2017-11-21T07:12:58.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos搭建自己的Git服务器">
 <meta name="twitter:description" content="搭建Git服务器及使用1、安装Git执行以下命令安装git12yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-develyum install git
@@ -339,8 +339,8 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-06T08:52:51+08:00">
-                2017-11-06
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T15:12:58+08:00">
+                2017-11-21
               </time>
             
           </span>
@@ -450,6 +450,7 @@ color="255,30,30" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/can
       
         <h2 id="搭建Git服务器及使用"><a href="#搭建Git服务器及使用" class="headerlink" title="搭建Git服务器及使用"></a>搭建Git服务器及使用</h2><h3 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h3><p>执行以下命令安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel</div><div class="line">yum install git</div></pre></td></tr></table></figure></p>
 <p>接下来我们创建一个git用户组和用户，用来运行git服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">groupadd git</div><div class="line">useradd git -g git</div><div class="line">passwd git</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>最好切换到git用户 不然后面新建的git仓库都要改权限 烦烦烦！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su - git</div></pre></td></tr></table></figure></p>
 <h3 id="2、创建证书登录"><a href="#2、创建证书登录" class="headerlink" title="2、创建证书登录"></a>2、创建证书登录</h3><p>收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p>
 <p>如果没有该文件则创建它：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /home/git/</div><div class="line">mkdir .ssh</div><div class="line">chmod 700 .ssh</div><div class="line">touch .ssh/authorized_keys</div><div class="line">chmod 600 .ssh/authorized_keys</div></pre></td></tr></table></figure></p>
