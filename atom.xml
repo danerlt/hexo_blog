@@ -62,13 +62,13 @@
     <link href="http://litao.work/2017/10/17/docker%E9%95%9C%E5%83%8F/"/>
     <id>http://litao.work/2017/10/17/docker镜像/</id>
     <published>2017-10-17T12:55:44.000Z</published>
-    <updated>2017-11-21T07:15:47.646Z</updated>
+    <updated>2017-11-21T07:21:25.701Z</updated>
     
     <content type="html"><![CDATA[<h2 id="使用镜像"><a href="#使用镜像" class="headerlink" title="使用镜像"></a>使用镜像</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p>命令: <code>docker pull</code>,从镜像仓库中拉取或者更新指定镜像</p>
 <h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><blockquote>
 <p>docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;</p>
-<h4 id="OPTIONS说明："><a href="#OPTIONS说明：" class="headerlink" title="OPTIONS说明："></a>OPTIONS说明：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-a :拉取所有 tagged 镜像</div><div class="line">--disable-content-trust :忽略镜像的校验,默认开启</div></pre></td></tr></table></figure>
 </blockquote>
+<h4 id="OPTIONS说明："><a href="#OPTIONS说明：" class="headerlink" title="OPTIONS说明："></a>OPTIONS说明：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-a :拉取所有 tagged 镜像</div><div class="line">--disable-content-trust :忽略镜像的校验,默认开启</div></pre></td></tr></table></figure>
 <p>Docker Registry地址：地址的格式一般是 <code>&lt;域名/IP&gt;[:端口号]</code>。默认地址是 Docker Hub。<br>仓库名：如之前所说，这里的仓库名是两段式名称，既 <code>&lt;用户名&gt;/&lt;软件名&gt;</code>。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像.</p>
 <h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker pull java #从Docker Hub下载java最新版镜像。</div><div class="line">docker pull -a java #从Docker Hub下载REPOSITORY为java的所有镜像。</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -90,8 +90,8 @@
       &lt;h2 id=&quot;使用镜像&quot;&gt;&lt;a href=&quot;#使用镜像&quot; class=&quot;headerlink&quot; title=&quot;使用镜像&quot;&gt;&lt;/a&gt;使用镜像&lt;/h2&gt;&lt;h3 id=&quot;获取镜像&quot;&gt;&lt;a href=&quot;#获取镜像&quot; class=&quot;headerlink&quot; title=&quot;获取镜像&quot;&gt;&lt;/a&gt;获取镜像&lt;/h3&gt;&lt;p&gt;命令: &lt;code&gt;docker pull&lt;/code&gt;,从镜像仓库中拉取或者更新指定镜像&lt;/p&gt;
 &lt;h4 id=&quot;语法：&quot;&gt;&lt;a href=&quot;#语法：&quot; class=&quot;headerlink&quot; title=&quot;语法：&quot;&gt;&lt;/a&gt;语法：&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt;&lt;/p&gt;
-&lt;h4 id=&quot;OPTIONS说明：&quot;&gt;&lt;a href=&quot;#OPTIONS说明：&quot; class=&quot;headerlink&quot; title=&quot;OPTIONS说明：&quot;&gt;&lt;/a&gt;OPTIONS说明：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;-a :拉取所有 tagged 镜像&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;--disable-content-trust :忽略镜像的校验,默认开启&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/blockquote&gt;
+&lt;h4 id=&quot;OPTIONS说明：&quot;&gt;&lt;a href=&quot;#OPTIONS说明：&quot; class=&quot;headerlink&quot; title=&quot;OPTIONS说明：&quot;&gt;&lt;/a&gt;OPTIONS说明：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;-a :拉取所有 tagged 镜像&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;--disable-content-trust :忽略镜像的校验,默认开启&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;Docker Registry地址：地址的格式一般是 &lt;code&gt;&amp;lt;域名/IP&amp;gt;[:端口号]&lt;/code&gt;。默认地址是 Docker Hub。&lt;br&gt;仓库名：如之前所说，这里的仓库名是两段式名称，既 &lt;code&gt;&amp;lt;用户名&amp;gt;/&amp;lt;软件名&amp;gt;&lt;/code&gt;。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像.&lt;/p&gt;
 &lt;h4 id=&quot;例子：&quot;&gt;&lt;a href=&quot;#例子：&quot; class=&quot;headerlink&quot; title=&quot;例子：&quot;&gt;&lt;/a&gt;例子：&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;docker pull java #从Docker Hub下载java最新版镜像。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;docker pull -a java #从Docker Hub下载REPOSITORY为java的所有镜像。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
