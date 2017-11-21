@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://litao.work/2017/10/17/docker%E9%95%9C%E5%83%8F/</loc>
+    
+    <lastmod>2017-11-21T07:14:31.500Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://litao.work/2017/11/06/Centos%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Git%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     
     <lastmod>2017-11-21T07:12:58.161Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://litao.work/2017/10/17/docker%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2017-10-17T12:57:37.404Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://litao.work/2017/10/17/docker%E9%95%9C%E5%83%8F/</loc>
-    
-    <lastmod>2017-10-17T12:55:44.251Z</lastmod>
     
   </url>
   
