@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2017-11-21T07:12:58.161Z</updated>
+  <updated>2017-12-01T05:03:55.032Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux自动安装Python3脚本</title>
+    <link href="http://litao.work/2017/12/01/Linux%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85Python3%E8%84%9A%E6%9C%AC/"/>
+    <id>http://litao.work/2017/12/01/Linux自动安装Python3脚本/</id>
+    <published>2017-12-01T05:03:25.000Z</published>
+    <updated>2017-12-01T05:03:55.032Z</updated>
+    
+    <content type="html"><![CDATA[<p>Linux自动安装Python3脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env bash</div><div class="line"># 安装依赖</div><div class="line">yum update -y &amp;&amp; yum install -y bzip2-devel cmake gcc gcc-c++ gimp-devel gimp-devel-tools gimp-help-browser gstreamer-devel gtk* gtk+-devel jasper-devel jasper-utils libavc1394-devel libdc1394-devel libffi-dev libjpeg-devel libpng-devel libraw1394-devel libtiff-devel libtool nasm ncurses-devel openssl-devel pyOpenSSL sqlite-devel swig zlib-devel</div><div class="line"></div><div class="line">PYTHON_VERSION=3.6.3 #这里选择Python的版本号</div><div class="line"># 下载压缩包</div><div class="line">if [ ! -f &quot;python.tar.xz&quot; ]; then</div><div class="line">    wget -o python.tar.xz  https://www.python.org/ftp/python/$&#123;PYTHON_VERSION&#125;/Python-$&#123;PYTHON_VERSION&#125;.tar.xz</div><div class="line">fi</div><div class="line">if [ ! -d &quot;/usr/src/python&quot; ]; then</div><div class="line">    mkdir -p /usr/src/python</div><div class="line">fi</div><div class="line"></div><div class="line"># 解压</div><div class="line">cp python.tar.xz /usr/src/python</div><div class="line">cd /usr/src/python</div><div class="line">xz -d python.tar.xz</div><div class="line">tar -xvf python.tar -C /usr/src/python</div><div class="line">rm python.tar</div><div class="line"></div><div class="line"># 编译安装Python</div><div class="line">cd /usr/src/python/Python-$PYTHON_VERSION</div><div class="line">./configure --prefix=/usr/local</div><div class="line">make</div><div class="line">make install</div><div class="line">make clean</div><div class="line"># 创建软链接</div><div class="line">cd /usr/local/bin</div><div class="line">ln -s /usr/bin/idle3 idle</div><div class="line">ln -s /usr/bin/pydoc3 pydoc</div><div class="line">ln -s /usr/bin/python3 python</div><div class="line">ln -s /usr/bin/python3-config python-config</div><div class="line"></div><div class="line"># 安装pip</div><div class="line">wget -O get-pip.py &apos;https://bootstrap.pypa.io/get-pip.py&apos;</div><div class="line">python get-pip.py</div><div class="line"></div><div class="line"># 添加镜像加速</div><div class="line">mkdir ~/.pip</div><div class="line">touch ~/.pip/pip.conf</div><div class="line">echo [global] &gt; ~/.pip/pip.conf</div><div class="line">echo trusted-host=mirrors.aliyun.com &gt;&gt; ~/.pip/pip.conf</div><div class="line">echo index-url = https://mirrors.aliyun.com/pypi/simple &gt;&gt; ~/.pip/pip.conf</div><div class="line"># 安装常用的库</div><div class="line">pip3 install beautifulsoup4 flask flask-cors gevent kafka lxml numpy paramiko pillow psutil pymysql pyOpenSSL redis requests rsa selenium thrift uwsgi wget twisted Scrapy scrapy_redis pymongo redis-py-cluster  thefuck</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Linux自动安装Python3脚本&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/d
+    
+    </summary>
+    
+      <category term="运维" scheme="http://litao.work/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://litao.work/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Centos搭建自己的Git服务器</title>
@@ -505,9 +530,9 @@ leancloud_visitors:
       <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
-    
       <category term="docker" scheme="http://litao.work/tags/docker/"/>
+    
+      <category term="mysql" scheme="http://litao.work/tags/mysql/"/>
     
   </entry>
   
@@ -798,51 +823,6 @@ leancloud_visitors:
     
       &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;写这个文档一是为了记录下自己安装Oracle和配置的一些步骤，以备以后查看，二是在安装文档时找不到一般比较好的中文版介绍，安装时参考的&lt;a href=&quot;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&quot;&gt;https://wiki.centos.org/HowTos/Oracle12onCentos7#head-172a15fb5e1115fcae130f7ac01149a35fde01d1&lt;/a&gt;,文档只要安装时的命令，没有截图，我加上了大部分命令运行的截图。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意:本文主要讲解到图形化安装前的配置,因为Oracle安装需要使用256位的图像显示,所以图形化界面的安装请戳&lt;a href=&quot;https://www.baidu.com&quot;&gt;这里&lt;/a&gt;.&lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
-      <category term="install" scheme="http://litao.work/tags/install/"/>
-    
-      <category term="centos" scheme="http://litao.work/tags/centos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos7安装.NET Core</title>
-    <link href="http://litao.work/2017/03/27/centos%E5%AE%89%E8%A3%85-NET-Core/"/>
-    <id>http://litao.work/2017/03/27/centos安装-NET-Core/</id>
-    <published>2017-03-27T04:32:18.000Z</published>
-    <updated>2017-08-30T07:27:49.960Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>.NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台<a href="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" target="_blank" rel="external">1</a>  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。<br>由于 .NET Core 的开发目标是跨平台的 .NET 平台，因此 .NET Core 会包含 .NET Framework 的类库，但与 .NET Framework 不同的是 .NET Core 采用包化 (Packages) 的管理方式，应用程序只需要获取需要的组件即可，与 .NET Framework 大包式安装的作法截然不同，同时各包亦有独立的版本线 (Version line)，不再硬性要求应用程序跟随主线版本。</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="安装-net-core"><a href="#安装-net-core" class="headerlink" title="安装.net core"></a>安装.net core</h2><h3 id="安装依赖的库文件"><a href="#安装依赖的库文件" class="headerlink" title="安装依赖的库文件"></a>安装依赖的库文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y libunwind libicu</div></pre></td></tr></table></figure>
-<p><img src="http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png" alt="image_1bc6vmvlaetorpeqhhr0hu7i9.png-23.3kB"></p>
-<h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><p>将压缩包下载的本地或者通过ftp上传到Linux上,我这里是用ftp上传的，所以名字不一样。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=843449</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/cld14rbsk7p29apk06jo8dks/image_1bc6vq96b1o1afe61r5virt9a613.png" alt="image_1bc6vq96b1o1afe61r5virt9a613.png-13.3kB"></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>将压缩包解压到<code>/opt/dotnet</code>目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mkdir -p /opt/dotnet &amp;&amp; sudo tar zxf dotnet.tar.gz -C /opt/dotnet</div></pre></td></tr></table></figure></p>
-<!--more-->
-<p><img src="http://static.zybuluo.com/danerlt/fcrpepfzeodbouh8ziu6aamo/image_1bc6vvdrm1df148k1k17128p1u011g.png" alt="image_1bc6vvdrm1df148k1k17128p1u011g.png-9.5kB"></p>
-<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>将dotnet创建一个链接到<code>/usr/local/bin</code>目录下，从而达到在任何目录下都可以运行dotnet<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /opt/dotnet/dotnet /usr/local/bin</div></pre></td></tr></table></figure></p>
-<p><img src="http://static.zybuluo.com/danerlt/017amet2egfea7737kpm62k5/image_1bc70608u1531nb019nj1cdu1hvv1t.png" alt="image_1bc70608u1531nb019nj1cdu1hvv1t.png-3.3kB"></p>
-<h2 id="创建HelloWorld"><a href="#创建HelloWorld" class="headerlink" title="创建HelloWorld"></a>创建HelloWorld</h2><p>让我们来初始化一个简单的HelloWorld应用吧<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet new console -o hwapp</div></pre></td></tr></table></figure></p>
-<p>如图所示，表示创建成功。<br><img src="http://static.zybuluo.com/danerlt/ch9o5cca65cbylyqhjc0ux1e/image_1bc709o111a1g1gcs1qdpiq165d37.png" alt="image_1bc709o111a1g1gcs1qdpiq165d37.png-42kB"></p>
-<h2 id="运行HelloWorld"><a href="#运行HelloWorld" class="headerlink" title="运行HelloWorld"></a>运行HelloWorld</h2><p>首先进入<code>hwapp</code>目录，然后运行即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd hwapp</div><div class="line">dotnet restore</div><div class="line">dotnet run</div></pre></td></tr></table></figure></p>
-<p>如图所示，执行成功，dotnet core的环境就搭建好了。<br><img src="http://static.zybuluo.com/danerlt/ygor8jgr8og0qe2e3t2tqtqt/image_1bc70gghn1hvm18jp7811q91eh73k.png" alt="image_1bc70gghn1hvm18jp7811q91eh73k.png-28.8kB"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;.NET Core 是.NET Framework的新一代版本，是微软开发的第一个官方版本，具有跨平台 (Windows、Mac OSX、Linux) 能力的应用程序开发框架 (Application Framework)，未来也将会支持 FreeBSD 与 Alpine 平台，也是微软在一开始发展时就开源的软件平台&lt;a href=&quot;http://static.zybuluo.com/danerlt/spc58phzhxu8lpoz6vwneqfv/image_1bc6vmvlaetorpeqhhr0hu7i9.png&quot;&gt;1&lt;/a&gt;  ，它经常也会拿来和现有的开源 .NET 平台 Mono 比较。&lt;br&gt;由于 .NET Core 的开发目标是跨平台的 .NET 平台，因此 .NET Core 会包含 .NET Framework 的类库，但与 .NET Framework 不同的是 .NET Core 采用包化 (Packages) 的管理方式，应用程序只需要获取需要的组件即可，与 .NET Framework 大包式安装的作法截然不同，同时各包亦有独立的版本线 (Version line)，不再硬性要求应用程序跟随主线版本。&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     
