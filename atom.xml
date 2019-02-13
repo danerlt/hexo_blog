@@ -45,7 +45,7 @@
     <link href="http://litao.work/2017/11/06/Centos%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Git%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>http://litao.work/2017/11/06/Centos搭建自己的Git服务器/</id>
     <published>2017-11-06T00:51:52.000Z</published>
-    <updated>2017-11-21T07:12:58.161Z</updated>
+    <updated>2017-11-21T07:12:58.162Z</updated>
     
     <content type="html"><![CDATA[<h2 id="搭建Git服务器及使用"><a href="#搭建Git服务器及使用" class="headerlink" title="搭建Git服务器及使用"></a>搭建Git服务器及使用</h2><h3 id="1、安装Git"><a href="#1、安装Git" class="headerlink" title="1、安装Git"></a>1、安装Git</h3><p>执行以下命令安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel</div><div class="line">yum install git</div></pre></td></tr></table></figure></p>
 <p>接下来我们创建一个git用户组和用户，用来运行git服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">groupadd git</div><div class="line">useradd git -g git</div><div class="line">passwd git</div></pre></td></tr></table></figure></p>
@@ -134,7 +134,7 @@
     <link href="http://litao.work/2017/10/17/docker%E5%9F%BA%E7%A1%80/"/>
     <id>http://litao.work/2017/10/17/docker基础/</id>
     <published>2017-10-17T12:55:34.000Z</published>
-    <updated>2017-10-17T12:57:37.404Z</updated>
+    <updated>2017-10-17T12:57:37.405Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Docker是世界领先的软件容器平台。 开发人员使用Docker来消除与同事的代码协作时的“我机器上的工作”问题。 运营商使用Docker在独立的容器中并行运行和管理应用程序，以获得更好的计算密度。 企业使用Docker构建灵活的软件传送流程，可以更快，更安全地发布新功能，并且对于Linux，Windows Server和Linux-on-mainframe应用程序都有信心。</p>
@@ -296,7 +296,7 @@
     <link href="http://litao.work/2017/09/20/centos7%E8%BF%9B%E5%85%A5%E5%8D%95%E7%94%A8%E6%88%B7/"/>
     <id>http://litao.work/2017/09/20/centos7进入单用户/</id>
     <published>2017-09-20T08:19:29.000Z</published>
-    <updated>2017-09-20T08:20:02.613Z</updated>
+    <updated>2017-09-20T08:20:02.614Z</updated>
     
     <content type="html"><![CDATA[<p>单用户模式是Linux操作系统中的运行级别之一，Linux操作系统具有6种运行级别，用于不同的需求或情况。单用户模式主要用于执行清理文件系统，管理配额，恢复文件系统以及恢复丢失的根密码等管理任务。在这种模式下，服务将无法启动，除root以外，不允许任何用户登录，系统也不会要求输入密码进行登录。<br><a id="more"></a><br>1.重启linux系统<br>在启动时，你可能会看到如下所示的启动画面，grub正在计算引导默认操作系统的时间，如/etc/grub2.cfg中所述;此时按任意键可中断自动启动。我们进入单用户需要按e编辑内核参数。<br><img src="http://static.zybuluo.com/danerlt/90tjjqzni1cwt8dnhj9rdg6v/image_1bpqcs0qm6keib01jkd1a9j1nls9.png" alt="image_1bpqcs0qm6keib01jkd1a9j1nls9.png-45.1kB"><br>按下之后，您将看到有关所选操作系统的信息。它提供了有关安装操作系统的硬盘和分区的信息，内核的位置，语言，视频输出，键盘类型，键盘表，崩溃内核和initrd（初始RAM盘）<br><img src="http://static.zybuluo.com/danerlt/7p6gw338vtxcui5llyl2wnpj/image_1bqf5dpls1jbb1rmi129c1089l09p.png" alt="image_1bqf5dpls1jbb1rmi129c1089l09p.png-22.7kB"><br>进入单用户模式;转到第二行（使用linux 16或linuxefi开始）使用上下箭头，然后修改ro参数。修改为<code>rw init=/sysroot/bin/sh</code>。完成后，按“Ctrl + x”启动。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rw init=/sysroot/bin/sh</div></pre></td></tr></table></figure></p>
 <p>现在就可以使用具有root权限的命令行模式（不输入密码）。<br><img src="http://static.zybuluo.com/danerlt/8zr68w5bfoelsourxcts3kdy/image_1bqf5qsc11m9a7thfuc106e1fgh4m.png" alt="image_1bqf5qsc11m9a7thfuc106e1fgh4m.png-45.2kB"></p>
@@ -358,7 +358,7 @@
     <link href="http://litao.work/2017/09/15/route%E5%91%BD%E4%BB%A4/"/>
     <id>http://litao.work/2017/09/15/route命令/</id>
     <published>2017-09-15T09:57:00.000Z</published>
-    <updated>2017-09-15T10:01:13.435Z</updated>
+    <updated>2017-09-15T10:01:13.436Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址设置为Linux机器的默认路由。要注意的是，直接在命令行下执行route命令来添加路由，不会永久保存，当网卡重启或者机器重启之后，该路由就失效了；可以在/etc/rc.local中添加route命令来保证该路由设置永久有效。<br><a id="more"></a><br>转自<a href="http://www.cnblogs.com/peida/archive/2013/03/05/2943698.html" target="_blank" rel="external">每天一个linux命令（53）：route命令</a><br>1．命令格式：<br>route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]]<br>2．命令功能：<br>Route命令是用于操作基于内核ip路由表，它的主要作用是创建一个静态路由让指定一个主机或者一个网络通过一个网络接口，如eth0。当使用”add”或者”del”参数时，路由表被修改，如果没有参数，则显示路由表当前的内容。<br>3．命令参数：<br>-c 显示更多信息<br>-n 不解析名字<br>-v 显示详细的处理信息<br>-F 显示发送信息<br>-C 显示路由缓存<br>-f 清除所有网关入口的路由表。<br>-p 与 add 命令一起使用时使路由具有永久性。</p>
@@ -429,7 +429,7 @@
     <link href="http://litao.work/2017/08/30/hexo-next%E6%B7%BB%E5%8A%A0%E8%AE%BF%E5%AE%A2%E9%87%8F/"/>
     <id>http://litao.work/2017/08/30/hexo-next添加访客量/</id>
     <published>2017-08-30T10:15:16.000Z</published>
-    <updated>2017-08-30T10:17:40.502Z</updated>
+    <updated>2017-08-30T10:17:40.503Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>转载自：Jey Zhang :<a href="http://www.jeyzhang.com/hexo-next-add-post-views.html" target="_blank" rel="external">Hexo的NexT主题个性化：添加文章阅读量</a></p>
@@ -541,7 +541,7 @@ leancloud_visitors:
     <link href="http://litao.work/2017/08/30/docker%E7%AC%94%E8%AE%B0/"/>
     <id>http://litao.work/2017/08/30/docker笔记/</id>
     <published>2017-08-30T08:21:02.000Z</published>
-    <updated>2017-08-30T08:25:48.296Z</updated>
+    <updated>2017-08-30T08:25:48.297Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Docker是世界领先的软件容器平台。 开发人员使用Docker来消除与同事的代码协作时的“我机器上的工作”问题。 运营商使用Docker在独立的容器中并行运行和管理应用程序，以获得更好的计算密度。 企业使用Docker构建灵活的软件传送流程，可以更快，更安全地发布新功能，并且对于Linux，Windows Server和Linux-on-mainframe应用程序都有信心。<br><a id="more"></a></p>
@@ -592,7 +592,7 @@ leancloud_visitors:
     <link href="http://litao.work/2017/08/30/Ajax%E7%AC%94%E8%AE%B0/"/>
     <id>http://litao.work/2017/08/30/Ajax笔记/</id>
     <published>2017-08-30T08:06:55.000Z</published>
-    <updated>2017-08-30T08:16:30.706Z</updated>
+    <updated>2017-08-30T08:16:30.707Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>参考链接：<br><a href="http://www.jianshu.com/p/a47120678b86#" target="_blank" rel="external">简书橙小张</a></p>
