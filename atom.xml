@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://litao.work/"/>
-  <updated>2019-02-13T05:41:14.676Z</updated>
+  <updated>2019-04-24T17:02:48.833Z</updated>
   <id>http://litao.work/</id>
   
   <author>
@@ -16,11 +16,62 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Leetcode Tree记录</title>
+    <link href="http://litao.work/2019/04/24/leetcode-tree%E8%AE%B0%E5%BD%95/"/>
+    <id>http://litao.work/2019/04/24/leetcode-tree记录/</id>
+    <published>2019-04-24T14:48:03.000Z</published>
+    <updated>2019-04-24T17:02:48.833Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文记录下在使用刷Leetcode的一些记录，主要使用变成语言为Python3。</p>
+<h2 id="tree的定义："><a href="#tree的定义：" class="headerlink" title="tree的定义："></a>tree的定义：</h2><p>Python中二叉树的定义<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x)</span>:</span></div><div class="line">        self.val = x</div><div class="line">        self.left = <span class="keyword">None</span></div><div class="line">        self.right = <span class="keyword">None</span></div></pre></td></tr></table></figure></p>
+<p>其他编程语言常见的定义：<br><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a4fd4a318aa38c?w=1709&amp;h=875&amp;f=png&amp;s=604855" alt=""><br>内存模型：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a4fdb68fe8cb97?w=1683&amp;h=812&amp;f=png&amp;s=408729" alt=""></p>
+<h2 id="二叉树分类"><a href="#二叉树分类" class="headerlink" title="二叉树分类"></a>二叉树分类</h2><h3 id="1-满二叉树-Full-Binary-Tree"><a href="#1-满二叉树-Full-Binary-Tree" class="headerlink" title="1.  满二叉树(Full Binary Tree)"></a>1.  满二叉树(Full Binary Tree)</h3><p>除最后一层无任何子节点外，每一层上的所有结点都有两个子结点二叉树，如下图：<br><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a4fe26e74d6b0b?w=1260&amp;h=469&amp;f=png&amp;s=38207" alt=""></p>
+<h3 id="2-完全二叉树（Complete-Binary-Tree）"><a href="#2-完全二叉树（Complete-Binary-Tree）" class="headerlink" title="2.  完全二叉树（Complete Binary Tree）"></a>2.  完全二叉树（Complete Binary Tree）</h3><p>如果一棵二叉树有n个结点，深度为k，它的每一个结点都与高度为k的满二叉树中编号为1~n的结点一一对应，则称该树为完全二叉树。如下图：<br><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a4fe2b4ecb1c24?w=1269&amp;h=408&amp;f=png&amp;s=36571" alt=""></p>
+<h3 id="3-平衡二叉树-Balanced-Binary-Tree"><a href="#3-平衡二叉树-Balanced-Binary-Tree" class="headerlink" title="3.  平衡二叉树(Balanced Binary Tree)"></a>3.  平衡二叉树(Balanced Binary Tree)</h3><p>平衡二叉树又称AVL树，平衡二叉树是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。如下图：<br><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a4fe44fc0f7e0c?w=1269&amp;h=408&amp;f=png&amp;s=36571" alt=""></p>
+<h3 id="4-二叉搜索树"><a href="#4-二叉搜索树" class="headerlink" title="4.二叉搜索树"></a>4.二叉搜索树</h3><p>二叉查找树（Binary Search Tree），（又：二叉搜索树，二叉排序树）它或者是一棵空树，或者是具有下列性质的二叉树： 若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。<br>如下图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a4ffff7b2817a1?w=150&amp;h=125&amp;f=png&amp;s=4497" alt=""></p>
+<h2 id="常用算法操作"><a href="#常用算法操作" class="headerlink" title="常用算法操作"></a>常用算法操作</h2><h3 id="通用模板"><a href="#通用模板" class="headerlink" title="通用模板"></a>通用模板</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 1个root</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">slove</span><span class="params">(root)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span> xxxx</div><div class="line">    <span class="keyword">if</span> f(root): <span class="keyword">return</span> yyyy</div><div class="line">    l = slove(root.left)</div><div class="line">    r = slove(root.right)</div><div class="line">    <span class="keyword">return</span> g(root, l, r)</div><div class="line">    </div><div class="line"><span class="comment">## 2个root    </span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">slove</span><span class="params">(p, q)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> p <span class="keyword">and</span> <span class="keyword">not</span> q: <span class="keyword">return</span> xxxx</div><div class="line">    <span class="keyword">if</span> f(p, q): reutn yyyy</div><div class="line">    c1 = slove(p.child, q.child)</div><div class="line">    c2 = slove(p.child, q.child)</div><div class="line">    <span class="keyword">return</span> g(p, q, c1, c2)</div></pre></td></tr></table></figure>
+<h3 id="三种遍历"><a href="#三种遍历" class="headerlink" title="三种遍历"></a>三种遍历</h3><p>常见的遍历有先序遍历，中序遍历，后序遍历。</p>
+<ul>
+<li>先序遍历：根节点-&gt;左子树-&gt;右子树</li>
+<li>中序遍历：左子树-&gt;根节点-&gt;右子树</li>
+<li>后序遍历：左子树-&gt;右子树-&gt;根节点<br><img src="https://user-gold-cdn.xitu.io/2019/4/24/16a5004000d76d16?w=1140&amp;h=558&amp;f=png&amp;s=239598" alt=""><h4 id="先序遍历"><a href="#先序遍历" class="headerlink" title="先序遍历"></a>先序遍历</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span><span class="params">(root)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span> </div><div class="line">    print(root.val)</div><div class="line">    preorder(root.left)</div><div class="line">    preorder(root.right)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span></div><div class="line">    inorder(root.left)</div><div class="line">    print(root.val)</div><div class="line">    inorder(root.right)</div></pre></td></tr></table></figure>
+<h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span><span class="params">(root)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span></div><div class="line">    postorder(root)</div><div class="line">    postorder(root)</div><div class="line">    print(root.val)</div></pre></td></tr></table></figure>
+<h3 id="创建二叉搜索树-BST"><a href="#创建二叉搜索树-BST" class="headerlink" title="创建二叉搜索树(BST)"></a>创建二叉搜索树(BST)</h3><p>根据一个nums数组，创建一个BST<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x)</span>:</span></div><div class="line">        self.val = x</div><div class="line">        self.left = <span class="keyword">None</span></div><div class="line">        self.right = <span class="keyword">None</span></div><div class="line">    </div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">createBST</span><span class="params">(nums)</span>:</span></div><div class="line">    root = <span class="keyword">None</span></div><div class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> nums:</div><div class="line">        root = insert(root, num)</div><div class="line">    <span class="keyword">return</span> root    </div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(root, val)</span>:</span></div><div class="line">    <span class="comment"># 注意 这个二叉树不是平衡的</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span> TreeNode(val)</div><div class="line">    <span class="keyword">if</span> val &lt;= root.val:</div><div class="line">        root.left = insert(root.left, val)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        root.right = insert(root.right, val)</div><div class="line">    <span class="keyword">return</span> root</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span><span class="params">(root)</span>:</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span></div><div class="line">    inorder(root.left)</div><div class="line">    print(root.val)</div><div class="line">    inorder(root.right)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder_list</span><span class="params">(root)</span>:</span></div><div class="line">    <span class="comment"># 得到中序遍历的数组</span></div><div class="line">    res = []</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span> []</div><div class="line">    res.append(root.val)</div><div class="line">    res.extend(inorder_list(root.left))</div><div class="line">    res.extend(inorder_list(root.right))</div><div class="line">    <span class="keyword">return</span> res</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    nums = [<span class="number">5</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>]</div><div class="line">    root = createBST(nums)</div><div class="line">    inorder(root)</div></pre></td></tr></table></figure></p>
+<p>上面的代码执行结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td></tr></table></figure></p>
+<h3 id="找到二叉树的最大值"><a href="#找到二叉树的最大值" class="headerlink" title="找到二叉树的最大值"></a>找到二叉树的最大值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">maxVal</span><span class="params">(root)</span>:</span></div><div class="line">    max_left = maxVal(root.left)</div><div class="line">    max_right = maxVal(root.right)</div><div class="line">    <span class="keyword">return</span> max(root.val, max_left, max_right)</div></pre></td></tr></table></figure>
+<h3 id="最大深度"><a href="#最大深度" class="headerlink" title="最大深度"></a>最大深度</h3><p>leetcode 104<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">def maxDeep(root):</div><div class="line">    if not root: return 0</div><div class="line">    l = maxDeep(root.left)</div><div class="line">    r = maxDeep(root.right)</div><div class="line">    return max(l, r) + 1</div></pre></td></tr></table></figure></p>
+<h3 id="最小深度"><a href="#最小深度" class="headerlink" title="最小深度"></a>最小深度</h3><p>leetcod 111<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">def minDeep(root):</div><div class="line">    if not root: return 0</div><div class="line">    if not root.leght and root.right return 1</div><div class="line">    l = minDeep(root.left)</div><div class="line">    r = minDeep(root.right)</div><div class="line">    if not root.left: return 1 + r</div><div class="line">    if not root.right: return 1 + l # 1 + left</div><div class="line">    return max(l, r) + 1</div></pre></td></tr></table></figure></p>
+<p>### </p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>文章中的视截图来自youtube 博主<a href="https://www.youtube.com/channel/UC5xDNEcvb1vgw3lE21Ack2Q" target="_blank" rel="external">花花</a>,感谢博主的视频。本文的参考的<a href="https://www.youtube.com/watch?v=PbGl8_-bZxI&amp;list=PLLuMmzMTgVK7ug02DDoQsf50OtwVDL1xd&amp;index=3" target="_blank" rel="external">youtube 视频链接</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文记录下在使用刷Leetcode的一些记录，主要使用变成语言为Python3。&lt;/p&gt;
+&lt;h2 id=&quot;tree的定义：&quot;&gt;&lt;a href=&quot;#tree的定义：&quot; class=&quot;headerlink&quot; title=&quot;tree的定义：&quot;&gt;&lt;/a&gt;tree的定义：&lt;/h2&gt;&lt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="python" scheme="http://litao.work/tags/python/"/>
+    
+      <category term="leetcode" scheme="http://litao.work/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2019年计划</title>
     <link href="http://litao.work/2019/02/13/2019%E5%B9%B4%E8%AE%A1%E5%88%92/"/>
     <id>http://litao.work/2019/02/13/2019年计划/</id>
     <published>2019-02-13T05:37:26.000Z</published>
-    <updated>2019-02-13T05:41:14.676Z</updated>
+    <updated>2019-02-13T05:42:39.259Z</updated>
     
     <content type="html"><![CDATA[<h2 id="工作上"><a href="#工作上" class="headerlink" title="工作上"></a>工作上</h2><p>优化好我负责的服务，将框架和应用的服务解耦，学习Python和Django高级的功能。</p>
 <h2 id="业余爱好"><a href="#业余爱好" class="headerlink" title="业余爱好"></a>业余爱好</h2><ul>
@@ -800,28 +851,6 @@ leancloud_visitors:
       <category term="idea" scheme="http://litao.work/tags/idea/"/>
     
       <category term="maven" scheme="http://litao.work/tags/maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos安装oracle 11g(二)</title>
-    <link href="http://litao.work/2017/03/30/centos%E5%AE%89%E8%A3%85oracle-11g-%E4%BA%8C/"/>
-    <id>http://litao.work/2017/03/30/centos安装oracle-11g-二/</id>
-    <published>2017-03-29T17:06:08.000Z</published>
-    <updated>2017-08-30T07:28:00.863Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="后端" scheme="http://litao.work/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="linux" scheme="http://litao.work/tags/linux/"/>
-    
-      <category term="install" scheme="http://litao.work/tags/install/"/>
-    
-      <category term="centos" scheme="http://litao.work/tags/centos/"/>
     
   </entry>
   
